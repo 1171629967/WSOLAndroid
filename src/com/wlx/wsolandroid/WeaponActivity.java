@@ -55,6 +55,7 @@ public class WeaponActivity extends Activity {
                 searchResultWeapons.clear();
                 String searchString = s.toString().trim();
 
+                //当搜索关键字为空时，显示全部武器
                 if (TextUtils.isEmpty(searchString)) {
                     lv1.setAdapter(adapter);
                 } else {
