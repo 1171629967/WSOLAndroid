@@ -33,6 +33,10 @@ public class WeaponListAdapter extends BaseAdapter {
     public int getCount() {
         return lists.size();
     }
+    
+    public void setData(List<Weapon> lists){
+        this.lists = lists;
+    }
 
     @Override
     public Object getItem(int position) {

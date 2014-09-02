@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import com.umeng.analytics.MobclickAgent;
 import com.wlx.wsolandroid.adapter.WeaponListAdapter;
 import com.wlx.wsolandroid.constant.Constant;
 import com.wlx.wsolandroid.model.Weapon;
@@ -22,7 +23,6 @@ import com.wlx.wsolandroid.widget.MyActionBar;
 public class WeaponActivity extends Activity {
     private ListView           lv1;
     private WeaponListAdapter  adapter;
-    private WeaponListAdapter  searchReultAdapter;
     private View               v_head;
     private EditText           et_search;
     private final List<Weapon> allWeapons          = new ArrayList<Weapon>();
@@ -33,6 +33,7 @@ public class WeaponActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weapon);
+//        MobclickAgent.updateOnlineConfig(this);
         this.initActionBar();
         this.initView();
     }
@@ -57,15 +58,17 @@ public class WeaponActivity extends Activity {
 
                 //当搜索关键字为空时，显示全部武器
                 if (TextUtils.isEmpty(searchString)) {
-                    lv1.setAdapter(adapter);
+                    adapter.setData(allWeapons);
                 } else {
                     for (int i = 0; i < allWeaponCount; i++) {
                         if (allWeapons.get(i).getName().contains(searchString)) {
                             searchResultWeapons.add(allWeapons.get(i));
                         }
                     }
-                    lv1.setAdapter(searchReultAdapter);
+                    adapter.setData(searchResultWeapons);
                 }
+                adapter.notifyDataSetChanged();
+
             }
         });
 
@@ -92,7 +95,7 @@ public class WeaponActivity extends Activity {
         }
 
         adapter = new WeaponListAdapter(this, allWeapons);
-        searchReultAdapter = new WeaponListAdapter(this, searchResultWeapons);
+
         lv1.setAdapter(adapter);
 
     }
@@ -103,6 +106,16 @@ public class WeaponActivity extends Activity {
         actionBar.setLeftEnable(false);
         RelativeLayout actionbar = (RelativeLayout) findViewById(R.id.rl_actionbar);
         actionbar.addView(actionBar);
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
 }
