@@ -254,8 +254,8 @@ com.wlx.wsolandroid.R$layout: int weapon_search
 com.wlx.wsolandroid.R$string: int app_name
 com.wlx.wsolandroid.R$style: int AppBaseTheme
 com.wlx.wsolandroid.R$style: int AppTheme
-com.wlx.wsolandroid.WeaponActivity
-com.wlx.wsolandroid.WeaponActivity: WeaponActivity()
+com.wlx.wsolandroid.WeaponJinpaiFragment
+com.wlx.wsolandroid.WeaponJinpaiFragment: WeaponActivity()
 com.wlx.wsolandroid.widget.MyActionBar: void setData(java.lang.Object)
 com.wlx.wsolandroid.widget.MyActionBar: void setLeftText(java.lang.String)
 com.wlx.wsolandroid.widget.MyActionBar: void setLeftText(int)

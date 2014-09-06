@@ -1581,7 +1581,7 @@ com.umeng.analytics.onlineconfig.a -> com.a.a.a.b:
     com.umeng.analytics.onlineconfig.c l -> e
     long m -> f
 com.umeng.analytics.onlineconfig.c -> com.a.a.a.c:
-com.wlx.wsolandroid.WeaponActivity -> com.wlx.wsolandroid.WeaponActivity:
+com.wlx.wsolandroid.WeaponJinpaiFragment -> com.wlx.wsolandroid.WeaponJinpaiFragment:
     android.widget.ListView lv1 -> a
     com.wlx.wsolandroid.adapter.WeaponListAdapter adapter -> b
     android.view.View v_head -> c
@@ -1594,12 +1594,12 @@ com.wlx.wsolandroid.WeaponActivity -> com.wlx.wsolandroid.WeaponActivity:
     void initActionBar() -> b
     void onResume() -> onResume
     void onPause() -> onPause
-    java.util.List access$0(com.wlx.wsolandroid.WeaponActivity) -> a
-    com.wlx.wsolandroid.adapter.WeaponListAdapter access$1(com.wlx.wsolandroid.WeaponActivity) -> b
-    java.util.List access$2(com.wlx.wsolandroid.WeaponActivity) -> c
-    int access$3(com.wlx.wsolandroid.WeaponActivity) -> d
+    java.util.List access$0(com.wlx.wsolandroid.WeaponJinpaiFragment) -> a
+    com.wlx.wsolandroid.adapter.WeaponListAdapter access$1(com.wlx.wsolandroid.WeaponJinpaiFragment) -> b
+    java.util.List access$2(com.wlx.wsolandroid.WeaponJinpaiFragment) -> c
+    int access$3(com.wlx.wsolandroid.WeaponJinpaiFragment) -> d
 com.wlx.wsolandroid.WeaponActivity$1 -> com.wlx.wsolandroid.a:
-    com.wlx.wsolandroid.WeaponActivity this$0 -> a
+    com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
     void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
     void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     void afterTextChanged(android.text.Editable) -> afterTextChanged

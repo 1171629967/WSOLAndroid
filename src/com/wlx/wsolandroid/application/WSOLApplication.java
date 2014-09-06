@@ -10,5 +10,6 @@ public class WSOLApplication extends Application {
     public void onCreate() {
         super.onCreate();
         MobclickAgent.openActivityDurationTrack(false);
+        
     }
 }
