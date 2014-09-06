@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_background"
+    android:orientation="vertical" >
+
+    <com.jeremyfeinstein.slidingmenu.lib.SlidingMenu
+        android:id="@+id/slidingmenulayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/style1"
+                    android:text="武器" />
+                <TextView
+                    android:id="@+id/tv_1_1"
+                    style="@style/style2"
+                    android:text="金牌武器上升值" />
+                
+                
+                <View style="@style/style_fenge" />
+                
+                <TextView
+                    style="@style/style1"
+                    android:text="任务" />
+                <TextView
+                    android:id="@+id/tv_2_1"
+                    style="@style/style2"
+                    android:text="任务报酬一览" />
+                
+                <View style="@style/style_fenge" />
+                
+                <TextView
+                    style="@style/style1"
+                    android:text="服饰" />
+                
+                <View style="@style/style_fenge" />
+                
+                <TextView
+                    style="@style/style1"
+                    android:text="道具" />
+                
+                <View style="@style/style_fenge" />
+                
+                <TextView
+                    style="@style/style1"
+                    android:text="其他" />
+                
+                
+            </LinearLayout>
+        </ScrollView>
+    </com.jeremyfeinstein.slidingmenu.lib.SlidingMenu>
+
+</LinearLayout>

@@ -16,5 +16,32 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    
+    <style name="style1">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    
+    <style name="style2">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <style name="style_fenge">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/gray</item>
+    </style>
 
 </resources>
