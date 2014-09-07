@@ -55,6 +55,10 @@
                 <TextView
                     style="@style/style1"
                     android:text="其他" />
+                <TextView
+                    android:id="@+id/tv_5_1"
+                    style="@style/style2"
+                    android:text="关于APP" />
                 
                 
             </LinearLayout>

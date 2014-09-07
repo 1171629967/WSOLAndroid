@@ -1509,13 +1509,13 @@ containing a value of this type.
         public static final int abs__up=0x7f05000b;
         public static final int disableHome=0x7f050009;
         public static final int edit_query=0x7f05002c;
-        public static final int et_search=0x7f050061;
+        public static final int et_search=0x7f050063;
         public static final int fl_fragments=0x7f050041;
         public static final int fullscreen=0x7f050013;
         public static final int homeAsUp=0x7f050006;
         public static final int left=0x7f050010;
         public static final int listMode=0x7f050002;
-        public static final int lv1=0x7f05005c;
+        public static final int lv1=0x7f05005d;
         public static final int margin=0x7f050012;
         public static final int menu_head_left=0x7f050038;
         public static final int menu_head_left_iv=0x7f050039;
@@ -1533,11 +1533,12 @@ containing a value of this type.
         public static final int showCustom=0x7f050008;
         public static final int showHome=0x7f050005;
         public static final int showTitle=0x7f050007;
-        public static final int slidingmenulayout=0x7f05005d;
-        public static final int slidingmenumain=0x7f050060;
+        public static final int slidingmenulayout=0x7f05005e;
+        public static final int slidingmenumain=0x7f050062;
         public static final int tabMode=0x7f050003;
-        public static final int tv_1_1=0x7f05005e;
-        public static final int tv_2_1=0x7f05005f;
+        public static final int tv_1_1=0x7f05005f;
+        public static final int tv_2_1=0x7f050060;
+        public static final int tv_5_1=0x7f050061;
         public static final int tv_C2=0x7f050050;
         public static final int tv_C3=0x7f050051;
         public static final int tv_C4=0x7f050052;
@@ -1555,6 +1556,7 @@ containing a value of this type.
         public static final int tv_N4=0x7f050046;
         public static final int tv_N5=0x7f050047;
         public static final int tv_N6=0x7f050048;
+        public static final int tv_content=0x7f05005b;
         public static final int tv_name=0x7f050042;
         public static final int tv_r1=0x7f050054;
         public static final int tv_r2=0x7f050055;
@@ -1564,7 +1566,7 @@ containing a value of this type.
         public static final int tv_r6=0x7f050059;
         public static final int tv_r7=0x7f05005a;
         public static final int useLogo=0x7f050004;
-        public static final int wb_content=0x7f05005b;
+        public static final int wb_content=0x7f05005c;
         public static final int wrap_content=0x7f050000;
     }
     public static final class integer {
@@ -1596,13 +1598,14 @@ containing a value of this type.
         public static final int activity_main=0x7f030016;
         public static final int activity_weapon_xishu=0x7f030017;
         public static final int adapter_item_weapon=0x7f030018;
-        public static final int fragment_renwu=0x7f030019;
-        public static final int fragment_weapon=0x7f03001a;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001b;
-        public static final int sherlock_spinner_item=0x7f03001c;
-        public static final int slidingmenu=0x7f03001d;
-        public static final int slidingmenumain=0x7f03001e;
-        public static final int weapon_search=0x7f03001f;
+        public static final int fragment_aboutapp=0x7f030019;
+        public static final int fragment_renwu=0x7f03001a;
+        public static final int fragment_weapon=0x7f03001b;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001c;
+        public static final int sherlock_spinner_item=0x7f03001d;
+        public static final int slidingmenu=0x7f03001e;
+        public static final int slidingmenumain=0x7f03001f;
+        public static final int weapon_search=0x7f030020;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 

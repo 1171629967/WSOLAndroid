@@ -12,7 +12,7 @@ import com.umeng.analytics.MobclickAgent;
 
 public class MainActivity extends FragmentActivity implements OnClickListener {
     private SlidingMenu menu;
-    private TextView    tv_1_1, tv_2_1;
+    private TextView    tv_1_1, tv_2_1, tv_5_1;
     private String      currentFragment;
 
     @Override
@@ -29,8 +29,10 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
     private void initView() {
         tv_1_1 = (TextView) menu.findViewById(R.id.tv_1_1);
         tv_2_1 = (TextView) menu.findViewById(R.id.tv_2_1);
+        tv_5_1 = (TextView) menu.findViewById(R.id.tv_5_1);
         tv_1_1.setOnClickListener(this);
         tv_2_1.setOnClickListener(this);
+        tv_5_1.setOnClickListener(this);
     }
 
     private void initSlidingMenu() {
@@ -71,6 +73,12 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fl_fragments, new RenwuFragment()).commit();
             currentFragment = "2_1";
+        }
+        //任务报酬一览----------------------------->
+        else if (v == tv_5_1 && !currentFragment.equals("5_1")) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fl_fragments, new AboutAppFragment()).commit();
+            currentFragment = "5_1";
         }
         menu.toggle(true);
     }
