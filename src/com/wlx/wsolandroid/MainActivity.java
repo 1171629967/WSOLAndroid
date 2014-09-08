@@ -9,11 +9,12 @@ import android.widget.TextView;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.umeng.analytics.MobclickAgent;
+import com.wlx.wsolandroid.BaseFragment.menuClicklistener;
 
-public class MainActivity extends FragmentActivity implements OnClickListener {
-    private SlidingMenu menu;
-    private TextView    tv_1_1, tv_2_1, tv_5_1;
-    private String      currentFragment;
+public class MainActivity extends FragmentActivity implements OnClickListener, menuClicklistener {
+    public SlidingMenu menu;
+    private TextView   tv_wuqi_1, tv_renwu_1, tv_renwu_2, tv_qita_1, tv_fujiang_1;
+    private String     currentFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,22 +24,26 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
         this.initView();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fl_fragments, new WeaponJinpaiFragment()).commit();
-        currentFragment = "1_1";
+        currentFragment = "wuqi_1";
     }
 
     private void initView() {
-        tv_1_1 = (TextView) menu.findViewById(R.id.tv_1_1);
-        tv_2_1 = (TextView) menu.findViewById(R.id.tv_2_1);
-        tv_5_1 = (TextView) menu.findViewById(R.id.tv_5_1);
-        tv_1_1.setOnClickListener(this);
-        tv_2_1.setOnClickListener(this);
-        tv_5_1.setOnClickListener(this);
+        tv_wuqi_1 = (TextView) menu.findViewById(R.id.tv_wuqi_1);
+        tv_renwu_1 = (TextView) menu.findViewById(R.id.tv_renwu_1);
+        tv_renwu_2 = (TextView) menu.findViewById(R.id.tv_renwu_2);
+        tv_qita_1 = (TextView) menu.findViewById(R.id.tv_qita_1);
+        tv_fujiang_1 = (TextView) menu.findViewById(R.id.tv_fujiang_1);
+        tv_wuqi_1.setOnClickListener(this);
+        tv_renwu_1.setOnClickListener(this);
+        tv_renwu_2.setOnClickListener(this);
+        tv_qita_1.setOnClickListener(this);
+        tv_fujiang_1.setOnClickListener(this);
     }
 
     private void initSlidingMenu() {
         menu = new SlidingMenu(this);
         menu.setMode(SlidingMenu.LEFT);
-        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
         //        menu.setShadowWidthRes(R.dimen.shadow_width);
         //        menu.setShadowDrawable(R.drawable.shadow);
         menu.setBehindOffsetRes(R.dimen.sliding_menu_offset);
@@ -63,22 +68,50 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
     @Override
     public void onClick(View v) {
         //金牌武器上升值----------------------------->
-        if (v == tv_1_1 && !currentFragment.equals("1_1")) {
+        if (v == tv_wuqi_1 && !currentFragment.equals("wuqi_1")) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fl_fragments, new WeaponJinpaiFragment()).commit();
-            currentFragment = "1_1";
+            currentFragment = "wuqi_1";
         }
         //任务报酬一览----------------------------->
-        else if (v == tv_2_1 && !currentFragment.equals("2_1")) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fl_fragments, new RenwuFragment()).commit();
-            currentFragment = "2_1";
+        else if (v == tv_renwu_1 && !currentFragment.equals("renwu_1")) {
+            LoadhtmlFragment fragment = new LoadhtmlFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("htmlName", "renwu.html");
+            fragment.setArguments(bundle);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment)
+                    .commit();
+            currentFragment = "renwu_1";
         }
         //任务报酬一览----------------------------->
-        else if (v == tv_5_1 && !currentFragment.equals("5_1")) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fl_fragments, new AboutAppFragment()).commit();
-            currentFragment = "5_1";
+        else if (v == tv_renwu_2 && !currentFragment.equals("renwu_2")) {
+            LoadhtmlFragment fragment = new LoadhtmlFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("htmlName", "renwudengji.html");
+            fragment.setArguments(bundle);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment)
+                    .commit();
+            currentFragment = "renwu_2";
+        }
+        //关于----------------------------->
+        else if (v == tv_qita_1 && !currentFragment.equals("qita_1")) {
+            LoadtxtFragment fragment = new LoadtxtFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("txtName", "aboutapp.txt");
+            fragment.setArguments(bundle);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment)
+                    .commit();
+            currentFragment = "qita_1";
+        }
+        //副将技能和属性----------------------------->
+        else if (v == tv_fujiang_1 && !currentFragment.equals("fujiang_1")) {
+            LoadtxtFragment fragment = new LoadtxtFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("txtName", "fujiang.txt");
+            fragment.setArguments(bundle);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment)
+                    .commit();
+            currentFragment = "fujiang_1";
         }
         menu.toggle(true);
     }
@@ -93,6 +126,11 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
     public void onPause() {
         super.onPause();
         MobclickAgent.onPause(this);
+    }
+
+    @Override
+    public void menuClick() {
+        menu.toggle(true);
     }
 
 }

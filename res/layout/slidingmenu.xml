@@ -22,45 +22,60 @@
                 <TextView
                     style="@style/style1"
                     android:text="武器" />
+
                 <TextView
-                    android:id="@+id/tv_1_1"
+                    android:id="@+id/tv_wuqi_1"
                     style="@style/style2"
                     android:text="金牌武器上升值" />
-                
-                
+
                 <View style="@style/style_fenge" />
-                
+
                 <TextView
                     style="@style/style1"
                     android:text="任务" />
+
                 <TextView
-                    android:id="@+id/tv_2_1"
+                    android:id="@+id/tv_renwu_1"
                     style="@style/style2"
                     android:text="任务报酬一览" />
-                
+                <TextView
+                    android:id="@+id/tv_renwu_2"
+                    style="@style/style2"
+                    android:text="任务等级表" />
+
                 <View style="@style/style_fenge" />
-                
+
                 <TextView
                     style="@style/style1"
                     android:text="服饰" />
-                
+
                 <View style="@style/style_fenge" />
-                
+
                 <TextView
                     style="@style/style1"
                     android:text="道具" />
-                
+
                 <View style="@style/style_fenge" />
-                
+
+                <TextView
+                    style="@style/style1"
+                    android:text="副将" />
+
+                <TextView
+                    android:id="@+id/tv_fujiang_1"
+                    style="@style/style2"
+                    android:text="副将技能和属性" />
+
+                <View style="@style/style_fenge" />
+
                 <TextView
                     style="@style/style1"
                     android:text="其他" />
+
                 <TextView
-                    android:id="@+id/tv_5_1"
+                    android:id="@+id/tv_qita_1"
                     style="@style/style2"
                     android:text="关于APP" />
-                
-                
             </LinearLayout>
         </ScrollView>
     </com.jeremyfeinstein.slidingmenu.lib.SlidingMenu>

@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -22,7 +22,7 @@ import com.wlx.wsolandroid.model.Weapon;
 import com.wlx.wsolandroid.model.Xishu;
 import com.wlx.wsolandroid.widget.MyActionBar;
 
-public class WeaponJinpaiFragment extends Fragment {
+public class WeaponJinpaiFragment extends BaseFragment {
     private ListView           lv1;
     private WeaponListAdapter  adapter;
     private View               v_head;
@@ -109,7 +109,15 @@ public class WeaponJinpaiFragment extends Fragment {
     private void initActionBar(View view) {
         MyActionBar actionBar = new MyActionBar(getActivity());
         actionBar.setTitle("金牌武器上升值");
-        actionBar.setLeftEnable(false);
+        actionBar.setLeftEnable(true);
+        actionBar.setLeftText("菜单");
+        actionBar.setLeftClickListenner(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                mClicklistener.menuClick();
+            }
+        });
         RelativeLayout actionbar = (RelativeLayout) view.findViewById(R.id.rl_actionbar);
         actionbar.addView(actionBar);
     }
