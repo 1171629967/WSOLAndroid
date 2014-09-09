@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.umeng.analytics.MobclickAgent;
 import com.wlx.wsolandroid.BaseFragment.menuClicklistener;
+import com.wlx.wsolandroid.constant.Constant;
 
 public class MainActivity extends FragmentActivity implements OnClickListener, menuClicklistener {
     public SlidingMenu menu;
@@ -24,7 +25,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
         this.initView();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fl_fragments, new WeaponJinpaiFragment()).commit();
-        currentFragment = "wuqi_1";
+        currentFragment = Constant.JINPAIWUQI;
     }
 
     private void initView() {
@@ -43,7 +44,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
     private void initSlidingMenu() {
         menu = new SlidingMenu(this);
         menu.setMode(SlidingMenu.LEFT);
-        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
         //        menu.setShadowWidthRes(R.dimen.shadow_width);
         //        menu.setShadowDrawable(R.drawable.shadow);
         menu.setBehindOffsetRes(R.dimen.sliding_menu_offset);
@@ -68,50 +69,50 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
     @Override
     public void onClick(View v) {
         //金牌武器上升值----------------------------->
-        if (v == tv_wuqi_1 && !currentFragment.equals("wuqi_1")) {
+        if (v == tv_wuqi_1 && !currentFragment.equals(Constant.JINPAIWUQI)) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fl_fragments, new WeaponJinpaiFragment()).commit();
-            currentFragment = "wuqi_1";
+            currentFragment = Constant.JINPAIWUQI;
         }
         //任务报酬一览----------------------------->
-        else if (v == tv_renwu_1 && !currentFragment.equals("renwu_1")) {
+        else if (v == tv_renwu_1 && !currentFragment.equals(Constant.RENWUBAOCHOU)) {
             LoadhtmlFragment fragment = new LoadhtmlFragment();
             Bundle bundle = new Bundle();
-            bundle.putString("htmlName", "renwu.html");
+            bundle.putString("htmlName", "renwubaochou.html");
             fragment.setArguments(bundle);
             getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment)
                     .commit();
-            currentFragment = "renwu_1";
+            currentFragment = Constant.RENWUBAOCHOU;
         }
-        //任务报酬一览----------------------------->
-        else if (v == tv_renwu_2 && !currentFragment.equals("renwu_2")) {
+        //任务等级表----------------------------->
+        else if (v == tv_renwu_2 && !currentFragment.equals(Constant.RENWUDENGJI)) {
             LoadhtmlFragment fragment = new LoadhtmlFragment();
             Bundle bundle = new Bundle();
             bundle.putString("htmlName", "renwudengji.html");
             fragment.setArguments(bundle);
             getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment)
                     .commit();
-            currentFragment = "renwu_2";
+            currentFragment = Constant.RENWUDENGJI;
         }
         //关于----------------------------->
-        else if (v == tv_qita_1 && !currentFragment.equals("qita_1")) {
+        else if (v == tv_qita_1 && !currentFragment.equals(Constant.ABOUTAPP)) {
             LoadtxtFragment fragment = new LoadtxtFragment();
             Bundle bundle = new Bundle();
             bundle.putString("txtName", "aboutapp.txt");
             fragment.setArguments(bundle);
             getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment)
                     .commit();
-            currentFragment = "qita_1";
+            currentFragment = Constant.ABOUTAPP;
         }
         //副将技能和属性----------------------------->
-        else if (v == tv_fujiang_1 && !currentFragment.equals("fujiang_1")) {
+        else if (v == tv_fujiang_1 && !currentFragment.equals(Constant.FUJIANG)) {
             LoadtxtFragment fragment = new LoadtxtFragment();
             Bundle bundle = new Bundle();
             bundle.putString("txtName", "fujiang.txt");
             fragment.setArguments(bundle);
             getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment)
                     .commit();
-            currentFragment = "fujiang_1";
+            currentFragment = Constant.FUJIANG;
         }
         menu.toggle(true);
     }

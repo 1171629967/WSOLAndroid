@@ -1,6 +1,17 @@
 package com.wlx.wsolandroid.constant;
 
 public class Constant {
+    /** 金牌武器上升值 */
+    public static final String JINPAIWUQI    = "jinpaiwuqi";
+    /** 任务报酬一览 */
+    public static final String RENWUBAOCHOU  = "renwubaochou";
+    /** 任务等级表 */
+    public static final String RENWUDENGJI   = "renwudengji";
+    /** 副将技能和属性 */
+    public static final String FUJIANG       = "fujiang";
+    /** 关于APP */
+    public static final String ABOUTAPP      = "aboutapp";
+
     public static final String weaponNameR1  = "偃月刀,大斧,碎棒,铁鞭,朴刀,甲刀,碎棍,双鞭,战斧,双戟,双剑,双锤,直枪,长棍,樱扇,燕扇,幻杖,法杖,铁钩,蛮拳,铁剑,狱刀,战盘,多节鞭,长双刀,钩镰刀,宝剑,铁枪,双节棍,夏圈,铁矛,斩马刀,羽扇,投弧刃,积刃剑,将剑,弧刀,旋棍,牙壁,盘刀,战戈,铁笛,双刃剑,尖剑,咒符,三尖枪,叉突矛,断戟,牙剑,桃扇,铁戟,麟角刀,蛇剑,狼牙棒,巨剑,细剑,重手甲,穿刃,龙牙钩,堕落,镖,青龙刀,螺旋枪,雷鸣枪,火焰圈,飞翔剑,龙扇,双钺,红龙刀,长弓,飞丽爪";
 
     public static final String weaponDataR1G = "4,2,4,2,2,6,4,1,3,9,4,0,1,5,0,7,4,5,2,4,9,4,1,0,5,1,2,4,0,1,5,2,6,9,3,2,6,2,4,0,1,3,1,3,8,6,3,5,5,5,6,3,3,1,4,5,2,6,4,5,7,5,1,2,4,0,7,5,2,3,7";
