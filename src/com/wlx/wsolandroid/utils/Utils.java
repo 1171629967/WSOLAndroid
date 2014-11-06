@@ -6,6 +6,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 
+import android.app.Activity;
+import android.util.DisplayMetrics;
+import android.view.Display;
+
 public class Utils {
 
     public static String getString(InputStream inputStream) {
@@ -27,6 +31,33 @@ public class Utils {
             e.printStackTrace();
         }
         return sb.toString();
+    }
+    
+    
+    
+    /**
+     * 获取手机屏幕分辨率，
+     * @param activity
+     * @param type 参数1表示获取屏幕宽像素值，2表示获取屏幕高像素值，3表示分辨率
+     * @return
+     */
+    public static int getDisplay(Activity activity,int type){
+    	DisplayMetrics localDisplayMetrics = new DisplayMetrics();
+    	Display localDisplay = activity.getWindowManager().getDefaultDisplay();
+    	localDisplay.getMetrics(localDisplayMetrics);
+    	int i=0;
+    	switch (type) {
+		case 1:
+			i=localDisplay.getWidth();
+			break;
+		case 2:
+			i=localDisplay.getHeight();
+			break;
+		case 3:
+			i=localDisplayMetrics.densityDpi;
+			break;		
+		}
+    	return i;
     }
 
 }

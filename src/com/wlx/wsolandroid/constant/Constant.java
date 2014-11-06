@@ -3,6 +3,8 @@ package com.wlx.wsolandroid.constant;
 public class Constant {
     /** 金牌武器上升值 */
     public static final String JINPAIWUQI    = "jinpaiwuqi";
+    /** 武器锻造模拟器 */
+    public static final String WUQIDUANZAO    = "wuqiduanzao";
     /** 任务报酬一览 */
     public static final String RENWUBAOCHOU  = "renwubaochou";
     /** 任务等级表 */

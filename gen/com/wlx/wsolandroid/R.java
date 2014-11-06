@@ -1459,13 +1459,14 @@ containing a value of this type.
         public static final int abs__textfield_searchview_right_holo_dark=0x7f02006d;
         public static final int abs__textfield_searchview_right_holo_light=0x7f02006e;
         public static final int abs__toast_frame=0x7f02006f;
-        public static final int borner_weapon_search_cancel=0x7f020070;
-        public static final int icon=0x7f020071;
-        public static final int menu_background=0x7f020072;
-        public static final int menu_left=0x7f020073;
-        public static final int menu_left_normal=0x7f020074;
-        public static final int menu_left_selected=0x7f020075;
-        public static final int weapon_appreciate_listview_back=0x7f020076;
+        public static final int borner_weapon_duanzao=0x7f020070;
+        public static final int borner_weapon_search_cancel=0x7f020071;
+        public static final int icon=0x7f020072;
+        public static final int menu_background=0x7f020073;
+        public static final int menu_left=0x7f020074;
+        public static final int menu_left_normal=0x7f020075;
+        public static final int menu_left_selected=0x7f020076;
+        public static final int weapon_appreciate_listview_back=0x7f020077;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f050026;
@@ -1509,13 +1510,17 @@ containing a value of this type.
         public static final int abs__up=0x7f05000b;
         public static final int disableHome=0x7f050009;
         public static final int edit_query=0x7f05002c;
-        public static final int et_search=0x7f050065;
+        public static final int et_search=0x7f050072;
         public static final int fl_fragments=0x7f050041;
         public static final int fullscreen=0x7f050013;
         public static final int homeAsUp=0x7f050006;
         public static final int left=0x7f050010;
         public static final int listMode=0x7f050002;
-        public static final int lv1=0x7f05005d;
+        public static final int ll_gongji2=0x7f050067;
+        public static final int ll_shuxingPart=0x7f050060;
+        public static final int lv1=0x7f05005f;
+        public static final int lv_weaponRank=0x7f050068;
+        public static final int lv_weaponType=0x7f050069;
         public static final int margin=0x7f050012;
         public static final int menu_head_left=0x7f050038;
         public static final int menu_head_left_iv=0x7f050039;
@@ -1529,12 +1534,13 @@ containing a value of this type.
         public static final int normal=0x7f050001;
         public static final int right=0x7f050011;
         public static final int rl_actionbar=0x7f050040;
+        public static final int rl_gongji1=0x7f050061;
         public static final int selected_view=0x7f050015;
         public static final int showCustom=0x7f050008;
         public static final int showHome=0x7f050005;
         public static final int showTitle=0x7f050007;
-        public static final int slidingmenulayout=0x7f05005e;
-        public static final int slidingmenumain=0x7f050064;
+        public static final int slidingmenulayout=0x7f05006a;
+        public static final int slidingmenumain=0x7f050071;
         public static final int tabMode=0x7f050003;
         public static final int tv_C2=0x7f050050;
         public static final int tv_C3=0x7f050051;
@@ -1553,10 +1559,12 @@ containing a value of this type.
         public static final int tv_N4=0x7f050046;
         public static final int tv_N5=0x7f050047;
         public static final int tv_N6=0x7f050048;
-        public static final int tv_content=0x7f05005c;
-        public static final int tv_fujiang_1=0x7f050062;
+        public static final int tv_base_gongjili=0x7f050064;
+        public static final int tv_content=0x7f05005e;
+        public static final int tv_fujiang_1=0x7f05006f;
+        public static final int tv_gongjili=0x7f050062;
         public static final int tv_name=0x7f050042;
-        public static final int tv_qita_1=0x7f050063;
+        public static final int tv_qita_1=0x7f050070;
         public static final int tv_r1=0x7f050054;
         public static final int tv_r2=0x7f050055;
         public static final int tv_r3=0x7f050056;
@@ -1564,11 +1572,17 @@ containing a value of this type.
         public static final int tv_r5=0x7f050058;
         public static final int tv_r6=0x7f050059;
         public static final int tv_r7=0x7f05005a;
-        public static final int tv_renwu_1=0x7f050060;
-        public static final int tv_renwu_2=0x7f050061;
-        public static final int tv_wuqi_1=0x7f05005f;
+        public static final int tv_renwu_1=0x7f05006d;
+        public static final int tv_renwu_2=0x7f05006e;
+        public static final int tv_rise_gongjili=0x7f050065;
+        public static final int tv_slotNumber_gongji=0x7f050066;
+        public static final int tv_slot_gongji=0x7f050063;
+        public static final int tv_weaponName=0x7f05005c;
+        public static final int tv_weaponRank=0x7f05005b;
+        public static final int tv_wuqi_1=0x7f05006b;
+        public static final int tv_wuqi_2=0x7f05006c;
         public static final int useLogo=0x7f050004;
-        public static final int wb_content=0x7f05005b;
+        public static final int wb_content=0x7f05005d;
         public static final int wrap_content=0x7f050000;
     }
     public static final class integer {
@@ -1600,14 +1614,18 @@ containing a value of this type.
         public static final int activity_main=0x7f030016;
         public static final int activity_weapon_xishu=0x7f030017;
         public static final int adapter_item_weapon=0x7f030018;
-        public static final int fragment_loadhtml=0x7f030019;
-        public static final int fragment_loadtxt=0x7f03001a;
-        public static final int fragment_weapon=0x7f03001b;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001c;
-        public static final int sherlock_spinner_item=0x7f03001d;
-        public static final int slidingmenu=0x7f03001e;
-        public static final int slidingmenumain=0x7f03001f;
-        public static final int weapon_search=0x7f030020;
+        public static final int adapter_item_weaponrank=0x7f030019;
+        public static final int adapter_item_weapontype=0x7f03001a;
+        public static final int fragment_loadhtml=0x7f03001b;
+        public static final int fragment_loadtxt=0x7f03001c;
+        public static final int fragment_weapon=0x7f03001d;
+        public static final int fragment_weapon_duanzao=0x7f03001e;
+        public static final int pop_choose_weapon=0x7f03001f;
+        public static final int sherlock_spinner_dropdown_item=0x7f030020;
+        public static final int sherlock_spinner_item=0x7f030021;
+        public static final int slidingmenu=0x7f030022;
+        public static final int slidingmenumain=0x7f030023;
+        public static final int weapon_search=0x7f030024;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 

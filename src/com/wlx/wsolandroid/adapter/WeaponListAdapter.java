@@ -14,7 +14,7 @@ import com.wlx.wsolandroid.R;
 import com.wlx.wsolandroid.model.Weapon;
 
 /**
- * 粉丝列表适配器
+ *金牌武器上升值列表适配器
  * 
  * @author wanglixin
  */

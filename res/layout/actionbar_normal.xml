@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:id="@+id/menu_head_left"
-        android:layout_width="50dp"
+        android:layout_width="70dp"
         android:layout_height="fill_parent"
         android:gravity="center" >
 
@@ -44,7 +44,7 @@
 
     <LinearLayout
         android:id="@+id/menu_head_right"
-        android:layout_width="50dp"
+        android:layout_width="70dp"
         android:layout_height="fill_parent"
         android:layout_alignParentRight="true"
         android:gravity="center" >
