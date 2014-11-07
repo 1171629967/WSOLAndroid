@@ -152,5 +152,11 @@
     
     <color name="gold_60">#60ffd700</color><!--透明度为60的金色 -->
     
+    <color name="gongjicao">#D69A62</color><!--攻击槽的深橙色 -->
+    <color name="pohuaicao">#6A8DC0</color><!--破坏槽的颜色色 -->
+    <color name="fangyucao">#79D8CF</color><!--防御槽的深橙色 -->
+    <color name="tilicao">#B9BE67</color><!--体力槽的深橙色 -->
+    <color name="wushuangcao">#DB7AA9</color><!--无双槽的深橙色 -->
+    
     
 </resources>

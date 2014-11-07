@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- 减少攻击锻造按钮 -->
+
+    <TextView
+        android:id="@+id/tv_gongjiDown"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <!-- 增加攻击锻造按钮 -->
+
+    <TextView
+        android:id="@+id/tv_gongjiUp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <!-- 攻击菜单 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_gongji1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_gongjiUp"
+        android:layout_toRightOf="@+id/tv_gongjiDown" >
+
+        <TextView
+            android:id="@+id/tv_gongjili"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="攻击力"
+            android:textColor="#b99f98"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_gongjili"
+            android:layout_toLeftOf="@+id/tv_slot_gongji"
+            android:layout_toRightOf="@+id/tv_gongjili"
+            android:orientation="horizontal" >
+
+            <!-- 攻击基础值 -->
+
+            <TextView
+                android:id="@+id/tv_base_gongjili"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="50"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <!-- 攻击上升值 -->
+
+            <TextView
+                android:id="@+id/tv_rise_gongjili"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="( + 50 )"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- 强化位文字 -->
+
+        <TextView
+            android:id="@+id/tv_slot_gongji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_gongjili"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@+id/tv_slotNumber_gongji"
+            android:text="Slot"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+        <!-- 几号强化位 -->
+
+        <TextView
+            android:id="@+id/tv_slotNumber_gongji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_gongjili"
+            android:layout_alignParentRight="true"
+            android:text="5"
+            android:textColor="@color/gray"
+            android:textSize="22sp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+    <!-- 攻击槽 -->
+
+    <LinearLayout
+        android:id="@+id/ll_gongjicao"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/rl_gongji1"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/tv_gongjiUp"
+        android:layout_toRightOf="@+id/tv_gongjiDown"
+        android:background="@drawable/borner_weapon_duanzao"
+        android:orientation="horizontal"
+        android:padding="0.5px" >
+    </LinearLayout>
+
+</RelativeLayout>

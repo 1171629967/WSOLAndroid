@@ -6,6 +6,92 @@ package com.wlx.wsolandroid.weapondata;
 
 
 public class R1WeaponData {
+	/** 攻击基础值 */
+	public static final int[] weaponBaseGongji={
+		49,//"偃月刀"
+		44 //"大斧"
+	};
+	
+	/** 破坏基础值 */
+	public static final int[] weaponBasePohuai={
+		37,//"偃月刀"
+		44 //"大斧"
+	};
+	/** 防御基础值 */
+	public static final int[] weaponBaseFangyu={
+		30,//"偃月刀"
+		34 //"大斧"
+	};
+	/** 体力基础值 */
+	public static final int[] weaponBaseTili={
+		170,//"偃月刀"
+		170 //"大斧"
+	};
+	/** 无双基础值 */
+	public static final int[] weaponBaseWushuang={
+		140,//"偃月刀"
+		145 //"大斧"
+	};
+	
+	/** 攻击强化位 */
+	public static final int[] weaponSlotGongji={
+		3,//"偃月刀"
+		2 //"大斧"
+	};
+	/** 破坏强化位 */
+	public static final int[] weaponSlotPohuai={
+		2,//"偃月刀"
+		1 //"大斧"
+	};
+	/** 防御强化位 */
+	public static final int[] weaponSlotFangyu={
+		5,//"偃月刀"
+		3 //"大斧"
+	};
+	/** 体力强化位 */
+	public static final int[] weaponSlotTili={
+		1,//"偃月刀"
+		6 //"大斧"
+	};
+	/** 无双强化位 */
+	public static final int[] weaponSlotWushuang={
+		6,//"偃月刀"
+		5 //"大斧"
+	};
+	
+	
+	
+	/** R1攻击上升值 */
+	public static final int[] R1RiseGongji={
+		24,//"偃月刀"
+		22 //"大斧"
+	};
+	/** R1破坏上升值 */
+	public static final int[] R1RisePohuai={
+		24,//"偃月刀"
+		15 //"大斧"
+	};
+	/** R1防御上升值 */
+	public static final int[] R1RiseFangyu={
+		30,//"偃月刀"
+		24 //"大斧"
+	};
+	/** R1体力上升值 */
+	public static final int[] R1RiseTili={
+		22,//"偃月刀"
+		33 //"大斧"
+	};
+	/** R1无双上升值 */
+	public static final int[] R1RiseWushuang={
+		32,//"偃月刀"
+		36 //"大斧"
+	};
+	
+	
+	
+	
+	
+	
 	
 	public static final String[] R1Names={
 		"偃月刀",

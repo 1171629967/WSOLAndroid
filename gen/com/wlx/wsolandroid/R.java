@@ -805,11 +805,11 @@ containing a value of this type.
         public static final int abs__bright_foreground_disabled_holo_light=0x7f070005;
         public static final int abs__bright_foreground_holo_dark=0x7f070002;
         public static final int abs__bright_foreground_holo_light=0x7f070003;
-        public static final int abs__primary_text_disable_only_holo_dark=0x7f070098;
-        public static final int abs__primary_text_disable_only_holo_light=0x7f070099;
-        public static final int abs__primary_text_holo_dark=0x7f07009a;
-        public static final int abs__primary_text_holo_light=0x7f07009b;
-        public static final int actionbar_text_color=0x7f07009c;
+        public static final int abs__primary_text_disable_only_holo_dark=0x7f07009d;
+        public static final int abs__primary_text_disable_only_holo_light=0x7f07009e;
+        public static final int abs__primary_text_holo_dark=0x7f07009f;
+        public static final int abs__primary_text_holo_light=0x7f0700a0;
+        public static final int actionbar_text_color=0x7f0700a1;
         /** 蜜色 
          */
         public static final int aliceblue=0x7f070032;
@@ -945,6 +945,9 @@ containing a value of this type.
         /** 亮海蓝色 
          */
         public static final int dodgerblue=0x7f070085;
+        /** 破坏槽的颜色色 
+         */
+        public static final int fangyucao=0x7f07009a;
         /** 暗金黄色 
          */
         public static final int firebrick=0x7f07004d;
@@ -972,6 +975,9 @@ containing a value of this type.
         /** 苍紫罗兰色 
          */
         public static final int goldenrod=0x7f07003f;
+        /** 透明度为60的金色 
+         */
+        public static final int gongjicao=0x7f070098;
         /** 天蓝色 
          */
         public static final int gray=0x7f070063;
@@ -1161,6 +1167,9 @@ containing a value of this type.
         /** 实木色 
          */
         public static final int plum=0x7f07003b;
+        /** 攻击槽的深橙色 
+         */
+        public static final int pohuaicao=0x7f070099;
         /** 火砖色 
          */
         public static final int powderblue=0x7f07004e;
@@ -1227,6 +1236,9 @@ containing a value of this type.
         /** 淡紫色 
          */
         public static final int thistle=0x7f070041;
+        /** 防御槽的深橙色 
+         */
+        public static final int tilicao=0x7f07009b;
         /** 热粉红色 
          */
         public static final int tomato=0x7f07001f;
@@ -1243,6 +1255,9 @@ containing a value of this type.
         /** 薄荷色 
          */
         public static final int whitesmoke=0x7f07002c;
+        /** 体力槽的深橙色 
+         */
+        public static final int wushuangcao=0x7f07009c;
         /** 亮黄色 
          */
         public static final int yellow=0x7f070009;
@@ -1510,17 +1525,22 @@ containing a value of this type.
         public static final int abs__up=0x7f05000b;
         public static final int disableHome=0x7f050009;
         public static final int edit_query=0x7f05002c;
-        public static final int et_search=0x7f050072;
+        public static final int et_search=0x7f05007f;
         public static final int fl_fragments=0x7f050041;
         public static final int fullscreen=0x7f050013;
         public static final int homeAsUp=0x7f050006;
+        public static final int include_fangyu=0x7f050069;
+        public static final int include_gongji=0x7f050067;
+        public static final int include_pohuai=0x7f050068;
+        public static final int include_tili=0x7f05006a;
+        public static final int include_wushuang=0x7f05006b;
         public static final int left=0x7f050010;
         public static final int listMode=0x7f050002;
-        public static final int ll_gongji2=0x7f050067;
-        public static final int ll_shuxingPart=0x7f050060;
+        public static final int ll_gongjicao=0x7f05007e;
+        public static final int ll_shuxingPart=0x7f050066;
         public static final int lv1=0x7f05005f;
-        public static final int lv_weaponRank=0x7f050068;
-        public static final int lv_weaponType=0x7f050069;
+        public static final int lv_weaponRank=0x7f05006c;
+        public static final int lv_weaponType=0x7f05006d;
         public static final int margin=0x7f050012;
         public static final int menu_head_left=0x7f050038;
         public static final int menu_head_left_iv=0x7f050039;
@@ -1534,13 +1554,15 @@ containing a value of this type.
         public static final int normal=0x7f050001;
         public static final int right=0x7f050011;
         public static final int rl_actionbar=0x7f050040;
-        public static final int rl_gongji1=0x7f050061;
+        public static final int rl_gongji1=0x7f050078;
+        public static final int rl_weaponGaizaoAndDuanzao=0x7f050062;
+        public static final int rl_weaponNameAndRank=0x7f050060;
         public static final int selected_view=0x7f050015;
         public static final int showCustom=0x7f050008;
         public static final int showHome=0x7f050005;
         public static final int showTitle=0x7f050007;
-        public static final int slidingmenulayout=0x7f05006a;
-        public static final int slidingmenumain=0x7f050071;
+        public static final int slidingmenulayout=0x7f05006e;
+        public static final int slidingmenumain=0x7f050075;
         public static final int tabMode=0x7f050003;
         public static final int tv_C2=0x7f050050;
         public static final int tv_C3=0x7f050051;
@@ -1559,12 +1581,17 @@ containing a value of this type.
         public static final int tv_N4=0x7f050046;
         public static final int tv_N5=0x7f050047;
         public static final int tv_N6=0x7f050048;
-        public static final int tv_base_gongjili=0x7f050064;
+        public static final int tv_base_gongjili=0x7f05007b;
         public static final int tv_content=0x7f05005e;
-        public static final int tv_fujiang_1=0x7f05006f;
-        public static final int tv_gongjili=0x7f050062;
+        public static final int tv_duanzao=0x7f050064;
+        public static final int tv_duanzaoData=0x7f050065;
+        public static final int tv_fujiang_1=0x7f050073;
+        public static final int tv_gaizaoData=0x7f050063;
+        public static final int tv_gongjiDown=0x7f050076;
+        public static final int tv_gongjiUp=0x7f050077;
+        public static final int tv_gongjili=0x7f050079;
         public static final int tv_name=0x7f050042;
-        public static final int tv_qita_1=0x7f050070;
+        public static final int tv_qita_1=0x7f050074;
         public static final int tv_r1=0x7f050054;
         public static final int tv_r2=0x7f050055;
         public static final int tv_r3=0x7f050056;
@@ -1572,15 +1599,16 @@ containing a value of this type.
         public static final int tv_r5=0x7f050058;
         public static final int tv_r6=0x7f050059;
         public static final int tv_r7=0x7f05005a;
-        public static final int tv_renwu_1=0x7f05006d;
-        public static final int tv_renwu_2=0x7f05006e;
-        public static final int tv_rise_gongjili=0x7f050065;
-        public static final int tv_slotNumber_gongji=0x7f050066;
-        public static final int tv_slot_gongji=0x7f050063;
+        public static final int tv_rank=0x7f050061;
+        public static final int tv_renwu_1=0x7f050071;
+        public static final int tv_renwu_2=0x7f050072;
+        public static final int tv_rise_gongjili=0x7f05007c;
+        public static final int tv_slotNumber_gongji=0x7f05007d;
+        public static final int tv_slot_gongji=0x7f05007a;
         public static final int tv_weaponName=0x7f05005c;
         public static final int tv_weaponRank=0x7f05005b;
-        public static final int tv_wuqi_1=0x7f05006b;
-        public static final int tv_wuqi_2=0x7f05006c;
+        public static final int tv_wuqi_1=0x7f05006f;
+        public static final int tv_wuqi_2=0x7f050070;
         public static final int useLogo=0x7f050004;
         public static final int wb_content=0x7f05005d;
         public static final int wrap_content=0x7f050000;
@@ -1625,7 +1653,8 @@ containing a value of this type.
         public static final int sherlock_spinner_item=0x7f030021;
         public static final int slidingmenu=0x7f030022;
         public static final int slidingmenumain=0x7f030023;
-        public static final int weapon_search=0x7f030024;
+        public static final int view_duanzao=0x7f030024;
+        public static final int weapon_search=0x7f030025;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
