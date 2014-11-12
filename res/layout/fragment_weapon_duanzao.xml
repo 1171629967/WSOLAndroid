@@ -1,134 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black" >
 
     <RelativeLayout
-        android:id="@+id/rl_actionbar"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    <!-- 武器名称和等级 -->
+        <RelativeLayout
+            android:id="@+id/rl_actionbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
 
-    <RelativeLayout
-        android:id="@+id/rl_weaponNameAndRank"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rl_actionbar"
-        android:layout_marginTop="5dp" >
+        <!-- 武器名称和等级 -->
 
-        <TextView
-            android:id="@+id/tv_weaponName"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/rl_weaponNameAndRank"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:textColor="@color/white"
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/tv_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-        
-        <TextView
-            android:text="级别"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/tv_rank"
+            android:layout_below="@+id/rl_actionbar"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_centerVertical="true"
-            android:textColor="@color/gongjicao"
-            android:textSize="20sp" />
-    </RelativeLayout>
-    
-    <!-- 武器改造和锻造 -->
+            android:layout_marginTop="5dp" >
 
-    <RelativeLayout
-        android:id="@+id/rl_weaponGaizaoAndDuanzao"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rl_weaponNameAndRank"
-        android:layout_marginTop="5dp" >
+            <TextView
+                android:id="@+id/tv_weaponName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
 
-        <TextView
-            android:text="改造"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:textColor="@color/gongjicao"
-            android:layout_toLeftOf="@+id/tv_gaizaoData"
-            android:textSize="20sp" />
-        
-        <TextView
-            android:id="@+id/tv_gaizaoData"
-            android:text="0/0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/tv_duanzao"
-            android:layout_marginRight="40dp"
-            android:layout_centerVertical="true"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            <TextView
+                android:id="@+id/tv_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/tv_duanzaoData"
-            android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/tv_rank"
+                android:text="级别"
+                android:textColor="@color/gongjicao"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <!-- 武器改造和锻造 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_weaponGaizaoAndDuanzao"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-        
-        <TextView
-            android:id="@+id/tv_duanzao"
-            android:text="锻造"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/tv_duanzaoData"
+            android:layout_below="@+id/rl_weaponNameAndRank"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_centerVertical="true"
-            android:textColor="@color/gongjicao"
-            android:textSize="20sp" />
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_gaizaoData"
+                android:text="改造"
+                android:textColor="@color/gongjicao"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_gaizaoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="40dp"
+                android:layout_toLeftOf="@+id/tv_duanzao"
+                android:text="0/0"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_duanzaoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_duanzao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/tv_duanzaoData"
+                android:text="锻造"
+                android:textColor="@color/gongjicao"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <!-- 模式 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_moshi"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_weaponGaizaoAndDuanzao"
+            android:layout_marginTop="5dp" >
+
+            <Button
+                android:id="@+id/bt_changeMoshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="切换模式"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_currentMoshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="当前为锻造模式"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+        <!-- 五大锻造属性模块 -->
+
+        <LinearLayout
+            android:id="@+id/ll_shuxingPart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_moshi"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/include_gongji"
+                layout="@layout/view_duanzao" />
+
+            <include
+                android:id="@+id/include_pohuai"
+                layout="@layout/view_duanzao" />
+
+            <include
+                android:id="@+id/include_fangyu"
+                layout="@layout/view_duanzao" />
+
+            <include
+                android:id="@+id/include_tili"
+                layout="@layout/view_duanzao" />
+
+            <include
+                android:id="@+id/include_wushuang"
+                layout="@layout/view_duanzao" />
+            
+            <include
+                android:id="@+id/include_yidong"
+                layout="@layout/view_yidongtiaoyue" />
+            
+            <include
+                android:id="@+id/include_tiaoyue"
+                layout="@layout/view_yidongtiaoyue" />
+        </LinearLayout>
     </RelativeLayout>
 
-    <!-- 五大锻造属性模块 -->
-
-    <LinearLayout
-        android:layout_below="@+id/rl_weaponGaizaoAndDuanzao"
-        android:layout_marginTop="20dp"
-        android:id="@+id/ll_shuxingPart"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
-
-        <include
-            android:id="@+id/include_gongji"
-            layout="@layout/view_duanzao" />
-
-        <include
-            android:id="@+id/include_pohuai"
-            layout="@layout/view_duanzao" />
-
-        <include
-            android:id="@+id/include_fangyu"
-            layout="@layout/view_duanzao" />
-
-        <include
-            android:id="@+id/include_tili"
-            layout="@layout/view_duanzao" />
-
-        <include
-            android:id="@+id/include_wushuang"
-            layout="@layout/view_duanzao" />
-    </LinearLayout>
-
-</RelativeLayout>
+</ScrollView>

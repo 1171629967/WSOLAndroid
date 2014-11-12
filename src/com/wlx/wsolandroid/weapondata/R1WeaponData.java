@@ -9,29 +9,63 @@ public class R1WeaponData {
 	/** 攻击基础值 */
 	public static final int[] weaponBaseGongji={
 		49,//"偃月刀"
-		44 //"大斧"
+		44,//"大斧"
+		46,//碎棒
+		45,//铁鞭
+		44,//朴刀
 	};
 	
 	/** 破坏基础值 */
 	public static final int[] weaponBasePohuai={
 		37,//"偃月刀"
-		44 //"大斧"
+		44,//"大斧"
+		55,//碎棒
+		49,//铁鞭
+		39,//朴刀
 	};
 	/** 防御基础值 */
 	public static final int[] weaponBaseFangyu={
 		30,//"偃月刀"
-		34 //"大斧"
+		34,//"大斧"
+		42,//碎棒
+		30,//铁鞭
+		31,//朴刀
 	};
 	/** 体力基础值 */
 	public static final int[] weaponBaseTili={
 		170,//"偃月刀"
-		170 //"大斧"
+		170,//"大斧"
+		200,//碎棒
+		190,//铁鞭
+		170,//朴刀
 	};
 	/** 无双基础值 */
 	public static final int[] weaponBaseWushuang={
 		140,//"偃月刀"
-		145 //"大斧"
+		145,//"大斧"
+		120,//碎棒
+		140,//铁鞭
+		155,//朴刀
 	};
+	/** 移动基础值 */
+	public static final int[] weaponBaseYidong={
+		110,//"偃月刀"
+		115,//"大斧"
+		100,//碎棒
+		110,//铁鞭
+		125,//朴刀
+	};
+	/** 跳跃基础值 */
+	public static final int[] weaponBaseTiaoyue={
+		135,//"偃月刀"
+		125,//"大斧"
+		120,//碎棒
+		130,//铁鞭
+		150,//朴刀
+	};
+	
+	
+	
 	
 	/** 攻击强化位 */
 	public static final int[] weaponSlotGongji={

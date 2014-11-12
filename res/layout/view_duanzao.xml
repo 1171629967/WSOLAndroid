@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:paddingTop="5dp"
-    android:paddingBottom="5dp"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
 
     <!-- 减少攻击锻造按钮 -->
 
@@ -39,20 +40,36 @@
         android:layout_toLeftOf="@+id/tv_gongjiUp"
         android:layout_toRightOf="@+id/tv_gongjiDown" >
 
-        <TextView
-            android:id="@+id/tv_gongjili"
+        <LinearLayout
+            android:id="@+id/ll_gongjili"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="攻击力"
-            android:textColor="#b99f98"
-            android:textSize="20sp" />
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_gongjili"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="攻击力"
+                android:textColor="#b99f98"
+                android:textSize="20sp" />
+            <!-- 装特殊强化的容器 -->
+
+            <LinearLayout
+                android:id="@+id/ll_teshuqianghua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
+            
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/tv_gongjili"
+            android:layout_alignBottom="@+id/ll_gongjili"
             android:layout_toLeftOf="@+id/tv_slot_gongji"
-            android:layout_toRightOf="@+id/tv_gongjili"
+            android:layout_toRightOf="@+id/ll_gongjili"
             android:orientation="horizontal" >
 
             <!-- 攻击基础值 -->
@@ -86,7 +103,7 @@
             android:id="@+id/tv_slot_gongji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/tv_gongjili"
+            android:layout_alignBottom="@+id/ll_gongjili"
             android:layout_marginRight="3dp"
             android:layout_toLeftOf="@+id/tv_slotNumber_gongji"
             android:text="Slot"
@@ -99,7 +116,7 @@
             android:id="@+id/tv_slotNumber_gongji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/tv_gongjili"
+            android:layout_alignBottom="@+id/ll_gongjili"
             android:layout_alignParentRight="true"
             android:text="5"
             android:textColor="@color/gray"
@@ -110,7 +127,7 @@
     <!-- 攻击槽 -->
 
     <LinearLayout
-        android:id="@+id/ll_gongjicao"
+        android:layout_marginTop="2dp"
         android:layout_width="fill_parent"
         android:layout_height="10dp"
         android:layout_below="@+id/rl_gongji1"
@@ -118,6 +135,17 @@
         android:layout_toLeftOf="@+id/tv_gongjiUp"
         android:layout_toRightOf="@+id/tv_gongjiDown"
         android:background="@drawable/borner_weapon_duanzao"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:id="@+id/ll_gongjicao"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/rl_gongji1"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tv_gongjiDown"
         android:orientation="horizontal"
         android:padding="0.5px" >
     </LinearLayout>

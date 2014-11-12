@@ -157,6 +157,7 @@
     <color name="fangyucao">#79D8CF</color><!--防御槽的深橙色 -->
     <color name="tilicao">#B9BE67</color><!--体力槽的深橙色 -->
     <color name="wushuangcao">#DB7AA9</color><!--无双槽的深橙色 -->
+    <color name="tesuqianghua">#00DCE0</color><!--特殊强化颜色 -->
     
     
 </resources>

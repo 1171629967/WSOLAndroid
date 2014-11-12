@@ -3,11 +3,16 @@ package com.wlx.wsolandroid.widget;
 import com.wlx.wsolandroid.R;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.LinearLayout;
 
 public class DuanzaoView extends View {
 	private Context context;
@@ -24,8 +29,14 @@ public class DuanzaoView extends View {
     
  
     public static final float totalPoint = 400;
-    //1攻击 2破坏 3防御 4体力 5无双
+    public static final float totalPointYidong = 200;
+    //1攻击 2破坏 3防御 4体力 5无双 6移动和跳跃
     private int     type;
+    
+ 
+   
+    
+
 
     /**
      * 
@@ -59,11 +70,21 @@ public class DuanzaoView extends View {
         //transparentPaint.setColor(Color.TRANSPARENT);
     }
 
+    
+    public void changeWidth(float selfWidth){
+    	this.selfWidth = selfWidth;
+    	
+    }
+    
  
+    
+   
     
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        
+       
         
         //根据type设置画笔颜色
         switch (type) {
@@ -81,7 +102,10 @@ public class DuanzaoView extends View {
                 break;
             case 5:
                 paint.setColor(context.getResources().getColor(R.color.wushuangcao));
-                break;       
+                break;  
+            case 6:
+                paint.setColor(context.getResources().getColor(R.color.pohuaicao));
+                break;
         }
         
         if (needStar) {
@@ -89,6 +113,19 @@ public class DuanzaoView extends View {
         	//canvas.drawRect(0, 0, transparentWidth, selfHeight, transparentPaint);
         	//再画中间有颜色部分
         	canvas.drawRect(transparentWidth, 0, selfWidth, selfHeight, paint);
+        	Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(),R.drawable.star);
+        	bitmap = Bitmap.createScaledBitmap(bitmap, (int)selfHeight, (int)selfHeight,true);
+        	Rect src = new Rect();
+        	src.left = 0;
+        	src.top = 0;
+        	src.right = (int) selfHeight;
+        	src.bottom = (int) selfHeight;
+        	Rect dst = new Rect();
+        	dst.left = (int) (selfWidth / 2 - selfHeight / 2 + 1);
+        	dst.top = 0;
+        	dst.right = (int) (selfWidth / 2 + selfHeight / 2 + 1);
+        	dst.bottom = (int) selfHeight;
+        	canvas.drawBitmap(bitmap, src, dst, paint);
 		}
         else {
         	canvas.drawRect(0, 0, selfWidth, selfHeight, paint);
