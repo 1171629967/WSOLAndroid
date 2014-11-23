@@ -1928,11 +1928,355 @@ com.wlx.wsolandroid.R$layout
 com.wlx.wsolandroid.R$string
 com.wlx.wsolandroid.R$style
 com.wlx.wsolandroid.R$styleable
-com.wlx.wsolandroid.constant.Constant
+com.wlx.wsolandroid.WeaponDuanzaoFragment:
+    private static final int CURRENT_MOSHI_DUANZAO
+    private static final int CURRENT_MOSHI_TESUDUANZAO
+com.wlx.wsolandroid.constant.Constant:
+    public static final java.lang.String JINPAIWUQI
+    public static final java.lang.String WUQIDUANZAO
+    public static final java.lang.String RENWUBAOCHOU
+    public static final java.lang.String RENWUDENGJI
+    public static final java.lang.String FUJIANG
+    public static final java.lang.String ABOUTAPP
+    public static final java.lang.String MEIZHOUHUODONG
+    public static final java.lang.String weaponNameR1
+    public static final java.lang.String weaponDataR1G
+    public static final java.lang.String weaponDataR1P
+    public static final java.lang.String weaponDataR1F
+    public static final java.lang.String weaponDataR1T
+    public static final java.lang.String weaponDataR1W
+    public static final java.lang.String xishuN1
+    public static final java.lang.String xishuN2
+    public static final java.lang.String xishuN3
+    public static final java.lang.String xishuN4
+    public static final java.lang.String xishuN5
+    public static final java.lang.String xishuN6
+    public static final java.lang.String xishuE6
+    public static final java.lang.String xishuE7
+    public static final java.lang.String xishuE8
+    public static final java.lang.String xishuE9
+    public static final java.lang.String xishuD
+    public static final java.lang.String xishuJA
+    public static final java.lang.String xishuJC
+    public static final java.lang.String xishuC2
+    public static final java.lang.String xishuC3
+    public static final java.lang.String xishuC4
+    public static final java.lang.String xishuC5
+    3:3:public Constant()
 com.wlx.wsolandroid.model.Xishu:
     private static final long serialVersionUID
 com.wlx.wsolandroid.utils.Utils:
-    9:9:public Utils()
+    13:13:public Utils()
+com.wlx.wsolandroid.weapondata.ClothesXiandingData
+com.wlx.wsolandroid.weapondata.R1WeaponData:
+    8:8:public R1WeaponData()
+com.wlx.wsolandroid.weapondata.R2WeaponData
+com.wlx.wsolandroid.weapondata.R3WeaponData:
+    7:7:public R3WeaponData()
+com.wlx.wsolandroid.weapondata.R4WeaponData:
+    6:6:public R4WeaponData()
+com.wlx.wsolandroid.weapondata.R5WeaponData:
+    8:8:public R5WeaponData()
+com.wlx.wsolandroid.weapondata.R6WeaponData:
+    3:3:public R6WeaponData()
+com.wlx.wsolandroid.weapondata.R7WeaponData:
+    3:3:public R7WeaponData()
+com.wlx.wsolandroid.widget.DuanzaoView:
+    public static final float totalPoint
+    public static final float totalPointYidong
+    67:71:public DuanzaoView(android.content.Context,android.util.AttributeSet)
+com.wlx.wsolandroid.widget.TesuqianghuaView:
+    55:57:public TesuqianghuaView(android.content.Context,android.util.AttributeSet)
+net.tsz.afinal.FinalBitmap
+net.tsz.afinal.FinalBitmap$1
+net.tsz.afinal.FinalBitmap$AsyncDrawable
+net.tsz.afinal.FinalBitmap$BitmapLoadAndDisplayTask
+net.tsz.afinal.FinalBitmap$CacheExecutecTask
+net.tsz.afinal.FinalBitmap$FinalBitmapConfig
+net.tsz.afinal.FinalDb
+net.tsz.afinal.FinalDb$DaoConfig
+net.tsz.afinal.FinalDb$DbUpdateListener
+net.tsz.afinal.FinalDb$SqliteDbHelper
+net.tsz.afinal.FinalHttp:
+    private static final int DEFAULT_SOCKET_BUFFER_SIZE
+    private static final java.lang.String HEADER_ACCEPT_ENCODING
+    private static final java.lang.String ENCODING_GZIP
+    154:154:public org.apache.http.client.HttpClient getHttpClient()
+    158:158:public org.apache.http.protocol.HttpContext getHttpContext()
+    162:164:public void configCharset(java.lang.String)
+    167:168:public void configCookieStore(org.apache.http.client.CookieStore)
+    172:173:public void configUserAgent(java.lang.String)
+    181:185:public void configTimeout(int)
+    192:194:public void configSSLSocketFactory(org.apache.http.conn.ssl.SSLSocketFactory)
+    201:202:public void configRequestExecutionRetryCount(int)
+    210:211:public void addHeader(java.lang.String,java.lang.String)
+    218:219:public void get(java.lang.String,net.tsz.afinal.http.AjaxCallBack)
+    226:229:public void get(java.lang.String,org.apache.http.Header[],net.tsz.afinal.http.AjaxParams,net.tsz.afinal.http.AjaxCallBack)
+    232:232:public java.lang.Object getSync(java.lang.String)
+    236:237:public java.lang.Object getSync(java.lang.String,net.tsz.afinal.http.AjaxParams)
+    242:244:public java.lang.Object getSync(java.lang.String,org.apache.http.Header[],net.tsz.afinal.http.AjaxParams)
+    250:251:public void post(java.lang.String,net.tsz.afinal.http.AjaxCallBack)
+    254:255:public void post(java.lang.String,net.tsz.afinal.http.AjaxParams,net.tsz.afinal.http.AjaxCallBack)
+    258:259:public void post(java.lang.String,org.apache.http.HttpEntity,java.lang.String,net.tsz.afinal.http.AjaxCallBack)
+    262:266:public void post(java.lang.String,org.apache.http.Header[],net.tsz.afinal.http.AjaxParams,java.lang.String,net.tsz.afinal.http.AjaxCallBack)
+    269:272:public void post(java.lang.String,org.apache.http.Header[],org.apache.http.HttpEntity,java.lang.String,net.tsz.afinal.http.AjaxCallBack)
+    276:276:public java.lang.Object postSync(java.lang.String)
+    280:280:public java.lang.Object postSync(java.lang.String,net.tsz.afinal.http.AjaxParams)
+    284:284:public java.lang.Object postSync(java.lang.String,org.apache.http.HttpEntity,java.lang.String)
+    289:292:public java.lang.Object postSync(java.lang.String,org.apache.http.Header[],net.tsz.afinal.http.AjaxParams,java.lang.String)
+    296:298:public java.lang.Object postSync(java.lang.String,org.apache.http.Header[],org.apache.http.HttpEntity,java.lang.String)
+    305:306:public void put(java.lang.String,net.tsz.afinal.http.AjaxCallBack)
+    310:311:public void put(java.lang.String,net.tsz.afinal.http.AjaxParams,net.tsz.afinal.http.AjaxCallBack)
+    314:315:public void put(java.lang.String,org.apache.http.HttpEntity,java.lang.String,net.tsz.afinal.http.AjaxCallBack)
+    318:321:public void put(java.lang.String,org.apache.http.Header[],org.apache.http.HttpEntity,java.lang.String,net.tsz.afinal.http.AjaxCallBack)
+    324:324:public java.lang.Object putSync(java.lang.String)
+    328:328:public java.lang.Object putSync(java.lang.String,net.tsz.afinal.http.AjaxParams)
+    332:332:public java.lang.Object putSync(java.lang.String,org.apache.http.HttpEntity,java.lang.String)
+    337:339:public java.lang.Object putSync(java.lang.String,org.apache.http.Header[],org.apache.http.HttpEntity,java.lang.String)
+    344:346:public void delete(java.lang.String,net.tsz.afinal.http.AjaxCallBack)
+    349:352:public void delete(java.lang.String,org.apache.http.Header[],net.tsz.afinal.http.AjaxCallBack)
+    355:355:public java.lang.Object deleteSync(java.lang.String)
+    359:361:public java.lang.Object deleteSync(java.lang.String,org.apache.http.Header[])
+    366:366:public net.tsz.afinal.http.HttpHandler download(java.lang.String,java.lang.String,net.tsz.afinal.http.AjaxCallBack)
+    371:371:public net.tsz.afinal.http.HttpHandler download(java.lang.String,java.lang.String,boolean,net.tsz.afinal.http.AjaxCallBack)
+    375:375:public net.tsz.afinal.http.HttpHandler download(java.lang.String,net.tsz.afinal.http.AjaxParams,java.lang.String,net.tsz.afinal.http.AjaxCallBack)
+    379:382:public net.tsz.afinal.http.HttpHandler download(java.lang.String,net.tsz.afinal.http.AjaxParams,java.lang.String,boolean,net.tsz.afinal.http.AjaxCallBack)
+    397:400:protected java.lang.Object sendSyncRequest(org.apache.http.impl.client.DefaultHttpClient,org.apache.http.protocol.HttpContext,org.apache.http.client.methods.HttpUriRequest,java.lang.String)
+    412:418:private org.apache.http.HttpEntity paramsToEntity(net.tsz.afinal.http.AjaxParams)
+    422:426:private org.apache.http.client.methods.HttpEntityEnclosingRequestBase addEntityToRequestBase(org.apache.http.client.methods.HttpEntityEnclosingRequestBase,org.apache.http.HttpEntity)
+net.tsz.afinal.annotation.sqlite.Id
+net.tsz.afinal.annotation.sqlite.ManyToOne
+net.tsz.afinal.annotation.sqlite.OneToMany
+net.tsz.afinal.annotation.sqlite.Property
+net.tsz.afinal.annotation.sqlite.Table
+net.tsz.afinal.annotation.sqlite.Transient
+net.tsz.afinal.bitmap.core.BaseMemoryCacheImpl
+net.tsz.afinal.bitmap.core.BaseMemoryCacheImpl$1
+net.tsz.afinal.bitmap.core.BitmapCache
+net.tsz.afinal.bitmap.core.BitmapCache$ImageCacheParams
+net.tsz.afinal.bitmap.core.BitmapDecoder
+net.tsz.afinal.bitmap.core.BitmapDisplayConfig
+net.tsz.afinal.bitmap.core.BitmapDisplayConfig$AnimationType
+net.tsz.afinal.bitmap.core.BitmapProcess
+net.tsz.afinal.bitmap.core.BytesBufferPool
+net.tsz.afinal.bitmap.core.BytesBufferPool$BytesBuffer
+net.tsz.afinal.bitmap.core.DiskCache
+net.tsz.afinal.bitmap.core.DiskCache$LookupRequest
+net.tsz.afinal.bitmap.core.IMemoryCache
+net.tsz.afinal.bitmap.core.LruMemoryCache
+net.tsz.afinal.bitmap.core.SoftMemoryCacheImpl
+net.tsz.afinal.bitmap.display.Displayer
+net.tsz.afinal.bitmap.display.SimpleDisplayer
+net.tsz.afinal.bitmap.download.Downloader
+net.tsz.afinal.bitmap.download.SimpleDownloader
+net.tsz.afinal.bitmap.download.SimpleDownloader$FlushedInputStream
+net.tsz.afinal.core.ArrayDeque:
+    private static final int MIN_INITIAL_CAPACITY
+    private static final long serialVersionUID
+    101:117:private void allocateElements(int)
+    173:175:public ArrayDeque(int)
+    187:190:public ArrayDeque(java.util.Collection)
+    203:208:public void addFirst(java.lang.Object)
+    234:235:public boolean offerFirst(java.lang.Object)
+    254:257:public java.lang.Object removeFirst()
+    264:267:public java.lang.Object removeLast()
+    281:287:public java.lang.Object pollLast()
+    294:297:public java.lang.Object getFirst()
+    304:307:public java.lang.Object getLast()
+    311:311:public java.lang.Object peekFirst()
+    315:315:public java.lang.Object peekLast()
+    359:371:public boolean removeLastOccurrence(java.lang.Object)
+    415:415:public java.lang.Object remove()
+    443:443:public java.lang.Object element()
+    456:456:public java.lang.Object peek()
+    471:472:public void push(java.lang.Object)
+    485:485:public java.lang.Object pop()
+    578:578:public java.util.Iterator descendingIterator()
+    818:827:private void writeObject(java.io.ObjectOutputStream)
+    835:846:private void readObject(java.io.ObjectInputStream)
+net.tsz.afinal.core.ArrayDeque$DescendingIterator
+net.tsz.afinal.core.Arrays:
+    159:159:public static varargs java.util.List asList(java.lang.Object[])
+    173:173:public static int binarySearch(byte[],byte)
+    193:209:public static int binarySearch(byte[],int,int,byte)
+    223:223:public static int binarySearch(char[],char)
+    243:259:public static int binarySearch(char[],int,int,char)
+    273:273:public static int binarySearch(double[],double)
+    293:320:public static int binarySearch(double[],int,int,double)
+    334:334:public static int binarySearch(float[],float)
+    354:381:public static int binarySearch(float[],int,int,float)
+    395:395:public static int binarySearch(int[],int)
+    415:431:public static int binarySearch(int[],int,int,int)
+    445:445:public static int binarySearch(long[],long)
+    465:481:public static int binarySearch(long[],int,int,long)
+    498:498:public static int binarySearch(java.lang.Object[],java.lang.Object)
+    522:539:public static int binarySearch(java.lang.Object[],int,int,java.lang.Object)
+    558:558:public static int binarySearch(java.lang.Object[],java.lang.Object,java.util.Comparator)
+    584:604:public static int binarySearch(java.lang.Object[],int,int,java.lang.Object,java.util.Comparator)
+    618:618:public static int binarySearch(short[],short)
+    638:654:public static int binarySearch(short[],int,int,short)
+    658:664:private static void checkBinarySearchBounds(int,int,int)
+    675:678:public static void fill(byte[],byte)
+    691:694:public static void fill(int[],int)
+    707:710:public static void fill(boolean[],boolean)
+    723:726:public static void fill(java.lang.Object[],java.lang.Object)
+    747:755:public static int hashCode(boolean[])
+    775:783:public static int hashCode(int[])
+    803:811:public static int hashCode(short[])
+    831:839:public static int hashCode(char[])
+    859:867:public static int hashCode(byte[])
+    887:899:public static int hashCode(long[])
+    919:930:public static int hashCode(float[])
+    950:963:public static int hashCode(double[])
+    987:1001:public static int hashCode(java.lang.Object[])
+    1032:1040:public static int deepHashCode(java.lang.Object[])
+    1045:1082:private static int deepHashCodeElement(java.lang.Object)
+    1097:1108:public static boolean equals(byte[],byte[])
+    1123:1134:public static boolean equals(short[],short[])
+    1149:1160:public static boolean equals(char[],char[])
+    1175:1186:public static boolean equals(int[],int[])
+    1201:1212:public static boolean equals(long[],long[])
+    1229:1241:public static boolean equals(float[],float[])
+    1258:1270:public static boolean equals(double[],double[])
+    1285:1296:public static boolean equals(boolean[],boolean[])
+    1311:1323:public static boolean equals(java.lang.Object[],java.lang.Object[])
+    1363:1376:public static boolean deepEquals(java.lang.Object[],java.lang.Object[])
+    1382:1429:private static boolean deepEqualsElements(java.lang.Object,java.lang.Object)
+    1463:1477:public static java.lang.String toString(boolean[])
+    1493:1507:public static java.lang.String toString(byte[])
+    1523:1537:public static java.lang.String toString(char[])
+    1553:1567:public static java.lang.String toString(double[])
+    1583:1597:public static java.lang.String toString(float[])
+    1613:1627:public static java.lang.String toString(int[])
+    1643:1657:public static java.lang.String toString(long[])
+    1673:1687:public static java.lang.String toString(short[])
+    1703:1717:public static java.lang.String toString(java.lang.Object[])
+    1739:1745:public static java.lang.String deepToString(java.lang.Object[])
+    1764:1831:private static void deepToStringImpl(java.lang.Object[],java.lang.Object[],java.lang.StringBuilder)
+    1846:1854:private static boolean deepToStringImplContains(java.lang.Object[],java.lang.Object)
+    1870:1873:public static boolean[] copyOf(boolean[],int)
+    1889:1892:public static byte[] copyOf(byte[],int)
+    1908:1911:public static char[] copyOf(char[],int)
+    1927:1930:public static double[] copyOf(double[],int)
+    1946:1949:public static float[] copyOf(float[],int)
+    1965:1968:public static int[] copyOf(int[],int)
+    1984:1987:public static long[] copyOf(long[],int)
+    2003:2006:public static short[] copyOf(short[],int)
+    2047:2050:public static java.lang.Object[] copyOf(java.lang.Object[],int,java.lang.Class)
+    2069:2080:public static boolean[] copyOfRange(boolean[],int,int)
+    2099:2110:public static byte[] copyOfRange(byte[],int,int)
+    2129:2140:public static char[] copyOfRange(char[],int,int)
+    2159:2170:public static double[] copyOfRange(double[],int,int)
+    2189:2200:public static float[] copyOfRange(float[],int,int)
+    2219:2230:public static int[] copyOfRange(int[],int,int)
+    2249:2260:public static long[] copyOfRange(long[],int,int)
+    2279:2290:public static short[] copyOfRange(short[],int,int)
+    2342:2353:public static java.lang.Object[] copyOfRange(java.lang.Object[],int,int,java.lang.Class)
+net.tsz.afinal.core.Arrays$ArrayList
+net.tsz.afinal.core.AsyncTask:
+    private static final java.lang.String LOG_TAG
+    private static final int CORE_POOL_SIZE
+    private static final int MAXIMUM_POOL_SIZE
+    private static final int KEEP_ALIVE
+    private static final int MESSAGE_POST_RESULT
+    private static final int MESSAGE_POST_PROGRESS
+    127:128:public static void init()
+    132:133:public static void setDefaultExecutor(java.util.concurrent.Executor)
+    187:187:public final net.tsz.afinal.core.AsyncTask$Status getStatus()
+    321:322:public final boolean cancel(boolean)
+    337:337:public final java.lang.Object get()
+    357:357:public final java.lang.Object get(long,java.util.concurrent.TimeUnit)
+    389:389:public final varargs net.tsz.afinal.core.AsyncTask execute(java.lang.Object[])
+    459:460:public static void execute(java.lang.Runnable)
+net.tsz.afinal.core.Deque:
+    public abstract void addFirst(java.lang.Object)
+    public abstract void addLast(java.lang.Object)
+    public abstract boolean offerFirst(java.lang.Object)
+    public abstract boolean offerLast(java.lang.Object)
+    public abstract java.lang.Object removeFirst()
+    public abstract java.lang.Object removeLast()
+    public abstract java.lang.Object pollFirst()
+    public abstract java.lang.Object pollLast()
+    public abstract java.lang.Object getFirst()
+    public abstract java.lang.Object getLast()
+    public abstract java.lang.Object peekFirst()
+    public abstract java.lang.Object peekLast()
+    public abstract boolean removeFirstOccurrence(java.lang.Object)
+    public abstract boolean removeLastOccurrence(java.lang.Object)
+    public abstract boolean add(java.lang.Object)
+    public abstract boolean offer(java.lang.Object)
+    public abstract java.lang.Object remove()
+    public abstract java.lang.Object poll()
+    public abstract java.lang.Object element()
+    public abstract java.lang.Object peek()
+    public abstract void push(java.lang.Object)
+    public abstract java.lang.Object pop()
+    public abstract boolean remove(java.lang.Object)
+    public abstract boolean contains(java.lang.Object)
+    public abstract int size()
+    public abstract java.util.Iterator iterator()
+    public abstract java.util.Iterator descendingIterator()
+net.tsz.afinal.core.FileNameGenerator
+net.tsz.afinal.core.Queue:
+    public abstract boolean add(java.lang.Object)
+    public abstract boolean offer(java.lang.Object)
+    public abstract java.lang.Object remove()
+    public abstract java.lang.Object poll()
+    public abstract java.lang.Object element()
+    public abstract java.lang.Object peek()
+net.tsz.afinal.db.sqlite.CursorUtils
+net.tsz.afinal.db.sqlite.DbModel
+net.tsz.afinal.db.sqlite.ManyToOneLazyLoader
+net.tsz.afinal.db.sqlite.OneToManyLazyLoader
+net.tsz.afinal.db.sqlite.SqlBuilder
+net.tsz.afinal.db.sqlite.SqlInfo
+net.tsz.afinal.db.table.Id
+net.tsz.afinal.db.table.KeyValue
+net.tsz.afinal.db.table.ManyToOne
+net.tsz.afinal.db.table.OneToMany
+net.tsz.afinal.db.table.Property
+net.tsz.afinal.db.table.TableInfo
+net.tsz.afinal.exception.AfinalException:
+    private static final long serialVersionUID
+    26:27:public AfinalException(java.lang.String)
+    30:31:public AfinalException(java.lang.Throwable)
+    34:35:public AfinalException(java.lang.String,java.lang.Throwable)
+net.tsz.afinal.exception.DbException
+net.tsz.afinal.exception.HttpException
+net.tsz.afinal.exception.ViewException:
+    private static final long serialVersionUID
+net.tsz.afinal.http.AjaxCallBack:
+    49:51:public net.tsz.afinal.http.AjaxCallBack progress(boolean,int)
+net.tsz.afinal.http.AjaxParams:
+    70:76:public AjaxParams(java.util.Map)
+    78:81:public AjaxParams(java.lang.String,java.lang.String)
+    83:93:public varargs AjaxParams(java.lang.Object[])
+    102:103:public void put(java.lang.String,java.io.File)
+    106:107:public void put(java.lang.String,java.io.InputStream)
+    110:111:public void put(java.lang.String,java.io.InputStream,java.lang.String)
+    121:124:public void put(java.lang.String,java.io.InputStream,java.lang.String,java.lang.String)
+    127:129:public void remove(java.lang.String)
+    159:194:public org.apache.http.HttpEntity getEntity()
+net.tsz.afinal.http.AjaxParams$FileWrapper
+net.tsz.afinal.http.HttpHandler:
+    private static final int UPDATE_START
+    private static final int UPDATE_LOADING
+    private static final int UPDATE_FAILURE
+    private static final int UPDATE_SUCCESS
+    157:157:public boolean isStop()
+    165:166:public void stop()
+net.tsz.afinal.http.MultipartEntity
+net.tsz.afinal.http.PreferencesCookieStore
+net.tsz.afinal.http.PreferencesCookieStore$SerializableCookie
+net.tsz.afinal.http.RetryHandler:
+    private static final int RETRY_SLEEP_TIME_MILLIS
+net.tsz.afinal.http.SyncRequestHandler
+net.tsz.afinal.http.entityhandler.FileEntityHandler:
+    34:34:public boolean isStop()
+    40:41:public void setStop(boolean)
+net.tsz.afinal.utils.ClassUtils
+net.tsz.afinal.utils.FieldUtils
+net.tsz.afinal.utils.Utils
 u.aly.a:
     80:81:public void a(u.aly.ar)
 u.aly.aa

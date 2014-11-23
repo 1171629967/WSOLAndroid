@@ -80,6 +80,13 @@
                     android:id="@+id/tv_qita_1"
                     style="@style/style2"
                     android:text="关于APP" />
+                
+                 <TextView
+                    android:id="@+id/tv_qita_2"
+                    style="@style/style2"
+                    android:text="每周活动" />
+                
+                
             </LinearLayout>
         </ScrollView>
     </com.jeremyfeinstein.slidingmenu.lib.SlidingMenu>

@@ -57,7 +57,7 @@
         android:textColor="@color/white"
         android:textSize="15sp" />
     
-    <!-- 移动上升 -->
+    <!-- 特殊上升值 -->
 
     <TextView
         android:id="@+id/tv_tesu_yidongli"
@@ -66,10 +66,22 @@
         android:layout_alignBottom="@+id/tv_base_yidongli"
         android:layout_alignLeft="@+id/tv_base_yidongli"
         android:layout_marginLeft="30dp"
-        android:text=""
         android:visibility="invisible"
         android:textColor="@color/white"
         android:textSize="15sp" />
+    
+    <!-- 特殊上升值 -->
+
+    <ImageView
+        android:id="@+id/iv_upNarrow"
+        android:layout_width="10dp"
+        android:layout_height="14dp"
+        android:background="@drawable/upnarrow"
+        android:layout_alignBottom="@+id/tv_tesu_yidongli"
+        android:layout_toRightOf="@+id/tv_tesu_yidongli"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="6dp"
+        android:visibility="invisible"/>
 
     <LinearLayout
         android:id="@+id/ll_yidongcao"

@@ -27,6 +27,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
@@ -41,6 +42,11 @@ import android.widget.Toast;
  * 
  */
 public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListener, OnItemClickListener {
+	
+	public  static int upNarrowWidth;
+	public  static int upNarrowHeight;
+	
+	
 	private MyActionBar actionBar;
 	private PopupWindow pop;
 	/** 手机屏幕的宽 */
@@ -82,6 +88,8 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 	private TextView tv_base_gongjili;
 	/** 攻击力上升值 */
 	private TextView tv_rise_gongjili;
+	/** 攻击力上升箭头 */
+	private ImageView iv_rise_upNarrow_gongji;
 	/** 攻击力强化位 */
 	private TextView tv_slotNumber_gongji;
 	/** 攻击条的容器 */
@@ -100,6 +108,8 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 	private TextView tv_base_pohuaili;
 	/** 破坏力上升值 */
 	private TextView tv_rise_pohuaili;
+	/** 破坏力上升箭头 */
+	private ImageView iv_rise_upNarrow_pohuai;
 	/** 破坏力强化位 */
 	private TextView tv_slotNumber_pohuai;
 	/** 破坏条的容器 */
@@ -118,6 +128,8 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 	private TextView tv_base_fangyuli;
 	/** 防御力上升值 */
 	private TextView tv_rise_fangyuli;
+	/** 防御力上升箭头 */
+	private ImageView iv_rise_upNarrow_fangyu;
 	/** 防御力强化位 */
 	private TextView tv_slotNumber_fangyu;
 	/** 防御条的容器 */
@@ -136,6 +148,8 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 	private TextView tv_base_tili;
 	/** 体力上升值 */
 	private TextView tv_rise_tili;
+	/** 体力力上升箭头 */
+	private ImageView iv_rise_upNarrow_tili;
 	/** 体力强化位 */
 	private TextView tv_slotNumber_tili;
 	/** 体力条的容器 */
@@ -154,6 +168,8 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 	private TextView tv_base_wushuang;
 	/** 无双上升值 */
 	private TextView tv_rise_wushuang;
+	/** 无双上升箭头 */
+	private ImageView iv_rise_upNarrow_wushuang;
 	/** 无双强化位 */
 	private TextView tv_slotNumber_wushuang;
 	/** 无双条的容器 */
@@ -174,6 +190,8 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 	private TextView tv_tesu_yidong;
 	/** 移动条的容器 */
 	private LinearLayout ll_yidongcao;
+	/** 移动特殊上升箭头 */
+	private ImageView iv_upNarrow_yidong;
 	// 跳跃相关控件--------------------------------
 	private View include_tiaoyue;
 	/** 跳跃字样 */
@@ -188,6 +206,8 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 	private TextView tv_tesu_tiaoyue;
 	/** 跳跃条的容器 */
 	private LinearLayout ll_tiaoyuecao;
+	/** 跳跃特殊上升箭头 */
+	private ImageView iv_upNarrow_tiaoyue;
 
 	/** 最大锻造值 */
 	private int maxDuanzaozhi = 24;
@@ -237,6 +257,12 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 	int riseFangyu;
 	int riseTili;
 	int riseWushuang;
+	// 和原来相比上升了多少点
+	int risedGongji = 0;
+	int risedPohuai = 0;
+	int risedFangyu = 0;
+	int risedTili = 0;
+	int risedWushuang = 0;
 	// 每一点数值所占的宽度
 	float persentWidth;
 	float persentWidthYidong;
@@ -281,6 +307,7 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 		tv_gongjiDown.setOnClickListener(this);
 		tv_base_gongjili = (TextView) include_gongji.findViewById(R.id.tv_base_gongjili);
 		tv_rise_gongjili = (TextView) include_gongji.findViewById(R.id.tv_rise_gongjili);
+		iv_rise_upNarrow_gongji = (ImageView)include_gongji.findViewById(R.id.iv_upNarrow_gongji_rise);
 		tv_slotNumber_gongji = (TextView) include_gongji.findViewById(R.id.tv_slotNumber_gongji);
 		ll_gongjicao = (LinearLayout) include_gongji.findViewById(R.id.ll_gongjicao);
 		// ll_gongjicao.setOrientation(LinearLayout.HORIZONTAL);
@@ -295,6 +322,7 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 		tv_pohuaiDown.setOnClickListener(this);
 		tv_base_pohuaili = (TextView) include_pohuai.findViewById(R.id.tv_base_gongjili);
 		tv_rise_pohuaili = (TextView) include_pohuai.findViewById(R.id.tv_rise_gongjili);
+		iv_rise_upNarrow_pohuai = (ImageView)include_pohuai.findViewById(R.id.iv_upNarrow_gongji_rise);
 		tv_slotNumber_pohuai = (TextView) include_pohuai.findViewById(R.id.tv_slotNumber_gongji);
 		ll_pohuaicao = (LinearLayout) include_pohuai.findViewById(R.id.ll_gongjicao);
 		ll_tesucao_pohuai = (LinearLayout) include_pohuai.findViewById(R.id.ll_teshuqianghua);
@@ -308,6 +336,7 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 		tv_fangyuDown.setOnClickListener(this);
 		tv_base_fangyuli = (TextView) include_fangyu.findViewById(R.id.tv_base_gongjili);
 		tv_rise_fangyuli = (TextView) include_fangyu.findViewById(R.id.tv_rise_gongjili);
+		iv_rise_upNarrow_fangyu = (ImageView)include_fangyu.findViewById(R.id.iv_upNarrow_gongji_rise);
 		tv_slotNumber_fangyu = (TextView) include_fangyu.findViewById(R.id.tv_slotNumber_gongji);
 		ll_fangyucao = (LinearLayout) include_fangyu.findViewById(R.id.ll_gongjicao);
 		ll_tesucao_fangyu = (LinearLayout) include_fangyu.findViewById(R.id.ll_teshuqianghua);
@@ -321,6 +350,7 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 		tv_tiliDown.setOnClickListener(this);
 		tv_base_tili = (TextView) include_tili.findViewById(R.id.tv_base_gongjili);
 		tv_rise_tili = (TextView) include_tili.findViewById(R.id.tv_rise_gongjili);
+		iv_rise_upNarrow_tili = (ImageView)include_tili.findViewById(R.id.iv_upNarrow_gongji_rise);
 		tv_slotNumber_tili = (TextView) include_tili.findViewById(R.id.tv_slotNumber_gongji);
 		ll_tilicao = (LinearLayout) include_tili.findViewById(R.id.ll_gongjicao);
 		ll_tesucao_tili = (LinearLayout) include_tili.findViewById(R.id.ll_teshuqianghua);
@@ -334,6 +364,7 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 		tv_wushuangDown.setOnClickListener(this);
 		tv_base_wushuang = (TextView) include_wushuang.findViewById(R.id.tv_base_gongjili);
 		tv_rise_wushuang = (TextView) include_wushuang.findViewById(R.id.tv_rise_gongjili);
+		iv_rise_upNarrow_wushuang = (ImageView)include_wushuang.findViewById(R.id.iv_upNarrow_gongji_rise);
 		tv_slotNumber_wushuang = (TextView) include_wushuang.findViewById(R.id.tv_slotNumber_gongji);
 		ll_wushuangcao = (LinearLayout) include_wushuang.findViewById(R.id.ll_gongjicao);
 		ll_tesucao_wushuang = (LinearLayout) include_wushuang.findViewById(R.id.ll_teshuqianghua);
@@ -348,6 +379,7 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 		tv_base_yidong = (TextView) include_yidong.findViewById(R.id.tv_base_yidongli);
 		tv_tesu_yidong = (TextView) include_yidong.findViewById(R.id.tv_tesu_yidongli);
 		ll_yidongcao = (LinearLayout) include_yidong.findViewById(R.id.ll_yidongcao);
+		iv_upNarrow_yidong = (ImageView) include_yidong.findViewById(R.id.iv_upNarrow);
 		// 初始化跳跃相关控件----------------------------
 		include_tiaoyue = view.findViewById(R.id.include_tiaoyue);
 		tv_tiaoyue = (TextView) include_tiaoyue.findViewById(R.id.tv_yidongli);
@@ -359,6 +391,7 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 		tv_base_tiaoyue = (TextView) include_tiaoyue.findViewById(R.id.tv_base_yidongli);
 		tv_tesu_tiaoyue = (TextView) include_tiaoyue.findViewById(R.id.tv_tesu_yidongli);
 		ll_tiaoyuecao = (LinearLayout) include_tiaoyue.findViewById(R.id.ll_yidongcao);
+		iv_upNarrow_tiaoyue = (ImageView) include_tiaoyue.findViewById(R.id.iv_upNarrow);
 
 		new Handler().postDelayed(new Runnable() {
 			@Override
@@ -438,11 +471,12 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 		riseFangyu = R1WeaponData.R1RiseFangyu[currentWeaponType] + currentWeaponRank * 3;
 		riseTili = R1WeaponData.R1RiseTili[currentWeaponType] + currentWeaponRank * 3;
 		riseWushuang = R1WeaponData.R1RiseWushuang[currentWeaponType] + currentWeaponRank * 3;
-		tv_rise_gongjili.setText("( + " + riseGongji + " )");
-		tv_rise_pohuaili.setText("( + " + risePohuai + " )");
-		tv_rise_fangyuli.setText("( + " + riseFangyu + " )");
-		tv_rise_tili.setText("( + " + riseTili + " )");
-		tv_rise_wushuang.setText("( + " + riseWushuang + " )");
+		
+		tv_rise_gongjili.setText("( + " + riseGongji);
+		tv_rise_pohuaili.setText("( + " + risePohuai);
+		tv_rise_fangyuli.setText("( + " + riseFangyu);
+		tv_rise_tili.setText("( + " + riseTili);
+		tv_rise_wushuang.setText("( + " + riseWushuang);
 
 		// 强化位
 		tv_slotNumber_gongji.setText(R1WeaponData.weaponSlotGongji[currentWeaponType] + "");
@@ -450,6 +484,9 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 		tv_slotNumber_fangyu.setText(R1WeaponData.weaponSlotFangyu[currentWeaponType] + "");
 		tv_slotNumber_tili.setText(R1WeaponData.weaponSlotTili[currentWeaponType] + "");
 		tv_slotNumber_wushuang.setText(R1WeaponData.weaponSlotWushuang[currentWeaponType] + "");
+		
+		upNarrowWidth = tv_base_gongjili.getWidth() / 2;
+		upNarrowHeight = tv_base_gongjili.getHeight();
 
 		// 获取攻击槽的总长度和高度(每个自定义View的高度即是槽的高度)
 		totalWidth = ll_gongjicao.getWidth();
@@ -767,6 +804,7 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 				currentTesuYidongTime++;
 				tv_tesu_yidong.setVisibility(View.VISIBLE);
 				tv_tesu_yidong.setText("+ "+currentTesuYidongTime);
+				iv_upNarrow_yidong.setVisibility(View.VISIBLE);
 				break;
 			case 2:
 				baseTiaoyue++;
@@ -779,6 +817,7 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 				currentTesuTiaoyueTime++;
 				tv_tesu_tiaoyue.setVisibility(View.VISIBLE);
 				tv_tesu_tiaoyue.setText("+ "+currentTesuTiaoyueTime);
+				iv_upNarrow_tiaoyue.setVisibility(View.VISIBLE);
 				break;
 
 			}
@@ -805,6 +844,7 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 				currentTesuYidongTime--;
 				if (currentTesuYidongTime == 0) {
 					tv_tesu_yidong.setVisibility(View.INVISIBLE);
+					iv_upNarrow_yidong.setVisibility(View.INVISIBLE);
 				}
 				tv_tesu_yidong.setText("+ "+currentTesuYidongTime);
 				break;
@@ -819,6 +859,7 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 				currentTesuTiaoyueTime--;
 				if (currentTesuTiaoyueTime == 0) {
 					tv_tesu_tiaoyue.setVisibility(View.INVISIBLE);
+					iv_upNarrow_tiaoyue.setVisibility(View.INVISIBLE);
 				}
 				tv_tesu_tiaoyue.setText("+ "+currentTesuTiaoyueTime);
 				break;
@@ -840,6 +881,9 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 				}
 				// 当前特殊强化次数增加1
 				currentTesuGongjiTime++;
+				risedGongji++;
+				tv_rise_gongjili.setText("( + "+(riseGongji+risedGongji));
+				iv_rise_upNarrow_gongji.setVisibility(View.VISIBLE);
 				break;
 			case 2:
 				if (currentTesuTime == 0) {
@@ -849,6 +893,9 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 				}
 				// 当前特殊强化次数增加1
 				currentTesuPohuaiTime++;
+				risedPohuai++;
+				tv_rise_pohuaili.setText("( + "+(risePohuai+risedPohuai));
+				iv_rise_upNarrow_pohuai.setVisibility(View.VISIBLE);
 				break;
 			case 3:
 				if (currentTesuTime == 0) {
@@ -858,6 +905,9 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 				}
 				// 当前特殊强化次数增加1
 				currentTesuFangyuTime++;
+				risedFangyu++;
+				tv_rise_fangyuli.setText("( + "+(riseFangyu+risedFangyu));
+				iv_rise_upNarrow_fangyu.setVisibility(View.VISIBLE);
 				break;
 			case 4:
 				if (currentTesuTime == 0) {
@@ -867,6 +917,9 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 				}
 				// 当前特殊强化次数增加1
 				currentTesuTiliTime++;
+				risedTili++;
+				tv_rise_tili.setText("( + "+(riseTili+risedTili));
+				iv_rise_upNarrow_tili.setVisibility(View.VISIBLE);
 				break;
 			case 5:
 				if (currentTesuTime == 0) {
@@ -876,6 +929,9 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 				}
 				// 当前特殊强化次数增加1
 				currentTesuWushuangTime++;
+				risedWushuang++;
+				tv_rise_wushuang.setText("( + "+(riseWushuang+risedWushuang));
+				iv_rise_upNarrow_wushuang.setVisibility(View.VISIBLE);
 				break;
 
 			}
@@ -937,26 +993,51 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 				index = ll_tesucao_gongji.getChildCount();
 				ll_tesucao_gongji.removeViewAt(index - 1);
 				currentTesuGongjiTime--;
+				risedGongji--;
+				tv_rise_gongjili.setText("( + "+(riseGongji+risedGongji));
+				if (risedGongji < 1) {
+					iv_rise_upNarrow_gongji.setVisibility(View.GONE);
+				}			
 				break;
 			case 2:
 				index = ll_tesucao_pohuai.getChildCount();
 				ll_tesucao_pohuai.removeViewAt(index - 1);
 				currentTesuPohuaiTime--;
+				risedPohuai--;
+				tv_rise_pohuaili.setText("( + "+(risePohuai+risedPohuai));
+				if (risedPohuai < 1) {
+					iv_rise_upNarrow_pohuai.setVisibility(View.GONE);
+				}
 				break;
 			case 3:
 				index = ll_tesucao_fangyu.getChildCount();
 				ll_tesucao_fangyu.removeViewAt(index - 1);
 				currentTesuFangyuTime--;
+				risedFangyu--;
+				tv_rise_fangyuli.setText("( + "+(riseFangyu+risedFangyu));
+				if (risedFangyu < 1) {
+					iv_rise_upNarrow_fangyu.setVisibility(View.GONE);
+				}
 				break;
 			case 4:
 				index = ll_tesucao_tili.getChildCount();
 				ll_tesucao_tili.removeViewAt(index - 1);
 				currentTesuTiliTime--;
+				risedTili--;
+				tv_rise_tili.setText("( + "+(riseTili+risedTili));
+				if (risedTili < 1) {
+					iv_rise_upNarrow_tili.setVisibility(View.GONE);
+				}
 				break;
 			case 5:
 				index = ll_tesucao_wushuang.getChildCount();
 				ll_tesucao_wushuang.removeViewAt(index - 1);
 				currentTesuWushuangTime--;
+				risedWushuang--;
+				tv_rise_wushuang.setText("( + "+(riseWushuang+risedWushuang));
+				if (risedWushuang < 1) {
+					iv_rise_upNarrow_wushuang.setVisibility(View.GONE);
+				}
 				break;
 			}
 
@@ -1013,6 +1094,28 @@ public class WeaponDuanzaoFragment extends BaseFragment implements OnClickListen
 		currentTesuFangyuTime = 0;
 		currentTesuTiliTime = 0;
 		currentTesuWushuangTime = 0;
+		currentTesuYidongTime = 0;
+		currentTesuTiaoyueTime = 0;
+		// 恢复和原来比上升的特殊强化数
+		risedGongji = 0;
+		risedPohuai = 0;
+		risedFangyu = 0;
+		risedTili = 0;
+		risedWushuang = 0;
+		iv_rise_upNarrow_gongji.setVisibility(View.GONE);
+		iv_rise_upNarrow_pohuai.setVisibility(View.GONE);
+		iv_rise_upNarrow_fangyu.setVisibility(View.GONE);
+		iv_rise_upNarrow_tili.setVisibility(View.GONE);
+		iv_rise_upNarrow_wushuang.setVisibility(View.GONE);
+		//隐藏移动跳跃相关控件
+		tv_yidongUp.setVisibility(View.INVISIBLE);
+		tv_yidongDown.setVisibility(View.INVISIBLE);
+		tv_tiaoyueUp.setVisibility(View.INVISIBLE);
+		tv_tiaoyueDown.setVisibility(View.INVISIBLE);
+		tv_tesu_yidong.setVisibility(View.INVISIBLE);
+		tv_tesu_tiaoyue.setVisibility(View.INVISIBLE);
+		iv_upNarrow_yidong.setVisibility(View.INVISIBLE);
+		iv_upNarrow_tiaoyue.setVisibility(View.INVISIBLE);
 	}
 
 	private void drawViewWidth(View view, int width) {

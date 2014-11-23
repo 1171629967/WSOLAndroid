@@ -14,7 +14,7 @@ import com.wlx.wsolandroid.constant.Constant;
 
 public class MainActivity extends FragmentActivity implements OnClickListener, menuClicklistener {
     public SlidingMenu menu;
-    private TextView   tv_wuqi_1,tv_wuqi_2, tv_renwu_1, tv_renwu_2, tv_qita_1, tv_fujiang_1;
+    private TextView   tv_wuqi_1,tv_wuqi_2, tv_renwu_1, tv_renwu_2, tv_qita_1, tv_qita_2,tv_fujiang_1;
     private String     currentFragment;
 
     @Override
@@ -34,12 +34,14 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
         tv_renwu_1 = (TextView) menu.findViewById(R.id.tv_renwu_1);
         tv_renwu_2 = (TextView) menu.findViewById(R.id.tv_renwu_2);
         tv_qita_1 = (TextView) menu.findViewById(R.id.tv_qita_1);
+        tv_qita_2 = (TextView) menu.findViewById(R.id.tv_qita_2);
         tv_fujiang_1 = (TextView) menu.findViewById(R.id.tv_fujiang_1);
         tv_wuqi_1.setOnClickListener(this);
         tv_wuqi_2.setOnClickListener(this);
         tv_renwu_1.setOnClickListener(this);
         tv_renwu_2.setOnClickListener(this);
         tv_qita_1.setOnClickListener(this);
+        tv_qita_2.setOnClickListener(this);
         tv_fujiang_1.setOnClickListener(this);
     }
 
@@ -111,6 +113,13 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
             getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment)
                     .commit();
             currentFragment = Constant.ABOUTAPP;
+        }
+      //每周活动----------------------------->
+        else if (v == tv_qita_2 && !currentFragment.equals(Constant.MEIZHOUHUODONG)) {
+            MeizhouhuodongFragment fragment = new MeizhouhuodongFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment)
+                    .commit();
+            currentFragment = Constant.MEIZHOUHUODONG;
         }
         //副将技能和属性----------------------------->
         else if (v == tv_fujiang_1 && !currentFragment.equals(Constant.FUJIANG)) {

@@ -4142,11 +4142,13 @@ com.wlx.wsolandroid.LoadtxtFragment$1 -> com.wlx.wsolandroid.f:
 com.wlx.wsolandroid.MainActivity -> com.wlx.wsolandroid.MainActivity:
     com.jeremyfeinstein.slidingmenu.lib.SlidingMenu menu -> m
     android.widget.TextView tv_wuqi_1 -> n
-    android.widget.TextView tv_renwu_1 -> o
-    android.widget.TextView tv_renwu_2 -> p
-    android.widget.TextView tv_qita_1 -> q
-    android.widget.TextView tv_fujiang_1 -> r
-    java.lang.String currentFragment -> s
+    android.widget.TextView tv_wuqi_2 -> o
+    android.widget.TextView tv_renwu_1 -> p
+    android.widget.TextView tv_renwu_2 -> q
+    android.widget.TextView tv_qita_1 -> r
+    android.widget.TextView tv_qita_2 -> s
+    android.widget.TextView tv_fujiang_1 -> t
+    java.lang.String currentFragment -> u
     void onCreate(android.os.Bundle) -> onCreate
     void initView() -> e
     void initSlidingMenu() -> f
@@ -4155,7 +4157,183 @@ com.wlx.wsolandroid.MainActivity -> com.wlx.wsolandroid.MainActivity:
     void onResume() -> onResume
     void onPause() -> onPause
     void menuClick() -> a
-com.wlx.wsolandroid.WeaponJinpaiFragment -> com.wlx.wsolandroid.g:
+com.wlx.wsolandroid.MeizhouhuodongFragment -> com.wlx.wsolandroid.g:
+    android.widget.TextView tv_content -> O
+    net.tsz.afinal.FinalHttp finalHttp -> P
+    void onCreate(android.os.Bundle) -> c
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
+    void initActionBar(android.view.View) -> a
+    void onResume() -> f
+    void onPause() -> g
+    android.widget.TextView access$0(com.wlx.wsolandroid.MeizhouhuodongFragment) -> a
+com.wlx.wsolandroid.MeizhouhuodongFragment$1 -> com.wlx.wsolandroid.h:
+    com.wlx.wsolandroid.MeizhouhuodongFragment this$0 -> a
+    void onSuccess(java.lang.Object) -> a
+    void onFailure(java.lang.Throwable,int,java.lang.String) -> a
+com.wlx.wsolandroid.MeizhouhuodongFragment$2 -> com.wlx.wsolandroid.i:
+    com.wlx.wsolandroid.MeizhouhuodongFragment this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.wlx.wsolandroid.WeaponDuanzaoFragment -> com.wlx.wsolandroid.j:
+    int upNarrowWidth -> O
+    int upNarrowHeight -> P
+    com.wlx.wsolandroid.widget.MyActionBar actionBar -> an
+    android.widget.PopupWindow pop -> ao
+    int windowWidth -> ap
+    android.widget.ListView lv_weaponType -> aq
+    android.widget.ListView lv_weaponRank -> ar
+    com.wlx.wsolandroid.adapter.WeaponTypeAdapter weaponTypeAdapter -> as
+    com.wlx.wsolandroid.adapter.WeaponRankAdapter weaponRankAdapter -> at
+    int currentWeaponRank -> au
+    int currentWeaponType -> av
+    android.widget.TextView tv_weaponName -> aw
+    android.widget.TextView tv_rank -> ax
+    android.widget.TextView tv_gaizaoData -> ay
+    android.widget.TextView tv_duanzaoData -> az
+    android.widget.Button bt_moshi -> aA
+    android.widget.TextView tv_currentMoshi -> aB
+    int currentMoshi -> aC
+    android.view.View include_gongji -> aD
+    android.widget.TextView tv_gongjili -> aE
+    android.widget.TextView tv_gongjiUp -> aF
+    android.widget.TextView tv_gongjiDown -> aG
+    android.widget.TextView tv_base_gongjili -> aH
+    android.widget.TextView tv_rise_gongjili -> aI
+    android.widget.TextView tv_slotNumber_gongji -> aJ
+    android.widget.LinearLayout ll_gongjicao -> aK
+    android.widget.LinearLayout ll_tesucao_gongji -> aL
+    android.view.View include_pohuai -> aM
+    android.widget.TextView tv_pohuaili -> aN
+    android.widget.TextView tv_pohuaiUp -> aO
+    android.widget.TextView tv_pohuaiDown -> aP
+    android.widget.TextView tv_base_pohuaili -> aQ
+    android.widget.TextView tv_rise_pohuaili -> aR
+    android.widget.TextView tv_slotNumber_pohuai -> aS
+    android.widget.LinearLayout ll_pohuaicao -> aT
+    android.widget.LinearLayout ll_tesucao_pohuai -> aU
+    android.view.View include_fangyu -> aV
+    android.widget.TextView tv_fangyuli -> aW
+    android.widget.TextView tv_fangyuUp -> aX
+    android.widget.TextView tv_fangyuDown -> aY
+    android.widget.TextView tv_base_fangyuli -> aZ
+    android.widget.TextView tv_rise_fangyuli -> ba
+    android.widget.TextView tv_slotNumber_fangyu -> bb
+    android.widget.LinearLayout ll_fangyucao -> bc
+    android.widget.LinearLayout ll_tesucao_fangyu -> bd
+    android.view.View include_tili -> be
+    android.widget.TextView tv_tili -> bf
+    android.widget.TextView tv_tiliUp -> bg
+    android.widget.TextView tv_tiliDown -> bh
+    android.widget.TextView tv_base_tili -> bi
+    android.widget.TextView tv_rise_tili -> bj
+    android.widget.TextView tv_slotNumber_tili -> bk
+    android.widget.LinearLayout ll_tilicao -> bl
+    android.widget.LinearLayout ll_tesucao_tili -> bm
+    android.view.View include_wushuang -> bn
+    android.widget.TextView tv_wushuang -> bo
+    android.widget.TextView tv_wushuangUp -> bp
+    android.widget.TextView tv_wushuangDown -> bq
+    android.widget.TextView tv_base_wushuang -> br
+    android.widget.TextView tv_rise_wushuang -> bs
+    android.widget.TextView tv_slotNumber_wushuang -> bt
+    android.widget.LinearLayout ll_wushuangcao -> bu
+    android.widget.LinearLayout ll_tesucao_wushuang -> bv
+    android.view.View include_yidong -> bw
+    android.widget.TextView tv_yidong -> bx
+    android.widget.TextView tv_yidongUp -> by
+    android.widget.TextView tv_yidongDown -> bz
+    android.widget.TextView tv_base_yidong -> bA
+    android.widget.TextView tv_tesu_yidong -> bB
+    android.widget.LinearLayout ll_yidongcao -> bC
+    android.widget.ImageView iv_upNarrow_yidong -> bD
+    android.view.View include_tiaoyue -> bE
+    android.widget.TextView tv_tiaoyue -> bF
+    android.widget.TextView tv_tiaoyueUp -> bG
+    android.widget.TextView tv_tiaoyueDown -> bH
+    android.widget.TextView tv_base_tiaoyue -> bI
+    android.widget.TextView tv_tesu_tiaoyue -> bJ
+    android.widget.LinearLayout ll_tiaoyuecao -> bK
+    android.widget.ImageView iv_upNarrow_tiaoyue -> bL
+    int maxDuanzaozhi -> bM
+    int currentDuanzaozhi -> bN
+    int currentGongjiTime -> bO
+    int currentPohuaiTime -> bP
+    int currentFangyuTime -> bQ
+    int currentTiliTime -> bR
+    int currentWushuangTime -> bS
+    int currentTesuGongjiTime -> bT
+    int currentTesuPohuaiTime -> bU
+    int currentTesuFangyuTime -> bV
+    int currentTesuTiliTime -> bW
+    int currentTesuWushuangTime -> bX
+    int currentTesuYidongTime -> bY
+    int currentTesuTiaoyueTime -> bZ
+    int tesuWidth -> ca
+    int tesuWidth2 -> cb
+    int tesuHeight -> cc
+    int baseGongji -> Q
+    int basePohuai -> R
+    int baseFangyu -> S
+    int baseTili -> T
+    int baseWushuang -> U
+    int baseYidong -> V
+    int baseTiaoyue -> W
+    int riseGongji -> X
+    int risePohuai -> Y
+    int riseFangyu -> Z
+    int riseTili -> aa
+    int riseWushuang -> ab
+    float persentWidth -> ac
+    float persentWidthYidong -> ad
+    int riseGongjiWidth -> ae
+    int risePohuaiWidth -> af
+    int riseFangyuWidth -> ag
+    int riseTiliWidth -> ah
+    int riseWushuangWidth -> ai
+    int totalWidth -> aj
+    int totalWidthYidong -> ak
+    int totalHeight -> al
+    int totalHeightYidong -> am
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
+    void initView(android.view.View) -> a
+    void initActionBar(android.view.View) -> b
+    void setData() -> r
+    void onResume() -> f
+    void onPause() -> g
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+    void onClick(android.view.View) -> onClick
+    void addQianghua(int,int) -> a
+    void addTesuQianghuaYidongOrTiaoyue(int,int) -> b
+    void removeTesuQianghuaYidongOrTiaoyue(int,int) -> c
+    void addTesuQianghua(int,int) -> d
+    void removeQianghua(int,int) -> e
+    void removeTesuQianghua(int,int) -> f
+    int calculateCurrentDuanzaoData() -> s
+    void clearDuanzao() -> t
+    void drawViewWidth(android.view.View,int) -> a
+    void access$0(com.wlx.wsolandroid.WeaponDuanzaoFragment,com.wlx.wsolandroid.adapter.WeaponTypeAdapter) -> a
+    void access$1(com.wlx.wsolandroid.WeaponDuanzaoFragment,com.wlx.wsolandroid.adapter.WeaponRankAdapter) -> a
+    void access$2(com.wlx.wsolandroid.WeaponDuanzaoFragment,android.widget.ListView) -> a
+    android.widget.ListView access$3(com.wlx.wsolandroid.WeaponDuanzaoFragment) -> a
+    com.wlx.wsolandroid.adapter.WeaponTypeAdapter access$4(com.wlx.wsolandroid.WeaponDuanzaoFragment) -> b
+    void access$5(com.wlx.wsolandroid.WeaponDuanzaoFragment,android.widget.ListView) -> b
+    android.widget.ListView access$6(com.wlx.wsolandroid.WeaponDuanzaoFragment) -> c
+    com.wlx.wsolandroid.adapter.WeaponRankAdapter access$7(com.wlx.wsolandroid.WeaponDuanzaoFragment) -> d
+    void access$8(com.wlx.wsolandroid.WeaponDuanzaoFragment,int) -> a
+    int access$9(com.wlx.wsolandroid.WeaponDuanzaoFragment) -> e
+    void access$10(com.wlx.wsolandroid.WeaponDuanzaoFragment,android.widget.PopupWindow) -> a
+    android.widget.PopupWindow access$11(com.wlx.wsolandroid.WeaponDuanzaoFragment) -> f
+    void access$12(com.wlx.wsolandroid.WeaponDuanzaoFragment) -> g
+    com.wlx.wsolandroid.widget.MyActionBar access$13(com.wlx.wsolandroid.WeaponDuanzaoFragment) -> h
+com.wlx.wsolandroid.WeaponDuanzaoFragment$1 -> com.wlx.wsolandroid.k:
+    com.wlx.wsolandroid.WeaponDuanzaoFragment this$0 -> a
+    void run() -> run
+com.wlx.wsolandroid.WeaponDuanzaoFragment$2 -> com.wlx.wsolandroid.l:
+    com.wlx.wsolandroid.WeaponDuanzaoFragment this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.wlx.wsolandroid.WeaponDuanzaoFragment$3 -> com.wlx.wsolandroid.m:
+    com.wlx.wsolandroid.WeaponDuanzaoFragment this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.wlx.wsolandroid.WeaponJinpaiFragment -> com.wlx.wsolandroid.n:
     android.widget.ListView lv1 -> O
     com.wlx.wsolandroid.adapter.WeaponListAdapter adapter -> P
     android.view.View v_head -> Q
@@ -4177,15 +4355,15 @@ com.wlx.wsolandroid.WeaponJinpaiFragment -> com.wlx.wsolandroid.g:
     int access$3(com.wlx.wsolandroid.WeaponJinpaiFragment) -> d
     java.util.List access$4(com.wlx.wsolandroid.WeaponJinpaiFragment) -> e
     void access$5(com.wlx.wsolandroid.WeaponJinpaiFragment,boolean) -> a
-com.wlx.wsolandroid.WeaponJinpaiFragment$1 -> com.wlx.wsolandroid.h:
+com.wlx.wsolandroid.WeaponJinpaiFragment$1 -> com.wlx.wsolandroid.o:
     com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
     void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
     void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     void afterTextChanged(android.text.Editable) -> afterTextChanged
-com.wlx.wsolandroid.WeaponJinpaiFragment$2 -> com.wlx.wsolandroid.i:
+com.wlx.wsolandroid.WeaponJinpaiFragment$2 -> com.wlx.wsolandroid.p:
     com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.WeaponJinpaiFragment$3 -> com.wlx.wsolandroid.j:
+com.wlx.wsolandroid.WeaponJinpaiFragment$3 -> com.wlx.wsolandroid.q:
     com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
     void run() -> run
 com.wlx.wsolandroid.WeaponXishuActivity -> com.wlx.wsolandroid.WeaponXishuActivity:
@@ -4229,9 +4407,36 @@ com.wlx.wsolandroid.adapter.WeaponListAdapter$ViewHolder -> com.wlx.wsolandroid.
     android.widget.TextView tv_r6 -> g
     android.widget.TextView tv_r7 -> h
     com.wlx.wsolandroid.adapter.WeaponListAdapter this$0 -> i
+com.wlx.wsolandroid.adapter.WeaponRankAdapter -> com.wlx.wsolandroid.a.c:
+    android.content.Context context -> a
+    java.lang.String[] weaponRank -> b
+    int currentWeaponRank -> c
+    int getCount() -> getCount
+    void setCurrentRank(int) -> a
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.wlx.wsolandroid.adapter.WeaponRankAdapter$ViewHolder -> com.wlx.wsolandroid.a.d:
+    android.widget.TextView tv_weaponRank -> a
+    com.wlx.wsolandroid.adapter.WeaponRankAdapter this$0 -> b
+com.wlx.wsolandroid.adapter.WeaponTypeAdapter -> com.wlx.wsolandroid.a.e:
+    android.content.Context context -> a
+    java.lang.String[] weaponType -> b
+    int currentType -> c
+    void setCurrentType(int) -> a
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.wlx.wsolandroid.adapter.WeaponTypeAdapter$ViewHolder -> com.wlx.wsolandroid.a.f:
+    android.widget.TextView tv_weaponName -> a
+    com.wlx.wsolandroid.adapter.WeaponTypeAdapter this$0 -> b
 com.wlx.wsolandroid.application.WSOLApplication -> com.wlx.wsolandroid.application.WSOLApplication:
     void onCreate() -> onCreate
-com.wlx.wsolandroid.model.Weapon -> com.wlx.wsolandroid.b.a:
+com.wlx.wsolandroid.constant.Constant -> com.wlx.wsolandroid.b.a:
+    java.lang.String tulingAPI -> a
+    java.lang.String tulingQuestion1 -> b
+com.wlx.wsolandroid.model.Weapon -> com.wlx.wsolandroid.c.a:
     java.lang.String name -> a
     int g -> b
     int p -> c
@@ -4250,7 +4455,7 @@ com.wlx.wsolandroid.model.Weapon -> com.wlx.wsolandroid.b.a:
     void setT(int) -> d
     int getW() -> f
     void setW(int) -> e
-com.wlx.wsolandroid.model.Xishu -> com.wlx.wsolandroid.b.b:
+com.wlx.wsolandroid.model.Xishu -> com.wlx.wsolandroid.c.b:
     java.lang.String N1 -> a
     java.lang.String N2 -> b
     java.lang.String N3 -> c
@@ -4302,9 +4507,59 @@ com.wlx.wsolandroid.model.Xishu -> com.wlx.wsolandroid.b.b:
     void setC4(java.lang.String) -> p
     java.lang.String getC5() -> q
     void setC5(java.lang.String) -> q
-com.wlx.wsolandroid.utils.Utils -> com.wlx.wsolandroid.c.a:
+com.wlx.wsolandroid.utils.Utils -> com.wlx.wsolandroid.d.a:
     java.lang.String getString(java.io.InputStream) -> a
-com.wlx.wsolandroid.widget.MyActionBar -> com.wlx.wsolandroid.d.a:
+    int getDisplay(android.app.Activity,int) -> a
+com.wlx.wsolandroid.weapondata.R1WeaponData -> com.wlx.wsolandroid.e.a:
+    int[] weaponBaseGongji -> a
+    int[] weaponBasePohuai -> b
+    int[] weaponBaseFangyu -> c
+    int[] weaponBaseTili -> d
+    int[] weaponBaseWushuang -> e
+    int[] weaponBaseYidong -> f
+    int[] weaponBaseTiaoyue -> g
+    int[] weaponSlotGongji -> h
+    int[] weaponSlotPohuai -> i
+    int[] weaponSlotFangyu -> j
+    int[] weaponSlotTili -> k
+    int[] weaponSlotWushuang -> l
+    int[] R1RiseGongji -> m
+    int[] R1RisePohuai -> n
+    int[] R1RiseFangyu -> o
+    int[] R1RiseTili -> p
+    int[] R1RiseWushuang -> q
+    java.lang.String[] R1Names -> r
+    java.lang.String[] R1_WeaponData -> s
+com.wlx.wsolandroid.weapondata.R3WeaponData -> com.wlx.wsolandroid.e.b:
+    java.lang.String[] R3Names -> a
+    java.lang.String[] R3_WeaponData -> b
+com.wlx.wsolandroid.weapondata.R4WeaponData -> com.wlx.wsolandroid.e.c:
+    java.lang.String[] R4Names -> a
+    java.lang.String[] R4_WeaponData -> b
+com.wlx.wsolandroid.weapondata.R5WeaponData -> com.wlx.wsolandroid.e.d:
+    java.lang.String[] R5Names -> a
+    java.lang.String[] R5_WeaponData -> b
+    int[] R5AttackValues -> c
+    int[] R5DestroyValues -> d
+    int[] R5DefenseValues -> e
+    int[] R5PhysicalStrengthValues -> f
+    int[] R5WushuangValues -> g
+com.wlx.wsolandroid.weapondata.R6WeaponData -> com.wlx.wsolandroid.e.e:
+    java.lang.String[] R6Names -> a
+    java.lang.String[] R6_WeaponData -> b
+com.wlx.wsolandroid.weapondata.R7WeaponData -> com.wlx.wsolandroid.e.f:
+    java.lang.String[] R7Names -> a
+com.wlx.wsolandroid.widget.DuanzaoView -> com.wlx.wsolandroid.f.a:
+    android.content.Context context -> a
+    android.graphics.Paint paint -> b
+    float transparentWidth -> c
+    boolean needStar -> d
+    float selfWidth -> e
+    float selfHeight -> f
+    int type -> g
+    void changeWidth(float) -> a
+    void onDraw(android.graphics.Canvas) -> onDraw
+com.wlx.wsolandroid.widget.MyActionBar -> com.wlx.wsolandroid.f.b:
     android.widget.LinearLayout leftLayout -> b
     android.widget.LinearLayout middleLayout -> c
     android.widget.LinearLayout rightLayout -> d
@@ -4334,23 +4589,283 @@ com.wlx.wsolandroid.widget.MyActionBar -> com.wlx.wsolandroid.d.a:
     void setRightIntent(android.content.Intent) -> setRightIntent
     void setRightClickListenner(android.view.View$OnClickListener) -> setRightClickListenner
     android.app.Activity access$0(com.wlx.wsolandroid.widget.MyActionBar) -> a
-com.wlx.wsolandroid.widget.MyActionBar$1 -> com.wlx.wsolandroid.d.b:
+com.wlx.wsolandroid.widget.MyActionBar$1 -> com.wlx.wsolandroid.f.c:
     com.wlx.wsolandroid.widget.MyActionBar this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.widget.MyActionBar$2 -> com.wlx.wsolandroid.d.c:
-    com.wlx.wsolandroid.widget.MyActionBar this$0 -> a
-    android.content.Intent val$intent -> b
-    void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.widget.MyActionBar$3 -> com.wlx.wsolandroid.d.d:
+com.wlx.wsolandroid.widget.MyActionBar$2 -> com.wlx.wsolandroid.f.d:
     com.wlx.wsolandroid.widget.MyActionBar this$0 -> a
     android.content.Intent val$intent -> b
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.widget.MyRelativeLayoutView -> com.wlx.wsolandroid.d.e:
+com.wlx.wsolandroid.widget.MyActionBar$3 -> com.wlx.wsolandroid.f.e:
+    com.wlx.wsolandroid.widget.MyActionBar this$0 -> a
+    android.content.Intent val$intent -> b
+    void onClick(android.view.View) -> onClick
+com.wlx.wsolandroid.widget.MyRelativeLayoutView -> com.wlx.wsolandroid.f.f:
     android.content.Context context -> a
     void initDefult() -> c
     int initLayout() -> a
     void initView() -> b
     void setData(java.lang.Object) -> setData
+com.wlx.wsolandroid.widget.TesuqianghuaView -> com.wlx.wsolandroid.f.g:
+    android.content.Context context -> a
+    android.graphics.Paint paint -> b
+    boolean ifFirst -> c
+    float selfWidth -> d
+    float selfHeight -> e
+    void onDraw(android.graphics.Canvas) -> onDraw
+net.tsz.afinal.FinalActivity -> net.tsz.afinal.FinalActivity:
+    int[] $SWITCH_TABLE$net$tsz$afinal$FinalActivity$Method -> a
+    void setContentView(int) -> setContentView
+    void setContentView(android.view.View,android.view.ViewGroup$LayoutParams) -> setContentView
+    void setContentView(android.view.View) -> setContentView
+    void initInjectedView(android.app.Activity) -> a
+    void initInjectedView(java.lang.Object,android.view.View) -> a
+    void setViewSelectListener(java.lang.Object,java.lang.reflect.Field,java.lang.String,java.lang.String) -> a
+    void setListener(java.lang.Object,java.lang.reflect.Field,java.lang.String,net.tsz.afinal.FinalActivity$Method) -> a
+    int[] $SWITCH_TABLE$net$tsz$afinal$FinalActivity$Method() -> a
+net.tsz.afinal.FinalActivity$Method -> net.tsz.afinal.a:
+    net.tsz.afinal.FinalActivity$Method Click -> a
+    net.tsz.afinal.FinalActivity$Method LongClick -> b
+    net.tsz.afinal.FinalActivity$Method ItemClick -> c
+    net.tsz.afinal.FinalActivity$Method itemLongClick -> d
+    net.tsz.afinal.FinalActivity$Method[] ENUM$VALUES -> e
+    net.tsz.afinal.FinalActivity$Method[] values() -> values
+    net.tsz.afinal.FinalActivity$Method valueOf(java.lang.String) -> valueOf
+net.tsz.afinal.FinalHttp -> net.tsz.afinal.b:
+    int maxConnections -> a
+    int socketTimeout -> b
+    int maxRetries -> c
+    int httpThreadCount -> d
+    org.apache.http.impl.client.DefaultHttpClient httpClient -> e
+    org.apache.http.protocol.HttpContext httpContext -> f
+    java.lang.String charset -> g
+    java.util.Map clientHeaderMap -> h
+    java.util.concurrent.ThreadFactory sThreadFactory -> i
+    java.util.concurrent.Executor executor -> j
+    void get(java.lang.String,net.tsz.afinal.http.AjaxParams,net.tsz.afinal.http.AjaxCallBack) -> a
+    void sendRequest(org.apache.http.impl.client.DefaultHttpClient,org.apache.http.protocol.HttpContext,org.apache.http.client.methods.HttpUriRequest,java.lang.String,net.tsz.afinal.http.AjaxCallBack) -> a
+    java.lang.String getUrlWithQueryString(java.lang.String,net.tsz.afinal.http.AjaxParams) -> a
+    java.util.Map access$0(net.tsz.afinal.FinalHttp) -> a
+net.tsz.afinal.FinalHttp$1 -> net.tsz.afinal.c:
+    java.util.concurrent.atomic.AtomicInteger mCount -> a
+    java.lang.Thread newThread(java.lang.Runnable) -> newThread
+net.tsz.afinal.FinalHttp$2 -> net.tsz.afinal.d:
+    net.tsz.afinal.FinalHttp this$0 -> a
+    void process(org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext) -> process
+net.tsz.afinal.FinalHttp$3 -> net.tsz.afinal.e:
+    net.tsz.afinal.FinalHttp this$0 -> a
+    void process(org.apache.http.HttpResponse,org.apache.http.protocol.HttpContext) -> process
+net.tsz.afinal.FinalHttp$InflatingEntity -> net.tsz.afinal.f:
+    java.io.InputStream getContent() -> getContent
+    long getContentLength() -> getContentLength
+net.tsz.afinal.annotation.view.EventListener -> net.tsz.afinal.a.a.a:
+    java.lang.Object handler -> a
+    java.lang.String clickMethod -> b
+    java.lang.String longClickMethod -> c
+    java.lang.String itemClickMethod -> d
+    java.lang.String itemSelectMethod -> e
+    java.lang.String nothingSelectedMethod -> f
+    java.lang.String itemLongClickMehtod -> g
+    net.tsz.afinal.annotation.view.EventListener click(java.lang.String) -> a
+    net.tsz.afinal.annotation.view.EventListener longClick(java.lang.String) -> b
+    net.tsz.afinal.annotation.view.EventListener itemLongClick(java.lang.String) -> c
+    net.tsz.afinal.annotation.view.EventListener itemClick(java.lang.String) -> d
+    net.tsz.afinal.annotation.view.EventListener select(java.lang.String) -> e
+    net.tsz.afinal.annotation.view.EventListener noSelect(java.lang.String) -> f
+    boolean onLongClick(android.view.View) -> onLongClick
+    boolean onItemLongClick(android.widget.AdapterView,android.view.View,int,long) -> onItemLongClick
+    void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+    void onClick(android.view.View) -> onClick
+    java.lang.Object invokeClickMethod(java.lang.Object,java.lang.String,java.lang.Object[]) -> a
+    boolean invokeLongClickMethod(java.lang.Object,java.lang.String,java.lang.Object[]) -> b
+    java.lang.Object invokeItemClickMethod(java.lang.Object,java.lang.String,java.lang.Object[]) -> c
+    boolean invokeItemLongClickMethod(java.lang.Object,java.lang.String,java.lang.Object[]) -> d
+    java.lang.Object invokeItemSelectMethod(java.lang.Object,java.lang.String,java.lang.Object[]) -> e
+    java.lang.Object invokeNoSelectMethod(java.lang.Object,java.lang.String,java.lang.Object[]) -> f
+net.tsz.afinal.annotation.view.Select -> net.tsz.afinal.a.a.b:
+    java.lang.String selected() -> a
+    java.lang.String noSelected() -> b
+net.tsz.afinal.annotation.view.ViewInject -> net.tsz.afinal.a.a.c:
+    int id() -> a
+    java.lang.String click() -> b
+    java.lang.String longClick() -> c
+    java.lang.String itemClick() -> d
+    java.lang.String itemLongClick() -> e
+    net.tsz.afinal.annotation.view.Select select() -> f
+net.tsz.afinal.core.AbstractCollection -> net.tsz.afinal.b.a:
+    boolean add(java.lang.Object) -> add
+    boolean addAll(java.util.Collection) -> addAll
+    void clear() -> clear
+    boolean contains(java.lang.Object) -> contains
+    boolean containsAll(java.util.Collection) -> containsAll
+    boolean isEmpty() -> isEmpty
+    java.util.Iterator iterator() -> iterator
+    boolean remove(java.lang.Object) -> remove
+    boolean removeAll(java.util.Collection) -> removeAll
+    boolean retainAll(java.util.Collection) -> retainAll
+    int size() -> size
+    java.lang.Object[] toArray() -> toArray
+    java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+    java.lang.String toString() -> toString
+net.tsz.afinal.core.ArrayDeque -> net.tsz.afinal.b.b:
+    java.lang.Object[] elements -> b
+    int head -> c
+    int tail -> d
+    boolean $assertionsDisabled -> a
+    void doubleCapacity() -> d
+    java.lang.Object[] copyElements(java.lang.Object[]) -> a
+    void addLast(java.lang.Object) -> a
+    boolean offerLast(java.lang.Object) -> b
+    java.lang.Object pollFirst() -> a
+    boolean removeFirstOccurrence(java.lang.Object) -> c
+    boolean add(java.lang.Object) -> add
+    boolean offer(java.lang.Object) -> d
+    java.lang.Object poll() -> b
+    void checkInvariants() -> e
+    boolean delete(int) -> a
+    int size() -> size
+    boolean isEmpty() -> isEmpty
+    java.util.Iterator iterator() -> iterator
+    boolean contains(java.lang.Object) -> contains
+    boolean remove(java.lang.Object) -> remove
+    void clear() -> clear
+    java.lang.Object[] toArray() -> toArray
+    java.lang.Object[] toArray(java.lang.Object[]) -> toArray
+    net.tsz.afinal.core.ArrayDeque clone() -> c
+    java.lang.Object clone() -> clone
+    int access$1(net.tsz.afinal.core.ArrayDeque) -> a
+    int access$2(net.tsz.afinal.core.ArrayDeque) -> b
+    java.lang.Object[] access$3(net.tsz.afinal.core.ArrayDeque) -> c
+    boolean access$4(net.tsz.afinal.core.ArrayDeque,int) -> a
+net.tsz.afinal.core.ArrayDeque$DeqIterator -> net.tsz.afinal.b.c:
+    int cursor -> b
+    int fence -> c
+    int lastRet -> d
+    net.tsz.afinal.core.ArrayDeque this$0 -> a
+    boolean hasNext() -> hasNext
+    java.lang.Object next() -> next
+    void remove() -> remove
+net.tsz.afinal.core.Arrays -> net.tsz.afinal.b.d:
+    boolean $assertionsDisabled -> a
+    java.lang.Object[] copyOf(java.lang.Object[],int) -> a
+    java.lang.Object[] copyOfRange(java.lang.Object[],int,int) -> a
+net.tsz.afinal.core.AsyncTask -> net.tsz.afinal.b.e:
+    java.util.concurrent.ThreadFactory sThreadFactory -> d
+    java.util.concurrent.BlockingQueue sPoolWorkQueue -> e
+    java.util.concurrent.Executor THREAD_POOL_EXECUTOR -> a
+    java.util.concurrent.Executor SERIAL_EXECUTOR -> b
+    java.util.concurrent.Executor DUAL_THREAD_EXECUTOR -> c
+    net.tsz.afinal.core.AsyncTask$InternalHandler sHandler -> f
+    java.util.concurrent.Executor sDefaultExecutor -> g
+    net.tsz.afinal.core.AsyncTask$WorkerRunnable mWorker -> h
+    java.util.concurrent.FutureTask mFuture -> i
+    net.tsz.afinal.core.AsyncTask$Status mStatus -> j
+    java.util.concurrent.atomic.AtomicBoolean mCancelled -> k
+    java.util.concurrent.atomic.AtomicBoolean mTaskInvoked -> l
+    int[] $SWITCH_TABLE$net$tsz$afinal$core$AsyncTask$Status -> m
+    void postResultIfNotInvoked(java.lang.Object) -> c
+    java.lang.Object postResult(java.lang.Object) -> d
+    java.lang.Object doInBackground(java.lang.Object[]) -> a
+    void onPreExecute() -> a
+    void onPostExecute(java.lang.Object) -> a
+    void onProgressUpdate(java.lang.Object[]) -> b
+    void onCancelled(java.lang.Object) -> b
+    void onCancelled() -> b
+    boolean isCancelled() -> c
+    net.tsz.afinal.core.AsyncTask executeOnExecutor(java.util.concurrent.Executor,java.lang.Object[]) -> a
+    void publishProgress(java.lang.Object[]) -> c
+    void finish(java.lang.Object) -> e
+    void access$0(net.tsz.afinal.core.AsyncTask,java.lang.Object) -> a
+    java.util.concurrent.atomic.AtomicBoolean access$1(net.tsz.afinal.core.AsyncTask) -> a
+    java.lang.Object access$2(net.tsz.afinal.core.AsyncTask,java.lang.Object) -> b
+    void access$3(net.tsz.afinal.core.AsyncTask,java.lang.Object) -> c
+    int[] $SWITCH_TABLE$net$tsz$afinal$core$AsyncTask$Status() -> d
+net.tsz.afinal.core.AsyncTask$1 -> net.tsz.afinal.b.f:
+    java.util.concurrent.atomic.AtomicInteger mCount -> a
+    java.lang.Thread newThread(java.lang.Runnable) -> newThread
+net.tsz.afinal.core.AsyncTask$2 -> net.tsz.afinal.b.g:
+    net.tsz.afinal.core.AsyncTask this$0 -> a
+    java.lang.Object call() -> call
+net.tsz.afinal.core.AsyncTask$3 -> net.tsz.afinal.b.h:
+    net.tsz.afinal.core.AsyncTask this$0 -> a
+    void done() -> done
+net.tsz.afinal.core.AsyncTask$AsyncTaskResult -> net.tsz.afinal.b.i:
+    net.tsz.afinal.core.AsyncTask mTask -> a
+    java.lang.Object[] mData -> b
+net.tsz.afinal.core.AsyncTask$InternalHandler -> net.tsz.afinal.b.j:
+    void handleMessage(android.os.Message) -> handleMessage
+net.tsz.afinal.core.AsyncTask$SerialExecutor -> net.tsz.afinal.b.k:
+    net.tsz.afinal.core.ArrayDeque mTasks -> a
+    java.lang.Runnable mActive -> b
+    void execute(java.lang.Runnable) -> execute
+    void scheduleNext() -> a
+net.tsz.afinal.core.AsyncTask$SerialExecutor$1 -> net.tsz.afinal.b.l:
+    net.tsz.afinal.core.AsyncTask$SerialExecutor this$1 -> a
+    java.lang.Runnable val$r -> b
+    void run() -> run
+net.tsz.afinal.core.AsyncTask$Status -> net.tsz.afinal.b.m:
+    net.tsz.afinal.core.AsyncTask$Status PENDING -> a
+    net.tsz.afinal.core.AsyncTask$Status RUNNING -> b
+    net.tsz.afinal.core.AsyncTask$Status FINISHED -> c
+    net.tsz.afinal.core.AsyncTask$Status[] ENUM$VALUES -> d
+    net.tsz.afinal.core.AsyncTask$Status[] values() -> values
+    net.tsz.afinal.core.AsyncTask$Status valueOf(java.lang.String) -> valueOf
+net.tsz.afinal.core.AsyncTask$WorkerRunnable -> net.tsz.afinal.b.n:
+    java.lang.Object[] mParams -> b
+net.tsz.afinal.core.Deque -> net.tsz.afinal.b.o:
+net.tsz.afinal.core.Queue -> net.tsz.afinal.b.p:
+net.tsz.afinal.exception.AfinalException -> net.tsz.afinal.c.a:
+net.tsz.afinal.exception.ViewException -> net.tsz.afinal.c.b:
+    java.lang.String strMsg -> a
+    void printStackTrace() -> printStackTrace
+net.tsz.afinal.http.AjaxCallBack -> net.tsz.afinal.d.a:
+    boolean progress -> a
+    int rate -> b
+    boolean isProgress() -> a
+    int getRate() -> b
+    void onStart() -> c
+    void onLoading(long,long) -> a
+    void onSuccess(java.lang.Object) -> a
+    void onFailure(java.lang.Throwable,int,java.lang.String) -> a
+net.tsz.afinal.http.AjaxParams -> net.tsz.afinal.d.b:
+    java.lang.String ENCODING -> c
+    java.util.concurrent.ConcurrentHashMap urlParams -> a
+    java.util.concurrent.ConcurrentHashMap fileParams -> b
+    void put(java.lang.String,java.lang.String) -> a
+    java.lang.String toString() -> toString
+    void init() -> c
+    java.util.List getParamsList() -> a
+    java.lang.String getParamString() -> b
+net.tsz.afinal.http.HttpHandler -> net.tsz.afinal.d.c:
+    org.apache.http.impl.client.AbstractHttpClient client -> d
+    org.apache.http.protocol.HttpContext context -> e
+    net.tsz.afinal.http.entityhandler.StringEntityHandler mStrEntityHandler -> f
+    net.tsz.afinal.http.entityhandler.FileEntityHandler mFileEntityHandler -> g
+    net.tsz.afinal.http.AjaxCallBack callback -> h
+    int executionCount -> i
+    java.lang.String targetUrl -> j
+    boolean isResume -> k
+    java.lang.String charset -> l
+    long time -> m
+    void makeRequestWithRetries(org.apache.http.client.methods.HttpUriRequest) -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> a
+    void onProgressUpdate(java.lang.Object[]) -> b
+    void handleResponse(org.apache.http.HttpResponse) -> a
+    void callBack(long,long,boolean) -> a
+net.tsz.afinal.http.RetryHandler -> net.tsz.afinal.d.d:
+    java.util.HashSet exceptionWhitelist -> a
+    java.util.HashSet exceptionBlacklist -> b
+    int maxRetries -> c
+    boolean retryRequest(java.io.IOException,int,org.apache.http.protocol.HttpContext) -> retryRequest
+net.tsz.afinal.http.entityhandler.EntityCallBack -> net.tsz.afinal.d.a.a:
+    void callBack(long,long,boolean) -> a
+net.tsz.afinal.http.entityhandler.FileEntityHandler -> net.tsz.afinal.d.a.b:
+    boolean mStop -> a
+    java.lang.Object handleEntity(org.apache.http.HttpEntity,net.tsz.afinal.http.entityhandler.EntityCallBack,java.lang.String,boolean) -> a
+net.tsz.afinal.http.entityhandler.StringEntityHandler -> net.tsz.afinal.d.a.c:
+    java.lang.Object handleEntity(org.apache.http.HttpEntity,net.tsz.afinal.http.entityhandler.EntityCallBack,java.lang.String) -> a
 u.aly.a -> a.a.a:
     int a -> a
     int b -> b
