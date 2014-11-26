@@ -326,7 +326,7 @@ public final class R {
 		public static final int showCustom = 0x7f050008;
 		public static final int showHome = 0x7f050005;
 		public static final int showTitle = 0x7f050007;
-		public static final int slidingmenumain = 0x7f05007b;
+		public static final int slidingmenumain = 0x7f05007c;
 		public static final int tabMode = 0x7f050003;
 		public static final int useLogo = 0x7f050004;
 		public static final int wrap_content = 0x7f050000;
@@ -539,7 +539,7 @@ public final class R {
 		public static final int SherlockSearchView_android_maxWidth = 0;
 		public static final int SherlockSearchView_iconifiedByDefault = 3;
 		public static final int SherlockSearchView_queryHint = 4;
-		public static final int[] SherlockSpinner = { 0x010100af, 0x01010175, 0x01010176, 0x0101017b, 0x01010262, 0x010102ac, 0x010102ad, 0x0101043a };
+		public static final int[] SherlockSpinner = { 0x010100af, 0x01010175, 0x01010176, 0x0101017b, 0x01010262, 0x010102ac, 0x010102ad, 0x01010411 };
 		public static final int SherlockSpinner_android_dropDownHorizontalOffset = 5;
 		public static final int SherlockSpinner_android_dropDownSelector = 1;
 		public static final int SherlockSpinner_android_dropDownVerticalOffset = 6;

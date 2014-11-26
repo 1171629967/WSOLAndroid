@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/gray"
@@ -13,7 +13,8 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_actionbar" >
 
         <TextView
             android:id="@+id/tv_content"
@@ -23,4 +24,19 @@
             android:textSize="12sp" />
     </ScrollView>
 
-</LinearLayout>
+    <com.wlx.wsolandroid.widget.ProgressWheel
+        android:id="@+id/progressbar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        ProgressWheel:barColor="#0097D6"
+        ProgressWheel:barLength="30dp"
+        ProgressWheel:barWidth="20dp"
+        ProgressWheel:rimColor="#330097D6"
+        ProgressWheel:rimWidth="20dp"
+        ProgressWheel:text="正在加载"
+        ProgressWheel:textColor="@color/white"
+        ProgressWheel:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

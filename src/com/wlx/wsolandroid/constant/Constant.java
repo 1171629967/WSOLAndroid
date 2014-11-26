@@ -2,6 +2,7 @@ package com.wlx.wsolandroid.constant;
 
 public class Constant {
 	public static String tulingAPI = "http://www.tuling123.com/openapi/api";
+	public static String tulingKEY = "9eef2ee631432b08710c555d673bf5a2";
 	public static String tulingQuestion1 = "真三国无双ol——公告栏";
 	
 	
