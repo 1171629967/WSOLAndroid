@@ -27,10 +27,10 @@
                     android:id="@+id/tv_wuqi_1"
                     style="@style/style2"
                     android:text="金牌武器上升值" />
-                <TextView
+                <!-- <TextView
                     android:id="@+id/tv_wuqi_2"
                     style="@style/style2"
-                    android:text="武器锻造模拟器" />
+                    android:text="武器锻造模拟器" /> -->
 
                 <View style="@style/style_fenge" />
 
@@ -76,10 +76,10 @@
                     style="@style/style1"
                     android:text="其他" />
 
-                <TextView
+                <!-- <TextView
                     android:id="@+id/tv_qita_1"
                     style="@style/style2"
-                    android:text="关于APP" />
+                    android:text="关于APP" /> -->
                 
                  <TextView
                     android:id="@+id/tv_qita_2"
