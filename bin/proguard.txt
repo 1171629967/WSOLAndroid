@@ -1,6 +1,9 @@
 # view res/layout/fragment_meizhouhuodong.xml #generated:14
 -keep class android.support.v4.widget.SwipeRefreshLayout { <init>(...); }
 
+# view AndroidManifest.xml #generated:29
+-keep class cn.domob.android.ads.DmActivity { <init>(...); }
+
 # view res/layout/abs__screen_action_bar.xml #generated:44
 # view res/layout/abs__screen_action_bar_overlay.xml #generated:27
 # view res/layout/abs__screen_simple.xml #generated:32
@@ -65,9 +68,9 @@
 # view res/layout/slidingmenumain.xml #generated:2
 -keep class com.jeremyfeinstein.slidingmenu.lib.SlidingMenu { <init>(...); }
 
-# view AndroidManifest.xml #generated:33
+# view AndroidManifest.xml #generated:32
 -keep class com.wlx.wsolandroid.MainActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:19
+# view AndroidManifest.xml #generated:21
 -keep class com.wlx.wsolandroid.application.WSOLApplication { <init>(...); }
 

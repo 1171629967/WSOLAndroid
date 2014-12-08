@@ -474,6 +474,7 @@ int id abs__submit_area 0x7f050035
 int id abs__textButton 0x7f050019
 int id abs__title 0x7f050021
 int id abs__up 0x7f05000b
+int id adContainer 0x7f050061
 int id bt_changeMoshi 0x7f050069
 int id disableHome 0x7f050009
 int id edit_query 0x7f05002c
@@ -509,7 +510,6 @@ int id menu_head_middle_tv 0x7f05003c
 int id menu_head_right 0x7f05003d
 int id menu_head_right_iv 0x7f05003e
 int id menu_head_right_tv 0x7f05003f
-int id miniAdLinearLayout 0x7f050061
 int id none 0x7f050014
 int id normal 0x7f050001
 int id right 0x7f050011

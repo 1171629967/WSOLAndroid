@@ -3,6 +3,7 @@ package com.wlx.wsolandroid;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -16,9 +17,11 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.RelativeLayout.LayoutParams;
 
-
-import cn.waps.AppConnect;
+import cn.domob.android.ads.AdEventListener;
+import cn.domob.android.ads.AdView;
+import cn.domob.android.ads.AdManager.ErrorCode;
 
 import com.umeng.analytics.MobclickAgent;
 import com.wlx.wsolandroid.adapter.WeaponListAdapter;
@@ -28,8 +31,9 @@ import com.wlx.wsolandroid.model.Xishu;
 import com.wlx.wsolandroid.widget.MyActionBar;
 
 public class WeaponJinpaiFragment extends BaseFragment {
-	// 万普广告栏容器
-	private LinearLayout miniAdlayout;
+	// 多盟广告栏容器
+	private RelativeLayout adContainer;
+	private AdView adView;
 	private ListView lv1;
 	private WeaponListAdapter adapter;
 	private View v_head;
@@ -111,7 +115,7 @@ public class WeaponJinpaiFragment extends BaseFragment {
 
 		lv1.setAdapter(adapter);
 
-		//添加万普广告
+		// 添加多盟广告
 		this.addAd(view);
 	}
 
@@ -188,19 +192,44 @@ public class WeaponJinpaiFragment extends BaseFragment {
 	}
 
 	private void addAd(View view) {
-		// 设置迷你广告背景颜色
-		// AppConnect.getInstance(getActivity()).setAdBackColor(Color.argb(50,
-		// 120, 240, 120));
-		// 设置迷你广告广告诧颜色
-		// AppConnect.getInstance(getActivity()).setAdForeColor(Color.YELLOW);
-		// 若未设置以上两个颜色,则默认为黑底白字
-		miniAdlayout = (LinearLayout) view.findViewById(R.id.miniAdLinearLayout);
-		AppConnect.getInstance(getActivity()).showMiniAd(getActivity(), miniAdlayout, 5); // 5秒切换一次广告
+		adContainer = (RelativeLayout) view.findViewById(R.id.adContainer);
+		adView = new AdView(getActivity(), "56OJzt4YuN/GvEjtN6", "16TLmhwaAp6uWNUOjw4wCyFk");
+		adView.setAdEventListener(new AdEventListener() {
 
-		// 添加万普条形广告
-		// adlayout = (LinearLayout) view.findViewById(R.id.miniAdLinearLayout);
-		// AppConnect.getInstance(getActivity()).showBannerAd(getActivity(),
-		// adlayout);
+			@Override
+			public void onLeaveApplication(AdView arg0) {
+			}
+
+			@Override
+			public void onEventAdReturned(AdView arg0) {
+			}
+
+			@Override
+			public Context onAdRequiresCurrentContext() {
+				return getActivity();
+			}
+
+			@Override
+			public void onAdOverlayPresented(AdView arg0) {
+			}
+
+			@Override
+			public void onAdOverlayDismissed(AdView arg0) {
+			}
+
+			@Override
+			public void onAdFailed(AdView arg0, ErrorCode arg1) {
+			}
+
+			@Override
+			public void onAdClicked(AdView arg0) {
+			}
+		});
+
+		RelativeLayout.LayoutParams layout = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+		layout.addRule(RelativeLayout.CENTER_HORIZONTAL);
+		adView.setLayoutParams(layout);
+		adContainer.addView(adView);
 	}
 
 	@Override

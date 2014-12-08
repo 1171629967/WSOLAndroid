@@ -1659,6 +1659,7 @@ containing a value of this type.
         public static final int abs__textButton=0x7f050019;
         public static final int abs__title=0x7f050021;
         public static final int abs__up=0x7f05000b;
+        public static final int adContainer=0x7f050061;
         public static final int bt_changeMoshi=0x7f050069;
         public static final int disableHome=0x7f050009;
         public static final int edit_query=0x7f05002c;
@@ -1694,7 +1695,6 @@ containing a value of this type.
         public static final int menu_head_right=0x7f05003d;
         public static final int menu_head_right_iv=0x7f05003e;
         public static final int menu_head_right_tv=0x7f05003f;
-        public static final int miniAdLinearLayout=0x7f050061;
         public static final int none=0x7f050014;
         public static final int normal=0x7f050001;
         public static final int right=0x7f050011;
