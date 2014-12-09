@@ -38,8 +38,8 @@ public class WeaponJinpaiFragment extends BaseFragment {
 	private WeaponListAdapter adapter;
 	private View v_head;
 	private EditText et_search;
-	private final List<Weapon> allWeapons = new ArrayList<Weapon>();
-	private final List<Weapon> searchResultWeapons = new ArrayList<Weapon>();
+	private  List<Weapon> allWeapons = new ArrayList<Weapon>();
+	private  List<Weapon> searchResultWeapons = new ArrayList<Weapon>();
 	private int allWeaponCount;
 
 	private final List<Xishu> xishus = new ArrayList<Xishu>();

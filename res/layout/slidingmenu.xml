@@ -85,6 +85,10 @@
                     android:id="@+id/tv_qita_2"
                     style="@style/style2"
                     android:text="每周活动" />
+                 <TextView
+                    android:id="@+id/tv_qita_3"
+                    style="@style/style2"
+                    android:text="骗子名单" />
                 
                 
             </LinearLayout>
