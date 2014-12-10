@@ -6,13 +6,12 @@ import java.util.List;
 import net.tsz.afinal.FinalHttp;
 import net.tsz.afinal.http.AjaxCallBack;
 import net.tsz.afinal.http.AjaxParams;
+import net.youmi.android.spot.SpotManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import cn.domob.android.ads.AdEventListener;
-import cn.domob.android.ads.AdView;
-import cn.domob.android.ads.AdManager.ErrorCode;
+
 
 import com.umeng.analytics.MobclickAgent;
 import com.wlx.wsolandroid.adapter.PianzimingdanAdapter;
@@ -45,9 +44,6 @@ import android.widget.RelativeLayout.LayoutParams;
  * 
  */
 public class PianzimingdanFragment extends BaseFragment implements OnRefreshListener{
-	// 多盟广告栏容器
-	private RelativeLayout adContainer;
-	private AdView adView;
 	private ListView listView;
 	private PianzimingdanAdapter adapter;
 	private View v_head;
@@ -56,6 +52,8 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 	private List<Pianzi> searchResultPianzis = new ArrayList<Pianzi>();
 	private SwipeRefreshLayout swipeRefreshLayout;
 	private FinalHttp finalHttp;
+	
+	private int totalPianziPage;
 
 	
 	@Override
@@ -119,7 +117,7 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light, android.R.color.holo_green_light, android.R.color.holo_blue_bright, android.R.color.holo_orange_light);
 		swipeRefreshLayout.setOnRefreshListener(this);
 		swipeRefreshLayout.setRefreshing(true);
-		loadData();
+		loadData(0);
 		
 		// 添加多盟广告
 		//this.addAd(view);
@@ -143,8 +141,9 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 
 	
 	
-	private void loadData() {
-		AjaxParams params = APIUtils.getTulingParams(Constant.tulingQuestion2);
+	private void loadData(final int page) {
+		String question = Constant.tulingQuestion2+page;
+		AjaxParams params = APIUtils.getTulingParams(question);
 		finalHttp.get(Constant.tulingAPI, params, new AjaxCallBack<Object>() {
 
 			@Override
@@ -160,10 +159,18 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 					JSONObject jsonObject = new JSONObject(t.toString());
 					String text = (String) jsonObject.get("text");
 					text = text.replaceAll("\\$", "\"");
-					System.out.println("骗子名单json---------》"+text);
-					allPianzis = JsonUtils.getPianzisFromJson(text);
-					adapter.setData(allPianzis);
-					adapter.notifyDataSetChanged();
+					//System.out.println("骗子名单json---------》"+page+"-------->"+text);
+					ArrayList<Pianzi> pianzis = JsonUtils.getPianzisFromJson(text);
+					allPianzis.addAll(pianzis);
+					adapter.notifyDataSetChanged();		
+					
+					if (page == 0) {
+						getTotalPages(text);
+						for (int i = 1; i < totalPianziPage; i++) {
+							loadData(i);
+						}
+					}
+					
 					
 				} catch (JSONException e) {
 					e.printStackTrace();
@@ -183,52 +190,27 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 	
 	
 	
+	private int getTotalPages(String text){
+		try {
+			JSONObject jb = new JSONObject(text);
+			totalPianziPage = jb.optInt("totalPianziPage");
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return totalPianziPage;
+	}
 	
-	private void addAd(View view) {
-		adContainer = (RelativeLayout) view.findViewById(R.id.adContainer);
-		adView = new AdView(getActivity(), "56OJzt4YuN/GvEjtN6", "16TLmhwaAp6uWNUOjw4wCyFk");
-		adView.setAdEventListener(new AdEventListener() {
-
-			@Override
-			public void onLeaveApplication(AdView arg0) {
-			}
-
-			@Override
-			public void onEventAdReturned(AdView arg0) {
-			}
-
-			@Override
-			public Context onAdRequiresCurrentContext() {
-				return getActivity();
-			}
-
-			@Override
-			public void onAdOverlayPresented(AdView arg0) {
-			}
-
-			@Override
-			public void onAdOverlayDismissed(AdView arg0) {
-			}
-
-			@Override
-			public void onAdFailed(AdView arg0, ErrorCode arg1) {
-			}
-
-			@Override
-			public void onAdClicked(AdView arg0) {
-			}
-		});
-
-		RelativeLayout.LayoutParams layout = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-		layout.addRule(RelativeLayout.CENTER_HORIZONTAL);
-		adView.setLayoutParams(layout);
-		adContainer.addView(adView);
+	
+	private void addAd() {
+		SpotManager.getInstance(getActivity()).setSpotOrientation(SpotManager.ORIENTATION_PORTRAIT);
+		SpotManager.getInstance(getActivity()).showSpotAds(getActivity());
 	}
 	
 	
 	@Override
 	public void onResume() {
 		super.onResume();
+		this.addAd();
 		MobclickAgent.onPageStart("骗子名单"); // 统计页面
 	}
 
@@ -241,7 +223,8 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 
 	@Override
 	public void onRefresh() {
-		this.loadData();
+		allPianzis.clear();
+		this.loadData(0);
 	}
 
 }

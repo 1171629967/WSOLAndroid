@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wlx.wsolandroid"
-    android:versionCode="5"
-    android:versionName="1.3.0" >
+    android:versionCode="7"
+    android:versionName="1.3.2" >
 
     <uses-sdk
         android:minSdkVersion="9"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="17" />
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,8 +14,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:name=".application.WSOLApplication"
@@ -24,9 +23,27 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="cn.domob.android.ads.DmActivity"
-            android:theme="@android:style/Theme.Translucent" >
+            android:name="net.youmi.android.AdBrowser"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
         </activity>
+
+        <service
+            android:name="net.youmi.android.AdService"
+            android:exported="false" >
+        </service>
+
+        <receiver android:name="net.youmi.android.AdReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="net.youmi.android.spot.SpotAdContentProvider"
+            android:authorities="com.wlx.wsolandroid" />
 
         <!-- 主页面 -->
         <activity
@@ -45,6 +62,10 @@
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
 
+        <meta-data
+            android:name="YOUMI_CHANNEL"
+            android:value="10440" >
+        </meta-data>
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="540523dcfd98c5a740058604" >

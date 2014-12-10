@@ -3,6 +3,8 @@ package com.wlx.wsolandroid;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.youmi.android.spot.SpotManager;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -19,10 +21,6 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 
-import cn.domob.android.ads.AdEventListener;
-import cn.domob.android.ads.AdView;
-import cn.domob.android.ads.AdManager.ErrorCode;
-
 import com.umeng.analytics.MobclickAgent;
 import com.wlx.wsolandroid.adapter.WeaponListAdapter;
 import com.wlx.wsolandroid.constant.Constant;
@@ -31,15 +29,12 @@ import com.wlx.wsolandroid.model.Xishu;
 import com.wlx.wsolandroid.widget.MyActionBar;
 
 public class WeaponJinpaiFragment extends BaseFragment {
-	// 多盟广告栏容器
-	private RelativeLayout adContainer;
-	private AdView adView;
 	private ListView lv1;
 	private WeaponListAdapter adapter;
 	private View v_head;
 	private EditText et_search;
-	private  List<Weapon> allWeapons = new ArrayList<Weapon>();
-	private  List<Weapon> searchResultWeapons = new ArrayList<Weapon>();
+	private List<Weapon> allWeapons = new ArrayList<Weapon>();
+	private List<Weapon> searchResultWeapons = new ArrayList<Weapon>();
 	private int allWeaponCount;
 
 	private final List<Xishu> xishus = new ArrayList<Xishu>();
@@ -115,8 +110,7 @@ public class WeaponJinpaiFragment extends BaseFragment {
 
 		lv1.setAdapter(adapter);
 
-		// 添加多盟广告
-		this.addAd(view);
+		
 	}
 
 	private void initActionBar(View view) {
@@ -191,50 +185,15 @@ public class WeaponJinpaiFragment extends BaseFragment {
 		}).start();
 	}
 
-	private void addAd(View view) {
-		adContainer = (RelativeLayout) view.findViewById(R.id.adContainer);
-		adView = new AdView(getActivity(), "56OJzt4YuN/GvEjtN6", "16TLmhwaAp6uWNUOjw4wCyFk");
-		adView.setAdEventListener(new AdEventListener() {
-
-			@Override
-			public void onLeaveApplication(AdView arg0) {
-			}
-
-			@Override
-			public void onEventAdReturned(AdView arg0) {
-			}
-
-			@Override
-			public Context onAdRequiresCurrentContext() {
-				return getActivity();
-			}
-
-			@Override
-			public void onAdOverlayPresented(AdView arg0) {
-			}
-
-			@Override
-			public void onAdOverlayDismissed(AdView arg0) {
-			}
-
-			@Override
-			public void onAdFailed(AdView arg0, ErrorCode arg1) {
-			}
-
-			@Override
-			public void onAdClicked(AdView arg0) {
-			}
-		});
-
-		RelativeLayout.LayoutParams layout = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-		layout.addRule(RelativeLayout.CENTER_HORIZONTAL);
-		adView.setLayoutParams(layout);
-		adContainer.addView(adView);
+	private void addAd() {
+		SpotManager.getInstance(getActivity()).setSpotOrientation(SpotManager.ORIENTATION_PORTRAIT);
+		SpotManager.getInstance(getActivity()).showSpotAds(getActivity());
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
+		this.addAd();
 		MobclickAgent.onPageStart("金牌武器上升值"); // 统计页面
 	}
 

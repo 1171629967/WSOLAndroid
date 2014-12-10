@@ -1387,1267 +1387,6 @@ android.support.v4.widget.ViewDragHelper:
 android.support.v4.widget.ViewDragHelper$2
 android.support.v4.widget.ViewDragHelper$Callback:
     148:148:public ViewDragHelper$Callback()
-cn.domob.android.a.b:
-    public static final int a
-    public static final int b
-    public static final int c
-    public static final int d
-    public static final int e
-    6:18:public b()
-cn.domob.android.a.c:
-    258:273:public java.lang.String c(java.lang.String)
-    282:292:public void d(java.lang.String)
-    399:412:public boolean e(java.lang.String)
-cn.domob.android.a.d:
-    private static final int o
-    private static final java.lang.String p
-    static final int b
-    static final int c
-    public static final long d
-    static final long e
-    static final int f
-    static final int g
-    static final int h
-    static final int i
-    static final int j
-    static final int k
-    static final int l
-    static final int m
-    static final int n
-    private static final java.lang.String q
-    private static final java.lang.String r
-    private static final java.lang.String s
-    private static final java.lang.String t
-    private static final java.lang.String u
-    private static final java.lang.String v
-    private static final java.lang.String w
-    private static final java.lang.String x
-cn.domob.android.a.d$a
-cn.domob.android.a.d$b
-cn.domob.android.a.e:
-    static final java.lang.String a
-cn.domob.android.a.f:
-    private static final java.lang.String b
-    private static final java.lang.String c
-    private static final java.lang.String d
-    private static final java.lang.String e
-    private static final java.lang.String f
-    private static final java.lang.String g
-    private static final java.lang.String h
-    private static final java.lang.String i
-    435:435:protected int b()
-cn.domob.android.a.f$a:
-    46:46:private f$a()
-cn.domob.android.a.g:
-    protected static final java.lang.String a
-    protected static final long b
-    protected static final int c
-    protected static final int d
-    90:91:public void b(long)
-cn.domob.android.ads.A
-cn.domob.android.ads.AdListener:
-    public abstract void onLandingPageOpening()
-    public abstract void onLandingPageClose()
-cn.domob.android.ads.AdManager:
-    public static final java.lang.String GENDER_MALE
-    public static final java.lang.String GENDER_FEMALE
-    public static final java.lang.String ACTION_URL
-    public static final java.lang.String ACTION_LAUNCH_APP
-    public static final java.lang.String ACTION_IN_APP
-    public static final java.lang.String ACTION_MAP
-    public static final java.lang.String ACTION_SMS
-    public static final java.lang.String ACTION_MAIL
-    public static final java.lang.String ACTION_MARKET
-    public static final java.lang.String ACTION_CALL
-    public static final java.lang.String ACTION_VIDEO
-    public static final java.lang.String ACTION_AUDIO
-    public static final java.lang.String TEST_EMULATOR
-    public static final java.lang.String SDK_VER
-    15:79:public AdManager()
-    94:94:public static void setAllowUseOfLocation(boolean)
-    104:105:public static void setPublisherId(java.lang.String)
-    115:115:public static java.lang.String getPublisherId(android.content.Context)
-    127:127:public static void setPostalCode(java.lang.String)
-    137:137:public static java.lang.String getPostalCode()
-    149:149:public static void setBirthday(java.util.GregorianCalendar)
-    164:166:public static void setBirthday(int,int,int)
-    176:176:public static java.util.GregorianCalendar getBirthday()
-    194:194:public static void setGender(java.lang.String)
-    207:207:public static java.lang.String getGender()
-    211:212:public static void setEndpoint(java.lang.String)
-    215:215:public static java.lang.String getEndpoint()
-    225:225:public static void setIsTestMode(boolean)
-    231:231:public static java.lang.String getSDKVersion()
-cn.domob.android.ads.AdView:
-    public static final java.lang.String INLINE_SIZE_300X250
-    public static final java.lang.String INLINE_SIZE_320X50
-    public static final java.lang.String INLINE_SIZE_600X94
-    public static final java.lang.String INLINE_SIZE_600X500
-    public static final java.lang.String INLINE_SIZE_728X90
-    public static final java.lang.String INLINE_SIZE_FLEXIBLE
-    private static final java.lang.String r
-    private static final java.lang.String s
-    77:83:public AdView(android.app.Activity,java.lang.String,java.lang.String,boolean)
-    98:99:protected AdView(android.app.Activity,java.lang.String,java.lang.String,java.lang.String)
-    109:110:public AdView(android.app.Activity,android.util.AttributeSet)
-    244:249:protected boolean a(android.content.Context)
-    262:262:protected boolean c()
-    266:266:protected boolean d()
-    282:282:protected cn.domob.android.ads.o h()
-    307:320:protected boolean j()
-    577:583:public void requestAdForAggregationPlatform()
-    595:603:public void loadUrl(java.lang.String,java.lang.String)
-    610:631:public void clean()
-    642:652:public void orientationChanged()
-    660:661:private void needCleanWhenDetached(boolean)
-    671:672:private void dmAdLoad()
-    678:679:private void dmAdImpression()
-    685:686:private void dmAdDismiss()
-    690:693:public void onDmAdFailed(cn.domob.android.ads.AdManager$ErrorCode)
-cn.domob.android.ads.B:
-    public static final int a
-    public static final int b
-    private static final int i
-    private static final int j
-    public static final java.lang.String c
-    public static final java.lang.String d
-    private static final int k
-    private static final int l
-    public static final java.lang.String e
-    public static final int f
-    public static final int g
-cn.domob.android.ads.B$a:
-    public static final java.lang.String a
-    public static final java.lang.String b
-    138:147:public cn.domob.android.ads.B$a a(int[])
-    158:164:public cn.domob.android.ads.B$a a(boolean,float)
-    175:181:public cn.domob.android.ads.B$a b(boolean,float)
-    190:191:public cn.domob.android.ads.B$a a(cn.domob.android.ads.B$c)
-    195:196:public cn.domob.android.ads.B$a a(cn.domob.android.ads.B$b)
-    208:209:public cn.domob.android.ads.B$a b(boolean)
-    213:214:public cn.domob.android.ads.B$a c(boolean)
-    218:219:public cn.domob.android.ads.B$a d(boolean)
-    223:224:public cn.domob.android.ads.B$a e(boolean)
-    228:229:public cn.domob.android.ads.B$a a(int)
-    233:234:public cn.domob.android.ads.B$a b(int)
-    238:239:public cn.domob.android.ads.B$a a(java.lang.String)
-cn.domob.android.ads.B$e:
-    271:271:static synthetic int[] a(cn.domob.android.ads.B$e,int[])
-    271:271:static synthetic boolean b(cn.domob.android.ads.B$e,boolean)
-    271:271:static synthetic int c(cn.domob.android.ads.B$e,int)
-    271:271:static synthetic boolean c(cn.domob.android.ads.B$e,boolean)
-    271:271:static synthetic int d(cn.domob.android.ads.B$e,int)
-    271:271:static synthetic cn.domob.android.ads.B$c a(cn.domob.android.ads.B$e,cn.domob.android.ads.B$c)
-    271:271:static synthetic cn.domob.android.ads.B$b a(cn.domob.android.ads.B$e,cn.domob.android.ads.B$b)
-    271:271:static synthetic boolean h(cn.domob.android.ads.B$e,boolean)
-    271:271:static synthetic boolean i(cn.domob.android.ads.B$e,boolean)
-    271:271:static synthetic boolean j(cn.domob.android.ads.B$e,boolean)
-    271:271:static synthetic boolean k(cn.domob.android.ads.B$e,boolean)
-    271:271:static synthetic int e(cn.domob.android.ads.B$e,int)
-    271:271:static synthetic int f(cn.domob.android.ads.B$e,int)
-    271:271:static synthetic java.lang.String a(cn.domob.android.ads.B$e,java.lang.String)
-cn.domob.android.ads.C:
-    23:26:C(android.app.Activity,java.lang.String,java.lang.String,java.lang.String)
-    29:30:void a(cn.domob.android.ads.RTSplashAdListener)
-    34:41:void a(android.content.Context,android.view.View)
-    54:81:protected void m()
-    15:15:static synthetic boolean a(cn.domob.android.ads.C)
-    15:15:static synthetic boolean a(cn.domob.android.ads.C,boolean)
-    15:15:static synthetic java.lang.String b(cn.domob.android.ads.C)
-cn.domob.android.ads.C$1
-cn.domob.android.ads.DmActivity:
-    public static final int TYPE_NONE
-    public static final int TYPE_INSTALL_RECEIVER
-    public static final int TYPE_DOWNLOADER
-    public static final int TYPE_NOTICE
-    public static final int TYPE_UPLOAD_PIC
-    public static final int TYPE_SHOW_WEBVIEW
-    public static final java.lang.String NOTICE_MESSAGE
-    public static final java.lang.String WEBVIEW_URL_NAME
-cn.domob.android.ads.E
-cn.domob.android.ads.F:
-    104:105:protected void b(cn.domob.android.ads.n,java.lang.String)
-cn.domob.android.ads.FeedsAdListener
-cn.domob.android.ads.FeedsAdView
-cn.domob.android.ads.FeedsAdView$1
-cn.domob.android.ads.FeedsAdView$2
-cn.domob.android.ads.FeedsAdView$2$1
-cn.domob.android.ads.FeedsAdView$2$2
-cn.domob.android.ads.FeedsAdView$2$3
-cn.domob.android.ads.FeedsAdView$2$4
-cn.domob.android.ads.G:
-    104:109:protected boolean e(java.lang.String)
-cn.domob.android.ads.H:
-    private java.lang.String u
-    private int v
-    protected cn.domob.android.ads.SplashAd$SplashMode r
-    private static final java.lang.String z
-    private static final int A
-    private static final int B
-    41:52:H(android.app.Activity,java.lang.String,java.lang.String,java.lang.String)
-    69:70:void a(cn.domob.android.ads.SplashAdListener)
-    76:82:boolean q()
-    92:123:private boolean m()
-    138:140:void a(int)
-    146:159:void a(android.content.Context,android.view.View)
-cn.domob.android.ads.I:
-    protected static final java.lang.String i
-    protected static final java.lang.String j
-    90:90:public void e()
-    94:98:public void f()
-    118:118:public void a(int,int)
-    123:123:public void a(java.util.HashMap,java.lang.String,long)
-cn.domob.android.ads.InterstitialAd
-cn.domob.android.ads.InterstitialAd$BorderType
-cn.domob.android.ads.InterstitialAdListener
-cn.domob.android.ads.J
-cn.domob.android.ads.J$1
-cn.domob.android.ads.L:
-    private static final long g
-cn.domob.android.ads.M
-cn.domob.android.ads.M$1
-cn.domob.android.ads.M$2
-cn.domob.android.ads.M$3
-cn.domob.android.ads.M$4
-cn.domob.android.ads.M$5
-cn.domob.android.ads.M$a
-cn.domob.android.ads.N:
-    44:47:public void e()
-    51:51:public void f()
-    172:175:public void a(int,int)
-    179:180:public void a(java.util.HashMap,java.lang.String,long)
-cn.domob.android.ads.Q
-cn.domob.android.ads.R
-cn.domob.android.ads.RTSplashAd
-cn.domob.android.ads.S
-cn.domob.android.ads.SplashAd
-cn.domob.android.ads.SplashAd$SplashMode
-cn.domob.android.ads.T
-cn.domob.android.ads.T$1
-cn.domob.android.ads.T$2
-cn.domob.android.ads.T$3
-cn.domob.android.ads.T$4
-cn.domob.android.ads.T$5
-cn.domob.android.ads.T$6
-cn.domob.android.ads.T$7
-cn.domob.android.ads.T$8
-cn.domob.android.ads.T$8$1
-cn.domob.android.ads.T$a
-cn.domob.android.ads.U
-cn.domob.android.ads.Updater
-cn.domob.android.ads.a.a:
-    private static final java.lang.String e
-    private static final java.lang.String f
-    private static final java.lang.String g
-    private static final java.lang.String h
-    private static final java.lang.String i
-cn.domob.android.ads.a.b:
-    21:25:protected java.lang.String e()
-cn.domob.android.ads.a.c:
-    private static final java.lang.String a
-    private static final java.lang.String b
-    private static final java.lang.String c
-    private static final java.lang.String d
-    private static final java.lang.String e
-    private static final java.lang.String f
-    private static final java.lang.String g
-    private static final int h
-    private static final int i
-    private static final java.lang.String j
-    private static final int k
-    private static final int l
-    private static final int m
-    private static final int p
-    private static final int q
-    private static final java.lang.String s
-cn.domob.android.ads.a.d:
-    private static final java.lang.String u
-    private static final java.lang.String v
-    private static final java.lang.String w
-    private static final java.lang.String x
-    private static final java.lang.String y
-    private static final java.lang.String z
-    private static final java.lang.String A
-    private static final java.lang.String B
-    private static final java.lang.String C
-    private static final java.lang.String D
-    private static final java.lang.String E
-    private static final java.lang.String F
-    private static final java.lang.String G
-    private static final java.lang.String H
-    private static final java.lang.String I
-    private static final java.lang.String J
-    private static final java.lang.String K
-    private static final java.lang.String L
-    public static final java.lang.String k
-    public static final java.lang.String l
-    public static final java.lang.String m
-    public static final java.lang.String n
-    116:119:public void e()
-    123:133:public void f()
-    955:955:public void a(int,int)
-    959:961:public void a(java.util.HashMap,java.lang.String,long)
-cn.domob.android.ads.a.e:
-    private static final java.lang.String y
-    private static final java.lang.String z
-    private static final java.lang.String A
-    private static final java.lang.String B
-    private static final java.lang.String C
-    private static final java.lang.String D
-    private static final java.lang.String E
-    private static final java.lang.String F
-    private static final java.lang.String G
-    private static final java.lang.String H
-    private static final java.lang.String I
-    private static final java.lang.String J
-    private static final java.lang.String K
-    private static final java.lang.String L
-    private static final java.lang.String M
-    private static final java.lang.String N
-    private static final java.lang.String O
-    private static final int P
-    private static final int Q
-    private static final int R
-    private static final int S
-    155:156:public void a(boolean)
-cn.domob.android.ads.b.a:
-    private static final java.lang.String n
-    private static final java.lang.String o
-    private static final java.lang.String p
-    67:67:public void e()
-    71:76:public void f()
-    389:389:public void a(int,int)
-    394:394:public void a(java.util.HashMap,java.lang.String,long)
-cn.domob.android.ads.b.a$1$3:
-    143:143:public void b()
-cn.domob.android.ads.b.b:
-    38:45:protected float c(java.lang.String)
-cn.domob.android.ads.b.h:
-    private static final long g
-    private static final int h
-    private static final java.lang.String i
-    219:219:protected boolean c()
-cn.domob.android.ads.b.m:
-    public static final int f
-    public static final int g
-    public static final int h
-    181:182:protected void a(cn.domob.android.ads.b.m$j)
-    189:190:protected void a(cn.domob.android.ads.b.m$h)
-    193:193:protected cn.domob.android.ads.b.m$h g()
-    197:198:protected void a(cn.domob.android.ads.b.m$e)
-    205:206:protected void a(cn.domob.android.ads.b.m$i)
-    209:209:protected cn.domob.android.ads.b.m$i i()
-cn.domob.android.ads.b.m$a:
-    public abstract void b()
-cn.domob.android.ads.b.m$c:
-    private cn.domob.android.ads.b.m$h d
-    private cn.domob.android.ads.b.m$i f
-    58:58:static synthetic cn.domob.android.ads.b.m$j a(cn.domob.android.ads.b.m$c,cn.domob.android.ads.b.m$j)
-    58:58:static synthetic cn.domob.android.ads.b.m$h a(cn.domob.android.ads.b.m$c,cn.domob.android.ads.b.m$h)
-    58:58:static synthetic cn.domob.android.ads.b.m$h d(cn.domob.android.ads.b.m$c)
-    58:58:static synthetic cn.domob.android.ads.b.m$e a(cn.domob.android.ads.b.m$c,cn.domob.android.ads.b.m$e)
-    58:58:static synthetic cn.domob.android.ads.b.m$i a(cn.domob.android.ads.b.m$c,cn.domob.android.ads.b.m$i)
-    58:58:static synthetic cn.domob.android.ads.b.m$i f(cn.domob.android.ads.b.m$c)
-cn.domob.android.ads.b.m$h
-cn.domob.android.ads.b.m$i
-cn.domob.android.ads.c:
-    protected cn.domob.android.ads.o g
-    protected static final java.lang.String p
-    protected static final java.lang.String q
-    protected static final java.lang.String r
-    protected static final java.lang.String s
-    protected static final java.lang.String t
-    protected static final java.lang.String u
-    protected static final java.lang.String v
-    protected static final java.lang.String w
-    protected static final java.lang.String x
-    protected static final java.lang.String y
-    protected static final java.lang.String z
-    protected static final java.lang.String A
-    protected static final java.lang.String B
-    protected static final java.lang.String C
-    protected static final java.lang.String D
-    protected static final int E
-    protected static final int F
-    protected static final int G
-    protected static final int H
-    protected static final int I
-    157:165:public c(java.lang.String)
-    318:320:protected void b(boolean)
-    377:378:protected void a(java.lang.String)
-    393:393:protected cn.domob.android.ads.c$a p()
-    405:405:public android.widget.RelativeLayout r()
-    471:472:protected void a(int)
-    480:480:protected cn.domob.android.ads.AdListener z()
-    493:494:protected void d(boolean)
-    720:734:public void F()
-    923:924:public void a(java.lang.String,int,java.lang.String)
-    928:929:public void b(java.lang.String,int,java.lang.String)
-    933:934:public void c(java.lang.String,int,java.lang.String)
-    938:939:public void d(java.lang.String,int,java.lang.String)
-    943:944:public void a(java.lang.String,int,java.lang.String,java.lang.String)
-    948:949:public void b(java.lang.String,int,java.lang.String,java.lang.String)
-    953:954:public void e(java.lang.String,int,java.lang.String)
-    958:959:public void f(java.lang.String,int,java.lang.String)
-    963:964:public void g(java.lang.String,int,java.lang.String)
-    969:969:public void h(java.lang.String,int,java.lang.String)
-    973:974:public void i(java.lang.String,int,java.lang.String)
-    980:980:public void a(java.lang.String,int,java.lang.String,boolean,java.lang.String)
-    984:992:private void a(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)
-    995:996:private void a(java.lang.String,java.lang.String,int,java.lang.String)
-    1000:1001:protected void g(java.lang.String)
-    1004:1005:protected void h(java.lang.String)
-    1107:1108:protected void b(int)
-    1111:1114:public void i(java.lang.String)
-cn.domob.android.ads.c.a:
-    private static final float b
-cn.domob.android.ads.c.b:
-    public static final java.lang.String b
-    public static final java.lang.String c
-    public static final java.lang.String d
-    public static final java.lang.String e
-    public static final java.lang.String f
-    public static final java.lang.String g
-    public static final java.lang.String h
-    public static final java.lang.String i
-    public static final java.lang.String j
-    75:75:public float a(java.lang.String,float)
-cn.domob.android.ads.c.d:
-    static final java.lang.String a
-    static final java.lang.String b
-    static final java.lang.String c
-    public static final java.lang.String d
-    public static final java.lang.String e
-    public static final java.lang.String f
-    public static final int g
-    public static final int h
-    63:63:public android.content.Context a()
-cn.domob.android.ads.c.d$a
-cn.domob.android.ads.c.d$b
-cn.domob.android.ads.c.e
-cn.domob.android.ads.c.e$a
-cn.domob.android.ads.c.e$b
-cn.domob.android.ads.c.e$c
-cn.domob.android.ads.d:
-    public static cn.domob.android.ads.H a
-cn.domob.android.ads.e:
-    private static final java.lang.String e
-    private static final java.lang.String f
-    private static final java.lang.String g
-    private static final java.lang.String h
-    private static final java.lang.String i
-    private static final java.lang.String j
-    private static final java.lang.String k
-    private static final java.lang.String l
-    private static final java.lang.String m
-    private static final java.lang.String n
-    private static final java.lang.String o
-    private static final java.lang.String p
-    private static final java.lang.String q
-    private static final java.lang.String r
-    private static final java.lang.String s
-    private static final java.lang.String t
-    private static final java.lang.String u
-    private static final java.lang.String v
-    private static final java.lang.String w
-    private static final java.lang.String x
-    private static final java.lang.String y
-    private static final java.lang.String z
-    private static final java.lang.String A
-    private static final java.lang.String B
-    private static final java.lang.String C
-    private static final java.lang.String D
-    private static final java.lang.String E
-    private static final java.lang.String F
-    private static final java.lang.String G
-    private static final java.lang.String H
-    private static final java.lang.String I
-    private static final java.lang.String J
-    private static final java.lang.String K
-    private static final java.lang.String L
-    private static final java.lang.String M
-    private static final java.lang.String N
-    private static final java.lang.String O
-    private static final java.lang.String P
-    private static final java.lang.String Q
-    private static final java.lang.String R
-    private static final java.lang.String S
-    private static final java.lang.String T
-    private static final java.lang.String U
-    private static final java.lang.String V
-    private static final java.lang.String W
-    private static final java.lang.String X
-    private static final java.lang.String Y
-    private static final java.lang.String Z
-    private static final java.lang.String aa
-    private static final java.lang.String ab
-    private static final java.lang.String ac
-    private static final java.lang.String ad
-    protected static final int a
-cn.domob.android.ads.e$a
-cn.domob.android.ads.h:
-    public abstract void onDmAdFailed(cn.domob.android.ads.AdManager$ErrorCode)
-cn.domob.android.ads.i:
-    private static final int p
-    public static final int c
-    231:232:public void a(boolean)
-    351:355:public void a()
-cn.domob.android.ads.j:
-    private static final java.lang.String g
-    private static final java.lang.String h
-    private static final java.lang.String i
-    private static final java.lang.String j
-    private static final java.lang.String k
-    private static final java.lang.String l
-    private static final java.lang.String m
-    protected static final int b
-cn.domob.android.ads.j$a
-cn.domob.android.ads.l:
-    public static final int e
-    public static final int f
-    public static final int g
-    public static final int h
-    public static final java.lang.String i
-    public static final java.lang.String j
-    public static final java.lang.String k
-    public static final java.lang.String l
-    public static final java.lang.String m
-    public static final java.lang.String n
-    public static final java.lang.String o
-    public static final java.lang.String p
-    public static final java.lang.String q
-    public static final java.lang.String r
-    public static final java.lang.String s
-    public static final java.lang.String t
-    public static final java.lang.String u
-    public static final java.lang.String v
-    public static final java.lang.String w
-    public static final java.lang.String x
-    public static final java.lang.String y
-    public static final java.lang.String z
-    public static final java.lang.String G
-    public static final java.lang.String H
-    public static final int I
-    public static final java.lang.String K
-    public static final java.lang.String L
-    public static final java.lang.String M
-    public static final java.lang.String N
-    public static final java.lang.String O
-    public static final java.lang.String Q
-    public static final boolean R
-    public static final int S
-    public static final java.lang.String T
-    public static final java.lang.String U
-    public static final java.lang.String V
-    public static final java.lang.String W
-    public static final java.lang.String Y
-    public static final java.lang.String Z
-    public static final java.lang.String aa
-    3:3:public l()
-cn.domob.android.ads.m:
-    21:52:protected void a(android.content.Context)
-    62:110:protected cn.domob.android.ads.G b(android.content.Context)
-    190:236:protected int b(android.content.Context,java.lang.String)
-cn.domob.android.ads.n:
-    public static final java.lang.String a
-    public static final java.lang.String b
-    public static final java.lang.String c
-    public static final java.lang.String d
-    public static final java.lang.String e
-    public static final java.lang.String f
-    public static final java.lang.String g
-    public static final java.lang.String h
-    public static final java.lang.String i
-    public static final java.lang.String j
-    public static final java.lang.String k
-    public static final java.lang.String l
-    public static final java.lang.String m
-    public static final java.lang.String n
-    public static final java.lang.String o
-    public static final java.lang.String p
-    public static final java.lang.String q
-    public static final java.lang.String r
-    public static final java.lang.String s
-    public static final java.lang.String t
-    public static final java.lang.String u
-    public static final java.lang.String v
-    public static final java.lang.String w
-    public static final java.lang.String x
-    public static final java.lang.String y
-    public static final java.lang.String z
-    public static final java.lang.String A
-    public static final java.lang.String B
-    public static final java.lang.String C
-    public static final java.lang.String D
-    public static final java.lang.String E
-    public static final java.lang.String F
-    public static final java.lang.String G
-    public static final java.lang.String H
-    public static final java.lang.String I
-    public static final java.lang.String J
-    public static final java.lang.String K
-    public static final java.lang.String L
-    public static final java.lang.String M
-    public static final java.lang.String N
-    public static final java.lang.String O
-    public static final java.lang.String P
-    public static final java.lang.String Q
-    public static final java.lang.String R
-    public static final java.lang.String S
-    public static final java.lang.String T
-    public static final java.lang.String U
-    public static final java.lang.String V
-    public static final java.lang.String W
-    public static final java.lang.String X
-    public static final java.lang.String Y
-    public static final java.lang.String Z
-    public static final java.lang.String aa
-    public static final java.lang.String ab
-    public static final java.lang.String ac
-    public static final java.lang.String ad
-    public static final java.lang.String ae
-    public static final java.lang.String af
-    public static final java.lang.String ag
-    public static final java.lang.String ah
-    public static final java.lang.String ai
-    public static final java.lang.String aj
-    public static final java.lang.String ak
-    public static final java.lang.String al
-    public static final java.lang.String am
-    public static final java.lang.String an
-    public static final java.lang.String ao
-    public static final java.lang.String ap
-cn.domob.android.ads.n$b:
-    public static final boolean b
-    919:919:public boolean a()
-    923:923:public int b()
-cn.domob.android.ads.n$c:
-    397:397:public int e()
-    404:404:public int f()
-    411:411:public int g()
-    418:418:public int h()
-    496:496:public java.lang.String s()
-    510:510:public int[] u()
-    568:569:public void a(int)
-    610:610:public cn.domob.android.ads.n$b G()
-    617:617:public cn.domob.android.ads.n$b H()
-cn.domob.android.ads.n$c$a:
-    687:687:public java.lang.String a()
-    722:722:public java.lang.String f()
-cn.domob.android.ads.o:
-    public abstract void e()
-    public abstract void f()
-    public abstract void a(int,int)
-    public abstract void a(java.util.HashMap,java.lang.String,long)
-cn.domob.android.ads.p:
-    public static final java.lang.String b
-    public static final java.lang.String c
-    public static final java.lang.String d
-    public static final java.lang.String e
-    public static final java.lang.String f
-    public static final java.lang.String g
-    public static final int h
-    public static final java.lang.String i
-    89:90:p(android.content.Context,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,cn.domob.android.ads.M)
-    93:102:p(android.content.Context,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,cn.domob.android.ads.M)
-    109:109:public java.lang.String b()
-    129:129:public java.lang.String g()
-    133:133:public android.net.Uri h()
-    270:302:public static void a(java.lang.String,java.lang.String,int,android.content.Context)
-cn.domob.android.ads.p$4
-cn.domob.android.ads.q:
-    private static final java.lang.String g
-    private static final java.lang.String h
-    private static final java.lang.String i
-    private static final java.lang.String j
-    private static final java.lang.String k
-    private static final java.lang.String l
-    private static final java.lang.String m
-    private static final java.lang.String n
-    private static final java.lang.String o
-    private static final java.lang.String p
-    private static final java.lang.String q
-    private static final java.lang.String r
-    private static final java.lang.String s
-    private static final java.lang.String t
-    private static final java.lang.String u
-    private static final java.lang.String v
-    private static final java.lang.String w
-    private static final java.lang.String x
-    private static final java.lang.String y
-    private static final java.lang.String z
-    private static final java.lang.String A
-    private static final java.lang.String B
-    private static final java.lang.String C
-    private static final java.lang.String D
-    private static final java.lang.String E
-    private static final java.lang.String F
-    public static final java.lang.String a
-    public static final java.lang.String b
-    public static final java.lang.String c
-cn.domob.android.ads.q$d
-cn.domob.android.ads.q$e
-cn.domob.android.ads.q$g
-cn.domob.android.ads.r:
-    private static final java.lang.String b
-    private static final java.lang.String c
-    private static final java.lang.String d
-    private static final java.lang.String e
-    private static final java.lang.String f
-    private static final java.lang.String g
-    private static final java.lang.String h
-    private static final java.lang.String i
-    private static final java.lang.String j
-    private static final java.lang.String k
-    private static final java.lang.String l
-    private static final java.lang.String m
-    private static final java.lang.String n
-    private static final java.lang.String o
-    private static final java.lang.String p
-    private static final java.lang.String q
-    private static final java.lang.String r
-    private static final java.lang.String s
-    private static final java.lang.String t
-    private static final java.lang.String u
-    private static final long v
-    private static final long w
-    private static final long x
-cn.domob.android.ads.t
-cn.domob.android.ads.t$1
-cn.domob.android.ads.t$a
-cn.domob.android.ads.u
-cn.domob.android.ads.v:
-    private static final java.lang.String e
-    private static final java.lang.String f
-    private static final java.lang.String g
-    public static final java.lang.String c
-    private static final int k
-    private static final int l
-    private static final int m
-    private static final int n
-cn.domob.android.ads.w:
-    private static final int f
-    private static final int g
-    private static final int h
-    private static final java.lang.String i
-cn.domob.android.ads.x
-cn.domob.android.ads.x$1
-cn.domob.android.ads.x$2
-cn.domob.android.ads.y
-cn.domob.android.ads.z
-cn.domob.android.b.a.a
-cn.domob.android.b.a.a$1
-cn.domob.android.b.a.a$2
-cn.domob.android.b.a.a$a
-cn.domob.android.b.a.b
-cn.domob.android.b.a.b$a
-cn.domob.android.c.a:
-    private static final int A
-    private static final int G
-    private static final int H
-    public static final java.lang.String c
-    public static final java.lang.String d
-    public static final java.lang.String e
-    public static final java.lang.String f
-    public static final java.lang.String g
-    public static final java.lang.String h
-    public static final java.lang.String i
-    public static final int j
-    public static final int k
-    public static final int l
-    public static final int m
-    public static final int n
-    public static final int o
-    public static final int p
-    public static final int q
-    private static final int S
-    193:194:public static void a(java.lang.String,java.lang.String,android.content.Context,cn.domob.android.c.b,java.lang.String,int)
-    205:206:public static void a(java.lang.String,android.content.Context,cn.domob.android.c.b,java.lang.String)
-    228:229:public static void a(java.lang.String,java.lang.String,java.lang.String,android.content.Context,cn.domob.android.c.b)
-    639:653:public static void a(int)
-cn.domob.android.c.c:
-    private static final java.lang.String f
-    private static final java.lang.String h
-    private static final java.lang.String i
-    private static final int j
-    178:187:public boolean a(java.lang.String)
-    214:215:public void a(java.util.concurrent.ThreadPoolExecutor)
-    218:218:public static int d()
-    227:228:public static void a(int)
-    236:236:public static int e()
-    245:246:public static void b(int)
-    254:254:public static int f()
-    263:264:public static void c(int)
-    457:458:public void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,cn.domob.android.c.f)
-    485:486:public void b(android.content.Context,java.lang.String,java.lang.String,cn.domob.android.c.f)
-    589:590:public void a(android.content.Context,java.lang.String,cn.domob.android.c.f)
-cn.domob.android.c.c$a:
-    78:78:private c$a()
-cn.domob.android.c.d:
-    41:41:public int b()
-    64:64:public java.lang.String e()
-cn.domob.android.c.e
-cn.domob.android.c.e$1
-cn.domob.android.c.e$1$1
-cn.domob.android.c.e$a
-cn.domob.android.c.g:
-    java.lang.String b
-    138:138:protected boolean a()
-cn.domob.android.c.i:
-    private static final java.lang.String b
-    private static final java.lang.String c
-cn.domob.android.c.j:
-    private static final int b
-    private static final int l
-    private static final int m
-    private static final int n
-cn.domob.android.c.l:
-    private static final java.lang.String k
-    protected static final java.lang.String a
-    protected static final java.lang.String d
-    static final int e
-    static final int f
-cn.domob.android.d.a:
-    private static final long serialVersionUID
-cn.domob.android.e.a:
-    private static final int b
-    private static final java.lang.String c
-    private static final java.lang.String f
-    private static final java.lang.String g
-    private static final java.lang.String h
-    private static final java.lang.String i
-    private static final java.lang.String j
-    private static final java.lang.String k
-    228:266:protected java.lang.String b()
-    412:418:protected void d()
-cn.domob.android.e.a$b
-cn.domob.android.e.c:
-    public static final int a
-    public static final boolean b
-    6:6:public c()
-    81:82:public static void c(android.content.Context)
-cn.domob.android.f.a:
-    private static final int b
-cn.domob.android.f.a.a
-cn.domob.android.f.b:
-    3:3:public b()
-cn.domob.android.f.d:
-    73:74:public void a(java.util.concurrent.ThreadPoolExecutor)
-    123:125:public void a(java.lang.String,java.lang.String)
-    133:134:public void a(int)
-    137:137:public int a()
-    141:141:public int b()
-    153:154:public void b(int)
-    157:157:public java.util.Map c()
-    161:161:public java.util.Map d()
-    222:223:public void b(java.lang.String,cn.domob.android.f.g,java.lang.String)
-    226:227:public void a(java.lang.String,cn.domob.android.f.f,cn.domob.android.f.g)
-    278:291:public varargs void a(cn.domob.android.f.g,java.lang.Object[])
-    303:304:public varargs void b(java.lang.String,cn.domob.android.f.g,java.lang.Object[])
-cn.domob.android.f.e:
-    public static final java.lang.String a
-    public static final java.lang.String b
-    private static final int c
-cn.domob.android.f.f:
-    46:50:public f(java.lang.String,java.lang.String)
-    62:73:public varargs f(java.lang.Object[])
-    96:97:public void a(java.lang.String)
-cn.domob.android.f.h:
-    20:20:public java.lang.String b()
-cn.domob.android.g.a.a:
-    private static final java.lang.String b
-    private static final long c
-cn.domob.android.g.a.b:
-    private static final long a
-    private static final int b
-    77:78:protected void a(int)
-    85:86:protected void a(long)
-cn.domob.android.g.a.c:
-    private static final java.lang.String b
-    private static final java.lang.String c
-    private static final java.lang.String d
-    private static final java.lang.String e
-    private static final java.lang.String f
-    private static final java.lang.String g
-    private static final java.lang.String h
-    private static final java.lang.String i
-    private static final java.lang.String j
-    73:74:protected void a(int)
-    80:81:public void a(long)
-cn.domob.android.g.a.d:
-    private static final int b
-    private static final java.lang.String c
-    private static final java.lang.String d
-    private static final java.lang.String e
-    private static final java.lang.String f
-    private static final java.lang.String g
-    private static final java.lang.String h
-    private static final java.lang.String i
-    private static final java.lang.String j
-cn.domob.android.h.a:
-    public static final java.lang.String a
-    public static final java.lang.String b
-    public static final java.lang.String c
-    32:41:public void a(java.lang.String,cn.domob.android.ads.n)
-cn.domob.android.i.a:
-    private static java.lang.String b
-    private static int c
-    private static java.lang.String d
-    private static java.lang.String e
-    24:48:private static void f(android.content.Context)
-    57:64:protected static java.lang.String a(android.content.Context)
-    74:78:protected static int b(android.content.Context)
-    88:92:protected static java.lang.String c(android.content.Context)
-    102:106:protected static java.lang.String d(android.content.Context)
-cn.domob.android.i.b:
-    public static final int a
-    public static final int b
-    public static final int c
-    public static final int d
-    public static final int e
-    public static final int f
-    111:114:public static java.lang.String a(byte[],int)
-cn.domob.android.i.b$a:
-    public abstract boolean a(byte[],int,int,boolean)
-    public abstract int a(int)
-cn.domob.android.i.b$b:
-    public static final int c
-    235:235:public int a(int)
-cn.domob.android.i.c:
-    private static java.lang.String j
-    private static java.lang.String k
-    private static final java.lang.String t
-    private static final java.lang.String u
-    private static final java.lang.String v
-    244:252:protected static java.lang.String i(android.content.Context)
-    262:268:protected static java.lang.String j(android.content.Context)
-    301:307:protected static boolean l(android.content.Context)
-    313:327:protected static java.lang.String a()
-    331:332:protected static java.lang.String b()
-    449:457:public static java.lang.String s(android.content.Context)
-    463:479:public static android.database.Cursor t(android.content.Context)
-    491:497:protected static java.lang.String u(android.content.Context)
-    501:501:protected static int c()
-    505:505:protected static int d()
-    509:509:protected static int e()
-    513:513:protected static long f()
-    668:718:protected static java.lang.String[] z(android.content.Context)
-    1102:1112:public static int C(android.content.Context)
-    54:54:static synthetic cn.domob.android.i.i h()
-cn.domob.android.i.c$a
-cn.domob.android.i.c$a$1
-cn.domob.android.i.c$a$a
-cn.domob.android.i.c$a$b
-cn.domob.android.i.c$a$c
-cn.domob.android.i.d
-cn.domob.android.i.e:
-    private static java.lang.String f
-    private static java.lang.String g
-    private static java.lang.String i
-    private static java.lang.Boolean j
-    private static float k
-    private static int m
-    private static int n
-    private static java.lang.String o
-    private static final java.lang.String q
-    private static final java.lang.String r
-    private static final java.lang.String s
-    private static final java.lang.String t
-    private static final java.lang.String u
-    private static final java.lang.String v
-    private static final java.lang.String w
-    private static final java.lang.String x
-    private static final java.lang.String y
-    private static java.lang.String z
-    private static java.lang.String B
-    private static java.lang.String C
-    private static java.lang.String D
-    private static java.lang.String E
-    private static final java.lang.String F
-    private static final java.lang.String G
-    private static final java.lang.String H
-    private static final java.lang.String I
-    private static final java.lang.String J
-    private static final java.lang.String K
-    private static final java.lang.String L
-    private static final java.lang.String M
-    private static final java.lang.String N
-    private static final java.lang.String O
-    private static final java.lang.String P
-    private static final java.lang.String Q
-    private static final java.lang.String R
-    private static final java.lang.String S
-    private static final java.lang.String T
-    private static final java.lang.String U
-    private static final java.lang.String V
-    private static final java.lang.String W
-    private static final java.lang.String X
-    private static final java.lang.String Y
-    private static final java.lang.String Z
-    private static final java.lang.String aa
-    private static final java.lang.String ab
-    private static final java.lang.String ac
-    private static final java.lang.String ad
-    private static final java.lang.String ae
-    private static final java.lang.String af
-    private static final java.lang.String ag
-    private static final java.lang.String ah
-    private static final java.lang.String ai
-    private static final java.lang.String aj
-    private static final java.lang.String ak
-    private static final java.lang.String al
-    private static final java.lang.String am
-    private static final java.lang.String an
-    private static final java.lang.String ao
-    private static final java.lang.String ap
-    private static final java.lang.String aq
-    private static final java.lang.String ar
-    private static final java.lang.String as
-    private static final java.lang.String at
-    private static final java.lang.String au
-    157:158:public static void a(java.util.ArrayList)
-    167:176:public static java.lang.String a(android.content.Context)
-    186:204:public static java.lang.String b(android.content.Context)
-    245:256:public static java.lang.String c(android.content.Context)
-    262:276:public static android.database.Cursor d(android.content.Context)
-    282:296:public static java.lang.String e(android.content.Context)
-    301:334:private static java.lang.String N(android.content.Context)
-    338:352:public static java.lang.String f(android.content.Context)
-    362:375:public static java.lang.String g(android.content.Context)
-    379:392:public static java.lang.String h(android.content.Context)
-    396:402:public static boolean i(android.content.Context)
-    406:413:private static boolean O(android.content.Context)
-    417:428:public static java.lang.String j(android.content.Context)
-    432:438:public static int k(android.content.Context)
-    442:449:public static java.lang.String l(android.content.Context)
-    463:470:public static java.lang.String n(android.content.Context)
-    507:517:public static java.lang.String o(android.content.Context)
-    527:536:public static java.lang.String p(android.content.Context)
-    592:603:public static java.lang.String s(android.content.Context)
-    612:629:public static java.lang.String a()
-    633:637:public static java.lang.String b()
-    670:679:public static java.lang.String u(android.content.Context)
-    692:710:public static boolean v(android.content.Context)
-    721:736:public static float w(android.content.Context)
-    762:767:public static int y(android.content.Context)
-    771:776:public static int z(android.content.Context)
-    780:787:public static int A(android.content.Context)
-    791:799:public static int B(android.content.Context)
-    821:824:public static int c()
-    842:845:public static long f()
-    881:890:public static java.lang.String D(android.content.Context)
-    900:908:public static java.lang.String E(android.content.Context)
-    919:982:public static java.lang.String F(android.content.Context)
-    992:1045:public static java.lang.String[] G(android.content.Context)
-    1362:1365:public static java.lang.String g()
-    1375:1396:public static java.lang.Boolean H(android.content.Context)
-    1403:1416:public static int I(android.content.Context)
-    1549:1558:public static long i()
-    1565:1574:public static long j()
-cn.domob.android.i.e$1
-cn.domob.android.i.e$a:
-    private static final long e
-    private static final int f
-    private static final int g
-    private static final int h
-    1302:1308:private int d()
-    1329:1338:private long f()
-    1048:1048:static synthetic int a(cn.domob.android.i.e$a)
-    1048:1048:static synthetic long d(cn.domob.android.i.e$a)
-cn.domob.android.i.e$a$a
-cn.domob.android.i.e$a$c
-cn.domob.android.i.g:
-    8:8:public g()
-    11:21:public static void a(java.io.InputStream,java.io.OutputStream)
-    24:41:public static void a(java.io.InputStream,java.io.OutputStream,long)
-    44:54:public static void a(java.io.InputStream,byte[])
-cn.domob.android.i.h$a:
-    private static final int b
-    private static final int c
-    private static final long f
-    private static final int g
-    private static final int h
-    private static final int i
-cn.domob.android.i.h$a$a
-cn.domob.android.i.h$a$c
-cn.domob.android.i.i:
-    private static final int d
-    22:27:public i(java.lang.String,java.lang.String)
-    78:79:public void d(java.lang.Object,java.lang.String)
-    86:87:public void f(java.lang.Object,java.lang.String)
-    112:113:public void f(java.lang.String)
-    127:127:public boolean a()
-    136:137:public static void a(boolean)
-cn.domob.android.i.k
-cn.domob.android.i.l:
-    7:7:public l()
-cn.domob.android.i.m:
-    private static final java.lang.String W
-    protected static final java.lang.String a
-    protected static final java.lang.String b
-    protected static final java.lang.String c
-    protected static final java.lang.String d
-    protected static final java.lang.String e
-    protected static final java.lang.String f
-    protected static final java.lang.String g
-    protected static final java.lang.String h
-    protected static final java.lang.String i
-    protected static final java.lang.String j
-    protected static final java.lang.String k
-    protected static final java.lang.String l
-    protected static final java.lang.String m
-    protected static final java.lang.String n
-    protected static final java.lang.String o
-    protected static final java.lang.String p
-    protected static final java.lang.String q
-    protected static final java.lang.String r
-    protected static final java.lang.String s
-    protected static final java.lang.String t
-    protected static final java.lang.String u
-    protected static final java.lang.String v
-    protected static final java.lang.String w
-    protected static final java.lang.String x
-    protected static final java.lang.String y
-    protected static final java.lang.String z
-    protected static final java.lang.String A
-    protected static final java.lang.String B
-    protected static final java.lang.String C
-    protected static final java.lang.String D
-    protected static final java.lang.String E
-    protected static final java.lang.String F
-    protected static final java.lang.String G
-    protected static final java.lang.String H
-    protected static final java.lang.String I
-    protected static final java.lang.String J
-    protected static final java.lang.String K
-    protected static final java.lang.String L
-    protected static final java.lang.String M
-    protected static final java.lang.String N
-    protected static final java.lang.String O
-    81:81:public java.util.ArrayList a()
-    319:322:public static java.lang.String m(android.content.Context)
-    332:335:public static java.lang.String n(android.content.Context)
-    352:356:public static boolean p(android.content.Context)
-    362:366:public static java.lang.String b()
-    372:375:public static java.lang.String c()
-    669:672:public static int H(android.content.Context)
-cn.domob.android.i.n:
-    34:34:public static int b(android.content.Context,int)
-cn.domob.android.i.o:
-    private static final java.lang.String b
-    133:146:public static java.lang.String b(java.lang.String,java.lang.String)
-    156:160:public static boolean b(java.lang.String)
-    170:180:public static java.lang.String c(java.lang.String)
-    191:200:public static java.lang.String d(java.lang.String)
-cn.domob.android.j.a:
-    public static final int a
-    475:487:public void a(int,int)
-    999:1010:public void c(cn.domob.android.j.f)
-    1023:1023:public cn.domob.android.j.b j()
-    36:36:static synthetic void F(cn.domob.android.j.a)
-cn.domob.android.j.a$6
-cn.domob.android.j.b:
-    private static final java.lang.String l
-    private static final java.lang.String m
-    private static final java.lang.String n
-    private static final java.lang.String o
-    private static final java.lang.String p
-    private static final java.lang.String q
-    private static final java.lang.String r
-    private static final java.lang.String s
-    private static final java.lang.String t
-    private static final java.lang.String u
-    private static final java.lang.String v
-    private static final java.lang.String w
-    private static final java.lang.String x
-    private static final java.lang.String y
-    private static final java.lang.String z
-    private static final java.lang.String A
-    private static final java.lang.String B
-    private static final java.lang.String C
-    private static final java.lang.String D
-    private static final java.lang.String E
-    private static final java.lang.String F
-    private static final java.lang.String G
-    private static final java.lang.String H
-    private static final java.lang.String I
-    private static final java.lang.String J
-    private static final java.lang.String K
-    private static final java.lang.String L
-    private static final java.lang.String M
-    private static final boolean N
-    private static final boolean O
-    private static final boolean P
-    private static final boolean Q
-    private static final boolean R
-    private static final long S
-    private static final int T
-    private static final int U
-    private static final int V
-    protected static final int a
-    protected static final int b
-    protected static final int c
-    protected static final int d
-    protected static final int e
-    protected static final int f
-    protected static final java.lang.String g
-    protected static final java.lang.String h
-    protected static final java.lang.String i
-    protected static final java.lang.String j
-    118:118:protected long b()
-cn.domob.android.j.b$a$a:
-    317:317:protected int a()
-    350:350:protected int f()
-    354:354:protected boolean g()
-cn.domob.android.j.b$a$a$a:
-    386:386:protected java.lang.String a()
-    394:394:protected int c()
-    402:402:protected java.lang.String[] e()
-cn.domob.android.j.c:
-    38:39:public void a(cn.domob.android.j.c$a)
-cn.domob.android.j.d:
-    private static final java.lang.String b
-    private static final java.lang.String c
-    private static final java.lang.String d
-    private static final java.lang.String e
-    private static final java.lang.String f
-    private static final java.lang.String g
-    private static final java.lang.String h
-    private static final java.lang.String i
-    private static final java.lang.String j
-    private static final java.lang.String k
-    private static final java.lang.String l
-    private static final java.lang.String m
-    private static final int n
-    private static final int o
-    private static final int p
-    private static final int q
-    private static final int r
-    private static final int s
-    private static final int t
-    private static final java.lang.String u
-    private static final java.lang.String v
-    private static final int w
-    private static final int x
-    private static final int y
-    private static final int z
-cn.domob.android.j.e:
-    8:8:public e()
-cn.domob.android.j.f:
-    private static final int i
-    173:180:private void e()
-    188:198:public synchronized void a(java.lang.String)
-    206:208:public void a(int)
-    216:217:public void a(boolean)
-    14:14:static synthetic int d(cn.domob.android.j.f)
-    14:14:static synthetic boolean e(cn.domob.android.j.f)
-    14:14:static synthetic void f(cn.domob.android.j.f)
-    14:14:static synthetic boolean g(cn.domob.android.j.f)
-cn.domob.android.j.f$3
-cn.domob.android.j.f$b:
-    public abstract void c(cn.domob.android.j.f)
-cn.domob.android.j.f$c
-cn.domob.android.j.f$c$1
 com.actionbarsherlock.ActionBarSherlock:
     protected static final java.lang.String TAG
     public static final boolean DEBUG
@@ -3902,6 +2641,41 @@ com.jeremyfeinstein.slidingmenu.lib.app.SlidingPreferenceActivity:
     125:126:public void showMenu()
     132:133:public void showSecondaryMenu()
     139:140:public void setSlidingActionBarEnabled(boolean)
+com.polites.android.FlingAnimation:
+    68:69:public void setFactor(float)
+com.polites.android.GestureImageView:
+    public static final java.lang.String GLOBAL_NS
+    public static final java.lang.String LOCAL_NS
+    437:439:public void moveBy(float,float)
+    481:481:public boolean isStrict()
+    489:489:public boolean isRecycle()
+    497:504:public void reset()
+    686:686:public boolean isPortrait()
+    694:696:public void setStartingPosition(float,float)
+    712:718:public boolean isOrientationAligned()
+com.polites.android.GestureImageViewTouchListener:
+    458:465:public void reset()
+    469:469:public float getMaxScale()
+    477:477:public float getMinScale()
+com.polites.android.MathUtils:
+    22:22:public MathUtils()
+    37:39:public static float distance(float,float,float,float)
+    61:67:public void rotate(android.graphics.PointF,android.graphics.PointF,float)
+com.polites.android.MoveAnimation:
+    73:75:public void reset()
+    79:79:public float getTargetX()
+    84:85:public void setTargetX(float)
+    89:89:public float getTargetY()
+    93:94:public void setTargetY(float)
+    97:97:public long getAnimationTimeMS()
+    101:102:public void setAnimationTimeMS(long)
+com.polites.android.ZoomAnimation:
+    129:129:public float getZoom()
+    137:137:public float getTouchX()
+    145:145:public float getTouchY()
+    153:153:public long getAnimationLengthMS()
+    157:158:public void setAnimationLengthMS(long)
+    161:161:public com.polites.android.ZoomAnimationListener getZoomAnimationListener()
 com.umeng.analytics.AnalyticsConfig:
     7:7:public AnalyticsConfig()
     26:27:public static void setAppkey(java.lang.String)
@@ -4115,6 +2889,7 @@ com.wlx.wsolandroid.constant.Constant:
     public static final java.lang.String FUJIANG
     public static final java.lang.String ABOUTAPP
     public static final java.lang.String MEIZHOUHUODONG
+    public static final java.lang.String PIANZIMINGDAN
     public static final java.lang.String weaponNameR1
     public static final java.lang.String weaponDataR1G
     public static final java.lang.String weaponDataR1P
@@ -4143,6 +2918,8 @@ com.wlx.wsolandroid.model.Xishu:
     private static final long serialVersionUID
 com.wlx.wsolandroid.utils.APIUtils:
     8:8:public APIUtils()
+com.wlx.wsolandroid.utils.JsonUtils:
+    12:12:public JsonUtils()
 com.wlx.wsolandroid.utils.Utils:
     13:13:public Utils()
     45:60:public static int getDisplay(android.app.Activity,int)
@@ -4157,12 +2934,52 @@ com.wlx.wsolandroid.weapondata.R7WeaponData
 com.wlx.wsolandroid.widget.DuanzaoView
 com.wlx.wsolandroid.widget.ProgressWheel
 com.wlx.wsolandroid.widget.TesuqianghuaView
-net.tsz.afinal.FinalBitmap
-net.tsz.afinal.FinalBitmap$1
-net.tsz.afinal.FinalBitmap$AsyncDrawable
-net.tsz.afinal.FinalBitmap$BitmapLoadAndDisplayTask
+net.tsz.afinal.FinalBitmap:
+    85:86:public net.tsz.afinal.FinalBitmap configLoadingImage(android.graphics.Bitmap)
+    94:95:public net.tsz.afinal.FinalBitmap configLoadingImage(int)
+    103:104:public net.tsz.afinal.FinalBitmap configLoadfailImage(android.graphics.Bitmap)
+    112:113:public net.tsz.afinal.FinalBitmap configLoadfailImage(int)
+    122:123:public net.tsz.afinal.FinalBitmap configBitmapMaxHeight(int)
+    131:132:public net.tsz.afinal.FinalBitmap configBitmapMaxWidth(int)
+    173:174:public net.tsz.afinal.FinalBitmap configMemoryCacheSize(int)
+    182:183:public net.tsz.afinal.FinalBitmap configMemoryCachePercent(float)
+    191:192:public net.tsz.afinal.FinalBitmap configDiskCacheSize(int)
+    200:202:public net.tsz.afinal.FinalBitmap configBitmapLoadThreadSize(int)
+    211:212:public net.tsz.afinal.FinalBitmap configRecycleImmediately(boolean)
+    270:279:public void display(android.view.View,java.lang.String,int,int)
+    282:290:public void display(android.view.View,java.lang.String,android.graphics.Bitmap)
+    294:303:public void display(android.view.View,java.lang.String,android.graphics.Bitmap,android.graphics.Bitmap)
+    306:317:public void display(android.view.View,java.lang.String,int,int,android.graphics.Bitmap,android.graphics.Bitmap)
+    321:322:public void display(android.view.View,java.lang.String,net.tsz.afinal.bitmap.core.BitmapDisplayConfig)
+    370:377:private net.tsz.afinal.bitmap.core.BitmapDisplayConfig getDisplayConfig()
+    382:385:private void clearCacheInternalInBackgroud()
+    390:393:private void clearDiskCacheInBackgroud()
+    397:400:private void clearCacheInBackgroud(java.lang.String)
+    403:406:private void clearDiskCacheInBackgroud(java.lang.String)
+    414:419:private void closeCacheInternalInBackgroud()
+    439:443:public android.graphics.Bitmap getBitmapFromCache(java.lang.String)
+    452:452:public android.graphics.Bitmap getBitmapFromMemoryCache(java.lang.String)
+    461:461:public android.graphics.Bitmap getBitmapFromDiskCache(java.lang.String)
+    465:465:public android.graphics.Bitmap getBitmapFromDiskCache(java.lang.String,net.tsz.afinal.bitmap.core.BitmapDisplayConfig)
+    469:470:public void setExitTasksEarly(boolean)
+    476:477:public void onResume()
+    483:484:public void onPause()
+    493:494:public void onDestroy()
+    500:501:public void clearCache()
+    508:509:public void clearCache(java.lang.String)
+    515:517:public void clearMemoryCache()
+    524:526:public void clearMemoryCache(java.lang.String)
+    533:534:public void clearDiskCache()
+    541:542:public void clearDiskCache(java.lang.String)
+    551:552:public void closeCache()
+    559:562:public void exitTasksEarly(boolean)
+    569:575:public void pauseWork(boolean)
+    381:381:static synthetic void access$0(net.tsz.afinal.FinalBitmap)
+    413:413:static synthetic void access$1(net.tsz.afinal.FinalBitmap)
+    389:389:static synthetic void access$2(net.tsz.afinal.FinalBitmap)
+    396:396:static synthetic void access$3(net.tsz.afinal.FinalBitmap,java.lang.String)
+    402:402:static synthetic void access$4(net.tsz.afinal.FinalBitmap,java.lang.String)
 net.tsz.afinal.FinalBitmap$CacheExecutecTask
-net.tsz.afinal.FinalBitmap$FinalBitmapConfig
 net.tsz.afinal.FinalDb
 net.tsz.afinal.FinalDb$DaoConfig
 net.tsz.afinal.FinalDb$DbUpdateListener
@@ -4220,26 +3037,79 @@ net.tsz.afinal.annotation.sqlite.OneToMany
 net.tsz.afinal.annotation.sqlite.Property
 net.tsz.afinal.annotation.sqlite.Table
 net.tsz.afinal.annotation.sqlite.Transient
-net.tsz.afinal.bitmap.core.BaseMemoryCacheImpl
-net.tsz.afinal.bitmap.core.BaseMemoryCacheImpl$1
-net.tsz.afinal.bitmap.core.BitmapCache
-net.tsz.afinal.bitmap.core.BitmapCache$ImageCacheParams
-net.tsz.afinal.bitmap.core.BitmapDecoder
-net.tsz.afinal.bitmap.core.BitmapDisplayConfig
+net.tsz.afinal.bitmap.core.BaseMemoryCacheImpl:
+    46:47:public void evictAll()
+    51:52:public void remove(java.lang.String)
+net.tsz.afinal.bitmap.core.BitmapCache:
+    private static final int DEFAULT_MEM_CACHE_SIZE
+    private static final int DEFAULT_DISK_CACHE_SIZE
+    private static final int DEFAULT_DISK_CACHE_COUNT
+    private static final boolean DEFAULT_MEM_CACHE_ENABLED
+    private static final boolean DEFAULT_DISK_CACHE_ENABLED
+    163:165:public void clearCache()
+    168:170:public void clearDiskCache()
+    173:176:public void clearMemoryCache()
+    179:181:public void clearCache(java.lang.String)
+    184:185:public void clearDiskCache(java.lang.String)
+    188:191:public void clearMemoryCache(java.lang.String)
+    198:200:public void close()
+net.tsz.afinal.bitmap.core.BitmapCache$ImageCacheParams:
+    216:218:public BitmapCache$ImageCacheParams(java.io.File)
+    252:253:public void setDiskCacheCount(int)
+net.tsz.afinal.bitmap.core.BitmapDecoder:
+    25:25:private BitmapDecoder()
+    29:39:public static android.graphics.Bitmap decodeSampledBitmapFromResource(android.content.res.Resources,int,int,int)
+    46:56:public static android.graphics.Bitmap decodeSampledBitmapFromDescriptor(java.io.FileDescriptor,int,int)
+net.tsz.afinal.bitmap.core.BitmapDisplayConfig:
+    71:72:public void setLoadingBitmap(android.graphics.Bitmap)
+    79:80:public void setLoadfailBitmap(android.graphics.Bitmap)
 net.tsz.afinal.bitmap.core.BitmapDisplayConfig$AnimationType
-net.tsz.afinal.bitmap.core.BitmapProcess
-net.tsz.afinal.bitmap.core.BytesBufferPool
-net.tsz.afinal.bitmap.core.BytesBufferPool$BytesBuffer
-net.tsz.afinal.bitmap.core.DiskCache
-net.tsz.afinal.bitmap.core.DiskCache$LookupRequest
-net.tsz.afinal.bitmap.core.IMemoryCache
-net.tsz.afinal.bitmap.core.LruMemoryCache
-net.tsz.afinal.bitmap.core.SoftMemoryCacheImpl
-net.tsz.afinal.bitmap.display.Displayer
-net.tsz.afinal.bitmap.display.SimpleDisplayer
-net.tsz.afinal.bitmap.download.Downloader
-net.tsz.afinal.bitmap.download.SimpleDownloader
-net.tsz.afinal.bitmap.download.SimpleDownloader$FlushedInputStream
+net.tsz.afinal.bitmap.core.BitmapProcess:
+    private static final int BYTESBUFFE_POOL_SIZE
+    private static final int BYTESBUFFER_SIZE
+net.tsz.afinal.bitmap.core.BytesBufferPool:
+    58:59:public synchronized void clear()
+net.tsz.afinal.bitmap.core.DiskCache:
+    private static final int MAGIC_INDEX_FILE
+    private static final int MAGIC_DATA_FILE
+    private static final int IH_MAGIC
+    private static final int IH_MAX_ENTRIES
+    private static final int IH_MAX_BYTES
+    private static final int IH_ACTIVE_REGION
+    private static final int IH_ACTIVE_ENTRIES
+    private static final int IH_ACTIVE_BYTES
+    private static final int IH_VERSION
+    private static final int IH_CHECKSUM
+    private static final int INDEX_HEADER_SIZE
+    private static final int DATA_HEADER_SIZE
+    private static final int BH_KEY
+    private static final int BH_CHECKSUM
+    private static final int BH_OFFSET
+    private static final int BH_LENGTH
+    private static final int BLOB_HEADER_SIZE
+    168:171:public void delete()
+    175:179:private static void deleteFileSilently(java.lang.String)
+    421:426:public byte[] lookup(long)
+    599:610:int getActiveCount()
+net.tsz.afinal.bitmap.core.IMemoryCache:
+    public abstract void evictAll()
+    public abstract void remove(java.lang.String)
+net.tsz.afinal.bitmap.core.LruMemoryCache:
+    166:182:public final java.lang.Object remove(java.lang.Object)
+    244:245:public final void evictAll()
+    253:253:public final synchronized int size()
+    262:262:public final synchronized int maxSize()
+    269:269:public final synchronized int hitCount()
+    277:277:public final synchronized int missCount()
+    284:284:public final synchronized int createCount()
+    291:291:public final synchronized int putCount()
+    298:298:public final synchronized int evictionCount()
+    306:306:public final synchronized java.util.Map snapshot()
+net.tsz.afinal.bitmap.core.SoftMemoryCacheImpl:
+    48:49:public void evictAll()
+    53:54:public void remove(java.lang.String)
+net.tsz.afinal.bitmap.download.SimpleDownloader:
+    private static final int IO_BUFFER_SIZE
 net.tsz.afinal.core.ArrayDeque:
     private static final int MIN_INITIAL_CAPACITY
     private static final long serialVersionUID
@@ -4353,7 +3223,6 @@ net.tsz.afinal.core.AsyncTask:
     127:128:public static void init()
     132:133:public static void setDefaultExecutor(java.util.concurrent.Executor)
     187:187:public final net.tsz.afinal.core.AsyncTask$Status getStatus()
-    321:322:public final boolean cancel(boolean)
     337:337:public final java.lang.Object get()
     357:357:public final java.lang.Object get(long,java.util.concurrent.TimeUnit)
     389:389:public final varargs net.tsz.afinal.core.AsyncTask execute(java.lang.Object[])
@@ -4446,7 +3315,14 @@ net.tsz.afinal.http.entityhandler.FileEntityHandler:
     40:41:public void setStop(boolean)
 net.tsz.afinal.utils.ClassUtils
 net.tsz.afinal.utils.FieldUtils
-net.tsz.afinal.utils.Utils
+net.tsz.afinal.utils.Utils:
+    private static final java.lang.String TAG
+    private static final long POLY64REV
+    private static final long INITIALCRC
+    26:26:public Utils()
+    75:80:public static long getUsableSpace(java.io.File)
+    110:115:public static byte[] copyOfRange(byte[],int,int)
+    144:147:public static final long crc64Long(java.lang.String)
 u.aly.a:
     80:81:public void a(u.aly.ar)
 u.aly.aa
