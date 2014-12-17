@@ -45,7 +45,7 @@
                 <TextView
                     android:id="@+id/tv_renwu_2"
                     style="@style/style2"
-                    android:text="任务等级表" />
+                    android:text="内政等级表" />
 
                 <View style="@style/style_fenge" />
 

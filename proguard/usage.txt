@@ -2885,7 +2885,7 @@ com.wlx.wsolandroid.constant.Constant:
     public static final java.lang.String JINPAIWUQI
     public static final java.lang.String WUQIDUANZAO
     public static final java.lang.String RENWUBAOCHOU
-    public static final java.lang.String RENWUDENGJI
+    public static final java.lang.String NEIZHENGDENGJI
     public static final java.lang.String FUJIANG
     public static final java.lang.String ABOUTAPP
     public static final java.lang.String MEIZHOUHUODONG
@@ -2913,6 +2913,7 @@ com.wlx.wsolandroid.constant.Constant:
     public static final java.lang.String xishuC3
     public static final java.lang.String xishuC4
     public static final java.lang.String xishuC5
+    public static final java.lang.String renwudengjiTotalCountArray
     3:3:public Constant()
 com.wlx.wsolandroid.model.Xishu:
     private static final long serialVersionUID

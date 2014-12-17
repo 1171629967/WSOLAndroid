@@ -2150,6 +2150,7 @@ com.wlx.wsolandroid.R$id: int layout
 com.wlx.wsolandroid.R$id: int left
 com.wlx.wsolandroid.R$id: int listMode
 com.wlx.wsolandroid.R$id: int listView
+com.wlx.wsolandroid.R$id: int ll
 com.wlx.wsolandroid.R$id: int ll_beizhu
 com.wlx.wsolandroid.R$id: int ll_gongjicao
 com.wlx.wsolandroid.R$id: int ll_gongjili
@@ -2157,6 +2158,7 @@ com.wlx.wsolandroid.R$id: int ll_shuxingPart
 com.wlx.wsolandroid.R$id: int ll_teshuqianghua
 com.wlx.wsolandroid.R$id: int ll_yidongcao
 com.wlx.wsolandroid.R$id: int ll_zhengju
+com.wlx.wsolandroid.R$id: int lv
 com.wlx.wsolandroid.R$id: int lv1
 com.wlx.wsolandroid.R$id: int lv_weaponRank
 com.wlx.wsolandroid.R$id: int lv_weaponType
@@ -2214,7 +2216,11 @@ com.wlx.wsolandroid.R$id: int tv_gaizaoData
 com.wlx.wsolandroid.R$id: int tv_gongjiDown
 com.wlx.wsolandroid.R$id: int tv_gongjiUp
 com.wlx.wsolandroid.R$id: int tv_gongjili
+com.wlx.wsolandroid.R$id: int tv_lastDiffer
+com.wlx.wsolandroid.R$id: int tv_lvNumber
 com.wlx.wsolandroid.R$id: int tv_name
+com.wlx.wsolandroid.R$id: int tv_nextNeed
+com.wlx.wsolandroid.R$id: int tv_pamadeng
 com.wlx.wsolandroid.R$id: int tv_qita_2
 com.wlx.wsolandroid.R$id: int tv_qita_3
 com.wlx.wsolandroid.R$id: int tv_r1
@@ -2231,6 +2237,7 @@ com.wlx.wsolandroid.R$id: int tv_rise_gongjili
 com.wlx.wsolandroid.R$id: int tv_slotNumber_gongji
 com.wlx.wsolandroid.R$id: int tv_slot_gongji
 com.wlx.wsolandroid.R$id: int tv_tesu_yidongli
+com.wlx.wsolandroid.R$id: int tv_totalCount
 com.wlx.wsolandroid.R$id: int tv_weaponName
 com.wlx.wsolandroid.R$id: int tv_weaponRank
 com.wlx.wsolandroid.R$id: int tv_wuqi_1
@@ -2267,6 +2274,7 @@ com.wlx.wsolandroid.R$layout: int actionbar_normal
 com.wlx.wsolandroid.R$layout: int activity_main
 com.wlx.wsolandroid.R$layout: int activity_scaleimage
 com.wlx.wsolandroid.R$layout: int activity_weapon_xishu
+com.wlx.wsolandroid.R$layout: int adapter_item_neizhengdengji
 com.wlx.wsolandroid.R$layout: int adapter_item_pianzimingdan
 com.wlx.wsolandroid.R$layout: int adapter_item_weapon
 com.wlx.wsolandroid.R$layout: int adapter_item_weaponrank
@@ -2274,6 +2282,7 @@ com.wlx.wsolandroid.R$layout: int adapter_item_weapontype
 com.wlx.wsolandroid.R$layout: int fragment_loadhtml
 com.wlx.wsolandroid.R$layout: int fragment_loadtxt
 com.wlx.wsolandroid.R$layout: int fragment_meizhouhuodong
+com.wlx.wsolandroid.R$layout: int fragment_neizhengdengji
 com.wlx.wsolandroid.R$layout: int fragment_pianzimingdan
 com.wlx.wsolandroid.R$layout: int fragment_weapon
 com.wlx.wsolandroid.R$layout: int fragment_weapon_duanzao
@@ -2579,6 +2588,8 @@ com.wlx.wsolandroid.ScaleImageActivity: ScaleImageActivity()
 com.wlx.wsolandroid.WeaponXishuActivity
 com.wlx.wsolandroid.application.WSOLApplication
 com.wlx.wsolandroid.application.WSOLApplication: WSOLApplication()
+com.wlx.wsolandroid.widget.MarqueeTextView
+com.wlx.wsolandroid.widget.MarqueeTextView: MarqueeTextView(android.content.Context,android.util.AttributeSet)
 com.wlx.wsolandroid.widget.MyActionBar: void setData(java.lang.Object)
 com.wlx.wsolandroid.widget.MyActionBar: void setLeftText(java.lang.String)
 com.wlx.wsolandroid.widget.MyActionBar: void setLeftText(int)

@@ -5267,6 +5267,8 @@ com.wlx.wsolandroid.MainActivity -> com.wlx.wsolandroid.MainActivity:
     android.widget.TextView tv_qita_3 -> s
     android.widget.TextView tv_fujiang_1 -> t
     java.lang.String currentFragment -> u
+    com.wlx.wsolandroid.widget.MarqueeTextView tv_pamadeng -> v
+    net.tsz.afinal.FinalHttp finalHttp -> w
     void onCreate(android.os.Bundle) -> onCreate
     void initView() -> f
     void initSlidingMenu() -> g
@@ -5276,7 +5278,22 @@ com.wlx.wsolandroid.MainActivity -> com.wlx.wsolandroid.MainActivity:
     void onPause() -> onPause
     void menuClick() -> a
     void onDestroy() -> onDestroy
-com.wlx.wsolandroid.MeizhouhuodongFragment -> com.wlx.wsolandroid.g:
+    void loadPaomadengMessage() -> h
+    void access$0(com.wlx.wsolandroid.MainActivity) -> a
+    com.wlx.wsolandroid.widget.MarqueeTextView access$1(com.wlx.wsolandroid.MainActivity) -> b
+com.wlx.wsolandroid.MainActivity$1 -> com.wlx.wsolandroid.g:
+    com.wlx.wsolandroid.MainActivity this$0 -> a
+    void onGetOnlineConfigSuccessful(java.lang.String,java.lang.String) -> onGetOnlineConfigSuccessful
+    void onGetOnlineConfigFailed(java.lang.String) -> onGetOnlineConfigFailed
+com.wlx.wsolandroid.MainActivity$2 -> com.wlx.wsolandroid.h:
+    com.wlx.wsolandroid.MainActivity this$0 -> a
+    void run() -> run
+com.wlx.wsolandroid.MainActivity$3 -> com.wlx.wsolandroid.i:
+    com.wlx.wsolandroid.MainActivity this$0 -> a
+    void onStart() -> a
+    void onSuccess(java.lang.Object) -> a
+    void onFailure(java.lang.Throwable,int,java.lang.String) -> a
+com.wlx.wsolandroid.MeizhouhuodongFragment -> com.wlx.wsolandroid.j:
     android.support.v4.widget.SwipeRefreshLayout swipeRefreshLayout -> R
     android.widget.TextView tv_content -> S
     net.tsz.afinal.FinalHttp finalHttp -> T
@@ -5290,15 +5307,27 @@ com.wlx.wsolandroid.MeizhouhuodongFragment -> com.wlx.wsolandroid.g:
     void loadData() -> x
     android.support.v4.widget.SwipeRefreshLayout access$0(com.wlx.wsolandroid.MeizhouhuodongFragment) -> a
     android.widget.TextView access$1(com.wlx.wsolandroid.MeizhouhuodongFragment) -> b
-com.wlx.wsolandroid.MeizhouhuodongFragment$1 -> com.wlx.wsolandroid.h:
+com.wlx.wsolandroid.MeizhouhuodongFragment$1 -> com.wlx.wsolandroid.k:
     com.wlx.wsolandroid.MeizhouhuodongFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.MeizhouhuodongFragment$2 -> com.wlx.wsolandroid.i:
+com.wlx.wsolandroid.MeizhouhuodongFragment$2 -> com.wlx.wsolandroid.l:
     com.wlx.wsolandroid.MeizhouhuodongFragment this$0 -> a
     void onStart() -> a
     void onSuccess(java.lang.Object) -> a
     void onFailure(java.lang.Throwable,int,java.lang.String) -> a
-com.wlx.wsolandroid.PianzimingdanFragment -> com.wlx.wsolandroid.j:
+com.wlx.wsolandroid.NeizhengDengjiFragment -> com.wlx.wsolandroid.m:
+    android.widget.ListView lv -> Q
+    com.wlx.wsolandroid.adapter.NeizhengdengjiListAdapter adapter -> R
+    java.lang.String[] totalCountArray -> S
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
+    void initView(android.view.View) -> a
+    void initActionBar(android.view.View) -> b
+    void onResume() -> g
+    void onPause() -> h
+com.wlx.wsolandroid.NeizhengDengjiFragment$1 -> com.wlx.wsolandroid.n:
+    com.wlx.wsolandroid.NeizhengDengjiFragment this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.wlx.wsolandroid.PianzimingdanFragment -> com.wlx.wsolandroid.o:
     android.widget.ListView listView -> Q
     com.wlx.wsolandroid.adapter.PianzimingdanAdapter adapter -> R
     android.view.View v_head -> S
@@ -5325,26 +5354,30 @@ com.wlx.wsolandroid.PianzimingdanFragment -> com.wlx.wsolandroid.j:
     int access$4(com.wlx.wsolandroid.PianzimingdanFragment,java.lang.String) -> a
     int access$5(com.wlx.wsolandroid.PianzimingdanFragment) -> e
     void access$6(com.wlx.wsolandroid.PianzimingdanFragment,int) -> a
-com.wlx.wsolandroid.PianzimingdanFragment$1 -> com.wlx.wsolandroid.k:
+com.wlx.wsolandroid.PianzimingdanFragment$1 -> com.wlx.wsolandroid.p:
     com.wlx.wsolandroid.PianzimingdanFragment this$0 -> a
     void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
     void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     void afterTextChanged(android.text.Editable) -> afterTextChanged
-com.wlx.wsolandroid.PianzimingdanFragment$2 -> com.wlx.wsolandroid.l:
+com.wlx.wsolandroid.PianzimingdanFragment$2 -> com.wlx.wsolandroid.q:
     com.wlx.wsolandroid.PianzimingdanFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.PianzimingdanFragment$3 -> com.wlx.wsolandroid.m:
+com.wlx.wsolandroid.PianzimingdanFragment$3 -> com.wlx.wsolandroid.r:
     com.wlx.wsolandroid.PianzimingdanFragment this$0 -> a
     int val$page -> b
     void onStart() -> a
     void onSuccess(java.lang.Object) -> a
     void onFailure(java.lang.Throwable,int,java.lang.String) -> a
+com.wlx.wsolandroid.PianzimingdanFragment$4 -> com.wlx.wsolandroid.s:
+    com.wlx.wsolandroid.PianzimingdanFragment this$0 -> a
+    void onGetOnlineConfigSuccessful(java.lang.String,java.lang.String) -> onGetOnlineConfigSuccessful
+    void onGetOnlineConfigFailed(java.lang.String) -> onGetOnlineConfigFailed
 com.wlx.wsolandroid.ScaleImageActivity -> com.wlx.wsolandroid.ScaleImageActivity:
     com.polites.android.GestureImageView gestureImageView -> a
     java.lang.String imgUrl -> b
     net.tsz.afinal.FinalBitmap finalBitmap -> c
     void onCreate(android.os.Bundle) -> onCreate
-com.wlx.wsolandroid.WeaponJinpaiFragment -> com.wlx.wsolandroid.n:
+com.wlx.wsolandroid.WeaponJinpaiFragment -> com.wlx.wsolandroid.t:
     android.widget.ListView lv1 -> Q
     com.wlx.wsolandroid.adapter.WeaponListAdapter adapter -> R
     android.view.View v_head -> S
@@ -5367,17 +5400,21 @@ com.wlx.wsolandroid.WeaponJinpaiFragment -> com.wlx.wsolandroid.n:
     int access$3(com.wlx.wsolandroid.WeaponJinpaiFragment) -> d
     java.util.List access$4(com.wlx.wsolandroid.WeaponJinpaiFragment) -> e
     void access$5(com.wlx.wsolandroid.WeaponJinpaiFragment,boolean) -> a
-com.wlx.wsolandroid.WeaponJinpaiFragment$1 -> com.wlx.wsolandroid.o:
+com.wlx.wsolandroid.WeaponJinpaiFragment$1 -> com.wlx.wsolandroid.u:
     com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
     void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
     void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     void afterTextChanged(android.text.Editable) -> afterTextChanged
-com.wlx.wsolandroid.WeaponJinpaiFragment$2 -> com.wlx.wsolandroid.p:
+com.wlx.wsolandroid.WeaponJinpaiFragment$2 -> com.wlx.wsolandroid.v:
     com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.WeaponJinpaiFragment$3 -> com.wlx.wsolandroid.q:
+com.wlx.wsolandroid.WeaponJinpaiFragment$3 -> com.wlx.wsolandroid.w:
     com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
     void run() -> run
+com.wlx.wsolandroid.WeaponJinpaiFragment$4 -> com.wlx.wsolandroid.x:
+    com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
+    void onGetOnlineConfigSuccessful(java.lang.String,java.lang.String) -> onGetOnlineConfigSuccessful
+    void onGetOnlineConfigFailed(java.lang.String) -> onGetOnlineConfigFailed
 com.wlx.wsolandroid.WeaponXishuActivity -> com.wlx.wsolandroid.WeaponXishuActivity:
     android.widget.TextView tv_N1 -> a
     android.widget.TextView tv_N2 -> b
@@ -5401,7 +5438,20 @@ com.wlx.wsolandroid.WeaponXishuActivity -> com.wlx.wsolandroid.WeaponXishuActivi
     void initActionBar() -> a
     void initView() -> b
     void setData() -> c
-com.wlx.wsolandroid.adapter.PianzimingdanAdapter -> com.wlx.wsolandroid.a.a:
+com.wlx.wsolandroid.adapter.NeizhengdengjiListAdapter -> com.wlx.wsolandroid.a.a:
+    java.lang.String[] totalCountArray -> a
+    android.content.Context context -> b
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.wlx.wsolandroid.adapter.NeizhengdengjiListAdapter$ViewHolder -> com.wlx.wsolandroid.a.b:
+    android.widget.TextView tv_lvNumber -> a
+    android.widget.TextView tv_nextNeed -> b
+    android.widget.TextView tv_lastDiffer -> c
+    android.widget.TextView tv_totalCount -> d
+    com.wlx.wsolandroid.adapter.NeizhengdengjiListAdapter this$0 -> e
+com.wlx.wsolandroid.adapter.PianzimingdanAdapter -> com.wlx.wsolandroid.a.c:
     net.tsz.afinal.FinalBitmap finalBitmap -> a
     java.util.List lists -> b
     android.content.Context context -> c
@@ -5411,11 +5461,11 @@ com.wlx.wsolandroid.adapter.PianzimingdanAdapter -> com.wlx.wsolandroid.a.a:
     long getItemId(int) -> getItemId
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
     android.content.Context access$0(com.wlx.wsolandroid.adapter.PianzimingdanAdapter) -> a
-com.wlx.wsolandroid.adapter.PianzimingdanAdapter$1 -> com.wlx.wsolandroid.a.b:
+com.wlx.wsolandroid.adapter.PianzimingdanAdapter$1 -> com.wlx.wsolandroid.a.d:
     com.wlx.wsolandroid.adapter.PianzimingdanAdapter this$0 -> a
     java.lang.String val$jietu -> b
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.adapter.PianzimingdanAdapter$ViewHolder -> com.wlx.wsolandroid.a.c:
+com.wlx.wsolandroid.adapter.PianzimingdanAdapter$ViewHolder -> com.wlx.wsolandroid.a.e:
     android.widget.ImageView iv -> a
     android.widget.TextView tv_name -> b
     android.widget.LinearLayout ll_zhengju -> c
@@ -5423,7 +5473,7 @@ com.wlx.wsolandroid.adapter.PianzimingdanAdapter$ViewHolder -> com.wlx.wsolandro
     android.widget.TextView tv_zhengju -> e
     android.widget.TextView tv_beizhu -> f
     com.wlx.wsolandroid.adapter.PianzimingdanAdapter this$0 -> g
-com.wlx.wsolandroid.adapter.WeaponListAdapter -> com.wlx.wsolandroid.a.d:
+com.wlx.wsolandroid.adapter.WeaponListAdapter -> com.wlx.wsolandroid.a.f:
     java.util.List lists -> a
     android.content.Context context -> b
     int getCount() -> getCount
@@ -5431,7 +5481,7 @@ com.wlx.wsolandroid.adapter.WeaponListAdapter -> com.wlx.wsolandroid.a.d:
     java.lang.Object getItem(int) -> getItem
     long getItemId(int) -> getItemId
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
-com.wlx.wsolandroid.adapter.WeaponListAdapter$ViewHolder -> com.wlx.wsolandroid.a.e:
+com.wlx.wsolandroid.adapter.WeaponListAdapter$ViewHolder -> com.wlx.wsolandroid.a.g:
     android.widget.TextView tv_name -> a
     android.widget.TextView tv_r1 -> b
     android.widget.TextView tv_r2 -> c
@@ -5448,6 +5498,9 @@ com.wlx.wsolandroid.constant.Constant -> com.wlx.wsolandroid.b.a:
     java.lang.String tulingKEY -> b
     java.lang.String tulingQuestion1 -> c
     java.lang.String tulingQuestion2 -> d
+    java.lang.String tulingQuestion3 -> e
+    java.lang.String IS_OPEN_AD -> f
+    java.lang.String AD_INTERVAL_TIME -> g
 com.wlx.wsolandroid.model.Pianzi -> com.wlx.wsolandroid.c.a:
     java.lang.String name -> a
     java.lang.String jietu -> b
@@ -5538,7 +5591,10 @@ com.wlx.wsolandroid.utils.JsonUtils -> com.wlx.wsolandroid.d.b:
     java.util.ArrayList getPianzisFromJson(java.lang.String) -> a
 com.wlx.wsolandroid.utils.Utils -> com.wlx.wsolandroid.d.c:
     java.lang.String getString(java.io.InputStream) -> a
-com.wlx.wsolandroid.widget.MyActionBar -> com.wlx.wsolandroid.e.a:
+com.wlx.wsolandroid.widget.MarqueeTextView -> com.wlx.wsolandroid.widget.MarqueeTextView:
+    void onFocusChanged(boolean,int,android.graphics.Rect) -> onFocusChanged
+    boolean isFocused() -> isFocused
+com.wlx.wsolandroid.widget.MyActionBar -> com.wlx.wsolandroid.widget.a:
     android.widget.LinearLayout leftLayout -> b
     android.widget.LinearLayout middleLayout -> c
     android.widget.LinearLayout rightLayout -> d
@@ -5568,18 +5624,18 @@ com.wlx.wsolandroid.widget.MyActionBar -> com.wlx.wsolandroid.e.a:
     void setRightIntent(android.content.Intent) -> setRightIntent
     void setRightClickListenner(android.view.View$OnClickListener) -> setRightClickListenner
     android.app.Activity access$0(com.wlx.wsolandroid.widget.MyActionBar) -> a
-com.wlx.wsolandroid.widget.MyActionBar$1 -> com.wlx.wsolandroid.e.b:
+com.wlx.wsolandroid.widget.MyActionBar$1 -> com.wlx.wsolandroid.widget.b:
     com.wlx.wsolandroid.widget.MyActionBar this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.widget.MyActionBar$2 -> com.wlx.wsolandroid.e.c:
-    com.wlx.wsolandroid.widget.MyActionBar this$0 -> a
-    android.content.Intent val$intent -> b
-    void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.widget.MyActionBar$3 -> com.wlx.wsolandroid.e.d:
+com.wlx.wsolandroid.widget.MyActionBar$2 -> com.wlx.wsolandroid.widget.c:
     com.wlx.wsolandroid.widget.MyActionBar this$0 -> a
     android.content.Intent val$intent -> b
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.widget.MyRelativeLayoutView -> com.wlx.wsolandroid.e.e:
+com.wlx.wsolandroid.widget.MyActionBar$3 -> com.wlx.wsolandroid.widget.d:
+    com.wlx.wsolandroid.widget.MyActionBar this$0 -> a
+    android.content.Intent val$intent -> b
+    void onClick(android.view.View) -> onClick
+com.wlx.wsolandroid.widget.MyRelativeLayoutView -> com.wlx.wsolandroid.widget.e:
     android.content.Context context -> a
     void initDefult() -> c
     int initLayout() -> a

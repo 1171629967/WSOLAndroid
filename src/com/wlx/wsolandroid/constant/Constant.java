@@ -5,6 +5,10 @@ public class Constant {
 	public static String tulingKEY = "9eef2ee631432b08710c555d673bf5a2";
 	public static String tulingQuestion1 = "真三国无双ol——公告栏";
 	public static String tulingQuestion2 = "真三国无双ol——骗子名单";
+	public static String tulingQuestion3 = "真三国无双ol——应用告示Android";
+	
+	public static String IS_OPEN_AD = "isOpenAD";
+	public static String AD_INTERVAL_TIME = "adIntervalTime";
 	
 	
     /** 金牌武器上升值 */
@@ -13,8 +17,8 @@ public class Constant {
     public static final String WUQIDUANZAO    = "wuqiduanzao";
     /** 任务报酬一览 */
     public static final String RENWUBAOCHOU  = "renwubaochou";
-    /** 任务等级表 */
-    public static final String RENWUDENGJI   = "renwudengji";
+    /** 内政等级表 */
+    public static final String NEIZHENGDENGJI   = "neizhengdengji";
     /** 副将技能和属性 */
     public static final String FUJIANG       = "fujiang";
     /** 关于APP */
@@ -50,5 +54,12 @@ public class Constant {
     public static final String xishuC3       = "(5+5)*N+10,10+10*N+10";
     public static final String xishuC4       = "20,17";
     public static final String xishuC5       = "12+10,12";
+    
+    
+    
+    /** 任务等级所需的内政值 */
+    public static final String renwudengjiTotalCountArray = "10,22,36,52,70,90,112,136,162,190,220,252,286,322,360,400,442,486,532,580,630,682,736,792,850,910,972,1036,1102,1170,1240,1312,1386,1462,1540,1620,1702,1786,1872,1960,2050,2142,2236,2332,2430,2530,2632,2736,2842,2950," +
+    														"3062,3178,3298,3422,3550,3682,3818,3958,4102,4250,4402,4558,4718,4882,5050,5222,5398,5578,5762,5950,6142,6338,6538,6742,6950,7162,7378,7598,7822,8050,8282,8518,8758,9002,9250,9502,9758,10018,10282,10550,10824,11104,11390,11682,11980,12284,12594,12910,13232,13560," +
+    														"13900,14252,14616,14992,15380,15780,16192,16616,17052,17500,17960,18432,18916,19412,19920,20440,20972,21516,22072,22640,23220,23812,24416,25032,25660,26300,26952,27616,28292,28980";
 
 }

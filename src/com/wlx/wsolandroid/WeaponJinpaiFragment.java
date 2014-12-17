@@ -3,6 +3,8 @@ package com.wlx.wsolandroid;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.youmi.android.AdManager;
+import net.youmi.android.onlineconfig.OnlineConfigCallBack;
 import net.youmi.android.spot.SpotManager;
 
 import android.content.Context;
@@ -185,9 +187,22 @@ public class WeaponJinpaiFragment extends BaseFragment {
 		}).start();
 	}
 
-	private void addAd() {
-		SpotManager.getInstance(getActivity()).setSpotOrientation(SpotManager.ORIENTATION_PORTRAIT);
-		SpotManager.getInstance(getActivity()).showSpotAds(getActivity());
+	private void addAd() {		
+		AdManager.getInstance(getActivity()).asyncGetOnlineConfig(Constant.IS_OPEN_AD, new OnlineConfigCallBack() {
+			@Override
+			public void onGetOnlineConfigSuccessful(String key, String value) {
+				// 获取在线参数成功
+				String isOpenAD = value;
+				if (isOpenAD.equals("true")) {					
+					SpotManager.getInstance(getActivity()).showSpotAds(getActivity());
+				}
+			}
+
+			@Override
+			public void onGetOnlineConfigFailed(String key) {
+				// 获取在线参数失败，可能原因有：键值未设置或为空、网络异常、服务器异常
+			}
+		});	
 	}
 
 	@Override

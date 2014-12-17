@@ -4,16 +4,28 @@
     android:layout_height="match_parent"
     android:background="@color/gray"
     android:orientation="vertical" >
+
     <RelativeLayout
         android:id="@+id/rl_actionbar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
-    <FrameLayout 
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+
+    <com.wlx.wsolandroid.widget.MarqueeTextView
+        android:visibility="gone"
+        android:id="@+id/tv_pamadeng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"  
+        android:focusable="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusableInTouchMode="true"  
+        android:textColor="@color/bisque" />
+
+    <FrameLayout
         android:id="@+id/fl_fragments"
-        >
-        
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
     </FrameLayout>
 
 </LinearLayout>
