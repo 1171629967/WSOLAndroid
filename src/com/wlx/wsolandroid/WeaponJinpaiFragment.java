@@ -3,11 +3,10 @@ package com.wlx.wsolandroid;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.youmi.android.AdManager;
-import net.youmi.android.onlineconfig.OnlineConfigCallBack;
-import net.youmi.android.spot.SpotManager;
+
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -17,6 +16,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -27,10 +28,10 @@ import com.umeng.analytics.MobclickAgent;
 import com.wlx.wsolandroid.adapter.WeaponListAdapter;
 import com.wlx.wsolandroid.constant.Constant;
 import com.wlx.wsolandroid.model.Weapon;
-import com.wlx.wsolandroid.model.Xishu;
+import com.wlx.wsolandroid.model.Weilixishu;
 import com.wlx.wsolandroid.widget.MyActionBar;
 
-public class WeaponJinpaiFragment extends BaseFragment {
+public class WeaponJinpaiFragment extends BaseFragment implements OnItemClickListener{
 	private ListView lv1;
 	private WeaponListAdapter adapter;
 	private View v_head;
@@ -39,7 +40,7 @@ public class WeaponJinpaiFragment extends BaseFragment {
 	private List<Weapon> searchResultWeapons = new ArrayList<Weapon>();
 	private int allWeaponCount;
 
-	private final List<Xishu> xishus = new ArrayList<Xishu>();
+	private final List<Weilixishu> weilixishus = new ArrayList<Weilixishu>();
 	private boolean isLoadXishuFinish = false;
 
 	@Override
@@ -47,7 +48,6 @@ public class WeaponJinpaiFragment extends BaseFragment {
 		View view = inflater.inflate(R.layout.fragment_weapon, null);
 		this.initActionBar(view);
 		this.initView(view);
-		this.loadXishu();
 		return view;
 	}
 
@@ -111,7 +111,7 @@ public class WeaponJinpaiFragment extends BaseFragment {
 		adapter = new WeaponListAdapter(getActivity(), allWeapons);
 
 		lv1.setAdapter(adapter);
-
+		lv1.setOnItemClickListener(this);
 		
 	}
 
@@ -131,84 +131,13 @@ public class WeaponJinpaiFragment extends BaseFragment {
 		actionbar.addView(actionBar);
 	}
 
-	/** 异步线程解析武器威力系数 */
-	private void loadXishu() {
-		new Thread(new Runnable() {
+	
 
-			@Override
-			public void run() {
-
-				String[] N1s = Constant.xishuN1.split("\\,");
-				String[] N2s = Constant.xishuN2.split("\\,");
-				String[] N3s = Constant.xishuN3.split("\\,");
-				String[] N4s = Constant.xishuN4.split("\\,");
-				String[] N5s = Constant.xishuN5.split("\\,");
-				String[] N6s = Constant.xishuN6.split("\\,");
-				String[] E6s = Constant.xishuE6.split("\\,");
-				String[] E7s = Constant.xishuE7.split("\\,");
-				String[] E8s = Constant.xishuE8.split("\\,");
-				String[] E9s = Constant.xishuE9.split("\\,");
-
-				String[] Ds = Constant.xishuD.split("\\,");
-				String[] JAs = Constant.xishuJA.split("\\,");
-				String[] JCs = Constant.xishuJC.split("\\,");
-				String[] C2s = Constant.xishuC2.split("\\,");
-				String[] C3s = Constant.xishuC3.split("\\,");
-				String[] C4s = Constant.xishuC4.split("\\,");
-				String[] C5s = Constant.xishuC5.split("\\,");
-
-				int count = N1s.length;
-				for (int i = 0; i < count; i++) {
-					Xishu xishu = new Xishu();
-
-					xishu.setN1(N1s[i]);
-					xishu.setN2(N2s[i]);
-					xishu.setN3(N3s[i]);
-					xishu.setN4(N4s[i]);
-					xishu.setN5(N5s[i]);
-					xishu.setN6(N6s[i]);
-					xishu.setE6(E6s[i]);
-					xishu.setE7(E7s[i]);
-					xishu.setE8(E8s[i]);
-					xishu.setE9(E9s[i]);
-
-					xishu.setD(Ds[i]);
-					xishu.setJA(JAs[i]);
-					xishu.setJC(JCs[i]);
-					xishu.setC2(C2s[i]);
-					xishu.setC3(C3s[i]);
-					xishu.setC4(C4s[i]);
-					xishu.setC5(C5s[i]);
-
-					xishus.add(xishu);
-				}
-				isLoadXishuFinish = true;
-			}
-		}).start();
-	}
-
-	private void addAd() {		
-		AdManager.getInstance(getActivity()).asyncGetOnlineConfig(Constant.IS_OPEN_AD, new OnlineConfigCallBack() {
-			@Override
-			public void onGetOnlineConfigSuccessful(String key, String value) {
-				// 获取在线参数成功
-				String isOpenAD = value;
-				if (isOpenAD.equals("true")) {					
-					SpotManager.getInstance(getActivity()).showSpotAds(getActivity());
-				}
-			}
-
-			@Override
-			public void onGetOnlineConfigFailed(String key) {
-				// 获取在线参数失败，可能原因有：键值未设置或为空、网络异常、服务器异常
-			}
-		});	
-	}
+	
 
 	@Override
 	public void onResume() {
 		super.onResume();
-		this.addAd();
 		MobclickAgent.onPageStart("金牌武器上升值"); // 统计页面
 	}
 
@@ -216,6 +145,13 @@ public class WeaponJinpaiFragment extends BaseFragment {
 	public void onPause() {
 		super.onPause();
 		MobclickAgent.onPageEnd("金牌武器上升值");
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+		Intent intent = new Intent(getActivity(),WeaponXishuActivity.class);
+		intent.putExtra("weaponName", adapter.getDate().get(position-1).getName());
+		startActivity(intent);
 	}
 
 }

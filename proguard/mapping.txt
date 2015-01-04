@@ -5433,7 +5433,7 @@ com.wlx.wsolandroid.WeaponXishuActivity -> com.wlx.wsolandroid.WeaponXishuActivi
     android.widget.TextView tv_C3 -> o
     android.widget.TextView tv_C4 -> p
     android.widget.TextView tv_C5 -> q
-    com.wlx.wsolandroid.model.Xishu xishu -> r
+    com.wlx.wsolandroid.model.Weilixishu xishu -> r
     void onCreate(android.os.Bundle) -> onCreate
     void initActionBar() -> a
     void initView() -> b
@@ -5533,7 +5533,7 @@ com.wlx.wsolandroid.model.Weapon -> com.wlx.wsolandroid.c.b:
     void setT(int) -> d
     int getW() -> f
     void setW(int) -> e
-com.wlx.wsolandroid.model.Xishu -> com.wlx.wsolandroid.c.c:
+com.wlx.wsolandroid.model.Weilixishu -> com.wlx.wsolandroid.c.c:
     java.lang.String N1 -> a
     java.lang.String N2 -> b
     java.lang.String N3 -> c

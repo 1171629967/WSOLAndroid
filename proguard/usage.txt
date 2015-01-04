@@ -2915,7 +2915,7 @@ com.wlx.wsolandroid.constant.Constant:
     public static final java.lang.String xishuC5
     public static final java.lang.String renwudengjiTotalCountArray
     3:3:public Constant()
-com.wlx.wsolandroid.model.Xishu:
+com.wlx.wsolandroid.model.Weilixishu:
     private static final long serialVersionUID
 com.wlx.wsolandroid.utils.APIUtils:
     8:8:public APIUtils()

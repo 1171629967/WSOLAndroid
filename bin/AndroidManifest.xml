@@ -15,10 +15,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_LOGS"/>
 
-    <!-- 以下为有米可选权限 -->
-    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
 
     <application
         android:name=".application.WSOLApplication"
@@ -26,30 +25,7 @@
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <!-- 有米配置############################################################################################# -->
-        <activity
-            android:name="net.youmi.android.AdBrowser"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.Light.NoTitleBar" >
-        </activity>
-
-        <service
-            android:name="net.youmi.android.AdService"
-            android:exported="true" >
-        </service>
-
-        <receiver android:name="net.youmi.android.AdReceiver" >
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_ADDED" />
-
-                <data android:scheme="package" />
-            </intent-filter>
-        </receiver>
-
-        <provider
-            android:name="net.youmi.android.spot.SpotAdContentProvider"
-            android:authorities="com.wlx.wsolandroid" />
-        <!-- 有米配置############################################################################################# -->
+        
 
         <!-- 主页面 -->
         <activity
@@ -63,15 +39,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".WeaponXishuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >           
+        </activity>
+        <activity
             android:name=".ScaleImageActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
 
-        <meta-data
-            android:name="YOUMI_CHANNEL"
-            android:value="10440" >
-        </meta-data>
+        
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="540523dcfd98c5a740058604" >

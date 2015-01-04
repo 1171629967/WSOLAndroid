@@ -1,5 +1,7 @@
 package com.wlx.wsolandroid;
 
+import java.util.List;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -10,6 +12,7 @@ import net.tsz.afinal.http.AjaxParams;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,24 +20,26 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.listener.FindListener;
+
 import com.umeng.analytics.MobclickAgent;
 import com.wlx.wsolandroid.constant.Constant;
+import com.wlx.wsolandroid.model.Information;
 import com.wlx.wsolandroid.utils.APIUtils;
 import com.wlx.wsolandroid.widget.MyActionBar;
 import com.wlx.wsolandroid.widget.ProgressWheel;
 
 public class MeizhouhuodongFragment extends BaseFragment implements OnRefreshListener {
 	private SwipeRefreshLayout swipeRefreshLayout;
-	private TextView tv_content;
-	private FinalHttp finalHttp;
+	private TextView tv_content;	
 	// private ProgressWheel progressBar;
 	boolean running;
 	int progress = 0;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		finalHttp = new FinalHttp();
+		super.onCreate(savedInstanceState);	
 	}
 
 	@SuppressWarnings("deprecation")
@@ -89,40 +94,24 @@ public class MeizhouhuodongFragment extends BaseFragment implements OnRefreshLis
 	}
 
 	private void loadData() {
-		AjaxParams params = APIUtils.getTulingParams(Constant.tulingQuestion1);
-		finalHttp.get(Constant.tulingAPI, params, new AjaxCallBack<Object>() {
+		BmobQuery<Information> bmobQuery = new BmobQuery<Information>();
+    	bmobQuery.addWhereEqualTo("type", "activity_everyweek_android");
+    	bmobQuery.findObjects(getActivity(), new FindListener<Information>() {
 
 			@Override
-			public void onStart() {
-				super.onStart();
-
-				// progressBar.setVisibility(View.VISIBLE);
-				// startLoading(progressBar);
-			}
-
-			@Override
-			public void onSuccess(Object t) {
-				super.onSuccess(t);
+			public void onSuccess(List<Information> infos) {
 				swipeRefreshLayout.setRefreshing(false);
-				// progressBar.setVisibility(View.GONE);
-				try {
-					JSONObject jsonObject = new JSONObject(t.toString());
-					String text = (String) jsonObject.get("text");
-					text = text.replaceAll("\\$", "\n");
-					tv_content.setText(text);
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
-
+				Information info = infos.get(0);  
+				String des = info.getDes();
+				tv_content.setText(des);
 			}
-
+			
 			@Override
-			public void onFailure(Throwable t, int errorNo, String strMsg) {
-				super.onFailure(t, errorNo, strMsg);
+			public void onError(int arg0, String arg1) {
 				swipeRefreshLayout.setRefreshing(false);
-				// progressBar.setVisibility(View.GONE);
 			}
-
 		});
+		
+		
 	}
 }

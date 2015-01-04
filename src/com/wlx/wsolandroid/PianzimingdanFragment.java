@@ -6,9 +6,6 @@ import java.util.List;
 import net.tsz.afinal.FinalHttp;
 import net.tsz.afinal.http.AjaxCallBack;
 import net.tsz.afinal.http.AjaxParams;
-import net.youmi.android.AdManager;
-import net.youmi.android.onlineconfig.OnlineConfigCallBack;
-import net.youmi.android.spot.SpotManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -161,7 +158,7 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 					JSONObject jsonObject = new JSONObject(t.toString());
 					String text = (String) jsonObject.get("text");
 					text = text.replaceAll("\\$", "\"");
-					//System.out.println("骗子名单json---------》"+page+"-------->"+text);
+					System.out.println("骗子名单json---------》"+page+"-------->"+text);
 					ArrayList<Pianzi> pianzis = JsonUtils.getPianzisFromJson(text);
 					allPianzis.addAll(pianzis);
 					adapter.notifyDataSetChanged();		
@@ -203,28 +200,12 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 	}
 	
 	
-	private void addAd() {
-		AdManager.getInstance(getActivity()).asyncGetOnlineConfig(Constant.IS_OPEN_AD, new OnlineConfigCallBack() {
-		    @Override
-		    public void onGetOnlineConfigSuccessful(String key, String value) {		        
-		        // 获取在线参数成功
-		    	String isOpenAD = value;
-		    	if (isOpenAD.equals("true")) {
-		    		SpotManager.getInstance(getActivity()).showSpotAds(getActivity());
-				}
-		    }
-		    @Override
-		    public void onGetOnlineConfigFailed(String key) {
-		        // 获取在线参数失败，可能原因有：键值未设置或为空、网络异常、服务器异常
-		    }
-		});
-	}
+	
 	
 	
 	@Override
 	public void onResume() {
 		super.onResume();
-		this.addAd();
 		MobclickAgent.onPageStart("骗子名单"); // 统计页面
 	}
 

@@ -3,9 +3,6 @@ package com.wlx.wsolandroid;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.youmi.android.AdManager;
-import net.youmi.android.onlineconfig.OnlineConfigCallBack;
-import net.youmi.android.spot.SpotManager;
 
 import android.R.integer;
 import android.content.Context;
@@ -29,7 +26,7 @@ import com.wlx.wsolandroid.adapter.NeizhengdengjiListAdapter;
 import com.wlx.wsolandroid.adapter.WeaponListAdapter;
 import com.wlx.wsolandroid.constant.Constant;
 import com.wlx.wsolandroid.model.Weapon;
-import com.wlx.wsolandroid.model.Xishu;
+import com.wlx.wsolandroid.model.Weilixishu;
 import com.wlx.wsolandroid.widget.MyActionBar;
 
 public class NeizhengDengjiFragment extends BaseFragment {

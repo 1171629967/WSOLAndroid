@@ -29,6 +29,9 @@ public class WeaponListAdapter extends BaseAdapter {
         this.lists = lists;
     }
 
+    
+    
+    
     @Override
     public int getCount() {
         return lists.size();
@@ -36,6 +39,10 @@ public class WeaponListAdapter extends BaseAdapter {
     
     public void setData(List<Weapon> lists){
         this.lists = lists;
+    }
+    
+    public List<Weapon> getDate(){
+    	return lists;
     }
 
     @Override

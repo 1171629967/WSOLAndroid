@@ -1,15 +1,14 @@
 package com.wlx.wsolandroid;
 
 
+import java.util.List;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import net.tsz.afinal.FinalHttp;
 import net.tsz.afinal.http.AjaxCallBack;
 import net.tsz.afinal.http.AjaxParams;
-import net.youmi.android.AdManager;
-import net.youmi.android.onlineconfig.OnlineConfigCallBack;
-import net.youmi.android.spot.SpotManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
@@ -19,11 +18,17 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
+import cn.bmob.v3.Bmob;
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.listener.FindListener;
+
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.umeng.analytics.MobclickAgent;
 import com.wlx.wsolandroid.BaseFragment.menuClicklistener;
 import com.wlx.wsolandroid.constant.Constant;
+import com.wlx.wsolandroid.model.Information;
 import com.wlx.wsolandroid.model.Pianzi;
+import com.wlx.wsolandroid.model.Weilixishu;
 import com.wlx.wsolandroid.utils.APIUtils;
 import com.wlx.wsolandroid.utils.JsonUtils;
 import com.wlx.wsolandroid.widget.MarqueeTextView;
@@ -43,28 +48,10 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 		
 		finalHttp = new FinalHttp();
 
-		// 有米插屏广告预加载
-		AdManager.getInstance(this).init("1fd03cb84d3ba452", "b078ce712a256153", false);
-		SpotManager.getInstance(this).loadSpotAds();
-		SpotManager.getInstance(this).setSpotOrientation(SpotManager.ORIENTATION_PORTRAIT);
-		AdManager.getInstance(this).asyncGetOnlineConfig(Constant.AD_INTERVAL_TIME, new OnlineConfigCallBack() {
-			@Override
-			public void onGetOnlineConfigSuccessful(String key, String value) {
-				// 获取在线参数成功
-				int adIntervalTime = 30;
-				try {
-					adIntervalTime = Integer.parseInt(value);
-				} catch (Exception e) {
-					adIntervalTime = 30;
-				}				
-				SpotManager.getInstance(MainActivity.this).setShowInterval(adIntervalTime);
-			}
-
-			@Override
-			public void onGetOnlineConfigFailed(String key) {
-				SpotManager.getInstance(MainActivity.this).setShowInterval(30);
-			}
-		});	
+		//后台配置
+		Bmob.initialize(this, "8763a00a263ee5064e8a55be05f72f3a");
+		
+		
 
 
 		this.initSlidingMenu();
@@ -212,50 +199,34 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 
 	@Override
 	protected void onDestroy() {
-		SpotManager.getInstance(this).unregisterSceenReceiver();
 		super.onDestroy();
 	}
 	
-	private void loadPaomadengMessage(){
-		String question = Constant.tulingQuestion3;
-		AjaxParams params = APIUtils.getTulingParams(question);
-		finalHttp.get(Constant.tulingAPI, params, new AjaxCallBack<Object>() {
-
+	private void loadPaomadengMessage(){		
+		BmobQuery<Information> bmobQuery = new BmobQuery<Information>();
+    	bmobQuery.addWhereEqualTo("type", "gonggao_android");
+    	bmobQuery.findObjects(this, new FindListener<Information>() {
+			
 			@Override
-			public void onStart() {
-				super.onStart();
-			}
-
-			@Override
-			public void onSuccess(Object t) {
-				super.onSuccess(t);
-				
-				try {
-					JSONObject jsonObject = new JSONObject(t.toString());
-					String text = (String) jsonObject.get("text");
-					//text = text.replaceAll("\\$", "\"");
-					if (text.equals("无内容")) {
-						tv_pamadeng.setVisibility(View.GONE);
-					}
-					else {
-						tv_pamadeng.setText(text);
-						tv_pamadeng.setVisibility(View.VISIBLE);
-					}
-					
-				} catch (JSONException e) {
-					e.printStackTrace();
+			public void onSuccess(List<Information> infos) {
+				Information info = infos.get(0);  
+				String des = info.getDes();
+				if (TextUtils.isEmpty(des)) {
 					tv_pamadeng.setVisibility(View.GONE);
 				}
-
+				else {
+					tv_pamadeng.setText(des);
+					tv_pamadeng.setVisibility(View.VISIBLE);
+				}
 			}
-
+			
 			@Override
-			public void onFailure(Throwable t, int errorNo, String strMsg) {
-				super.onFailure(t, errorNo, strMsg);
+			public void onError(int arg0, String arg1) {
 				tv_pamadeng.setVisibility(View.GONE);
 			}
-
 		});
+		
+		
 	}
 
 }
