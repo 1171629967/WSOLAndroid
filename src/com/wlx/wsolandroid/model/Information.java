@@ -1,6 +1,8 @@
 package com.wlx.wsolandroid.model;
 
-public class Information {
+import cn.bmob.v3.BmobObject;
+
+public class Information extends BmobObject{
 	private String type;
 	private String des;
 	public String getType() {

@@ -141,7 +141,7 @@ public class WeaponXishuActivity extends Activity implements OnRefreshListener, 
 			public void onSuccess(List<Information> infos) {
 				Information info = infos.get(0);
 				String des = info.getDes();
-				tv_explain.setText(des);
+				tv_explain.setText(des.replace("$", "\n"));
 			}
 
 			@Override
@@ -226,7 +226,7 @@ public class WeaponXishuActivity extends Activity implements OnRefreshListener, 
 				break;
 			// 蓝色 （带属性）
 			case 1:
-				redSpan = new ForegroundColorSpan(Color.BLUE);
+				redSpan = new ForegroundColorSpan(getResources().getColor(R.color.hava_shuxing_color));
 				break;
 			// 红色 （自带炎属性）
 			case 2:

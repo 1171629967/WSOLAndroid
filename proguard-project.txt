@@ -20,10 +20,17 @@
 -keep public class * extends android.content.ContentProvider
 
 
--dontwarn net.youmi.android.**
--keep class net.youmi.android.** {
-    *;
-}
+-ignorewarnings
+-libraryjars libs/BmobSDK_V3.2.7_1209.jar
+
+-keepattributes Signature
+-keep class cn.bmob.v3.** {*;}
+
+-keep class com.wlx.wsolandroid.model.Information{*;}
+-keep class com.wlx.wsolandroid.model.Pianzi{*;}
+-keep class com.wlx.wsolandroid.model.Weilixishu{*;}
+-keep class com.wlx.wsolandroid.model.Yijian{*;}
+
 
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface

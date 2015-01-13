@@ -1,3 +1,5 @@
+a.This:
+    73:75:public This()
 android.support.annotation.AnimRes
 android.support.annotation.AnimatorRes
 android.support.annotation.AnyRes
@@ -122,7 +124,6 @@ android.support.v4.app.Fragment:
     842:847:public void setUserVisibleHint(boolean)
     854:854:public boolean getUserVisibleHint()
     861:869:public android.support.v4.app.LoaderManager getLoaderManager()
-    877:881:public void startActivity(android.content.Intent)
     888:892:public void startActivityForResult(android.content.Intent,int)
     1044:1044:public android.view.View getView()
     1332:1333:public void registerForContextMenu(android.view.View)
@@ -137,7 +138,6 @@ android.support.v4.app.FragmentActivity:
     static final int MSG_REALLY_STOPPED
     static final int MSG_RESUME_PENDING
     633:635:public java.lang.Object getLastCustomNonConfigurationInstance()
-    848:856:public void startActivityFromFragment(android.support.v4.app.Fragment,android.content.Intent,int)
     877:882:public android.support.v4.app.LoaderManager getSupportLoaderManager()
 android.support.v4.app.FragmentActivity$FragmentTag:
     public static final int Fragment_id
@@ -2860,6 +2860,9 @@ com.wlx.wsolandroid.BaseFragment:
 com.wlx.wsolandroid.BuildConfig
 com.wlx.wsolandroid.MeizhouhuodongFragment:
     boolean running
+com.wlx.wsolandroid.PianzimingdanFragment:
+    private int totalPianziPage
+    177:182:private int getTotalPages(java.lang.String)
 com.wlx.wsolandroid.R
 com.wlx.wsolandroid.R$anim
 com.wlx.wsolandroid.R$attr
@@ -2881,46 +2884,9 @@ com.wlx.wsolandroid.adapter.WeaponRankAdapter
 com.wlx.wsolandroid.adapter.WeaponRankAdapter$ViewHolder
 com.wlx.wsolandroid.adapter.WeaponTypeAdapter
 com.wlx.wsolandroid.adapter.WeaponTypeAdapter$ViewHolder
-com.wlx.wsolandroid.constant.Constant:
-    public static final java.lang.String JINPAIWUQI
-    public static final java.lang.String WUQIDUANZAO
-    public static final java.lang.String RENWUBAOCHOU
-    public static final java.lang.String NEIZHENGDENGJI
-    public static final java.lang.String FUJIANG
-    public static final java.lang.String ABOUTAPP
-    public static final java.lang.String MEIZHOUHUODONG
-    public static final java.lang.String PIANZIMINGDAN
-    public static final java.lang.String weaponNameR1
-    public static final java.lang.String weaponDataR1G
-    public static final java.lang.String weaponDataR1P
-    public static final java.lang.String weaponDataR1F
-    public static final java.lang.String weaponDataR1T
-    public static final java.lang.String weaponDataR1W
-    public static final java.lang.String xishuN1
-    public static final java.lang.String xishuN2
-    public static final java.lang.String xishuN3
-    public static final java.lang.String xishuN4
-    public static final java.lang.String xishuN5
-    public static final java.lang.String xishuN6
-    public static final java.lang.String xishuE6
-    public static final java.lang.String xishuE7
-    public static final java.lang.String xishuE8
-    public static final java.lang.String xishuE9
-    public static final java.lang.String xishuD
-    public static final java.lang.String xishuJA
-    public static final java.lang.String xishuJC
-    public static final java.lang.String xishuC2
-    public static final java.lang.String xishuC3
-    public static final java.lang.String xishuC4
-    public static final java.lang.String xishuC5
-    public static final java.lang.String renwudengjiTotalCountArray
-    3:3:public Constant()
-com.wlx.wsolandroid.model.Weilixishu:
-    private static final long serialVersionUID
-com.wlx.wsolandroid.utils.APIUtils:
-    8:8:public APIUtils()
-com.wlx.wsolandroid.utils.JsonUtils:
-    12:12:public JsonUtils()
+com.wlx.wsolandroid.constant.Constant
+com.wlx.wsolandroid.utils.APIUtils
+com.wlx.wsolandroid.utils.JsonUtils
 com.wlx.wsolandroid.utils.Utils:
     13:13:public Utils()
     45:60:public static int getDisplay(android.app.Activity,int)
@@ -2935,6 +2901,62 @@ com.wlx.wsolandroid.weapondata.R7WeaponData
 com.wlx.wsolandroid.widget.DuanzaoView
 com.wlx.wsolandroid.widget.ProgressWheel
 com.wlx.wsolandroid.widget.TesuqianghuaView
+d.This:
+    private com.sina.weibo.sdk.auth.Oauth2AccessToken aA
+    29:29:static synthetic cn.bmob.v3.listener.OtherLoginListener Code(d.This)
+    34:34:static synthetic void Code(d.This,com.sina.weibo.sdk.auth.Oauth2AccessToken)
+    34:34:static synthetic com.sina.weibo.sdk.auth.Oauth2AccessToken V(d.This)
+    91:91:static synthetic void Code(d.This,org.json.JSONObject)
+    79:79:static synthetic void V(d.This,org.json.JSONObject)
+d.This$This:
+    113:116:public final void onCancel()
+    121:142:public final void onComplete(android.os.Bundle)
+    146:152:public final void onWeiboException(com.sina.weibo.sdk.exception.WeiboException)
+e.This:
+    25:25:static synthetic cn.bmob.v3.listener.OtherLoginListener Code(e.This)
+    71:71:static synthetic void Code(e.This,org.json.JSONObject)
+    58:58:static synthetic void V(e.This,org.json.JSONObject)
+e.This$1:
+    98:101:public final void onError(com.tencent.tauth.UiError)
+    106:123:public final void onComplete(java.lang.Object)
+    128:131:public final void onCancel()
+f.thing:
+    7:7:public thing()
+g.Tempest:
+    11:11:private Tempest()
+g.Though:
+    30:30:public Though()
+g.mine:
+    11:11:public mine()
+g.of:
+    33:33:public of()
+g.thing:
+    26:26:public thing()
+h.method:
+    35:37:public method(java.lang.String)
+j.II:
+    private static final long serialVersionUID
+j.method:
+    static final long serialVersionUID
+j.yet:
+    private static final long serialVersionUID
+k.This
+l.I:
+    76:76:private java.lang.Object writeReplace()
+l.The:
+    32:32:private The()
+l.This:
+    45:45:private This()
+l.This$This:
+    private static final long serialVersionUID
+l.This$of:
+    private static final long serialVersionUID
+l.This$thing:
+    private static final long serialVersionUID
+l.acknowledge:
+    625:625:private java.lang.Object writeReplace()
+m.is:
+    58:58:private is()
 net.tsz.afinal.FinalBitmap:
     85:86:public net.tsz.afinal.FinalBitmap configLoadingImage(android.graphics.Bitmap)
     94:95:public net.tsz.afinal.FinalBitmap configLoadingImage(int)
@@ -2999,6 +3021,7 @@ net.tsz.afinal.FinalHttp:
     201:202:public void configRequestExecutionRetryCount(int)
     210:211:public void addHeader(java.lang.String,java.lang.String)
     218:219:public void get(java.lang.String,net.tsz.afinal.http.AjaxCallBack)
+    222:223:public void get(java.lang.String,net.tsz.afinal.http.AjaxParams,net.tsz.afinal.http.AjaxCallBack)
     226:229:public void get(java.lang.String,org.apache.http.Header[],net.tsz.afinal.http.AjaxParams,net.tsz.afinal.http.AjaxCallBack)
     232:232:public java.lang.Object getSync(java.lang.String)
     236:237:public java.lang.Object getSync(java.lang.String,net.tsz.afinal.http.AjaxParams)
@@ -3029,7 +3052,9 @@ net.tsz.afinal.FinalHttp:
     371:371:public net.tsz.afinal.http.HttpHandler download(java.lang.String,java.lang.String,boolean,net.tsz.afinal.http.AjaxCallBack)
     375:375:public net.tsz.afinal.http.HttpHandler download(java.lang.String,net.tsz.afinal.http.AjaxParams,java.lang.String,net.tsz.afinal.http.AjaxCallBack)
     379:382:public net.tsz.afinal.http.HttpHandler download(java.lang.String,net.tsz.afinal.http.AjaxParams,java.lang.String,boolean,net.tsz.afinal.http.AjaxCallBack)
+    387:394:protected void sendRequest(org.apache.http.impl.client.DefaultHttpClient,org.apache.http.protocol.HttpContext,org.apache.http.client.methods.HttpUriRequest,java.lang.String,net.tsz.afinal.http.AjaxCallBack)
     397:400:protected java.lang.Object sendSyncRequest(org.apache.http.impl.client.DefaultHttpClient,org.apache.http.protocol.HttpContext,org.apache.http.client.methods.HttpUriRequest,java.lang.String)
+    404:408:public static java.lang.String getUrlWithQueryString(java.lang.String,net.tsz.afinal.http.AjaxParams)
     412:418:private org.apache.http.HttpEntity paramsToEntity(net.tsz.afinal.http.AjaxParams)
     422:426:private org.apache.http.client.methods.HttpEntityEnclosingRequestBase addEntityToRequestBase(org.apache.http.client.methods.HttpEntityEnclosingRequestBase,org.apache.http.HttpEntity)
 net.tsz.afinal.annotation.sqlite.Id
@@ -3228,6 +3253,7 @@ net.tsz.afinal.core.AsyncTask:
     357:357:public final java.lang.Object get(long,java.util.concurrent.TimeUnit)
     389:389:public final varargs net.tsz.afinal.core.AsyncTask execute(java.lang.Object[])
     459:460:public static void execute(java.lang.Runnable)
+    477:481:protected final varargs void publishProgress(java.lang.Object[])
 net.tsz.afinal.core.Deque:
     public abstract void addFirst(java.lang.Object)
     public abstract void addLast(java.lang.Object)
@@ -3285,35 +3311,19 @@ net.tsz.afinal.exception.DbException
 net.tsz.afinal.exception.HttpException
 net.tsz.afinal.exception.ViewException:
     private static final long serialVersionUID
-net.tsz.afinal.http.AjaxCallBack:
-    49:51:public net.tsz.afinal.http.AjaxCallBack progress(boolean,int)
-net.tsz.afinal.http.AjaxParams:
-    70:76:public AjaxParams(java.util.Map)
-    78:81:public AjaxParams(java.lang.String,java.lang.String)
-    83:93:public varargs AjaxParams(java.lang.Object[])
-    102:103:public void put(java.lang.String,java.io.File)
-    106:107:public void put(java.lang.String,java.io.InputStream)
-    110:111:public void put(java.lang.String,java.io.InputStream,java.lang.String)
-    121:124:public void put(java.lang.String,java.io.InputStream,java.lang.String,java.lang.String)
-    127:129:public void remove(java.lang.String)
-    159:194:public org.apache.http.HttpEntity getEntity()
+net.tsz.afinal.http.AjaxCallBack
+net.tsz.afinal.http.AjaxParams
 net.tsz.afinal.http.AjaxParams$FileWrapper
-net.tsz.afinal.http.HttpHandler:
-    private static final int UPDATE_START
-    private static final int UPDATE_LOADING
-    private static final int UPDATE_FAILURE
-    private static final int UPDATE_SUCCESS
-    157:157:public boolean isStop()
-    165:166:public void stop()
+net.tsz.afinal.http.HttpHandler
 net.tsz.afinal.http.MultipartEntity
 net.tsz.afinal.http.PreferencesCookieStore
 net.tsz.afinal.http.PreferencesCookieStore$SerializableCookie
 net.tsz.afinal.http.RetryHandler:
     private static final int RETRY_SLEEP_TIME_MILLIS
 net.tsz.afinal.http.SyncRequestHandler
-net.tsz.afinal.http.entityhandler.FileEntityHandler:
-    34:34:public boolean isStop()
-    40:41:public void setStop(boolean)
+net.tsz.afinal.http.entityhandler.EntityCallBack
+net.tsz.afinal.http.entityhandler.FileEntityHandler
+net.tsz.afinal.http.entityhandler.StringEntityHandler
 net.tsz.afinal.utils.ClassUtils
 net.tsz.afinal.utils.FieldUtils
 net.tsz.afinal.utils.Utils:
@@ -3324,6 +3334,10 @@ net.tsz.afinal.utils.Utils:
     75:80:public static long getUsableSpace(java.io.File)
     110:115:public static byte[] copyOfRange(byte[],int,int)
     144:147:public static final long crc64Long(java.lang.String)
+o.I:
+    private static final long serialVersionUID
+q.This:
+    private static final long serialVersionUID
 u.aly.a:
     80:81:public void a(u.aly.ar)
 u.aly.aa

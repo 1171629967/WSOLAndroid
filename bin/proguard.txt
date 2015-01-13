@@ -1,6 +1,7 @@
 # view res/layout/activity_weapon_xishu.xml #generated:13
 # view res/layout/fragment_meizhouhuodong.xml #generated:15
 # view res/layout/fragment_pianzimingdan.xml #generated:12
+# view res/layout/fragment_yijianyilan.xml #generated:13
 -keep class android.support.v4.widget.SwipeRefreshLayout { <init>(...); }
 
 # view res/layout/abs__screen_action_bar.xml #generated:44

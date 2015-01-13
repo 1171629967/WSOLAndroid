@@ -103,7 +103,7 @@ public class MeizhouhuodongFragment extends BaseFragment implements OnRefreshLis
 				swipeRefreshLayout.setRefreshing(false);
 				Information info = infos.get(0);  
 				String des = info.getDes();
-				tv_content.setText(des);
+				tv_content.setText(des.replace("$", "\n"));
 			}
 			
 			@Override

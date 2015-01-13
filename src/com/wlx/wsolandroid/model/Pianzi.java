@@ -2,11 +2,25 @@ package com.wlx.wsolandroid.model;
 
 import java.util.List;
 
-public class Pianzi {
+import cn.bmob.v3.BmobObject;
+
+public class Pianzi extends BmobObject{
+	private int pianziId;
 	private String name;
 	private String jietu;
 	private String zhengjuurl;
 	private String beizhu;
+
+	
+	
+	
+	public int getPianziId() {
+		return pianziId;
+	}
+
+	public void setPianziId(int pianziId) {
+		this.pianziId = pianziId;
+	}
 
 	public String getName() {
 		return name;

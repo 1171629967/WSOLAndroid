@@ -26,7 +26,7 @@
                 <TextView
                     android:id="@+id/tv_wuqi_1"
                     style="@style/style2"
-                    android:text="金牌武器上升值" />
+                    android:text="金牌上升和威力系数" />
                 <!-- <TextView
                     android:id="@+id/tv_wuqi_2"
                     style="@style/style2"
@@ -89,6 +89,14 @@
                     android:id="@+id/tv_qita_3"
                     style="@style/style2"
                     android:text="骗子名单" />
+                 <TextView
+                    android:id="@+id/tv_qita_4"
+                    style="@style/style2"
+                    android:text="意见和建议" />
+                 <TextView
+                    android:id="@+id/tv_qita_5"
+                    style="@style/style2"
+                    android:text="玩家意见一览" />
                 
                 
             </LinearLayout>

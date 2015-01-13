@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_actionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="为了更加完善该应用，您有任何意见和建议，请填写告知！谢谢"
+                android:textColor="@color/orange" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_tiebaName"
+                    android:layout_width="50dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/orange"
+                    android:text="贴吧ID" />
+
+                <EditText
+                    android:id="@+id/et_tiebaName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_tiebaName"
+                    android:hint="请填写您贴吧ID，方便联系您，可不填写" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_gameName"
+                    android:layout_width="50dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/orange"
+                    android:text="游戏ID" />
+
+                <EditText
+                    android:id="@+id/et_gameName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/tv_gameName"
+                    android:hint="请填写您游戏ID，方便联系您，可不填写" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_qq"
+                    android:layout_width="50dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/orange"
+                    android:layout_centerVertical="true"
+                    android:text="QQ号码" />
+
+                <EditText
+                    android:id="@+id/et_qq"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/tv_qq"
+                    android:hint="请填写您QQ，方便联系您，可不填写" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="20dp"
+                android:hint="请填写您对本应用的意见和建议，包括任何您想对作者说的话，必须填写" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

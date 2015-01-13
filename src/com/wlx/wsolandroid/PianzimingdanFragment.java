@@ -10,12 +10,14 @@ import net.tsz.afinal.http.AjaxParams;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.listener.FindListener;
 
 import com.umeng.analytics.MobclickAgent;
 import com.wlx.wsolandroid.adapter.PianzimingdanAdapter;
 import com.wlx.wsolandroid.constant.Constant;
 import com.wlx.wsolandroid.model.Pianzi;
+import com.wlx.wsolandroid.model.Weilixishu;
 import com.wlx.wsolandroid.utils.APIUtils;
 import com.wlx.wsolandroid.utils.JsonUtils;
 import com.wlx.wsolandroid.widget.MyActionBar;
@@ -42,7 +44,7 @@ import android.widget.RelativeLayout.LayoutParams;
  * @author wanglixin
  * 
  */
-public class PianzimingdanFragment extends BaseFragment implements OnRefreshListener{
+public class PianzimingdanFragment extends BaseFragment implements OnRefreshListener {
 	private ListView listView;
 	private PianzimingdanAdapter adapter;
 	private View v_head;
@@ -50,18 +52,14 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 	private List<Pianzi> allPianzis = new ArrayList<Pianzi>();;
 	private List<Pianzi> searchResultPianzis = new ArrayList<Pianzi>();
 	private SwipeRefreshLayout swipeRefreshLayout;
-	private FinalHttp finalHttp;
-	
+
 	private int totalPianziPage;
 
-	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		finalHttp = new FinalHttp();
 	}
-	
-	
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_pianzimingdan, null);
@@ -104,8 +102,6 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 			}
 		});
 
-		
-		
 		listView = (ListView) view.findViewById(R.id.listView);
 		listView.addHeaderView(v_head);
 		adapter = new PianzimingdanAdapter(getActivity(), allPianzis);
@@ -116,10 +112,8 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light, android.R.color.holo_green_light, android.R.color.holo_blue_bright, android.R.color.holo_orange_light);
 		swipeRefreshLayout.setOnRefreshListener(this);
 		swipeRefreshLayout.setRefreshing(true);
-		loadData(0);
-		
-		// 添加多盟广告
-		//this.addAd(view);
+		loadData();
+
 	}
 
 	private void initActionBar(View view) {
@@ -138,58 +132,28 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 		actionbar.addView(actionBar);
 	}
 
-	
-	
-	private void loadData(final int page) {
-		String question = Constant.tulingQuestion2+page;
-		AjaxParams params = APIUtils.getTulingParams(question);
-		finalHttp.get(Constant.tulingAPI, params, new AjaxCallBack<Object>() {
+	private void loadData() {
+		BmobQuery<Pianzi> bmobQuery = new BmobQuery<Pianzi>();
+		bmobQuery.setLimit(1000);
+		bmobQuery.order("pianziId");
+		bmobQuery.findObjects(getActivity(), new FindListener<Pianzi>() {
 
 			@Override
-			public void onStart() {
-				super.onStart();
-			}
-
-			@Override
-			public void onSuccess(Object t) {
-				super.onSuccess(t);
+			public void onSuccess(List<Pianzi> pianzis) {
 				swipeRefreshLayout.setRefreshing(false);
-				try {
-					JSONObject jsonObject = new JSONObject(t.toString());
-					String text = (String) jsonObject.get("text");
-					text = text.replaceAll("\\$", "\"");
-					System.out.println("骗子名单json---------》"+page+"-------->"+text);
-					ArrayList<Pianzi> pianzis = JsonUtils.getPianzisFromJson(text);
-					allPianzis.addAll(pianzis);
-					adapter.notifyDataSetChanged();		
-					
-					if (page == 0) {
-						getTotalPages(text);
-						for (int i = 1; i < totalPianziPage; i++) {
-							loadData(i);
-						}
-					}
-					
-					
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
-
+				allPianzis.addAll(pianzis);
+				adapter.notifyDataSetChanged();
 			}
 
 			@Override
-			public void onFailure(Throwable t, int errorNo, String strMsg) {
-				super.onFailure(t, errorNo, strMsg);
+			public void onError(int arg0, String arg1) {
 				swipeRefreshLayout.setRefreshing(false);
 			}
-
 		});
-	
+
 	}
-	
-	
-	
-	private int getTotalPages(String text){
+
+	private int getTotalPages(String text) {
 		try {
 			JSONObject jb = new JSONObject(text);
 			totalPianziPage = jb.optInt("totalPianziPage");
@@ -198,11 +162,7 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 		}
 		return totalPianziPage;
 	}
-	
-	
-	
-	
-	
+
 	@Override
 	public void onResume() {
 		super.onResume();
@@ -215,11 +175,10 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 		MobclickAgent.onPageEnd("骗子名单");
 	}
 
-
 	@Override
 	public void onRefresh() {
 		allPianzis.clear();
-		this.loadData(0);
+		this.loadData();
 	}
 
 }

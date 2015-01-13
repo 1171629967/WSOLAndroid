@@ -72,16 +72,16 @@ public class NeizhengdengjiListAdapter extends BaseAdapter {
         	holder.tv_nextNeed.setText((b-a)+"");
 		}
         //与上级等级差
-        if (position <= 50) {
+        if (position < 50) {
         	holder.tv_lastDiffer.setText("2");
 		}
-        else if(position > 50 && position <= 90){
+        else if(position >= 50 && position < 90){
         	holder.tv_lastDiffer.setText("4");
         }
-        else if(position > 90 && position <= 100){
+        else if(position >= 90 && position < 100){
         	holder.tv_lastDiffer.setText("6");
         }
-        else if(position > 100 && position <= 130){
+        else if(position >= 100 && position < 130){
         	holder.tv_lastDiffer.setText("12");
         }
         

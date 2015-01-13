@@ -160,4 +160,7 @@
     <color name="tesuqianghua">#00DCE0</color><!--特殊强化颜色 -->
     
     
+    <color name="hava_shuxing_color">#0069D9</color><!-- 威力系数带属性颜色 -->
+    
+    
 </resources>

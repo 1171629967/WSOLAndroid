@@ -1,6 +1,5 @@
 package com.wlx.wsolandroid;
 
-
 import java.util.List;
 
 import org.json.JSONException;
@@ -35,43 +34,37 @@ import com.wlx.wsolandroid.widget.MarqueeTextView;
 
 public class MainActivity extends FragmentActivity implements OnClickListener, menuClicklistener {
 	public SlidingMenu menu;
-	private TextView tv_wuqi_1, tv_renwu_1, tv_renwu_2, tv_qita_2, tv_qita_3, tv_fujiang_1;
+	private TextView tv_wuqi_1, tv_renwu_1, tv_renwu_2, tv_qita_2, tv_qita_3, tv_qita_4, tv_qita_5, tv_fujiang_1;
 	private String currentFragment;
 	/** 公告栏，跑马灯效果 */
 	private MarqueeTextView tv_pamadeng;
-	private FinalHttp finalHttp;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-		finalHttp = new FinalHttp();
 
-		//后台配置
+		// 后台配置
 		Bmob.initialize(this, "8763a00a263ee5064e8a55be05f72f3a");
-		
-		
-
 
 		this.initSlidingMenu();
 		this.initView();
 		getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, new WeaponJinpaiFragment()).commit();
 		currentFragment = Constant.JINPAIWUQI;
-		
+
 		new Handler().postDelayed(new Runnable() {
-			
+
 			@Override
 			public void run() {
 				loadPaomadengMessage();
 			}
 		}, 1000);
-		
+
 	}
 
 	private void initView() {
 		tv_pamadeng = (MarqueeTextView) menu.findViewById(R.id.tv_pamadeng);
-		
+
 		tv_wuqi_1 = (TextView) menu.findViewById(R.id.tv_wuqi_1);
 		// tv_wuqi_2 = (TextView) menu.findViewById(R.id.tv_wuqi_2);
 		tv_renwu_1 = (TextView) menu.findViewById(R.id.tv_renwu_1);
@@ -79,6 +72,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 		// tv_qita_1 = (TextView) menu.findViewById(R.id.tv_qita_1);
 		tv_qita_2 = (TextView) menu.findViewById(R.id.tv_qita_2);
 		tv_qita_3 = (TextView) menu.findViewById(R.id.tv_qita_3);
+		tv_qita_4 = (TextView) menu.findViewById(R.id.tv_qita_4);
+		tv_qita_5 = (TextView) menu.findViewById(R.id.tv_qita_5);
 		tv_fujiang_1 = (TextView) menu.findViewById(R.id.tv_fujiang_1);
 		tv_wuqi_1.setOnClickListener(this);
 		// tv_wuqi_2.setOnClickListener(this);
@@ -87,6 +82,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 		// tv_qita_1.setOnClickListener(this);
 		tv_qita_2.setOnClickListener(this);
 		tv_qita_3.setOnClickListener(this);
+		tv_qita_4.setOnClickListener(this);
+		tv_qita_5.setOnClickListener(this);
 		tv_fujiang_1.setOnClickListener(this);
 	}
 
@@ -140,7 +137,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 		}
 		// 内政等级表----------------------------->
 		else if (v == tv_renwu_2 && !currentFragment.equals(Constant.NEIZHENGDENGJI)) {
-			NeizhengDengjiFragment fragment = new NeizhengDengjiFragment();			
+			NeizhengDengjiFragment fragment = new NeizhengDengjiFragment();
 			getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment).commit();
 			currentFragment = Constant.NEIZHENGDENGJI;
 		}
@@ -167,6 +164,18 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 			PianzimingdanFragment fragment = new PianzimingdanFragment();
 			getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment).commit();
 			currentFragment = Constant.PIANZIMINGDAN;
+		}
+		// 意见和建议----------------------------->
+		else if (v == tv_qita_4 && !currentFragment.equals(Constant.YIJIAN)) {
+			YijianFragment fragment = new YijianFragment();
+			getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment).commit();
+			currentFragment = Constant.YIJIAN;
+		}
+		// 玩家意见一览----------------------------->
+		else if (v == tv_qita_5 && !currentFragment.equals(Constant.YIJIAN)) {
+			YijianyilanFragment fragment = new YijianyilanFragment();
+			getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment).commit();
+			currentFragment = Constant.YIJIANYILAN;
 		}
 		// 副将技能和属性----------------------------->
 		else if (v == tv_fujiang_1 && !currentFragment.equals(Constant.FUJIANG)) {
@@ -201,32 +210,30 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 	protected void onDestroy() {
 		super.onDestroy();
 	}
-	
-	private void loadPaomadengMessage(){		
+
+	private void loadPaomadengMessage() {
 		BmobQuery<Information> bmobQuery = new BmobQuery<Information>();
-    	bmobQuery.addWhereEqualTo("type", "gonggao_android");
-    	bmobQuery.findObjects(this, new FindListener<Information>() {
-			
+		bmobQuery.addWhereEqualTo("type", "gonggao_android");
+		bmobQuery.findObjects(this, new FindListener<Information>() {
+
 			@Override
 			public void onSuccess(List<Information> infos) {
-				Information info = infos.get(0);  
+				Information info = infos.get(0);
 				String des = info.getDes();
 				if (TextUtils.isEmpty(des)) {
 					tv_pamadeng.setVisibility(View.GONE);
-				}
-				else {
+				} else {
 					tv_pamadeng.setText(des);
 					tv_pamadeng.setVisibility(View.VISIBLE);
 				}
 			}
-			
+
 			@Override
 			public void onError(int arg0, String arg1) {
 				tv_pamadeng.setVisibility(View.GONE);
 			}
 		});
-		
-		
+
 	}
 
 }
