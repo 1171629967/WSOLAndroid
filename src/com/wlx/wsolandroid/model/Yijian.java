@@ -7,6 +7,10 @@ public class Yijian extends BmobObject{
 	private String gameName;
 	private String content;
 	private String qq;
+	
+	
+	
+	
 	public String getTiebaName() {
 		return tiebaName;
 	}

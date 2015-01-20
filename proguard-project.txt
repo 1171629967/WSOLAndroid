@@ -30,6 +30,7 @@
 -keep class com.wlx.wsolandroid.model.Pianzi{*;}
 -keep class com.wlx.wsolandroid.model.Weilixishu{*;}
 -keep class com.wlx.wsolandroid.model.Yijian{*;}
+-keep class com.wlx.wsolandroid.model.YijianReply{*;}
 
 
 # If your project uses WebView with JS, uncomment the following

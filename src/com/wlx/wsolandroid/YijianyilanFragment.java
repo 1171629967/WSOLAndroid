@@ -3,6 +3,7 @@ package com.wlx.wsolandroid;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
@@ -10,8 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.AdapterView.OnItemClickListener;
 
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.listener.FindListener;
@@ -24,7 +27,7 @@ import com.wlx.wsolandroid.model.Pianzi;
 import com.wlx.wsolandroid.model.Yijian;
 import com.wlx.wsolandroid.widget.MyActionBar;
 
-public class YijianyilanFragment extends BaseFragment implements OnRefreshListener{
+public class YijianyilanFragment extends BaseFragment implements OnRefreshListener,OnItemClickListener{
 
 	private ListView lv;
 	private YijianyilanAdapter adapter;
@@ -42,6 +45,7 @@ public class YijianyilanFragment extends BaseFragment implements OnRefreshListen
 
 	private void initView(View view) {
 		lv = (ListView) view.findViewById(R.id.lv);
+		lv.setOnItemClickListener(this);
 		adapter = new YijianyilanAdapter(getActivity(), yijians);
 		lv.setAdapter(adapter);
 
@@ -106,6 +110,13 @@ public class YijianyilanFragment extends BaseFragment implements OnRefreshListen
 	public void onRefresh() {
 		yijians.clear();
 		this.loadData();
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+		Intent intent = new Intent(getActivity(),YijianReplyActivity.class);
+		intent.putExtra("objectId", yijians.get(position).getObjectId());
+		startActivity(intent);
 	}
 
 }

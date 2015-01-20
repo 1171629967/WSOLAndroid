@@ -1,4 +1,5 @@
 # view res/layout/activity_weapon_xishu.xml #generated:13
+# view res/layout/activity_yijian_reply.xml #generated:13
 # view res/layout/fragment_meizhouhuodong.xml #generated:15
 # view res/layout/fragment_pianzimingdan.xml #generated:12
 # view res/layout/fragment_yijianyilan.xml #generated:13
@@ -79,6 +80,9 @@
 
 # view AndroidManifest.xml #generated:41
 -keep class com.wlx.wsolandroid.WeaponXishuActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:51
+-keep class com.wlx.wsolandroid.YijianReplyActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:22
 -keep class com.wlx.wsolandroid.application.WSOLApplication { <init>(...); }
