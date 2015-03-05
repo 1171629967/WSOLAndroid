@@ -49,7 +49,7 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 	private PianzimingdanAdapter adapter;
 	private View v_head;
 	private EditText et_search;
-	private List<Pianzi> allPianzis = new ArrayList<Pianzi>();;
+	private List<Pianzi> allPianzis = new ArrayList<Pianzi>();
 	private List<Pianzi> searchResultPianzis = new ArrayList<Pianzi>();
 	private SwipeRefreshLayout swipeRefreshLayout;
 

@@ -8,6 +8,8 @@ import org.json.JSONObject;
 import net.tsz.afinal.FinalHttp;
 import net.tsz.afinal.http.AjaxCallBack;
 import net.tsz.afinal.http.AjaxParams;
+import android.app.ActivityManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
@@ -16,6 +18,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobQuery;
@@ -34,10 +37,12 @@ import com.wlx.wsolandroid.widget.MarqueeTextView;
 
 public class MainActivity extends FragmentActivity implements OnClickListener, menuClicklistener {
 	public SlidingMenu menu;
-	private TextView tv_wuqi_1, tv_renwu_1, tv_renwu_2, tv_qita_2, tv_qita_3, tv_qita_4, tv_qita_5, tv_fujiang_1;
+	private TextView tv_wuqi_1, tv_renwu_1, tv_renwu_2, tv_qita_2, tv_qita_3, tv_qita_4, tv_qita_5,tv_qita_6, tv_music_1, tv_fujiang_1;
 	private String currentFragment;
 	/** 公告栏，跑马灯效果 */
 	private MarqueeTextView tv_pamadeng;
+	 long waitTime = 2000;  
+	 long touchTime = 0;  
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 
 		// 后台配置
 		Bmob.initialize(this, "8763a00a263ee5064e8a55be05f72f3a");
+		
+		
 
 		this.initSlidingMenu();
 		this.initView();
@@ -74,6 +81,9 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 		tv_qita_3 = (TextView) menu.findViewById(R.id.tv_qita_3);
 		tv_qita_4 = (TextView) menu.findViewById(R.id.tv_qita_4);
 		tv_qita_5 = (TextView) menu.findViewById(R.id.tv_qita_5);
+		tv_qita_6 = (TextView) menu.findViewById(R.id.tv_qita_6);
+		tv_music_1 = (TextView) menu.findViewById(R.id.tv_music_1);
+//		tv_video_1 = (TextView) menu.findViewById(R.id.tv_video_1);
 		tv_fujiang_1 = (TextView) menu.findViewById(R.id.tv_fujiang_1);
 		tv_wuqi_1.setOnClickListener(this);
 		// tv_wuqi_2.setOnClickListener(this);
@@ -84,6 +94,9 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 		tv_qita_3.setOnClickListener(this);
 		tv_qita_4.setOnClickListener(this);
 		tv_qita_5.setOnClickListener(this);
+		tv_qita_6.setOnClickListener(this);
+		tv_music_1.setOnClickListener(this);
+//		tv_video_1.setOnClickListener(this);
 		tv_fujiang_1.setOnClickListener(this);
 	}
 
@@ -99,19 +112,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 		menu.setMenu(R.layout.slidingmenu);
 	}
 
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		switch (keyCode) {
-		case KeyEvent.KEYCODE_MENU:
-			menu.toggle(true);
-			break;
-
-		default:
-			break;
-		}
-		return super.onKeyDown(keyCode, event);
-	}
-
+	
 	@Override
 	public void onClick(View v) {
 		// 金牌武器上升值----------------------------->
@@ -172,10 +173,28 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 			currentFragment = Constant.YIJIAN;
 		}
 		// 玩家意见一览----------------------------->
-		else if (v == tv_qita_5 && !currentFragment.equals(Constant.YIJIAN)) {
+		else if (v == tv_qita_5 && !currentFragment.equals(Constant.YIJIANYILAN)) {
 			YijianyilanFragment fragment = new YijianyilanFragment();
 			getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment).commit();
 			currentFragment = Constant.YIJIANYILAN;
+		}
+		// 游戏BMG音乐----------------------------->
+		else if (v == tv_music_1 && !currentFragment.equals(Constant.MUSIC)) {
+			MusicFragment fragment = new MusicFragment();
+			getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment).commit();
+			currentFragment = Constant.MUSIC;
+		}
+		// 游戏PK视频----------------------------->
+//		else if (v == tv_video_1 && !currentFragment.equals(Constant.VIDEO)) {
+//			VideoListFragment fragment = new VideoListFragment();
+//			getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment).commit();
+//			currentFragment = Constant.VIDEO;
+//		}
+		// 吧主担保交易----------------------------->
+		else if (v == tv_qita_6 && !currentFragment.equals(Constant.TRANSATION)) {
+			TransationFragment fragment = new TransationFragment();
+			getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragments, fragment).commit();
+			currentFragment = Constant.TRANSATION;
 		}
 		// 副将技能和属性----------------------------->
 		else if (v == tv_fujiang_1 && !currentFragment.equals(Constant.FUJIANG)) {
@@ -236,4 +255,28 @@ public class MainActivity extends FragmentActivity implements OnClickListener, m
 
 	}
 
+	
+	
+	
+	
+	   
+	 @Override  
+	 public boolean onKeyDown(int keyCode, KeyEvent event) {  
+	     if(event.getAction() == KeyEvent.ACTION_DOWN && KeyEvent.KEYCODE_BACK == keyCode) {  
+	    	if(menu.isMenuShowing()){
+	    		finish();
+	    	}
+	    	else {
+	    		menu.toggle(true);
+			}
+	         return true;  
+	     }
+	     else if(event.getAction() == KeyEvent.KEYCODE_MENU){
+	 			menu.toggle(true);
+	     }
+	     
+	     return super.onKeyDown(keyCode, event);  
+	 }  
+	
+	
 }

@@ -1,3 +1,24 @@
+A.This
+B.I:
+    76:76:private java.lang.Object writeReplace()
+B.The:
+    32:32:private The()
+B.This:
+    45:45:private This()
+B.This$This:
+    private static final long serialVersionUID
+B.This$of:
+    private static final long serialVersionUID
+B.This$thing:
+    private static final long serialVersionUID
+B.acknowledge:
+    625:625:private java.lang.Object writeReplace()
+C.is:
+    58:58:private is()
+E.I:
+    private static final long serialVersionUID
+G.This:
+    private static final long serialVersionUID
 a.This:
     73:75:public This()
 android.support.annotation.AnimRes
@@ -2538,6 +2559,52 @@ com.actionbarsherlock.widget.SuggestionsAdapter:
     250:252:public void close()
     690:701:private android.graphics.drawable.Drawable getActivityIconWithCache(android.content.ComponentName)
     712:729:private android.graphics.drawable.Drawable getActivityIcon(android.content.ComponentName)
+com.bmob.BmobConfiguration:
+    26:26:public static com.bmob.BmobConfiguration createDefault(android.content.Context)
+com.bmob.BmobConfiguration$Builder:
+    54:67:public com.bmob.BmobConfiguration$Builder customExternalCacheDir(java.lang.String)
+com.bmob.BmobPro:
+    68:72:public synchronized void initConfig(com.bmob.BmobConfiguration)
+    152:153:public java.lang.String getCacheDir()
+    163:164:public java.lang.String getCacheDownloadDir()
+    174:175:public java.lang.String getCacheThumbnailDir()
+    179:179:public java.io.File getThumbnail(java.lang.String)
+    188:190:public void clearCache()
+    199:199:public long getCacheFileSize()
+    209:209:public java.lang.String getCacheFormatSize()
+com.bmob.BmobProFile
+com.bmob.BmobProFile$1
+com.bmob.BmobProFile$2
+com.bmob.BmobProFile$3
+com.bmob.BmobProFile$4
+com.bmob.BmobProFile$5
+com.bmob.btp.callback.BaseListener
+com.bmob.btp.callback.CommandListener
+com.bmob.btp.callback.CommonListener
+com.bmob.btp.callback.DownloadListener
+com.bmob.btp.callback.IListener
+com.bmob.btp.callback.LocalThumbnailListener
+com.bmob.btp.callback.ShakeHandListener
+com.bmob.btp.callback.SubmitListener
+com.bmob.btp.callback.ThumbnailListener
+com.bmob.btp.callback.UploadBatchListener
+com.bmob.btp.callback.UploadListener
+com.bmob.btp.file.BTPFileResponse
+com.bmob.btp.file.This
+com.bmob.btp.file.thing
+com.bmob.utils.BmobLog:
+    public static final java.lang.String Tag
+    18:18:public BmobLog()
+    25:25:public static void i(java.lang.String)
+    30:30:public static void smile(java.lang.String)
+    35:35:public static void i(java.lang.Object,java.lang.String)
+    55:55:public static varargs void d(java.lang.String,java.lang.Object[])
+    64:64:public static varargs void e(java.lang.String,java.lang.Object[])
+com.bmob.utils.This
+com.bmob.utils.of:
+    44:44:public static java.io.File s(android.content.Context)
+com.bmob.utils.thing:
+    11:11:public thing()
 com.jeremyfeinstein.slidingmenu.lib.CanvasTransformerBuilder
 com.jeremyfeinstein.slidingmenu.lib.CanvasTransformerBuilder$1
 com.jeremyfeinstein.slidingmenu.lib.CanvasTransformerBuilder$2
@@ -2568,19 +2635,12 @@ com.jeremyfeinstein.slidingmenu.lib.MenuInterface
 com.jeremyfeinstein.slidingmenu.lib.R:
     9:9:public R()
 com.jeremyfeinstein.slidingmenu.lib.R$attr
-com.jeremyfeinstein.slidingmenu.lib.R$bool
-com.jeremyfeinstein.slidingmenu.lib.R$color
-com.jeremyfeinstein.slidingmenu.lib.R$dimen
-com.jeremyfeinstein.slidingmenu.lib.R$drawable
 com.jeremyfeinstein.slidingmenu.lib.R$id:
-    275:275:public R$id()
-com.jeremyfeinstein.slidingmenu.lib.R$integer
+    26:26:public R$id()
 com.jeremyfeinstein.slidingmenu.lib.R$layout:
-    337:337:public R$layout()
-com.jeremyfeinstein.slidingmenu.lib.R$string
-com.jeremyfeinstein.slidingmenu.lib.R$style
+    35:35:public R$layout()
 com.jeremyfeinstein.slidingmenu.lib.R$styleable:
-    469:469:public R$styleable()
+    38:38:public R$styleable()
 com.jeremyfeinstein.slidingmenu.lib.SlidingMenu:
     public static final int SLIDING_WINDOW
     public static final int SLIDING_CONTENT
@@ -2862,8 +2922,9 @@ com.wlx.wsolandroid.MeizhouhuodongFragment:
     boolean running
 com.wlx.wsolandroid.PianzimingdanFragment:
     private int totalPianziPage
-    177:182:private int getTotalPages(java.lang.String)
-com.wlx.wsolandroid.R
+    158:163:private int getTotalPages(java.lang.String)
+com.wlx.wsolandroid.R:
+    10:10:public R()
 com.wlx.wsolandroid.R$anim
 com.wlx.wsolandroid.R$attr
 com.wlx.wsolandroid.R$bool
@@ -2875,21 +2936,38 @@ com.wlx.wsolandroid.R$integer
 com.wlx.wsolandroid.R$layout
 com.wlx.wsolandroid.R$string
 com.wlx.wsolandroid.R$style
-com.wlx.wsolandroid.R$styleable
+com.wlx.wsolandroid.R$styleable:
+    2156:2156:public R$styleable()
+com.wlx.wsolandroid.TransationFragment:
+    boolean running
+com.wlx.wsolandroid.VideoListFragment
+com.wlx.wsolandroid.VideoListFragment$1
+com.wlx.wsolandroid.VideoListFragment$2
+com.wlx.wsolandroid.VideoListFragment$3
 com.wlx.wsolandroid.WeaponDuanzaoFragment
 com.wlx.wsolandroid.WeaponDuanzaoFragment$1
 com.wlx.wsolandroid.WeaponDuanzaoFragment$2
 com.wlx.wsolandroid.WeaponDuanzaoFragment$3
+com.wlx.wsolandroid.adapter.MusicListAdapter:
+    41:42:public void setData(java.util.List)
+com.wlx.wsolandroid.adapter.TransationAdapter:
+    50:51:public void setData(java.util.List)
+com.wlx.wsolandroid.adapter.VideoListAdapter
+com.wlx.wsolandroid.adapter.VideoListAdapter$ViewHolder
 com.wlx.wsolandroid.adapter.WeaponRankAdapter
 com.wlx.wsolandroid.adapter.WeaponRankAdapter$ViewHolder
 com.wlx.wsolandroid.adapter.WeaponTypeAdapter
 com.wlx.wsolandroid.adapter.WeaponTypeAdapter$ViewHolder
+com.wlx.wsolandroid.adapter.YijianReplyAdapter:
+    40:41:public void setData(java.util.List)
+com.wlx.wsolandroid.adapter.YijianyilanAdapter:
+    38:39:public void setData(java.util.List)
 com.wlx.wsolandroid.constant.Constant
 com.wlx.wsolandroid.utils.APIUtils
 com.wlx.wsolandroid.utils.JsonUtils
 com.wlx.wsolandroid.utils.Utils:
-    13:13:public Utils()
-    45:60:public static int getDisplay(android.app.Activity,int)
+    15:15:public Utils()
+    47:62:public static int getDisplay(android.app.Activity,int)
 com.wlx.wsolandroid.weapondata.ClothesXiandingData
 com.wlx.wsolandroid.weapondata.R1WeaponData
 com.wlx.wsolandroid.weapondata.R2WeaponData
@@ -2899,10 +2977,26 @@ com.wlx.wsolandroid.weapondata.R5WeaponData
 com.wlx.wsolandroid.weapondata.R6WeaponData
 com.wlx.wsolandroid.weapondata.R7WeaponData
 com.wlx.wsolandroid.widget.DuanzaoView
+com.wlx.wsolandroid.widget.NumberProgressBar:
+    private static final java.lang.String INSTANCE_STATE
+    private static final java.lang.String INSTANCE_TEXT_COLOR
+    private static final java.lang.String INSTANCE_TEXT_SIZE
+    private static final java.lang.String INSTANCE_REACHED_BAR_HEIGHT
+    private static final java.lang.String INSTANCE_REACHED_BAR_COLOR
+    private static final java.lang.String INSTANCE_UNREACHED_BAR_HEIGHT
+    private static final java.lang.String INSTANCE_UNREACHED_BAR_COLOR
+    private static final java.lang.String INSTANCE_MAX
+    private static final java.lang.String INSTANCE_PROGRESS
+    private static final java.lang.String INSTANCE_SUFFIX
+    private static final java.lang.String INSTANCE_PREFIX
+    private static final java.lang.String INSTANCE_TEXT_VISBILITY
+    private static final int PROGRESS_TEXT_VISIBLE
+    private static final int PROGRESS_TEXT_INVISIBLE
+    433:436:public void incrementProgressBy(int)
 com.wlx.wsolandroid.widget.ProgressWheel
 com.wlx.wsolandroid.widget.TesuqianghuaView
 d.This:
-    private com.sina.weibo.sdk.auth.Oauth2AccessToken aA
+    private com.sina.weibo.sdk.auth.Oauth2AccessToken aK
     29:29:static synthetic cn.bmob.v3.listener.OtherLoginListener Code(d.This)
     34:34:static synthetic void Code(d.This,com.sina.weibo.sdk.auth.Oauth2AccessToken)
     34:34:static synthetic com.sina.weibo.sdk.auth.Oauth2AccessToken V(d.This)
@@ -2926,37 +3020,165 @@ g.Tempest:
     11:11:private Tempest()
 g.Though:
     30:30:public Though()
+g.V:
+    101:103:public final void Code(java.lang.String,long)
+    141:141:public final int Code(java.lang.String,int)
+    311:316:public static byte[] L()
+    344:351:public static byte[] B(java.lang.String,java.lang.String)
 g.mine:
     11:11:public mine()
 g.of:
-    33:33:public of()
+    36:36:public of()
 g.thing:
     26:26:public thing()
+h.Tempest:
+    93:104:public static varargs void Code(java.io.Closeable[])
+h.be:
+    37:37:public static int C(byte[])
+    41:41:public static short S(byte[])
+    45:51:public static byte[] V(int)
+    55:61:public static byte[] I(int)
+h.madness:
+    62:155:public static java.util.Map Code(java.lang.String[])
+    177:194:private static java.lang.String p(java.lang.String)
+    211:222:private static java.lang.String q(java.lang.String)
+    238:249:private static java.lang.String r(java.lang.String)
 h.method:
     35:37:public method(java.lang.String)
-j.II:
-    private static final long serialVersionUID
-j.method:
-    static final long serialVersionUID
-j.yet:
-    private static final long serialVersionUID
+h.this:
+    33:51:public static com.bmob.btp.file.BTPFileResponse n(java.lang.String)
+    117:126:public static long V(java.io.File)
+i.darkness:
+    82:91:public static void Code(java.io.InputStream,java.io.OutputStream)
+j.From:
+    private m.thing ed
+    private android.content.Context dz
+    private v.thing ee
+    private com.bmob.btp.callback.UploadListener et
+    private com.bmob.btp.file.thing eu
+    private n.I ev
+    private p.The ei
+    53:53:public final int u()
+    59:59:public final r.This v()
+    64:115:public final void Code(android.content.Context,v.thing,p.The)
+    119:119:public final boolean isFinished()
+    125:125:public final void w()
+    130:130:public final void clear()
+    143:175:private void Code(n.be)
+    187:236:private void D(byte[])
+    250:282:private void Code(boolean,int)
+    293:300:private void u(java.lang.String)
+j.I:
+    private m.thing ed
+    private android.content.Context dz
+    44:44:public final int u()
+    50:50:public final r.This v()
+    55:173:public final void Code(android.content.Context,v.thing,p.The)
+    177:177:public final boolean isFinished()
+    183:183:public final void w()
+    187:188:public final void clear()
+j.The
+j.This:
+    29:29:public int u()
+    35:35:public r.This v()
+    43:43:public void Code(android.content.Context,v.thing,p.The)
+    47:47:public boolean isFinished()
+    54:54:public void w()
+    60:60:public void clear()
+    72:75:public static void postResponse(java.lang.Runnable)
+    81:92:public final void postUploadSuccess(com.bmob.btp.callback.UploadListener,java.lang.String,java.lang.String)
+    197:207:public final void postError(com.bmob.btp.callback.BaseListener,int,java.lang.String)
+j.This$1
+j.This$2
+j.This$3
+j.This$4
+j.This$5
+j.This$6
+j.This$7
+j.This$8
+j.acknowledge:
+    private m.thing ed
+    com.bmob.btp.callback.ShakeHandListener eo
+    private android.content.Context dz
+    private v.thing ep
+    44:44:public final int u()
+    50:50:public final r.This v()
+    55:133:public final void Code(android.content.Context,v.thing,p.The)
+    138:138:public final boolean isFinished()
+    143:144:public final void w()
+    149:150:public final void clear()
+j.acknowledge$1
+j.darkness:
+    14:14:public darkness()
+    42:45:public static final j.The Code(r.This)
+j.mine:
+    private m.thing ed
+    private com.bmob.btp.callback.ShakeHandListener eo
+    private android.content.Context dz
+    40:40:public final int u()
+    46:46:public final r.This v()
+    51:95:public final void Code(android.content.Context,v.thing,p.The)
+    107:115:private void Code(android.content.Context,v.thing)
+    153:153:public final boolean isFinished()
+    159:159:public final void w()
+    164:165:public final void clear()
+j.mine$1
+j.of:
+    private m.thing ed
+    39:39:public final int u()
+    45:45:public final r.This v()
+    50:123:public final void Code(android.content.Context,v.thing,p.The)
+    127:127:public final boolean isFinished()
+    133:133:public final void w()
+    138:138:public final void clear()
+j.of$1
+j.thing:
+    private m.thing ed
+    private android.content.Context dz
+    private v.thing ee
+    private com.bmob.btp.callback.DownloadListener ef
+    private com.bmob.btp.file.This eg
+    private n.thing eh
+    private p.The ei
+    52:52:public final int u()
+    58:58:public final r.This v()
+    63:113:public final void Code(android.content.Context,v.thing,p.The)
+    117:117:public final boolean isFinished()
+    123:127:public final void w()
+    132:132:public final void clear()
+    170:229:private void D(byte[])
+    240:251:private void x()
+    263:278:private void I(int,int)
 k.This
-l.I:
-    76:76:private java.lang.Object writeReplace()
-l.The:
-    32:32:private The()
-l.This:
-    45:45:private This()
-l.This$This:
-    private static final long serialVersionUID
-l.This$of:
-    private static final long serialVersionUID
-l.This$thing:
-    private static final long serialVersionUID
-l.acknowledge:
-    625:625:private java.lang.Object writeReplace()
-m.is:
-    58:58:private is()
+k.thing
+l.This
+l.darkness
+l.of
+l.thing
+m.This
+m.darkness
+m.of
+m.thing
+n.From
+n.I
+n.Tempest
+n.The
+n.This
+n.Though
+n.V
+n.acknowledge
+n.be
+n.darkness
+n.i
+n.is
+n.madness
+n.method
+n.mine
+n.of
+n.there
+n.thing
+n.this
+n.yet
 net.tsz.afinal.FinalBitmap:
     85:86:public net.tsz.afinal.FinalBitmap configLoadingImage(android.graphics.Bitmap)
     94:95:public net.tsz.afinal.FinalBitmap configLoadingImage(int)
@@ -3049,12 +3271,9 @@ net.tsz.afinal.FinalHttp:
     355:355:public java.lang.Object deleteSync(java.lang.String)
     359:361:public java.lang.Object deleteSync(java.lang.String,org.apache.http.Header[])
     366:366:public net.tsz.afinal.http.HttpHandler download(java.lang.String,java.lang.String,net.tsz.afinal.http.AjaxCallBack)
-    371:371:public net.tsz.afinal.http.HttpHandler download(java.lang.String,java.lang.String,boolean,net.tsz.afinal.http.AjaxCallBack)
     375:375:public net.tsz.afinal.http.HttpHandler download(java.lang.String,net.tsz.afinal.http.AjaxParams,java.lang.String,net.tsz.afinal.http.AjaxCallBack)
-    379:382:public net.tsz.afinal.http.HttpHandler download(java.lang.String,net.tsz.afinal.http.AjaxParams,java.lang.String,boolean,net.tsz.afinal.http.AjaxCallBack)
     387:394:protected void sendRequest(org.apache.http.impl.client.DefaultHttpClient,org.apache.http.protocol.HttpContext,org.apache.http.client.methods.HttpUriRequest,java.lang.String,net.tsz.afinal.http.AjaxCallBack)
     397:400:protected java.lang.Object sendSyncRequest(org.apache.http.impl.client.DefaultHttpClient,org.apache.http.protocol.HttpContext,org.apache.http.client.methods.HttpUriRequest,java.lang.String)
-    404:408:public static java.lang.String getUrlWithQueryString(java.lang.String,net.tsz.afinal.http.AjaxParams)
     412:418:private org.apache.http.HttpEntity paramsToEntity(net.tsz.afinal.http.AjaxParams)
     422:426:private org.apache.http.client.methods.HttpEntityEnclosingRequestBase addEntityToRequestBase(org.apache.http.client.methods.HttpEntityEnclosingRequestBase,org.apache.http.HttpEntity)
 net.tsz.afinal.annotation.sqlite.Id
@@ -3253,7 +3472,6 @@ net.tsz.afinal.core.AsyncTask:
     357:357:public final java.lang.Object get(long,java.util.concurrent.TimeUnit)
     389:389:public final varargs net.tsz.afinal.core.AsyncTask execute(java.lang.Object[])
     459:460:public static void execute(java.lang.Runnable)
-    477:481:protected final varargs void publishProgress(java.lang.Object[])
 net.tsz.afinal.core.Deque:
     public abstract void addFirst(java.lang.Object)
     public abstract void addLast(java.lang.Object)
@@ -3311,19 +3529,38 @@ net.tsz.afinal.exception.DbException
 net.tsz.afinal.exception.HttpException
 net.tsz.afinal.exception.ViewException:
     private static final long serialVersionUID
-net.tsz.afinal.http.AjaxCallBack
-net.tsz.afinal.http.AjaxParams
+net.tsz.afinal.http.AjaxCallBack:
+    49:51:public net.tsz.afinal.http.AjaxCallBack progress(boolean,int)
+net.tsz.afinal.http.AjaxParams:
+    66:68:public AjaxParams()
+    70:76:public AjaxParams(java.util.Map)
+    78:81:public AjaxParams(java.lang.String,java.lang.String)
+    83:93:public varargs AjaxParams(java.lang.Object[])
+    96:99:public void put(java.lang.String,java.lang.String)
+    102:103:public void put(java.lang.String,java.io.File)
+    106:107:public void put(java.lang.String,java.io.InputStream)
+    110:111:public void put(java.lang.String,java.io.InputStream,java.lang.String)
+    121:124:public void put(java.lang.String,java.io.InputStream,java.lang.String,java.lang.String)
+    127:129:public void remove(java.lang.String)
+    159:194:public org.apache.http.HttpEntity getEntity()
+    198:200:private void init()
 net.tsz.afinal.http.AjaxParams$FileWrapper
-net.tsz.afinal.http.HttpHandler
+net.tsz.afinal.http.HttpHandler:
+    private static final int UPDATE_START
+    private static final int UPDATE_LOADING
+    private static final int UPDATE_FAILURE
+    private static final int UPDATE_SUCCESS
+    157:157:public boolean isStop()
+    165:166:public void stop()
 net.tsz.afinal.http.MultipartEntity
 net.tsz.afinal.http.PreferencesCookieStore
 net.tsz.afinal.http.PreferencesCookieStore$SerializableCookie
 net.tsz.afinal.http.RetryHandler:
     private static final int RETRY_SLEEP_TIME_MILLIS
 net.tsz.afinal.http.SyncRequestHandler
-net.tsz.afinal.http.entityhandler.EntityCallBack
-net.tsz.afinal.http.entityhandler.FileEntityHandler
-net.tsz.afinal.http.entityhandler.StringEntityHandler
+net.tsz.afinal.http.entityhandler.FileEntityHandler:
+    34:34:public boolean isStop()
+    40:41:public void setStop(boolean)
 net.tsz.afinal.utils.ClassUtils
 net.tsz.afinal.utils.FieldUtils
 net.tsz.afinal.utils.Utils:
@@ -3334,10 +3571,59 @@ net.tsz.afinal.utils.Utils:
     75:80:public static long getUsableSpace(java.io.File)
     110:115:public static byte[] copyOfRange(byte[],int,int)
     144:147:public static final long crc64Long(java.lang.String)
-o.I:
-    private static final long serialVersionUID
-q.This:
-    private static final long serialVersionUID
+o.I
+o.This
+o.darkness
+o.of
+o.thing
+p.From
+p.I
+p.Tempest
+p.The
+p.This
+p.V
+p.acknowledge
+p.darkness
+p.i
+p.mine
+p.of
+p.thing
+q.This
+q.This$1
+q.of
+q.thing
+r.I
+r.This:
+    55:55:public final int getValue()
+    59:90:public static final r.This e(int)
+r.acknowledge
+r.acknowledge$This
+r.darkness
+r.of
+r.thing
+s.This
+s.This$1
+s.This$2
+s.thing:
+    43:43:public final java.lang.String bb()
+    49:53:public final java.lang.String getCacheThumbnailDir()
+    59:63:public final java.lang.String bc()
+    74:79:public final long bd()
+    84:90:public final void clearCache()
+    94:105:private void I(java.io.File)
+    120:120:public final java.io.File getThumbnail(java.lang.String)
+t.This
+t.This$1
+t.This$2
+t.This$3
+t.This$3$1
+t.This$4
+t.This$5
+t.This$6
+t.This$7
+t.This$8
+u.This
+u.This$This
 u.aly.a:
     80:81:public void a(u.aly.ar)
 u.aly.aa
@@ -4313,3 +4599,53 @@ u.aly.y:
     21:21:public y()
 u.aly.z:
     private static final java.lang.String a
+u.thing
+v.From
+v.I
+v.I$This
+v.Tempest
+v.The
+v.This
+v.This$This
+v.Though
+v.V
+v.acknowledge
+v.darkness
+v.darkness$1
+v.darkness$2
+v.darkness$3
+v.darkness$4
+v.darkness$5
+v.darkness$6
+v.darkness$6$1
+v.darkness$6$2
+v.darkness$7
+v.darkness$This
+v.darkness$darkness
+v.darkness$of
+v.darkness$thing
+v.i
+v.mine
+v.of
+v.thing
+v.thing$1
+v.this
+w.This
+w.thing
+x.From
+x.From$1
+x.I
+x.The
+x.This
+x.acknowledge
+x.darkness
+x.mine
+x.of
+x.thing
+y.This
+z.ii:
+    private static final long serialVersionUID
+z.method:
+    static final long serialVersionUID
+z.yet:
+    private static final long serialVersionUID

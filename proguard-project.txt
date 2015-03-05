@@ -21,7 +21,7 @@
 
 
 -ignorewarnings
--libraryjars libs/BmobSDK_V3.2.7_1209.jar
+-libraryjars libs/BmobSDK_V3.3.2_0127.jar
 
 -keepattributes Signature
 -keep class cn.bmob.v3.** {*;}
@@ -31,6 +31,9 @@
 -keep class com.wlx.wsolandroid.model.Weilixishu{*;}
 -keep class com.wlx.wsolandroid.model.Yijian{*;}
 -keep class com.wlx.wsolandroid.model.YijianReply{*;}
+-keep class com.wlx.wsolandroid.model.Music{*;}
+-keep class com.wlx.wsolandroid.model.Video{*;}
+-keep class com.wlx.wsolandroid.model.Transation{*;}
 
 
 # If your project uses WebView with JS, uncomment the following

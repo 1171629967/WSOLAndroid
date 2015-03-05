@@ -7,10 +7,17 @@ public class Yijian extends BmobObject{
 	private String gameName;
 	private String content;
 	private String qq;
+	private String fromOS;
 	
 	
 	
 	
+	public String getFromOS() {
+		return fromOS;
+	}
+	public void setFromOS(String fromOS) {
+		this.fromOS = fromOS;
+	}
 	public String getTiebaName() {
 		return tiebaName;
 	}

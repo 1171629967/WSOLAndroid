@@ -1,12 +1,14 @@
 package com.wlx.wsolandroid.utils;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 
 import android.app.Activity;
+import android.os.Environment;
 import android.util.DisplayMetrics;
 import android.view.Display;
 
@@ -59,5 +61,31 @@ public class Utils {
 		}
     	return i;
     }
+    
+    /**
+	 * 获取SD卡的绝对路径
+	 * @return
+	 */
+	public static String getSDCardDIR(){
+		return Environment.getExternalStorageDirectory().getPath();
+	}
+	
+	public static String getDownLoadMusicDir(){
+		String dirString =  getSDCardDIR()+"/wsolMuiscs/";
+		makesureParentExist(new File(dirString));
+		return dirString;
+	}
+	
+	/**
+	 * 确保父级目录存在
+	 * @param paramFile
+	 */
+	public static void makesureParentExist(File paramFile)
+	{
+		File file = paramFile;
+		if ( file != null && !file.exists()) {
+			file.mkdirs();
+		}
+	}
 
 }

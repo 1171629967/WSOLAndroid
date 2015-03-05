@@ -87,6 +87,7 @@ public class YijianFragment extends BaseFragment {
 		yijian.setTiebaName(et_tiebaName.getText().toString());
 		yijian.setGameName(et_gameName.getText().toString());
 		yijian.setQq(et_qq.getText().toString());
+		yijian.setFromOS("Android  "+android.os.Build.VERSION.RELEASE);
 		
 		yijian.save(getActivity(), new SaveListener() {
 

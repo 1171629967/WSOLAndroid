@@ -27,10 +27,12 @@
                     android:id="@+id/tv_wuqi_1"
                     style="@style/style2"
                     android:text="金牌上升和威力系数" />
-                <!-- <TextView
+                <!--
+                     <TextView
                     android:id="@+id/tv_wuqi_2"
                     style="@style/style2"
-                    android:text="武器锻造模拟器" /> -->
+                    android:text="武器锻造模拟器" />
+                -->
 
                 <View style="@style/style_fenge" />
 
@@ -42,12 +44,31 @@
                     android:id="@+id/tv_renwu_1"
                     style="@style/style2"
                     android:text="任务报酬一览" />
+
                 <TextView
                     android:id="@+id/tv_renwu_2"
                     style="@style/style2"
                     android:text="内政等级表" />
 
                 <View style="@style/style_fenge" />
+
+                <TextView
+                    style="@style/style1"
+                    android:text="音乐" />
+                <TextView
+                    android:id="@+id/tv_music_1"
+                    style="@style/style2"
+                    android:text="游戏BMG音乐" />
+                
+                 <View style="@style/style_fenge" />
+                 <!-- <TextView
+                    style="@style/style1"
+                    android:text="视频" />
+                 <TextView
+                    android:id="@+id/tv_video_1"
+                    style="@style/style2"
+                    android:text="游戏PK视频" />
+                 <View style="@style/style_fenge" /> -->
 
                 <TextView
                     style="@style/style1"
@@ -76,28 +97,37 @@
                     style="@style/style1"
                     android:text="其他" />
 
-                <!-- <TextView
+                <!--
+                     <TextView
                     android:id="@+id/tv_qita_1"
                     style="@style/style2"
-                    android:text="关于APP" /> -->
-                
-                 <TextView
+                    android:text="关于APP" />
+                -->
+
+                <TextView
                     android:id="@+id/tv_qita_2"
                     style="@style/style2"
                     android:text="每周活动" />
-                 <TextView
+
+                <TextView
                     android:id="@+id/tv_qita_3"
                     style="@style/style2"
                     android:text="骗子名单" />
-                 <TextView
+
+                <TextView
                     android:id="@+id/tv_qita_4"
                     style="@style/style2"
                     android:text="意见和建议" />
-                 <TextView
+
+                <TextView
                     android:id="@+id/tv_qita_5"
                     style="@style/style2"
                     android:text="玩家意见一览" />
-                
+                <TextView
+                    android:id="@+id/tv_qita_6"
+                    style="@style/style2"
+                    android:text="吧主担保交易" />
+
                 
             </LinearLayout>
         </ScrollView>
