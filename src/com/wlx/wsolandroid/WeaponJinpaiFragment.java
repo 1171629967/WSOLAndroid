@@ -29,6 +29,7 @@ import com.wlx.wsolandroid.adapter.WeaponListAdapter;
 import com.wlx.wsolandroid.constant.Constant;
 import com.wlx.wsolandroid.model.Weapon;
 import com.wlx.wsolandroid.model.Weilixishu;
+import com.wlx.wsolandroid.utils.Utils;
 import com.wlx.wsolandroid.widget.MyActionBar;
 
 public class WeaponJinpaiFragment extends BaseFragment implements OnItemClickListener{
@@ -49,9 +50,14 @@ public class WeaponJinpaiFragment extends BaseFragment implements OnItemClickLis
 		this.initActionBar(view);
 		this.initView(view);
 		return view;
+		
+		
 	}
 
 	private void initView(View view) {
+		
+		//Utils.setAppBackgroundColor(getActivity(), 1, view.findViewById(R.id.rl));
+		
 		v_head = LayoutInflater.from(getActivity()).inflate(R.layout.weapon_search, null);
 		et_search = (EditText) v_head.findViewById(R.id.et_search);
 		et_search.addTextChangedListener(new TextWatcher() {

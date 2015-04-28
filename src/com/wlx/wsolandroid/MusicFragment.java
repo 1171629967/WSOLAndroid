@@ -74,6 +74,7 @@ public class MusicFragment extends BaseFragment implements OnItemClickListener, 
 		lv.setOnItemClickListener(this);
 		
 		numberProgressBar = (NumberProgressBar) view.findViewById(R.id.numberbar);
+		
 
 		swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
 		// 顶部刷新的样式
@@ -144,6 +145,7 @@ public class MusicFragment extends BaseFragment implements OnItemClickListener, 
 
 		final String downLoadUrl = musics.get(position).getMusicFile().getFileUrl(getActivity());
 		FinalHttp finalHttp = new FinalHttp();
+		
 		finalHttp.download(downLoadUrl, downLoadPath,true, new AjaxCallBack<File>() {
 
 			
@@ -172,7 +174,7 @@ public class MusicFragment extends BaseFragment implements OnItemClickListener, 
 			@Override
 			public void onFailure(Throwable t, int errorNo, String strMsg) {
 				numberProgressBar.setVisibility(View.GONE);
-				Toast.makeText(getActivity(), "下载音乐失败--"+strMsg, Toast.LENGTH_LONG).show();
+				Toast.makeText(getActivity(), "下载音乐失败："+strMsg, Toast.LENGTH_LONG).show();
 				super.onFailure(t, errorNo, strMsg);
 			}
 

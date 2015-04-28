@@ -64,7 +64,7 @@ public class ProgressWheel extends View {
 
     //Animation
     //The amount of pixels to move the bar by on each draw
-    private int spinSpeed = 2;
+    private int spinSpeed = 4;
     //The number of milliseconds to wait inbetween each draw
     private int delayMillis = 0;
     int progress = 0;

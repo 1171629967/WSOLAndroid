@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wlx.wsolandroid"
-    android:versionCode="12"
-    android:versionName="1.6.0" >
+    android:versionCode="13"
+    android:versionName="2.0.0" >
 
     <uses-sdk
         android:minSdkVersion="9"
@@ -10,30 +10,60 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.READ_LOGS"/>
-
-    
-
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 这个权限用于进行网络定位-->
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+<!-- 这个权限用于访问GPS定位-->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+<!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
     <application
         android:name=".application.WSOLApplication"
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        
 
         <!-- 主页面 -->
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" >
-            
+        </activity>
+        <activity
+            android:name=".WeaponXishuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".ScaleImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".YijianReplyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".RegistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,22 +71,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".WeaponXishuActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >           
-        </activity>
-        <activity
-            android:name=".ScaleImageActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-        </activity>
-         <activity
-            android:name=".YijianReplyActivity"
+            android:name=".CompletePersonInfoActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
 
-        
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="540523dcfd98c5a740058604" >
@@ -64,6 +83,16 @@
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="Xiaomi" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="dHXu5gRUSLPBp7pt0EHuwX8f" /> 
+
+        <!-- 百度定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
     </application>
 
 </manifest>

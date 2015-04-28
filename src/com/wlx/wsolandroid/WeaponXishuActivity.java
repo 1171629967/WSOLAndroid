@@ -29,6 +29,7 @@ import cn.bmob.v3.listener.GetListener;
 
 import com.wlx.wsolandroid.model.Information;
 import com.wlx.wsolandroid.model.Weilixishu;
+import com.wlx.wsolandroid.utils.Utils;
 import com.wlx.wsolandroid.widget.MyActionBar;
 
 /**
@@ -67,6 +68,8 @@ public class WeaponXishuActivity extends Activity implements OnRefreshListener, 
 	}
 
 	private void initView() {
+		Utils.setAppBackgroundColor(WeaponXishuActivity.this, 1, findViewById(R.id.linearLayout));
+		
 		swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
 		// 顶部刷新的样式
 		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light, android.R.color.holo_green_light, android.R.color.holo_blue_bright, android.R.color.holo_orange_light);

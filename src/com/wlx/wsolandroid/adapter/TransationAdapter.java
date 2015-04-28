@@ -68,8 +68,7 @@ public class TransationAdapter extends BaseAdapter {
 			convertView = LayoutInflater.from(context).inflate(R.layout.adapter_item_transation, null);
 			
 			holder.tv_title = (TextView) convertView.findViewById(R.id.tv_title);
-			holder.tv_buy = (TextView) convertView.findViewById(R.id.tv_buy);
-			holder.tv_sell = (TextView) convertView.findViewById(R.id.tv_sell);
+			
 			holder.tv_url = (TextView) convertView.findViewById(R.id.tv_url);
 			convertView.setTag(holder);
 		} else {
@@ -79,8 +78,6 @@ public class TransationAdapter extends BaseAdapter {
 		Transation transation = lists.get(position);
 
 		holder.tv_title.setText(transation.getTitle());
-		holder.tv_buy.setText("买家：  "+transation.getBuy());
-		holder.tv_sell.setText("卖家：  "+transation.getSell());
 		holder.tv_url.setText(transation.getUrl());
 
 		return convertView;
@@ -90,8 +87,7 @@ public class TransationAdapter extends BaseAdapter {
 	
 		TextView tv_title;
 		
-		TextView tv_buy;
-		TextView tv_sell;
+		
 		TextView tv_url;
 
 	}

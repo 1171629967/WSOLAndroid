@@ -10,6 +10,11 @@ public class Constant {
 	public static String IS_OPEN_AD = "isOpenAD";
 	public static String AD_INTERVAL_TIME = "adIntervalTime";
 	
+	public static String SP_NAME = "WSOL_SP";
+	public static String SP_PARAM_APPBACKCOLOR = "sp_param_appBackColor";
+	public static int APP_BACK_COLOR_NUM = 13;
+	
+	public static final String BMOB_ACCESSKEY = "f42ab7d36b6c0ec9ee85440e61c071ec";
 	
     /** 金牌武器上升值 */
     public static final String JINPAIWUQI    = "jinpaiwuqi";
@@ -33,18 +38,20 @@ public class Constant {
     public static final String YIJIANYILAN      = "yijianyilan";
     /** 游戏BMG音乐 */
     public static final String MUSIC      = "bmg_music";
+    /** 附近的玩家 */
+    public static final String NEAR_USER      = "near_user";
     /** 游戏PK视频 */
     public static final String VIDEO      = "video";
     /** 吧主担保交易 */
     public static final String TRANSATION      = "transation";
 
-    public static final String weaponNameR1  = "偃月刀,大斧,碎棒,铁鞭,朴刀,甲刀,碎棍,双鞭,战斧,双戟,双剑,双锤,直枪,长棍,樱扇,燕扇,幻杖,法杖,铁钩,蛮拳,铁剑,狱刀,战盘,多节鞭,长双刀,钩镰刀,宝剑,铁枪,双节棍,夏圈,铁矛,斩马刀,羽扇,投弧刃,积刃剑,将剑,弧刀,旋棍,牙壁,盘刀,战戈,铁笛,双刃剑,尖剑,咒符,三尖枪,叉突矛,断戟,牙剑,桃扇,铁戟,麟角刀,蛇剑,狼牙棒,巨剑,细剑,重手甲,穿刃,龙牙钩,堕落,镖,青龙刀,螺旋枪,雷鸣枪,火焰圈,飞翔剑,龙扇,双钺,红龙刀,长弓,飞丽爪,大钺,打球棍,双龙剑,野太刀,打双鞭";
+    public static final String weaponNameR1  = "偃月刀,大斧,碎棒,铁鞭,朴刀,甲刀,碎棍,双鞭,战斧,双戟,双剑,双锤,直枪,长棍,樱扇,燕扇,幻杖,法杖,铁钩,蛮拳,铁剑,狱刀,战盘,多节鞭,长双刀,钩镰刀,宝剑,铁枪,双节棍,夏圈,铁矛,斩马刀,羽扇,投弧刃,积刃剑,将剑,弧刀,旋棍,牙壁,盘刀,战戈,铁笛,双刃剑,尖剑,咒符,三尖枪,叉突矛,断戟,牙剑,桃扇,铁戟,麟角刀,蛇剑,狼牙棒,巨剑,细剑,重手甲,穿刃,龙牙钩,堕落,镖,青龙刀,螺旋枪,雷鸣枪,火焰圈,飞翔剑,龙扇,双钺,红龙刀,长弓,飞丽爪,大钺,打球棍,双龙剑,野太刀,打双鞭,旋击棍,麒麟刀";
 
-    public static final String weaponDataR1G = "4,2,4,2,2,6,4,1,3,9,4,0,1,5,0,7,4,5,2,4,9,4,1,0,5,1,2,4,0,1,5,2,6,9,3,2,6,2,4,0,1,3,1,3,8,6,3,5,5,5,6,3,3,1,4,5,2,6,4,5,7,5,1,2,4,0,7,5,2,3,7,4,0,4,3,1";
-    public static final String weaponDataR1P = "4,5,7,2,7,2,2,2,4,1,9,6,1,2,9,3,4,0,0,4,4,6,4,6,1,3,2,9,6,4,4,3,3,3,7,5,2,5,2,4,1,2,3,7,3,5,1,7,2,1,5,9,9,3,4,3,4,4,6,4,7,4,5,3,1,3,2,4,7,5,1,4,4,6,1,0";
-    public static final String weaponDataR1F = "0,4,7,7,1,6,1,3,8,1,9,6,2,2,1,2,9,6,6,4,4,8,6,3,1,4,6,1,0,0,9,1,9,3,3,0,1,2,6,8,7,2,6,4,6,5,1,2,3,4,2,1,5,8,5,2,2,8,8,9,7,0,5,1,5,1,9,3,4,0,7,2,3,9,0,2";
-    public static final String weaponDataR1T = "2,3,9,8,5,5,3,0,0,7,6,5,1,2,0,0,1,3,6,6,7,8,0,0,5,6,8,4,0,0,9,8,1,6,1,1,7,1,9,7,3,7,0,2,9,2,5,7,4,4,0,8,4,4,0,1,9,7,2,4,1,1,1,1,2,0,9,1,2,3,2,9,6,0,8,1";
-    public static final String weaponDataR1W = "2,6,9,5,9,6,2,6,5,4,2,1,9,9,6,6,2,6,6,8,8,2,3,7,5,7,0,2,2,4,1,5,1,8,0,3,8,9,3,7,3,4,5,4,5,3,6,2,6,9,9,4,4,7,6,5,4,2,9,0,5,2,0,3,8,2,0,0,9,9,0,2,9,5,4,6";
+    public static final String weaponDataR1G = "4,2,4,2,2,6,4,1,3,9,4,0,1,5,0,7,4,5,2,4,9,4,1,0,5,1,2,4,0,1,5,2,6,9,3,2,6,2,4,0,1,3,1,3,8,6,3,5,5,5,6,3,3,1,4,5,2,6,4,5,7,5,1,2,4,0,7,5,2,3,7,4,0,4,3,1,0,4";
+    public static final String weaponDataR1P = "4,5,7,2,7,2,2,2,4,1,9,6,1,2,9,3,4,0,0,4,4,6,4,6,1,3,2,9,6,4,4,3,3,3,7,5,2,5,2,4,1,2,3,7,3,5,1,7,2,1,5,9,9,3,4,3,4,4,6,4,7,4,5,3,1,3,2,4,7,5,1,4,4,6,1,0,2,3";
+    public static final String weaponDataR1F = "0,4,7,7,1,6,1,3,8,1,9,6,2,2,1,2,9,6,6,4,4,8,6,3,1,4,6,1,0,0,9,1,9,3,3,0,1,2,6,8,7,2,6,4,6,5,1,2,3,4,2,1,5,8,5,2,2,8,8,9,7,0,5,1,5,1,9,3,4,0,7,2,3,9,0,2,8,0";
+    public static final String weaponDataR1T = "2,3,9,8,5,5,3,0,0,7,6,5,1,2,0,0,1,3,6,6,7,8,0,0,5,6,8,4,0,0,9,8,1,6,1,1,7,1,9,7,3,7,0,2,9,2,5,7,4,4,0,8,4,4,0,1,9,7,2,4,1,1,1,1,2,0,9,1,2,3,2,9,6,0,8,1,4,2";
+    public static final String weaponDataR1W = "2,6,9,5,9,6,2,6,5,4,2,1,9,9,6,6,2,6,6,8,8,2,3,7,5,7,0,2,2,4,1,5,1,8,0,3,8,9,3,7,3,4,5,4,5,3,6,2,6,9,9,4,4,7,6,5,4,2,9,0,5,2,0,3,8,2,0,0,9,9,0,2,9,5,4,6,4,3";
 
     public static final String xishuN1       = "8,6";
     public static final String xishuN2       = "8,6";

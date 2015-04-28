@@ -162,5 +162,7 @@
     
     <color name="hava_shuxing_color">#0069D9</color><!-- 威力系数带属性颜色 -->
     
+    <color name="transparent">#00ffffff</color>
+    
     
 </resources>

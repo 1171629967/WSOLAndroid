@@ -34,6 +34,7 @@
 -keep class com.wlx.wsolandroid.model.Music{*;}
 -keep class com.wlx.wsolandroid.model.Video{*;}
 -keep class com.wlx.wsolandroid.model.Transation{*;}
+-keep class com.wlx.wsolandroid.model.User{*;}
 
 
 # If your project uses WebView with JS, uncomment the following
