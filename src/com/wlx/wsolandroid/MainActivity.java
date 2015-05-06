@@ -3,6 +3,10 @@ package com.wlx.wsolandroid;
 import java.util.List;
 
 import net.tsz.afinal.FinalBitmap;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
@@ -51,6 +55,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 	private RelativeLayout rl_me;
 	private ImageView iv_avator;
 	private TextView tv_nickName;
+	
+	public final static String  ACTION_FINISH_MAIN_ACTIVITY = "com.wlx.wsolandroid.action_finish_main_activity";
 
 	// 百度定位
 	private LocationClient mLocationClient;
@@ -60,6 +66,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		this.registerBoradcastReceiver();
 		this.initSlidingMenu();
 		this.initView();
 		this.initLocation();
@@ -81,21 +88,16 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 	private void initView() {
 		ll = (LinearLayout) menu.findViewById(R.id.ll);
 		fl_fragments = (FrameLayout) findViewById(R.id.fl_fragments);
-		Utils.setAppBackgroundColor(MainActivity.this, 0, ll);
-		Utils.setAppBackgroundColor(MainActivity.this, 1, fl_fragments);
+		Utils.setAppBackgroundColor(MainActivity.this, ll);
+		Utils.setAppBackgroundColor(MainActivity.this, fl_fragments);
 
 		tv_pamadeng = (MarqueeTextView) menu.findViewById(R.id.tv_pamadeng);
 		rl_me = (RelativeLayout) menu.findViewById(R.id.rl_me);
 		rl_me.setOnClickListener(this);
 		iv_avator = (ImageView) menu.findViewById(R.id.iv_avator);
 		tv_nickName = (TextView) menu.findViewById(R.id.tv_nickName);
-		// 设置个人信息
-		User currentUser = User.getCurrentUser(this, User.class);
-		String trueFaceUrl = BmobProFile.getInstance(this).signURL(
-				currentUser.getFaceName(), currentUser.getFaceUrl(),
-				Constant.BMOB_ACCESSKEY, 0, null);
-		FinalBitmap.create(this).display(iv_avator, trueFaceUrl);
-		tv_nickName.setText(currentUser.getNickName());
+
+		setFaceAndNickname();
 
 		tv_wuqi_1 = (TextView) menu.findViewById(R.id.tv_wuqi_1);
 		// tv_wuqi_2 = (TextView) menu.findViewById(R.id.tv_wuqi_2);
@@ -141,8 +143,16 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 
 	@Override
 	public void onClick(View v) {
+		// 个人信息----------------------------->
+		if (v == rl_me) {
+			Intent intent = new Intent(MainActivity.this,
+					CompletePersonInfoActivity.class);
+			intent.putExtra("fromWhere",
+					CompletePersonInfoActivity.FROM_MY_INFO);
+			startActivity(intent);
+		}
 		// 金牌武器上升值----------------------------->
-		if (v == tv_wuqi_1 && !currentFragment.equals(Constant.JINPAIWUQI)) {
+		else if (v == tv_wuqi_1 && !currentFragment.equals(Constant.JINPAIWUQI)) {
 			getSupportFragmentManager().beginTransaction()
 					.replace(R.id.fl_fragments, new WeaponJinpaiFragment())
 					.commit();
@@ -188,8 +198,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		// }
 		else if (v == tv_qita_1) {
 			Utils.createBackColor(MainActivity.this);
-			Utils.setAppBackgroundColor(MainActivity.this, 0, ll);
-			Utils.setAppBackgroundColor(MainActivity.this, 1, fl_fragments);
+			Utils.setAppBackgroundColor(MainActivity.this, ll);
+			Utils.setAppBackgroundColor(MainActivity.this, fl_fragments);
 		}
 		// 每周活动----------------------------->
 		else if (v == tv_qita_2
@@ -262,7 +272,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 			currentFragment = Constant.FUJIANG;
 		}
 
-		if (v != tv_qita_1) {
+		if (v != tv_qita_1 || v != rl_me) {
 			menu.toggle(true);
 		}
 
@@ -278,6 +288,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 	@Override
 	public void onResume() {
 		super.onResume();
+		setFaceAndNickname();
 		if (mLocationClient != null) {
 			mLocationClient.start();
 		}
@@ -297,7 +308,19 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 
 	@Override
 	protected void onDestroy() {
+		unregisterReceiver(mBroadcastReceiver);
 		super.onDestroy();
+	}
+
+	/** 设置用户的头像和昵称 */
+	private void setFaceAndNickname() {
+		// 设置个人信息
+		User currentUser = User.getCurrentUser(this, User.class);
+		String trueFaceUrl = BmobProFile.getInstance(this).signURL(
+				currentUser.getFaceName(), currentUser.getFaceUrl(),
+				Constant.BMOB_ACCESSKEY, 0, null);
+		FinalBitmap.create(this).display(iv_avator, trueFaceUrl);
+		tv_nickName.setText(currentUser.getNickName());
 	}
 
 	private void loadPaomadengMessage() {
@@ -354,5 +377,24 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		mLocationClient.setLocOption(option);
 		mLocationClient.start();
 	}
+	
+	
+	
+	public void registerBoradcastReceiver(){  
+        IntentFilter myIntentFilter = new IntentFilter();  
+        myIntentFilter.addAction(ACTION_FINISH_MAIN_ACTIVITY);  
+        //注册广播        
+        registerReceiver(mBroadcastReceiver, myIntentFilter);  
+    }  
+	
+	private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver(){  
+        @Override  
+        public void onReceive(Context context, Intent intent) {  
+            String action = intent.getAction();  
+            if(action.equals(ACTION_FINISH_MAIN_ACTIVITY)){  
+                finish();
+            }  
+        }           
+    };  
 
 }

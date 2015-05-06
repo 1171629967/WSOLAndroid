@@ -27,68 +27,41 @@ import android.view.View;
 
 public class Utils {
 
-	private static int[] backResourceArray0 = {
-			R.drawable.app_backgroundcolor0_0,
-			R.drawable.app_backgroundcolor1_0,
-			R.drawable.app_backgroundcolor2_0,
-			R.drawable.app_backgroundcolor3_0,
-			R.drawable.app_backgroundcolor4_0,
-			R.drawable.app_backgroundcolor5_0,
-			R.drawable.app_backgroundcolor6_0,
-			R.drawable.app_backgroundcolor7_0,
-			R.drawable.app_backgroundcolor8_0,
-			R.drawable.app_backgroundcolor9_0,
-			R.drawable.app_backgroundcolor10_0,
-			R.drawable.app_backgroundcolor11_0,
-			R.drawable.app_backgroundcolor12_0,
-			R.drawable.app_backgroundcolor13_0 };
 	private static int[] backResourceArray1 = {
-			R.drawable.app_backgroundcolor0,
-			R.drawable.app_backgroundcolor1,
-			R.drawable.app_backgroundcolor2,
-			R.drawable.app_backgroundcolor3,
-			R.drawable.app_backgroundcolor4,
-			R.drawable.app_backgroundcolor5,
-			R.drawable.app_backgroundcolor6,
-			R.drawable.app_backgroundcolor7,
-			R.drawable.app_backgroundcolor8,
-			R.drawable.app_backgroundcolor9,
-			R.drawable.app_backgroundcolor10,
-			R.drawable.app_backgroundcolor11,
-			R.drawable.app_backgroundcolor12,
-			R.drawable.app_backgroundcolor13 };
+			R.drawable.app_backgroundcolor0, R.drawable.app_backgroundcolor1,
+			R.drawable.app_backgroundcolor2, R.drawable.app_backgroundcolor3,
+			R.drawable.app_backgroundcolor4, R.drawable.app_backgroundcolor5,
+			R.drawable.app_backgroundcolor6, R.drawable.app_backgroundcolor7,
+			R.drawable.app_backgroundcolor8, R.drawable.app_backgroundcolor9,
+			R.drawable.app_backgroundcolor10, R.drawable.app_backgroundcolor11,
+			R.drawable.app_backgroundcolor12, R.drawable.app_backgroundcolor13 };
 
-	public static void setAppBackgroundColor(Activity activity, int type,
-			View view) {		
-		if (type == 0) {
-			view.setBackgroundResource(backResourceArray0[getSpBackColor(activity)]);
-		} else if (type == 1) {
-			view.setBackgroundResource(backResourceArray1[getSpBackColor(activity)]);
-		}
+	public static void setAppBackgroundColor(Activity activity, View view) {
+		view.setBackgroundResource(backResourceArray1[getSpBackColor(activity)]);
 	}
-	
+
 	/** 获取存在SP中的APP主题颜色 */
-	public static int getSpBackColor(Activity activity){
-		SharedPreferences sp = activity.getSharedPreferences(Constant.SP_NAME, Activity.MODE_PRIVATE);
+	public static int getSpBackColor(Activity activity) {
+		SharedPreferences sp = activity.getSharedPreferences(Constant.SP_NAME,
+				Activity.MODE_PRIVATE);
 		return sp.getInt(Constant.SP_PARAM_APPBACKCOLOR, 0);
 	}
 
 	/** 随机生成主题颜色 */
-	public static void createBackColor(Activity activity){		
-		SharedPreferences sp = activity.getSharedPreferences(Constant.SP_NAME, Activity.MODE_PRIVATE);
+	public static void createBackColor(Activity activity) {
+		SharedPreferences sp = activity.getSharedPreferences(Constant.SP_NAME,
+				Activity.MODE_PRIVATE);
 		int currentColor = sp.getInt(Constant.SP_PARAM_APPBACKCOLOR, 0);
 		int nextColor = currentColor;
 		if (currentColor == Constant.APP_BACK_COLOR_NUM) {
 			nextColor = 0;
-		}
-		else {
+		} else {
 			nextColor++;
 		}
 		SharedPreferences.Editor editor = sp.edit();
-		editor.putInt(Constant.SP_PARAM_APPBACKCOLOR, nextColor).commit();		
+		editor.putInt(Constant.SP_PARAM_APPBACKCOLOR, nextColor).commit();
 	}
-	
-	
+
 	public static String getString(InputStream inputStream) {
 		InputStreamReader inputStreamReader = null;
 		try {
@@ -163,8 +136,7 @@ public class Utils {
 			file.mkdirs();
 		}
 	}
-	
-	
+
 	public static String selectImage(Context context, final Uri uri) {
 		// Log.e(TAG, selectedImage.toString());
 		if (uri != null) {
@@ -178,15 +150,13 @@ public class Utils {
 		String path = "";
 		if (uri.getScheme().equals("file")) {
 			path = uri.getPath();
-		}
-		else
-		{
-			path = getSelectPhotoPath(context,uri);
+		} else {
+			path = getSelectPhotoPath(context, uri);
 		}
 		return path;
 	}
-	
-	private static String getSelectPhotoPath(Context context,Uri uri){
+
+	private static String getSelectPhotoPath(Context context, Uri uri) {
 		String[] filePathColumn = { MediaStore.Images.Media.DATA };
 		Cursor cursor = context.getContentResolver().query(uri, filePathColumn,
 				null, null, null);
@@ -194,14 +164,13 @@ public class Utils {
 		int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
 		String picturePath = cursor.getString(columnIndex);
 		cursor.close();
-		
+
 		if (picturePath == null) {
-			picturePath = Utils.getDataColumn(context, uri,null,null);
+			picturePath = Utils.getDataColumn(context, uri, null, null);
 		}
 		return picturePath;
 	}
-	
-	
+
 	public static String getDataColumn(Context context, Uri uri,
 			String selection, String[] selectionArgs) {
 

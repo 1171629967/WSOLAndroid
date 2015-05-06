@@ -21,7 +21,7 @@ import com.wlx.wsolandroid.R;
 import com.wlx.wsolandroid.ScaleImageActivity;
 import com.wlx.wsolandroid.model.Pianzi;
 import com.wlx.wsolandroid.model.Transation;
-import com.wlx.wsolandroid.model.Weapon;
+import com.wlx.wsolandroid.model.WeaponJinpai;
 
 /**
  * 吧主担保交易适配器

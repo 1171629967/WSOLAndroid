@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
 
     <RelativeLayout
         android:id="@+id/rl_actionbar"
@@ -10,100 +12,52 @@
         android:layout_height="wrap_content" />
 
     <ScrollView
+        android:layout_below="@+id/rl_actionbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp" >
+            android:orientation="vertical" >
 
-            <TextView
+            <View
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="为了更加完善该应用，您有任何意见和建议，请填写告知！谢谢"
-                android:textColor="@color/orange" />
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp" >
-
-                <TextView
-                    android:id="@+id/tv_tiebaName"
-                    android:layout_width="50dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:textColor="@color/orange"
-                    android:text="贴吧ID" />
-
-                <EditText
-                    android:id="@+id/et_tiebaName"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/tv_tiebaName"
-                    android:hint="请填写您贴吧ID，方便联系您，可不填写" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp" >
-
-                <TextView
-                    android:id="@+id/tv_gameName"
-                    android:layout_width="50dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:textColor="@color/orange"
-                    android:text="游戏ID" />
-
-                <EditText
-                    android:id="@+id/et_gameName"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@+id/tv_gameName"
-                    android:hint="请填写您游戏ID，方便联系您，可不填写" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp" >
-
-                <TextView
-                    android:id="@+id/tv_qq"
-                    android:layout_width="50dp"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/orange"
-                    android:layout_centerVertical="true"
-                    android:text="QQ号码" />
-
-                <EditText
-                    android:id="@+id/et_qq"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_toRightOf="@+id/tv_qq"
-                    android:hint="请填写您QQ，方便联系您，可不填写" />
-            </RelativeLayout>
+                android:layout_height="1px"
+                android:layout_marginTop="30dp"
+                android:background="@color/white" />
 
             <EditText
+                android:minHeight="250dp"
                 android:id="@+id/et_content"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_marginTop="20dp"
-                android:hint="请填写您对本应用的意见和建议，包括任何您想对作者说的话，必须填写" />
+                android:background="@null"
+                android:hint="请填写您对本应用的意见和建议，包括任何您想对作者说的话"
+                android:padding="10dp"
+                android:gravity="top"
+                android:textColor="@color/white"
+                android:textColorHint="@color/whitesmoke"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/white" />
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+    <com.wlx.wsolandroid.widget.ProgressWheel
+            android:id="@+id/progressWheel"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            ProgressWheel:barColor="#0097D6"
+            ProgressWheel:barLength="60dp"
+            ProgressWheel:barWidth="10dp"
+            ProgressWheel:rimColor="#330097D6"
+            ProgressWheel:rimWidth="5dp"
+            ProgressWheel:textColor="#222"
+            ProgressWheel:textSize="14sp"
+            android:visibility="gone" />
+</RelativeLayout>

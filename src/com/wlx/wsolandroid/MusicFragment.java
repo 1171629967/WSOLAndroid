@@ -42,7 +42,7 @@ import com.wlx.wsolandroid.adapter.MusicListAdapter;
 import com.wlx.wsolandroid.adapter.WeaponListAdapter;
 import com.wlx.wsolandroid.constant.Constant;
 import com.wlx.wsolandroid.model.Music;
-import com.wlx.wsolandroid.model.Weapon;
+import com.wlx.wsolandroid.model.WeaponJinpai;
 import com.wlx.wsolandroid.model.Weilixishu;
 import com.wlx.wsolandroid.model.Yijian;
 import com.wlx.wsolandroid.utils.Utils;

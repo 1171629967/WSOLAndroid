@@ -68,7 +68,7 @@ public class WeaponXishuActivity extends Activity implements OnRefreshListener, 
 	}
 
 	private void initView() {
-		Utils.setAppBackgroundColor(WeaponXishuActivity.this, 1, findViewById(R.id.linearLayout));
+		Utils.setAppBackgroundColor(WeaponXishuActivity.this, findViewById(R.id.linearLayout));
 		
 		swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
 		// 顶部刷新的样式

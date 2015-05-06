@@ -178,6 +178,8 @@ public class PianzimingdanFragment extends BaseFragment implements OnRefreshList
 	@Override
 	public void onRefresh() {
 		allPianzis.clear();
+		searchResultPianzis.clear();
+		et_search.setText("");
 		this.loadData();
 	}
 

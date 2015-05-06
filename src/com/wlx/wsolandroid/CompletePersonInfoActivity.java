@@ -32,6 +32,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -59,6 +60,7 @@ public class CompletePersonInfoActivity extends Activity implements
 	private EditText et_tiebaName;
 	private EditText et_city;
 	private EditText et_gameName;
+	private Button bt_loginOut;
 
 	private ScrollView sv;
 
@@ -71,35 +73,84 @@ public class CompletePersonInfoActivity extends Activity implements
 	private NumberProgressBar numberProgressBar;
 	private ProgressWheel progressWheel;
 
+	public static final int FROM_REGIST = 0;
+	public static final int FROM_MY_INFO = 1;
+	public static final int FROM_PERSON_INFO = 2;
+	private int fromWhere;
+
+	private User user;
+
+	/** 当fromWhere是FROM_MY_INFO时，判断当前是否可编辑状态 */
+	private boolean isEditState = false;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_complete_personinfo);
 
+		fromWhere = getIntent().getIntExtra("fromWhere", FROM_REGIST);
+		if (fromWhere == FROM_MY_INFO) {
+			user = User.getCurrentUser(this, User.class);
+		} else if (fromWhere == FROM_PERSON_INFO) {
+			user = (User) getIntent().getSerializableExtra("user");
+		}
+
 		initActionBar();
 		initView();
-		finalBitmap = FinalBitmap.create(this);
-		
+
 	}
 
 	private void initActionBar() {
-		MyActionBar actionBar = new MyActionBar(this);
-		actionBar.setTitle("完善个人信息");
-		actionBar.setLeftEnable(false);
-		actionBar.setRightText("提交");
 		RelativeLayout actionbar = (RelativeLayout) findViewById(R.id.rl_actionbar);
+		final MyActionBar actionBar = new MyActionBar(this);
+
+		switch (fromWhere) {
+		case FROM_REGIST:
+			actionBar.setTitle("完善个人信息");
+			actionBar.setLeftEnable(false);
+			actionBar.setRightText("提交");
+			actionBar.setRightClickListenner(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					submitTask();
+				}
+			});
+			break;
+		case FROM_MY_INFO:
+			actionBar.setTitle(user.getNickName());
+			actionBar.setLeftEnable(true);
+			actionBar.setRightText("编辑");
+			actionBar.setRightClickListenner(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					if (isEditState) {
+						isEditState = false;
+						setEnableOrNot(false);
+						actionBar.setRightText("编辑");
+						submitTask();
+					} else {
+						isEditState = true;
+						setEnableOrNot(true);
+						actionBar.setRightText("完成");
+					}
+				}
+			});
+			break;
+		case FROM_PERSON_INFO:
+			actionBar.setTitle(user.getNickName());
+			actionBar.setLeftEnable(true);
+			break;
+		}
+
 		actionbar.addView(actionBar);
-		actionBar.setRightClickListenner(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				submitTask();
-			}
-		});
+
 	}
 
 	private void initView() {
+		finalBitmap = FinalBitmap.create(this);
+
 		sv = (ScrollView) findViewById(R.id.sv);
-		Utils.setAppBackgroundColor(this, 1, sv);
+		Utils.setAppBackgroundColor(this, sv);
 		et_nickName = (EditText) findViewById(R.id.et_nickName);
 		et_gameName = (EditText) findViewById(R.id.et_gameName);
 		et_qq = (EditText) findViewById(R.id.et_qq);
@@ -107,16 +158,70 @@ public class CompletePersonInfoActivity extends Activity implements
 		et_city = (EditText) findViewById(R.id.et_city);
 		iv_face = (ImageView) findViewById(R.id.iv_face);
 		iv_face.setOnClickListener(this);
-		
+		bt_loginOut = (Button) findViewById(R.id.bt_loginout);
+		bt_loginOut.setOnClickListener(this);
+		if (fromWhere == FROM_MY_INFO) {
+			bt_loginOut.setVisibility(View.VISIBLE);
+		}
+
 		numberProgressBar = (NumberProgressBar) findViewById(R.id.numberbar);
 		progressWheel = (ProgressWheel) findViewById(R.id.progressWheel);
 		progressWheel.spin();
+
+		if (fromWhere == FROM_MY_INFO || fromWhere == FROM_PERSON_INFO) {
+			setEnableOrNot(false);
+			// 设置头像
+			String trueFaceUrl = BmobProFile.getInstance(this).signURL(
+					user.getFaceName(), user.getFaceUrl(),
+					Constant.BMOB_ACCESSKEY, 0, null);
+			finalBitmap.display(iv_face, trueFaceUrl);
+			// 设置昵称
+			et_nickName.setText(user.getNickName());
+			// 设置游戏名称
+			if (!TextUtils.isEmpty(user.getGameName())) {
+
+				et_gameName.setText(user.getGameName());
+			}
+			// 设置QQ
+			if (!TextUtils.isEmpty(user.getQq())) {
+
+				et_qq.setText(user.getQq());
+			}
+			// 设置贴吧名称
+			if (!TextUtils.isEmpty(user.getTiebaName())) {
+
+				et_tiebaName.setText(user.getTiebaName());
+			}
+			// 设置所在城市
+			if (!TextUtils.isEmpty(user.getCity())) {
+				et_city.setText(user.getCity());
+			}
+		}
+	}
+
+	/** 设置控件是否可点击 */
+	public void setEnableOrNot(boolean isEnable) {
+		iv_face.setEnabled(isEnable);
+		et_nickName.setEnabled(isEnable);
+		et_gameName.setEnabled(isEnable);
+		et_qq.setEnabled(isEnable);
+		et_tiebaName.setEnabled(isEnable);
+		et_city.setEnabled(isEnable);
+
 	}
 
 	@Override
 	public void onClick(View v) {
 		if (v == iv_face) {
 			takePhoto();
+		} else if (v == bt_loginOut) {
+			BmobUser.logOut(this); // 清除缓存用户对象
+			finish();
+			startActivity(new Intent(CompletePersonInfoActivity.this,LoginActivity.class));
+			Intent mIntent = new Intent(
+					MainActivity.ACTION_FINISH_MAIN_ACTIVITY);
+			// 发送广播,把MainActivity关闭
+			sendBroadcast(mIntent);
 		}
 	}
 
@@ -195,7 +300,7 @@ public class CompletePersonInfoActivity extends Activity implements
 					public void onSuccess(String fileName, String url) {
 						faceUrl = url;
 						faceName = fileName;
-						updateUserFace(faceName, faceUrl);												
+						updateUserFace(faceName, faceUrl);
 					}
 
 					@Override
@@ -227,9 +332,8 @@ public class CompletePersonInfoActivity extends Activity implements
 				Toast.makeText(CompletePersonInfoActivity.this, "上传头像成功",
 						Toast.LENGTH_LONG).show();
 				String trueFaceUrl = BmobProFile.getInstance(
-						CompletePersonInfoActivity.this).signURL(
-						faceName, faceUrl, Constant.BMOB_ACCESSKEY, 0,
-						null);
+						CompletePersonInfoActivity.this).signURL(faceName,
+						faceUrl, Constant.BMOB_ACCESSKEY, 0, null);
 				finalBitmap.display(iv_face, trueFaceUrl);
 				numberProgressBar.setVisibility(View.GONE);
 			}
@@ -246,30 +350,24 @@ public class CompletePersonInfoActivity extends Activity implements
 	private void updateUser() {
 		progressWheel.setVisibility(View.VISIBLE);
 		User newUser = new User();
-		newUser.setNickName(et_nickName.getText().toString());		
-		if (!TextUtils.isEmpty(et_qq.getText().toString())) {
-			newUser.setQq(et_qq.getText().toString());
-		}
-		if (!TextUtils.isEmpty(et_tiebaName.getText().toString())) {
-			newUser.setTiebaName(et_tiebaName.getText().toString());
-		}
-		if (!TextUtils.isEmpty(et_city.getText().toString())) {
-			newUser.setCity(et_city.getText().toString());
-		}
-		if (!TextUtils.isEmpty(et_gameName.getText().toString())) {
-			newUser.setGameName(et_gameName.getText().toString());
-		}
+		newUser.setNickName(et_nickName.getText().toString());
+		newUser.setQq(et_qq.getText().toString());
+		newUser.setTiebaName(et_tiebaName.getText().toString());
+		newUser.setCity(et_city.getText().toString());
+		newUser.setGameName(et_gameName.getText().toString());
 
 		BmobUser bmobUser = BmobUser.getCurrentUser(this);
 		newUser.update(this, bmobUser.getObjectId(), new UpdateListener() {
 			@Override
 			public void onSuccess() {
 				progressWheel.setVisibility(View.GONE);
-				Toast.makeText(CompletePersonInfoActivity.this, "完善个人信息成功",
+				Toast.makeText(CompletePersonInfoActivity.this, "提交个人信息成功",
 						Toast.LENGTH_LONG).show();
-				startActivity(new Intent(CompletePersonInfoActivity.this,
-						MainActivity.class));
-				finish();
+				if (fromWhere == FROM_REGIST) {
+					startActivity(new Intent(CompletePersonInfoActivity.this,
+							MainActivity.class));
+					finish();
+				}
 			}
 
 			@Override

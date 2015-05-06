@@ -26,139 +26,185 @@
             android:background="@drawable/avator_default" />
 
         <LinearLayout
-            android:id="@+id/ll_nickName"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/iv_face"
             android:layout_marginTop="20dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:padding="10dp" >
+            android:orientation="vertical" >
 
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="昵称："
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/white" />
 
-            <EditText
-                android:id="@+id/et_nickName"
+            <LinearLayout
+                android:id="@+id/ll_nickName"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="昵称："
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_nickName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/whitesmoke" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
                 android:layout_marginLeft="10dp"
-                android:background="@null"
-                android:hint="请输入昵称"
-                android:padding="5dp" />
-        </LinearLayout>
+                android:background="@color/white" />
 
-        <LinearLayout
-            android:id="@+id/ll_game"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ll_nickName"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:padding="10dp" >
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="游戏角色："
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-            <EditText
-                android:id="@+id/et_gameName"
+            <LinearLayout
+                android:id="@+id/ll_game"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="游戏角色："
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_gameName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/whitesmoke" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
                 android:layout_marginLeft="10dp"
-                android:background="@null"
-                android:hint="请输入游戏内角色名"
-                android:padding="5dp" />
-        </LinearLayout>
+                android:background="@color/white" />
 
-        <LinearLayout
-            android:id="@+id/ll_qq"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ll_game"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:padding="10dp" >
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="QQ："
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-            <EditText
-                android:id="@+id/et_qq"
+            <LinearLayout
+                android:id="@+id/ll_qq"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="QQ："
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_qq"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/whitesmoke" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
                 android:layout_marginLeft="10dp"
-                android:background="@null"
-                android:hint="请输入QQ号"
-                android:inputType="number"
-                android:padding="5dp" />
-        </LinearLayout>
+                android:background="@color/white" />
 
-        <LinearLayout
-            android:id="@+id/ll_tieba"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ll_qq"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:padding="10dp" >
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="贴吧ID："
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-            <EditText
-                android:id="@+id/et_tiebaName"
+            <LinearLayout
+                android:id="@+id/ll_tieba"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="贴吧ID："
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_tiebaName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/whitesmoke" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
                 android:layout_marginLeft="10dp"
-                android:background="@null"
-                android:hint="请输入贴吧ID"
-                android:padding="5dp" />
-        </LinearLayout>
+                android:background="@color/white" />
 
-        <LinearLayout
-            android:id="@+id/ll_city"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ll_tieba"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:padding="10dp" >
-
-            <TextView
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="城市："
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-            <EditText
-                android:id="@+id/et_city"
+            <LinearLayout
+                android:id="@+id/ll_city"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:background="@null"
-                android:hint="请输入您所在的城市"
-                android:padding="5dp" />
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="城市："
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_city"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/whitesmoke" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/white" />
+            
+            <Button 
+                android:visibility="gone"
+                android:layout_margin="20dp"
+                android:id="@+id/bt_loginout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="退出登录"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/borner_login_out"
+                />
         </LinearLayout>
 
         <com.wlx.wsolandroid.widget.NumberProgressBar
@@ -173,7 +219,6 @@
             custom:progress="0" />
 
         <com.wlx.wsolandroid.widget.ProgressWheel
-            android:visibility="gone"
             android:id="@+id/progressWheel"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -184,7 +229,8 @@
             ProgressWheel:rimColor="#330097D6"
             ProgressWheel:rimWidth="5dp"
             ProgressWheel:textColor="#222"
-            ProgressWheel:textSize="14sp" />
+            ProgressWheel:textSize="14sp"
+            android:visibility="gone" />
     </RelativeLayout>
 
 </ScrollView>

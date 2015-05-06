@@ -165,4 +165,7 @@
     <color name="transparent">#00ffffff</color>
     
     
+    <color name="lightskyblue_80">#8087cefa</color><!--亮天蓝色 -->
+    
+    
 </resources>

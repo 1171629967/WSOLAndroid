@@ -6,10 +6,11 @@
 # view res/layout/fragment_pianzimingdan.xml #generated:12
 # view res/layout/fragment_transation.xml #generated:13
 # view res/layout/fragment_videolist.xml #generated:13
+# view res/layout/fragment_weapon.xml #generated:13
 # view res/layout/fragment_yijianyilan.xml #generated:12
 -keep class android.support.v4.widget.SwipeRefreshLayout { <init>(...); }
 
-# view AndroidManifest.xml #generated:91
+# view AndroidManifest.xml #generated:92
 -keep class com.baidu.location.f { <init>(...); }
 
 # view res/layout/slidingmenu.xml #generated:8
@@ -49,10 +50,11 @@
 # view res/layout/activity_main.xml #generated:12
 -keep class com.wlx.wsolandroid.widget.MarqueeTextView { <init>(...); }
 
-# view res/layout/activity_complete_personinfo.xml #generated:164
+# view res/layout/activity_complete_personinfo.xml #generated:210
 # view res/layout/fragment_musiclist.xml #generated:32
 -keep class com.wlx.wsolandroid.widget.NumberProgressBar { <init>(...); }
 
-# view res/layout/activity_complete_personinfo.xml #generated:175
+# view res/layout/activity_complete_personinfo.xml #generated:221
+# view res/layout/fragment_yijian.xml #generated:50
 -keep class com.wlx.wsolandroid.widget.ProgressWheel { <init>(...); }
 

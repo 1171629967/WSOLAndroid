@@ -71,18 +71,23 @@ public class YijianReplyActivity extends Activity implements OnRefreshListener {
 			public void onClick(View v) {
 				et_reply = new EditText(YijianReplyActivity.this);
 				builder = new AlertDialog.Builder(YijianReplyActivity.this);
-				builder.setTitle("回复").setView(et_reply).setNegativeButton("取消", null);
-				builder.setPositiveButton("提交", new DialogInterface.OnClickListener() {
+				builder.setTitle("回复").setView(et_reply)
+						.setNegativeButton("取消", null);
+				builder.setPositiveButton("提交",
+						new DialogInterface.OnClickListener() {
 
-					public void onClick(DialogInterface dialog, int which) {
-						String reply = et_reply.getText().toString();
-						if (TextUtils.isEmpty(reply)) {
-							Toast.makeText(YijianReplyActivity.this, "请填写回复内容", Toast.LENGTH_LONG).show();
-							return;
-						}
-						upLoadReply();
-					}
-				});
+							public void onClick(DialogInterface dialog,
+									int which) {
+								String reply = et_reply.getText().toString();
+								if (TextUtils.isEmpty(reply)) {
+									Toast.makeText(YijianReplyActivity.this,
+											"请填写回复内容", Toast.LENGTH_LONG)
+											.show();
+									return;
+								}
+								upLoadReply();
+							}
+						});
 				builder.show();
 			}
 		});
@@ -91,10 +96,14 @@ public class YijianReplyActivity extends Activity implements OnRefreshListener {
 	}
 
 	private void initView() {
-		Utils.setAppBackgroundColor(YijianReplyActivity.this, 1, findViewById(R.id.ll));
+		Utils.setAppBackgroundColor(YijianReplyActivity.this,
+				findViewById(R.id.ll));
 		swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
 		// 顶部刷新的样式
-		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light, android.R.color.holo_green_light, android.R.color.holo_blue_bright, android.R.color.holo_orange_light);
+		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light,
+				android.R.color.holo_green_light,
+				android.R.color.holo_blue_bright,
+				android.R.color.holo_orange_light);
 		swipeRefreshLayout.setOnRefreshListener(this);
 		swipeRefreshLayout.setRefreshing(true);
 
@@ -126,38 +135,36 @@ public class YijianReplyActivity extends Activity implements OnRefreshListener {
 		});
 	}
 
-	
-	private void upLoadReply(){
+	private void upLoadReply() {
 		progressDialog = new ProgressDialog(this);
 		progressDialog.setMessage("正在提交您的回复，请稍后");
 		progressDialog.show();
-		
-		
+
 		YijianReply yijianReply = new YijianReply();
 		yijianReply.setContent(et_reply.getText().toString());
 		yijianReply.setReplyId(objectId);
 		yijianReply.setFrom(0);
-		
-		
+
 		yijianReply.save(this, new SaveListener() {
 
-		    @Override
-		    public void onSuccess() {
-		    	progressDialog.dismiss();
-		    	Toast.makeText(YijianReplyActivity.this, "谢谢您的回复，祝您游戏愉快", Toast.LENGTH_LONG).show();
-		    	swipeRefreshLayout.setRefreshing(true);
-		    	loadData();
-		    }
+			@Override
+			public void onSuccess() {
+				progressDialog.dismiss();
+				Toast.makeText(YijianReplyActivity.this, "谢谢您的回复，祝您游戏愉快",
+						Toast.LENGTH_LONG).show();
+				swipeRefreshLayout.setRefreshing(true);
+				loadData();
+			}
 
-		    @Override
-		    public void onFailure(int code, String arg0) {
-		    	progressDialog.dismiss();
-		    	Toast.makeText(YijianReplyActivity.this, "提交回复失败，请重试", Toast.LENGTH_LONG).show();
-		    }
+			@Override
+			public void onFailure(int code, String arg0) {
+				progressDialog.dismiss();
+				Toast.makeText(YijianReplyActivity.this, "提交回复失败，请重试",
+						Toast.LENGTH_LONG).show();
+			}
 		});
 	}
-	
-	
+
 	@Override
 	public void onRefresh() {
 		loadData();

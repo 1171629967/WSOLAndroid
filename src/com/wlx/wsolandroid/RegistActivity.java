@@ -51,7 +51,7 @@ public class RegistActivity extends Activity implements OnClickListener {
 
 	private void initView() {
 		ll = (LinearLayout) findViewById(R.id.ll);
-		Utils.setAppBackgroundColor(this, 1, ll);
+		Utils.setAppBackgroundColor(this, ll);
 		et_userName = (EditText) findViewById(R.id.et_userName);
 		et_password = (EditText) findViewById(R.id.et_password);
 		bt_confirm = (Button) findViewById(R.id.bt_confirm);

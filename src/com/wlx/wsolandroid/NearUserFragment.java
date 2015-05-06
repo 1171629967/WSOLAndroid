@@ -45,7 +45,7 @@ import com.wlx.wsolandroid.adapter.WeaponListAdapter;
 import com.wlx.wsolandroid.constant.Constant;
 import com.wlx.wsolandroid.model.Music;
 import com.wlx.wsolandroid.model.User;
-import com.wlx.wsolandroid.model.Weapon;
+import com.wlx.wsolandroid.model.WeaponJinpai;
 import com.wlx.wsolandroid.model.Weilixishu;
 import com.wlx.wsolandroid.model.Yijian;
 import com.wlx.wsolandroid.utils.Utils;
@@ -53,20 +53,20 @@ import com.wlx.wsolandroid.widget.MyActionBar;
 import com.wlx.wsolandroid.widget.NumberProgressBar;
 
 /**
- *附近的用户
+ * 附近的用户
  */
-public class NearUserFragment extends BaseFragment implements OnItemClickListener, OnRefreshListener {
+public class NearUserFragment extends BaseFragment implements
+		OnItemClickListener, OnRefreshListener {
 	private ListView lv;
 	private NearUserAdapter adapter;
 
 	private List<User> users = new ArrayList<User>();
 
 	private SwipeRefreshLayout swipeRefreshLayout;
-	
-	
 
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_near_user, null);
 		this.initActionBar(view);
 		this.initView(view);
@@ -78,17 +78,18 @@ public class NearUserFragment extends BaseFragment implements OnItemClickListene
 		adapter = new NearUserAdapter(getActivity(), users);
 		lv.setAdapter(adapter);
 		lv.setOnItemClickListener(this);
-		
-		
-		
 
-		swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
+		swipeRefreshLayout = (SwipeRefreshLayout) view
+				.findViewById(R.id.swipeRefreshLayout);
 		// 顶部刷新的样式
-		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light, android.R.color.holo_green_light, android.R.color.holo_blue_bright, android.R.color.holo_orange_light);
+		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light,
+				android.R.color.holo_green_light,
+				android.R.color.holo_blue_bright,
+				android.R.color.holo_orange_light);
 		swipeRefreshLayout.setOnRefreshListener(this);
 		swipeRefreshLayout.setRefreshing(true);
 		loadData();
-			
+
 	}
 
 	private void initActionBar(View view) {
@@ -103,30 +104,34 @@ public class NearUserFragment extends BaseFragment implements OnItemClickListene
 				mClicklistener.menuClick();
 			}
 		});
-		RelativeLayout actionbar = (RelativeLayout) view.findViewById(R.id.rl_actionbar);
+		RelativeLayout actionbar = (RelativeLayout) view
+				.findViewById(R.id.rl_actionbar);
 		actionbar.addView(actionBar);
 	}
 
 	private void loadData() {
 		BmobQuery<User> bmobQuery = new BmobQuery<User>();
-		bmobQuery.addWhereNear("lastGeoPoint", User.getCurrentUser(getActivity(),
-				User.class).getLastGeoPoint());
-		bmobQuery.setLimit(10);    //获取最接近用户地点的10条数据
+		//距离100米以内玩家
+		bmobQuery.addWhereWithinKilometers("lastGeoPoint",
+				User.getCurrentUser(getActivity(), User.class)
+						.getLastGeoPoint(), 10000);
+		bmobQuery.addWhereNotEqualTo("username", User.getCurrentUser(getActivity(), User.class).getUsername());
+		bmobQuery.setLimit(10000); // 获取最接近用户地点的10000条数据
 		bmobQuery.findObjects(getActivity(), new FindListener<User>() {
-		    @Override
-		    public void onSuccess(List<User> queryUsers) {
-		    	swipeRefreshLayout.setRefreshing(false);
+			@Override
+			public void onSuccess(List<User> queryUsers) {
+				swipeRefreshLayout.setRefreshing(false);
 				users.addAll(queryUsers);
 				adapter.notifyDataSetChanged();
-		    }
-		    @Override
-		    public void onError(int code, String msg) {
-		    	swipeRefreshLayout.setRefreshing(false);
-		    	Toast.makeText(getActivity(), "加载失败："+msg, Toast.LENGTH_LONG).show();
-		    }
+			}
+
+			@Override
+			public void onError(int code, String msg) {
+				swipeRefreshLayout.setRefreshing(false);
+				Toast.makeText(getActivity(), "加载失败：" + msg, Toast.LENGTH_LONG)
+						.show();
+			}
 		});
-		
-		
 
 	}
 
@@ -143,9 +148,14 @@ public class NearUserFragment extends BaseFragment implements OnItemClickListene
 	}
 
 	@Override
-	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+	public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+			long arg3) {
 
-	
+		Intent intent = new Intent(getActivity(),
+				CompletePersonInfoActivity.class);
+		intent.putExtra("fromWhere", CompletePersonInfoActivity.FROM_PERSON_INFO);
+		intent.putExtra("user", users.get(position));
+		startActivity(intent);
 
 	}
 
@@ -154,13 +164,5 @@ public class NearUserFragment extends BaseFragment implements OnItemClickListene
 		users.clear();
 		this.loadData();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
