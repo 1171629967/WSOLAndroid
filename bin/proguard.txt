@@ -1,7 +1,7 @@
 # view res/layout/activity_weapon_xishu.xml #generated:13
 # view res/layout/activity_yijian_reply.xml #generated:13
 # view res/layout/fragment_meizhouhuodong.xml #generated:14
-# view res/layout/fragment_musiclist.xml #generated:14
+# view res/layout/fragment_musiclist.xml #generated:13
 # view res/layout/fragment_near_user.xml #generated:12
 # view res/layout/fragment_pianzimingdan.xml #generated:12
 # view res/layout/fragment_transation.xml #generated:13
@@ -51,7 +51,7 @@
 -keep class com.wlx.wsolandroid.widget.MarqueeTextView { <init>(...); }
 
 # view res/layout/activity_complete_personinfo.xml #generated:210
-# view res/layout/fragment_musiclist.xml #generated:32
+# view res/layout/fragment_musiclist.xml #generated:31
 -keep class com.wlx.wsolandroid.widget.NumberProgressBar { <init>(...); }
 
 # view res/layout/activity_complete_personinfo.xml #generated:221

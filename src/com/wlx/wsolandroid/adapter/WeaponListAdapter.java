@@ -3,6 +3,8 @@ package com.wlx.wsolandroid.adapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import u.aly.da;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,10 +25,12 @@ public class WeaponListAdapter extends BaseAdapter {
 	private List<WeaponJinpai> lists = new ArrayList<WeaponJinpai>();
 
 	private final Context context;
+	private int dataType;
 
-	public WeaponListAdapter(Context context, List<WeaponJinpai> lists) {
+	public WeaponListAdapter(Context context, List<WeaponJinpai> lists,int dataType) {
 		this.context = context;
 		this.lists = lists;
+		this.dataType = dataType;
 	}
 
 	@Override
@@ -45,6 +49,17 @@ public class WeaponListAdapter extends BaseAdapter {
 	@Override
 	public Object getItem(int position) {
 		return null;
+	}
+	
+	
+	
+
+	public int getDataType() {
+		return dataType;
+	}
+
+	public void setDataType(int dataType) {
+		this.dataType = dataType;
 	}
 
 	@Override
@@ -77,51 +92,119 @@ public class WeaponListAdapter extends BaseAdapter {
 		WeaponJinpai weapon = lists.get(position);
 
 		StringBuilder sb1 = new StringBuilder("R1   ");
-		sb1.append(weapon.getG()).append("  ").append(weapon.getP())
-				.append("  ").append(weapon.getF()).append("  ")
-				.append(weapon.getT()).append("  ").append(weapon.getW());
+		if (dataType == 0) {
+			sb1.append(weapon.getG()).append("  ").append(weapon.getP())
+			.append("  ").append(weapon.getF()).append("  ")
+			.append(weapon.getT()).append("  ").append(weapon.getW());
+		}
+		else {
+			sb1.append(weapon.getG()%10).append("  ").append(weapon.getP()%10)
+			.append("  ").append(weapon.getF()%10).append("  ")
+			.append(weapon.getT()%10).append("  ").append(weapon.getW()%10);
+		}
+		
 
 		StringBuilder sb2 = new StringBuilder("R2   ");
-		sb2.append((weapon.getG() + 3)).append("  ")
-				.append((weapon.getP() + 3)).append("  ")
-				.append((weapon.getF() + 3)).append("  ")
-				.append((weapon.getT() + 3)).append("  ")
-				.append((weapon.getW() + 3));
+		if (dataType == 0) {
+			sb2.append((weapon.getG() + 3)).append("  ")
+			.append((weapon.getP() + 3)).append("  ")
+			.append((weapon.getF() + 3)).append("  ")
+			.append((weapon.getT() + 3)).append("  ")
+			.append((weapon.getW() + 3));
+		}
+		else {
+			sb2.append((weapon.getG() + 3)%10).append("  ")
+			.append((weapon.getP() + 3)%10).append("  ")
+			.append((weapon.getF() + 3)%10).append("  ")
+			.append((weapon.getT() + 3)%10).append("  ")
+			.append((weapon.getW() + 3)%10);
+		}
+		
 
 		StringBuilder sb3 = new StringBuilder("R3   ");
-		sb3.append((weapon.getG() + 6)).append("  ")
-				.append((weapon.getP() + 6)).append("  ")
-				.append((weapon.getF() + 6)).append("  ")
-				.append((weapon.getT() + 6)).append("  ")
-				.append((weapon.getW() + 6));
+		if (dataType == 0) {
+			sb3.append((weapon.getG() + 6)).append("  ")
+			.append((weapon.getP() + 6)).append("  ")
+			.append((weapon.getF() + 6)).append("  ")
+			.append((weapon.getT() + 6)).append("  ")
+			.append((weapon.getW() + 6));
+		}
+		else {
+			sb3.append((weapon.getG() + 6)%10).append("  ")
+			.append((weapon.getP() + 6)%10).append("  ")
+			.append((weapon.getF() + 6)%10).append("  ")
+			.append((weapon.getT() + 6)%10).append("  ")
+			.append((weapon.getW() + 6)%10);
+		}
+		
 
 		StringBuilder sb4 = new StringBuilder("R4   ");
-		sb4.append((weapon.getG() + 9)).append("  ")
-				.append((weapon.getP() + 9)).append("  ")
-				.append((weapon.getF() + 9)).append("  ")
-				.append((weapon.getT() + 9)).append("  ")
-				.append((weapon.getW() + 9));
+		if (dataType == 0) {
+			sb4.append((weapon.getG() + 9)).append("  ")
+			.append((weapon.getP() + 9)).append("  ")
+			.append((weapon.getF() + 9)).append("  ")
+			.append((weapon.getT() + 9)).append("  ")
+			.append((weapon.getW() + 9));
+		}
+		else {
+			sb4.append((weapon.getG() + 9)%10).append("  ")
+			.append((weapon.getP() + 9)%10).append("  ")
+			.append((weapon.getF() + 9)%10).append("  ")
+			.append((weapon.getT() + 9)%10).append("  ")
+			.append((weapon.getW() + 9)%10);
+		}
+		
 
 		StringBuilder sb5 = new StringBuilder("R5   ");
-		sb5.append((weapon.getG() + 12)).append("  ")
-				.append((weapon.getP() + 12)).append("  ")
-				.append((weapon.getF() + 12)).append("  ")
-				.append((weapon.getT() + 12)).append("  ")
-				.append((weapon.getW() + 12));
+		if (dataType == 0) {
+			sb5.append((weapon.getG() + 12)).append("  ")
+			.append((weapon.getP() + 12)).append("  ")
+			.append((weapon.getF() + 12)).append("  ")
+			.append((weapon.getT() + 12)).append("  ")
+			.append((weapon.getW() + 12));
+		}
+		else {
+			sb5.append((weapon.getG() + 12)%10).append("  ")
+			.append((weapon.getP() + 12)%10).append("  ")
+			.append((weapon.getF() + 12)%10).append("  ")
+			.append((weapon.getT() + 12)%10).append("  ")
+			.append((weapon.getW() + 12)%10);
+		}
+		
 
 		StringBuilder sb6 = new StringBuilder("R6   ");
-		sb6.append((weapon.getG() + 15)).append("  ")
-				.append((weapon.getP() + 15)).append("  ")
-				.append((weapon.getF() + 15)).append("  ")
-				.append((weapon.getT() + 15)).append("  ")
-				.append((weapon.getW() + 15));
+		if (dataType == 0) {
+			sb6.append((weapon.getG() + 15)).append("  ")
+			.append((weapon.getP() + 15)).append("  ")
+			.append((weapon.getF() + 15)).append("  ")
+			.append((weapon.getT() + 15)).append("  ")
+			.append((weapon.getW() + 15));
+		}
+		else {
+			sb6.append((weapon.getG() + 15)%10).append("  ")
+			.append((weapon.getP() + 15)%10).append("  ")
+			.append((weapon.getF() + 15)%10).append("  ")
+			.append((weapon.getT() + 15)%10).append("  ")
+			.append((weapon.getW() + 15)%10);
+		}
+		
 
 		StringBuilder sb7 = new StringBuilder("R7   ");
-		sb7.append((weapon.getG() + 18)).append("  ")
-				.append((weapon.getP() + 18)).append("  ")
-				.append((weapon.getF() + 18)).append("  ")
-				.append((weapon.getT() + 18)).append("  ")
-				.append((weapon.getW() + 18));
+		if (dataType == 0) {
+			sb7.append((weapon.getG() + 18)).append("  ")
+			.append((weapon.getP() + 18)).append("  ")
+			.append((weapon.getF() + 18)).append("  ")
+			.append((weapon.getT() + 18)).append("  ")
+			.append((weapon.getW() + 18));
+		}
+		else {
+			sb7.append((weapon.getG() + 18)%10).append("  ")
+			.append((weapon.getP() + 18)%10).append("  ")
+			.append((weapon.getF() + 18)%10).append("  ")
+			.append((weapon.getT() + 18)%10).append("  ")
+			.append((weapon.getW() + 18)%10);
+		}
+		
 		
 		StringBuilder sb_base = new StringBuilder("基础   ");
 		sb_base.append((weapon.getG_base())).append("  ")

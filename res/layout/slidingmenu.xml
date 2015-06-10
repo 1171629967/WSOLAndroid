@@ -88,7 +88,7 @@
                 <TextView
                     android:id="@+id/tv_music_1"
                     style="@style/style2"
-                    android:text="游戏BMG音乐" />
+                    android:text="游戏BGM音乐" />
 
                 <View style="@style/style_fenge" />
                 <!--

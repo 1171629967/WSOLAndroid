@@ -68,7 +68,7 @@
         <item name="progress_unreached_color">#CCCCCC</item>
         <item name="progress_reached_color">#3498DB</item>
 
-        <item name="progress_text_size">10sp</item>
+        <item name="progress_text_size">20sp</item>
         <item name="progress_text_color">#3498DB</item>
 
         <item name="progress_reached_bar_height">1.5dp</item>
@@ -85,7 +85,7 @@
         <item name="progress_unreached_color">#CCCCCC</item>
         <item name="progress_reached_color">#70A800</item>
 
-        <item name="progress_text_size">10sp</item>
+        <item name="progress_text_size">20sp</item>
         <item name="progress_text_color">#70A800</item>
 
         <item name="progress_reached_bar_height">1.5dp</item>
@@ -101,7 +101,7 @@
 
         <item name="progress_unreached_color">#CCCCCC</item>
         <item name="progress_reached_color">#FF3D7F</item>
-        <item name="progress_text_size">10sp</item>
+        <item name="progress_text_size">20sp</item>
         <item name="progress_text_color">#FF3D7F</item>
 
         <item name="progress_reached_bar_height">1.5dp</item>
@@ -117,7 +117,7 @@
 
         <item name="progress_unreached_color">#CCCCCC</item>
         <item name="progress_reached_color">#E74C3C</item>
-        <item name="progress_text_size">10sp</item>
+        <item name="progress_text_size">20sp</item>
         <item name="progress_text_color">#E74C3C</item>
 
         <item name="progress_reached_bar_height">1.5dp</item>
@@ -133,7 +133,7 @@
 
         <item name="progress_unreached_color">#CCCCCC</item>
         <item name="progress_reached_color">#6DBCDB</item>
-        <item name="progress_text_size">10sp</item>
+        <item name="progress_text_size">20sp</item>
         <item name="progress_text_color">#6DBCDB</item>
 
         <item name="progress_reached_bar_height">1.5dp</item>
@@ -149,7 +149,7 @@
 
         <item name="progress_unreached_color">#CCCCCC</item>
         <item name="progress_reached_color">#FFC73B</item>
-        <item name="progress_text_size">10sp</item>
+        <item name="progress_text_size">20sp</item>
         <item name="progress_text_color">#FFC73B</item>
 
         <item name="progress_reached_bar_height">1.5dp</item>
@@ -165,7 +165,7 @@
 
         <item name="progress_unreached_color">#CCCCCC</item>
         <item name="progress_reached_color">#FF530D</item>
-        <item name="progress_text_size">10sp</item>
+        <item name="progress_text_size">20sp</item>
         <item name="progress_text_color">#FF530D</item>
 
         <item name="progress_reached_bar_height">1.5dp</item>
@@ -181,7 +181,7 @@
 
         <item name="progress_unreached_color">#CCCCCC</item>
         <item name="progress_reached_color">#ECF0F1</item>
-        <item name="progress_text_size">10sp</item>
+        <item name="progress_text_size">20sp</item>
         <item name="progress_text_color">#ECF0F1</item>
 
         <item name="progress_reached_bar_height">1.5dp</item>

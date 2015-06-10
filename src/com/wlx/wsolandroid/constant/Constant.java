@@ -13,6 +13,7 @@ public class Constant {
 	public static String SP_NAME = "WSOL_SP";
 	public static String SP_PARAM_APPBACKCOLOR = "sp_param_appBackColor";
 	public static int APP_BACK_COLOR_NUM = 13;
+	public static String SP_PARAM_JINPAIWEAPON_DATA_TYPE = "sp_param_jinpaiweapon_data_type";
 	
 	public static final String BMOB_ACCESSKEY = "f42ab7d36b6c0ec9ee85440e61c071ec";
 	

@@ -3,10 +3,12 @@ package com.wlx.wsolandroid;
 import java.util.ArrayList;
 import java.util.List;
 
+import u.aly.cu;
 
-
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -38,7 +40,8 @@ import com.wlx.wsolandroid.model.Weilixishu;
 import com.wlx.wsolandroid.utils.Utils;
 import com.wlx.wsolandroid.widget.MyActionBar;
 
-public class WeaponJinpaiFragment extends BaseFragment implements OnItemClickListener, OnRefreshListener{
+public class WeaponJinpaiFragment extends BaseFragment implements
+		OnItemClickListener, OnRefreshListener {
 	private ListView lv1;
 	private WeaponListAdapter adapter;
 	private View v_head;
@@ -47,31 +50,33 @@ public class WeaponJinpaiFragment extends BaseFragment implements OnItemClickLis
 	private List<WeaponJinpai> searchResultWeapons = new ArrayList<WeaponJinpai>();
 
 	private SwipeRefreshLayout swipeRefreshLayout;
-	
+	private int currentDataType;
 
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_weapon, null);
 		this.initActionBar(view);
 		this.initView(view);
 		return view;
-		
-		
+
 	}
 
 	private void initView(View view) {
-		
-		
-		v_head = LayoutInflater.from(getActivity()).inflate(R.layout.weapon_search, null);
+
+		v_head = LayoutInflater.from(getActivity()).inflate(
+				R.layout.weapon_search, null);
 		et_search = (EditText) v_head.findViewById(R.id.et_search);
 		et_search.addTextChangedListener(new TextWatcher() {
 
 			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
 			}
 
 			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
 			}
 
 			@Override
@@ -85,7 +90,9 @@ public class WeaponJinpaiFragment extends BaseFragment implements OnItemClickLis
 				} else {
 					int weaponCount = allWeapons.size();
 					for (int i = 0; i < weaponCount; i++) {
-						if (allWeapons.get(i).getName().contains(searchString) || allWeapons.get(i).getPinyin().contains(searchString.toLowerCase())) {
+						if (allWeapons.get(i).getName().contains(searchString)
+								|| allWeapons.get(i).getPinyin()
+										.contains(searchString.toLowerCase())) {
 							searchResultWeapons.add(allWeapons.get(i));
 						}
 					}
@@ -97,41 +104,27 @@ public class WeaponJinpaiFragment extends BaseFragment implements OnItemClickLis
 		});
 
 		lv1 = (ListView) view.findViewById(R.id.lv1);
-
 		lv1.addHeaderView(v_head);
 
-//		String[] names = Constant.weaponNameR1.split("\\,");
-//		String[] pinyins = Constant.weaponPinyin.split("\\,");
-//		String[] gs = Constant.weaponDataR1G.split("\\,");
-//		String[] ps = Constant.weaponDataR1P.split("\\,");
-//		String[] fs = Constant.weaponDataR1F.split("\\,");
-//		String[] ts = Constant.weaponDataR1T.split("\\,");
-//		String[] ws = Constant.weaponDataR1W.split("\\,");
-//
-//		allWeaponCount = names.length;
-//		for (int i = 0; i < allWeaponCount; i++) {
-//			Weapon weapon = new Weapon();
-//			weapon.setName(names[i]);
-//			weapon.setPinyin(pinyins[i]);
-//			weapon.setG(Integer.parseInt(gs[i]));
-//			weapon.setP(Integer.parseInt(ps[i]));
-//			weapon.setF(Integer.parseInt(fs[i]));
-//			weapon.setT(Integer.parseInt(ts[i]));
-//			weapon.setW(Integer.parseInt(ws[i]));
-//			allWeapons.add(weapon);
-//		}
-
-		adapter = new WeaponListAdapter(getActivity(), allWeapons);
+		SharedPreferences sp = getActivity().getSharedPreferences(Constant.SP_NAME,
+				Activity.MODE_PRIVATE);
+		currentDataType = sp.getInt(Constant.SP_PARAM_JINPAIWEAPON_DATA_TYPE, 0);
+		
+		adapter = new WeaponListAdapter(getActivity(), allWeapons,currentDataType);
 
 		lv1.setAdapter(adapter);
 		lv1.setOnItemClickListener(this);
-		
-		swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
+
+		swipeRefreshLayout = (SwipeRefreshLayout) view
+				.findViewById(R.id.swipeRefreshLayout);
 		// 顶部刷新的样式
-		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light, android.R.color.holo_green_light, android.R.color.holo_blue_bright, android.R.color.holo_orange_light);
+		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light,
+				android.R.color.holo_green_light,
+				android.R.color.holo_blue_bright,
+				android.R.color.holo_orange_light);
 		swipeRefreshLayout.setOnRefreshListener(this);
 		swipeRefreshLayout.setRefreshing(true);
-		
+
 		this.loadData();
 	}
 
@@ -147,15 +140,33 @@ public class WeaponJinpaiFragment extends BaseFragment implements OnItemClickLis
 				mClicklistener.menuClick();
 			}
 		});
+		
+		actionBar.setRightText("变化");
+		actionBar.setRightClickListenner(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {				
+				if (currentDataType == 0) {
+					currentDataType = 1;
+				}
+				else {
+					currentDataType = 0;
+				}
+				adapter.setDataType(currentDataType);
+				SharedPreferences sp = getActivity().getSharedPreferences(Constant.SP_NAME,
+						Activity.MODE_PRIVATE);
+				SharedPreferences.Editor editor = sp.edit();
+				editor.putInt(Constant.SP_PARAM_JINPAIWEAPON_DATA_TYPE, currentDataType).commit();
+				adapter.notifyDataSetChanged();
+			}
+		});
 		RelativeLayout actionbar = (RelativeLayout) view.findViewById(R.id.rl_actionbar);
 		actionbar.addView(actionBar);
 	}
 
-	
-
 	private void loadData() {
 		BmobQuery<WeaponJinpai> bmobQuery = new BmobQuery<WeaponJinpai>();
-		//bmobQuery.setLimit(1000);
+		// bmobQuery.setLimit(1000);
 		bmobQuery.order("weaponId");
 		bmobQuery.findObjects(getActivity(), new FindListener<WeaponJinpai>() {
 
@@ -173,7 +184,6 @@ public class WeaponJinpaiFragment extends BaseFragment implements OnItemClickLis
 		});
 
 	}
-	
 
 	@Override
 	public void onResume() {
@@ -188,9 +198,11 @@ public class WeaponJinpaiFragment extends BaseFragment implements OnItemClickLis
 	}
 
 	@Override
-	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-		Intent intent = new Intent(getActivity(),WeaponXishuActivity.class);
-		intent.putExtra("weaponName", adapter.getDate().get(position-1).getName());
+	public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+			long arg3) {
+		Intent intent = new Intent(getActivity(), WeaponXishuActivity.class);
+		intent.putExtra("weaponName", adapter.getDate().get(position - 1)
+				.getName());
 		startActivity(intent);
 	}
 
@@ -199,7 +211,7 @@ public class WeaponJinpaiFragment extends BaseFragment implements OnItemClickLis
 		allWeapons.clear();
 		searchResultWeapons.clear();
 		et_search.setText("");
-		this.loadData();	
+		this.loadData();
 	}
 
 }

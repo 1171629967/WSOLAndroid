@@ -111,7 +111,7 @@ public class NearUserFragment extends BaseFragment implements
 
 	private void loadData() {
 		BmobQuery<User> bmobQuery = new BmobQuery<User>();
-		//距离100米以内玩家
+		//距离10000千米以内玩家
 		bmobQuery.addWhereWithinKilometers("lastGeoPoint",
 				User.getCurrentUser(getActivity(), User.class)
 						.getLastGeoPoint(), 10000);
