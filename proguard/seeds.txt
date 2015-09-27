@@ -996,26 +996,43 @@ cn.bmob.v3.update.UpdateStatus: int DOWNLOAD_COMPLETE_FAIL
 cn.bmob.v3.update.UpdateStatus: int DOWNLOAD_COMPLETE_SUCCESS
 cn.bmob.v3.update.UpdateStatus: int DOWNLOAD_NEED_RESTART
 cn.bmob.v3.update.UpdateStatus: UpdateStatus()
+com.alibaba.fastjson.JSONPath$Operator: com.alibaba.fastjson.JSONPath$Operator[] values()
+com.alibaba.fastjson.JSONPath$Operator: com.alibaba.fastjson.JSONPath$Operator valueOf(java.lang.String)
+com.alibaba.fastjson.parser.Feature: com.alibaba.fastjson.parser.Feature[] values()
+com.alibaba.fastjson.parser.Feature: com.alibaba.fastjson.parser.Feature valueOf(java.lang.String)
+com.alibaba.fastjson.serializer.SerializerFeature: com.alibaba.fastjson.serializer.SerializerFeature[] values()
+com.alibaba.fastjson.serializer.SerializerFeature: com.alibaba.fastjson.serializer.SerializerFeature valueOf(java.lang.String)
 com.baidu.location.BDLocation
 com.baidu.location.BDLocation: android.os.Parcelable$Creator CREATOR
-com.baidu.location.CommonEncrypt
-com.baidu.location.CommonEncrypt: byte[] encrypt(byte[])
 com.baidu.location.Jni
 com.baidu.location.Jni: java.lang.String a(byte[],int)
-com.baidu.location.Jni: java.lang.String sky()
 com.baidu.location.Jni: java.lang.String b(double,double,int,int)
 com.baidu.location.Jni: java.lang.String c(byte[],int)
+com.baidu.location.Jni: java.lang.String ib(byte[],byte[])
+com.baidu.location.Jni: java.lang.String sky()
+com.baidu.location.Jni: java.lang.String ee(java.lang.String,int)
+com.baidu.location.Jni: byte[] encrypt(byte[])
 com.baidu.location.Jni: java.lang.String g(byte[])
 com.baidu.location.Jni: void f(byte[],byte[])
+com.baidu.location.Jni: long murmur(java.lang.String)
+com.baidu.location.Jni: java.lang.String encodeNotLimit(java.lang.String,int)
 com.baidu.location.LocationClientOption$LocationMode: com.baidu.location.LocationClientOption$LocationMode[] values()
 com.baidu.location.LocationClientOption$LocationMode: com.baidu.location.LocationClientOption$LocationMode valueOf(java.lang.String)
-com.baidu.location.a0$a
-com.baidu.location.a4$c
-com.baidu.location.ab$b
-com.baidu.location.ad
+com.baidu.location.Poi
+com.baidu.location.Poi: android.os.Parcelable$Creator CREATOR
+com.baidu.location.a.a
+com.baidu.location.c.d$a: com.baidu.location.c.d$a[] values()
+com.baidu.location.c.d$a: com.baidu.location.c.d$a valueOf(java.lang.String)
+com.baidu.location.c.d$b: com.baidu.location.c.d$b[] values()
+com.baidu.location.c.d$b: com.baidu.location.c.d$b valueOf(java.lang.String)
+com.baidu.location.c.d$c: com.baidu.location.c.d$c[] values()
+com.baidu.location.c.d$c: com.baidu.location.c.d$c valueOf(java.lang.String)
+com.baidu.location.c.f$b: com.baidu.location.c.f$b[] values()
+com.baidu.location.c.f$b: com.baidu.location.c.f$b valueOf(java.lang.String)
+com.baidu.location.d.a$b
+com.baidu.location.e.e$a
 com.baidu.location.f
 com.baidu.location.f: f()
-com.baidu.location.k$a
 com.baidu.mapapi.map.MapView: com.baidu.mapapi.map.BaiduMap getMap()
 com.baidu.mapapi.map.MapView: void setZoomControlsPosition(android.graphics.Point)
 com.baidu.mapapi.map.MapView: void setScaleControlPosition(android.graphics.Point)
@@ -1023,6 +1040,10 @@ com.baidu.mapapi.map.MapViewLayoutParams$ELayoutMode: com.baidu.mapapi.map.MapVi
 com.baidu.mapapi.map.MapViewLayoutParams$ELayoutMode: com.baidu.mapapi.map.MapViewLayoutParams$ELayoutMode valueOf(java.lang.String)
 com.baidu.mapapi.map.MyLocationConfiguration$LocationMode: com.baidu.mapapi.map.MyLocationConfiguration$LocationMode[] values()
 com.baidu.mapapi.map.MyLocationConfiguration$LocationMode: com.baidu.mapapi.map.MyLocationConfiguration$LocationMode valueOf(java.lang.String)
+com.baidu.mapapi.radar.RadarNearbySearchSortType: com.baidu.mapapi.radar.RadarNearbySearchSortType[] values()
+com.baidu.mapapi.radar.RadarNearbySearchSortType: com.baidu.mapapi.radar.RadarNearbySearchSortType valueOf(java.lang.String)
+com.baidu.mapapi.radar.RadarSearchError: com.baidu.mapapi.radar.RadarSearchError[] values()
+com.baidu.mapapi.radar.RadarSearchError: com.baidu.mapapi.radar.RadarSearchError valueOf(java.lang.String)
 com.baidu.mapapi.search.core.PoiInfo$POITYPE: com.baidu.mapapi.search.core.PoiInfo$POITYPE[] values()
 com.baidu.mapapi.search.core.PoiInfo$POITYPE: com.baidu.mapapi.search.core.PoiInfo$POITYPE valueOf(java.lang.String)
 com.baidu.mapapi.search.core.SearchResult$ERRORNO: com.baidu.mapapi.search.core.SearchResult$ERRORNO[] values()
@@ -1043,9 +1064,9 @@ com.baidu.mapapi.utils.route.RouteParaOption$EBusStrategyType: com.baidu.mapapi.
 com.baidu.mapapi.utils.route.RouteParaOption$EBusStrategyType: com.baidu.mapapi.utils.route.RouteParaOption$EBusStrategyType valueOf(java.lang.String)
 com.baidu.platform.comapi.a
 com.baidu.platform.comapi.map.MapRenderer
-com.baidu.platform.comapi.map.MapRenderer: void nativeInit(int)
-com.baidu.platform.comapi.map.MapRenderer: void nativeResize(int,int,int)
-com.baidu.platform.comapi.map.MapRenderer: int nativeRender(int)
+com.baidu.platform.comapi.map.MapRenderer: void nativeInit(long)
+com.baidu.platform.comapi.map.MapRenderer: void nativeResize(long,int,int)
+com.baidu.platform.comapi.map.MapRenderer: int nativeRender(long)
 com.baidu.platform.comapi.map.e: com.baidu.platform.comapi.map.e[] values()
 com.baidu.platform.comapi.map.e: com.baidu.platform.comapi.map.e valueOf(java.lang.String)
 com.baidu.platform.comapi.map.x: com.baidu.platform.comapi.map.x[] values()
@@ -1057,88 +1078,96 @@ com.baidu.platform.comjni.engine.JNIEngine: boolean UnInitEngine()
 com.baidu.platform.comjni.engine.JNIEngine: void SetProxyInfo(java.lang.String,int)
 com.baidu.platform.comjni.engine.JNIEngine: boolean StartSocketProc()
 com.baidu.platform.comjni.map.basemap.JNIBaseMap
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: int Create()
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: int SetCallback(int,com.baidu.platform.comjni.map.basemap.BaseMapCallback)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: int Release(int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean Init(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,int,int,int,int,int,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void OnPause(int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void OnResume(int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ResetImageRes(int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void SetMapStatus(int,android.os.Bundle)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: int SetMapControlMode(int,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: android.os.Bundle GetMapStatus(int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: android.os.Bundle getDrawingMapStatus(int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: float GetZoomToBound(int,android.os.Bundle)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ShowSatelliteMap(int,boolean)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ShowTrafficMap(int,boolean)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ShowHotMap(int,boolean)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean GetBaiduHotMapCityInfo(int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ShowLayers(int,int,boolean)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void UpdateLayers(int,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: int AddLayer(int,int,int,java.lang.String)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ClearLayer(int,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String GetNearlyObjID(int,int,int,int,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String ScrPtToGeoPoint(int,int,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String GeoPtToScrPoint(int,int,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void SaveScreenToLocal(int,java.lang.String,android.os.Bundle)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordAdd(int,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordStart(int,int,boolean,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordSuspend(int,int,boolean,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordRemove(int,int,boolean)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String OnRecordGetAll(int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String OnRecordGetAt(int,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordImport(int,boolean,boolean)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String OnHotcityGet(int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String OnSchcityGet(int,java.lang.String)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void addOneOverlayItem(int,android.os.Bundle)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void updateOneOverlayItem(int,android.os.Bundle)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void removeOneOverlayItem(int,android.os.Bundle)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void PostStatInfo(int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: int MapProc(int,int,int,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: int CreateDuplicate(int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: int[] GetScreenBuf(int,int[],int,int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void enableDrawHouseHeight(int,boolean)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean isDrawHouseHeightEnable(int)
-com.baidu.platform.comjni.map.basemap.JNIBaseMap: void clearHeatMapLayerCache(int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: long Create()
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int SetCallback(long,com.baidu.platform.comjni.map.basemap.BaseMapCallback)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int Release(long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean Init(long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,int,int,int,int,int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void OnPause(long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void OnResume(long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ResetImageRes(long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void SetMapStatus(long,android.os.Bundle)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int SetMapControlMode(long,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: android.os.Bundle GetMapStatus(long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: android.os.Bundle getDrawingMapStatus(long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: float GetZoomToBound(long,android.os.Bundle)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ShowSatelliteMap(long,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ShowTrafficMap(long,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ShowHotMap(long,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean GetBaiduHotMapCityInfo(long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ShowLayers(long,long,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void UpdateLayers(long,long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: long AddLayer(long,int,int,java.lang.String)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ClearLayer(long,long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String GetNearlyObjID(long,long,int,int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String ScrPtToGeoPoint(long,int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String GeoPtToScrPoint(long,int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void SaveScreenToLocal(long,java.lang.String,android.os.Bundle)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordAdd(long,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordStart(long,int,boolean,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordSuspend(long,int,boolean,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordReload(long,int,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordRemove(long,int,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String OnRecordGetAll(long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String OnRecordGetAt(long,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordImport(long,boolean,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String OnHotcityGet(long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String OnSchcityGet(long,java.lang.String)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void addOneOverlayItem(long,android.os.Bundle)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void updateOneOverlayItem(long,android.os.Bundle)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void removeOneOverlayItem(long,android.os.Bundle)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void PostStatInfo(long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int MapProc(long,int,int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: long CreateDuplicate(long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int[] GetScreenBuf(long,int[],int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void enableDrawHouseHeight(long,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean isDrawHouseHeightEnable(long)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void clearHeatMapLayerCache(long)
 com.baidu.platform.comjni.map.cloud.JniCloud
-com.baidu.platform.comjni.map.cloud.JniCloud: int create()
-com.baidu.platform.comjni.map.cloud.JniCloud: int release(int)
-com.baidu.platform.comjni.map.cloud.JniCloud: java.lang.String getSearchResult(int,int)
-com.baidu.platform.comjni.map.cloud.JniCloud: void cloudSearch(int,android.os.Bundle)
-com.baidu.platform.comjni.map.cloud.JniCloud: void cloudDetailSearch(int,android.os.Bundle)
+com.baidu.platform.comjni.map.cloud.JniCloud: long create()
+com.baidu.platform.comjni.map.cloud.JniCloud: int release(long)
+com.baidu.platform.comjni.map.cloud.JniCloud: java.lang.String getSearchResult(long,int)
+com.baidu.platform.comjni.map.cloud.JniCloud: void cloudSearch(long,android.os.Bundle)
+com.baidu.platform.comjni.map.cloud.JniCloud: void cloudDetailSearch(long,android.os.Bundle)
 com.baidu.platform.comjni.map.commonmemcache.JNICommonMemCache
-com.baidu.platform.comjni.map.commonmemcache.JNICommonMemCache: int Create()
-com.baidu.platform.comjni.map.commonmemcache.JNICommonMemCache: void Init(int,android.os.Bundle)
+com.baidu.platform.comjni.map.commonmemcache.JNICommonMemCache: long Create()
+com.baidu.platform.comjni.map.commonmemcache.JNICommonMemCache: void Init(long,android.os.Bundle)
 com.baidu.platform.comjni.map.favorite.JNIFavorite
-com.baidu.platform.comjni.map.favorite.JNIFavorite: int Create()
-com.baidu.platform.comjni.map.favorite.JNIFavorite: int Release(int)
-com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean Load(int,java.lang.String,java.lang.String,java.lang.String,int,int,int)
-com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean SetType(int,int)
-com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean Add(int,java.lang.String,java.lang.String)
-com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean Update(int,java.lang.String,java.lang.String)
-com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean Remove(int,java.lang.String)
-com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean Clear(int)
-com.baidu.platform.comjni.map.favorite.JNIFavorite: java.lang.String GetValue(int,java.lang.String)
-com.baidu.platform.comjni.map.favorite.JNIFavorite: int GetAll(int,android.os.Bundle)
-com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean IsExist(int,java.lang.String)
-com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean SaveCache(int)
+com.baidu.platform.comjni.map.favorite.JNIFavorite: long Create()
+com.baidu.platform.comjni.map.favorite.JNIFavorite: int Release(long)
+com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean Load(long,java.lang.String,java.lang.String,java.lang.String,int,int,int)
+com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean SetType(long,int)
+com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean Add(long,java.lang.String,java.lang.String)
+com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean Update(long,java.lang.String,java.lang.String)
+com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean Remove(long,java.lang.String)
+com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean Clear(long)
+com.baidu.platform.comjni.map.favorite.JNIFavorite: java.lang.String GetValue(long,java.lang.String)
+com.baidu.platform.comjni.map.favorite.JNIFavorite: int GetAll(long,android.os.Bundle)
+com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean IsExist(long,java.lang.String)
+com.baidu.platform.comjni.map.favorite.JNIFavorite: boolean SaveCache(long)
+com.baidu.platform.comjni.map.radar.JNIRadar
+com.baidu.platform.comjni.map.radar.JNIRadar: long Create()
+com.baidu.platform.comjni.map.radar.JNIRadar: int Release(long)
+com.baidu.platform.comjni.map.radar.JNIRadar: java.lang.String GetRadarResult(long,int)
+com.baidu.platform.comjni.map.radar.JNIRadar: boolean SendUploadLocationInfoRequest(long,android.os.Bundle)
+com.baidu.platform.comjni.map.radar.JNIRadar: boolean SendClearLocationInfoRequest(long,android.os.Bundle)
+com.baidu.platform.comjni.map.radar.JNIRadar: boolean SendGetLocationInfosNearbyRequest(long,android.os.Bundle)
 com.baidu.platform.comjni.map.search.JNISearch
-com.baidu.platform.comjni.map.search.JNISearch: int Create()
-com.baidu.platform.comjni.map.search.JNISearch: int Release(int)
-com.baidu.platform.comjni.map.search.JNISearch: java.lang.String GetSearchResult(int,int)
-com.baidu.platform.comjni.map.search.JNISearch: boolean ForceSearchByCityName(int,android.os.Bundle)
-com.baidu.platform.comjni.map.search.JNISearch: boolean AreaSearch(int,android.os.Bundle)
-com.baidu.platform.comjni.map.search.JNISearch: boolean RoutePlanByBus(int,android.os.Bundle)
-com.baidu.platform.comjni.map.search.JNISearch: boolean RoutePlanByCar(int,android.os.Bundle)
-com.baidu.platform.comjni.map.search.JNISearch: boolean RoutePlanByFoot(int,android.os.Bundle)
-com.baidu.platform.comjni.map.search.JNISearch: boolean POIDetailSearchPlace(int,java.lang.String)
-com.baidu.platform.comjni.map.search.JNISearch: boolean BusLineDetailSearch(int,java.lang.String,java.lang.String)
-com.baidu.platform.comjni.map.search.JNISearch: boolean SuggestionSearch(int,android.os.Bundle)
-com.baidu.platform.comjni.map.search.JNISearch: boolean ReverseGeocodeSearch(int,int,int)
-com.baidu.platform.comjni.map.search.JNISearch: boolean geocode(int,java.lang.String,java.lang.String)
-com.baidu.platform.comjni.map.search.JNISearch: boolean PoiRGCShareUrlSearch(int,int,int,java.lang.String,java.lang.String)
-com.baidu.platform.comjni.map.search.JNISearch: boolean PoiDetailShareUrlSearch(int,java.lang.String)
-com.baidu.platform.comjni.map.search.JNISearch: boolean MapBoundSearch(int,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: long Create()
+com.baidu.platform.comjni.map.search.JNISearch: int Release(long)
+com.baidu.platform.comjni.map.search.JNISearch: java.lang.String GetSearchResult(long,int)
+com.baidu.platform.comjni.map.search.JNISearch: boolean ForceSearchByCityName(long,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: boolean AreaSearch(long,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: boolean RoutePlanByBus(long,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: boolean RoutePlanByCar(long,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: boolean RoutePlanByFoot(long,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: boolean POIDetailSearchPlace(long,java.lang.String)
+com.baidu.platform.comjni.map.search.JNISearch: boolean BusLineDetailSearch(long,java.lang.String,java.lang.String)
+com.baidu.platform.comjni.map.search.JNISearch: boolean SuggestionSearch(long,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: boolean ReverseGeocodeSearch(long,int,int)
+com.baidu.platform.comjni.map.search.JNISearch: boolean geocode(long,java.lang.String,java.lang.String)
+com.baidu.platform.comjni.map.search.JNISearch: boolean PoiRGCShareUrlSearch(long,int,int,java.lang.String,java.lang.String)
+com.baidu.platform.comjni.map.search.JNISearch: boolean PoiDetailShareUrlSearch(long,java.lang.String)
+com.baidu.platform.comjni.map.search.JNISearch: boolean MapBoundSearch(long,android.os.Bundle)
 com.baidu.platform.comjni.tools.JNITools
 com.baidu.platform.comjni.tools.JNITools: boolean TransGeoStr2Pt(java.lang.Object)
 com.baidu.platform.comjni.tools.JNITools: void TransNodeStr2Pt(java.lang.Object)
@@ -1151,7 +1180,7 @@ com.baidu.platform.comjni.tools.ParcelItem: android.os.Parcelable$Creator a
 com.baidu.vi.VDeviceAPI
 com.baidu.vi.VDeviceAPI: void onNetworkStateChanged()
 com.baidu.vi.VMsg
-com.baidu.vi.VMsg: void OnUserCommand1(int,int,int,int)
+com.baidu.vi.VMsg: void OnUserCommand1(int,int,int,long)
 com.bmob.video.BmobVideoActivity
 com.bmob.video.widget.BmobMediaController: void setAnchorView(android.view.View)
 com.bmob.video.widget.BmobMediaController: void setMediaPlayer(com.bmob.video.widget.BmobMediaController$MediaPlayerControl)
@@ -1608,6 +1637,7 @@ com.wlx.wsolandroid.R$drawable: int icon
 com.wlx.wsolandroid.R$drawable: int menu_left
 com.wlx.wsolandroid.R$drawable: int menu_left_normal
 com.wlx.wsolandroid.R$drawable: int menu_left_selected
+com.wlx.wsolandroid.R$drawable: int narrow_gray
 com.wlx.wsolandroid.R$drawable: int star
 com.wlx.wsolandroid.R$drawable: int upnarrow
 com.wlx.wsolandroid.R$drawable: int weapon_appreciate_listview_back
@@ -1643,6 +1673,7 @@ com.wlx.wsolandroid.R$id: int invisible
 com.wlx.wsolandroid.R$id: int iv
 com.wlx.wsolandroid.R$id: int iv_avator
 com.wlx.wsolandroid.R$id: int iv_face
+com.wlx.wsolandroid.R$id: int iv_narrow
 com.wlx.wsolandroid.R$id: int iv_upNarrow
 com.wlx.wsolandroid.R$id: int iv_upNarrow_gongji_rise
 com.wlx.wsolandroid.R$id: int layout
@@ -1657,6 +1688,7 @@ com.wlx.wsolandroid.R$id: int ll_gongjicao
 com.wlx.wsolandroid.R$id: int ll_gongjili
 com.wlx.wsolandroid.R$id: int ll_nickName
 com.wlx.wsolandroid.R$id: int ll_qq
+com.wlx.wsolandroid.R$id: int ll_renwuBeizhu
 com.wlx.wsolandroid.R$id: int ll_shuxingPart
 com.wlx.wsolandroid.R$id: int ll_teshuqianghua
 com.wlx.wsolandroid.R$id: int ll_tieba
@@ -1717,6 +1749,7 @@ com.wlx.wsolandroid.R$id: int tv_base_yidongli
 com.wlx.wsolandroid.R$id: int tv_beizhu
 com.wlx.wsolandroid.R$id: int tv_content
 com.wlx.wsolandroid.R$id: int tv_currentMoshi
+com.wlx.wsolandroid.R$id: int tv_currentPlayTime
 com.wlx.wsolandroid.R$id: int tv_distance
 com.wlx.wsolandroid.R$id: int tv_duanzao
 com.wlx.wsolandroid.R$id: int tv_duanzaoData
@@ -1730,7 +1763,11 @@ com.wlx.wsolandroid.R$id: int tv_gongjiDown
 com.wlx.wsolandroid.R$id: int tv_gongjiUp
 com.wlx.wsolandroid.R$id: int tv_gongjili
 com.wlx.wsolandroid.R$id: int tv_headContent
+com.wlx.wsolandroid.R$id: int tv_jishuPoint
+com.wlx.wsolandroid.R$id: int tv_junfeiPoint
+com.wlx.wsolandroid.R$id: int tv_junshiPoint
 com.wlx.wsolandroid.R$id: int tv_lastDiffer
+com.wlx.wsolandroid.R$id: int tv_liutongPoint
 com.wlx.wsolandroid.R$id: int tv_lvNumber
 com.wlx.wsolandroid.R$id: int tv_moveAndJump
 com.wlx.wsolandroid.R$id: int tv_musicName
@@ -1756,15 +1793,26 @@ com.wlx.wsolandroid.R$id: int tv_r5
 com.wlx.wsolandroid.R$id: int tv_r6
 com.wlx.wsolandroid.R$id: int tv_r7
 com.wlx.wsolandroid.R$id: int tv_rank
+com.wlx.wsolandroid.R$id: int tv_renwuBeizhu
+com.wlx.wsolandroid.R$id: int tv_renwuGetDaoju
+com.wlx.wsolandroid.R$id: int tv_renwuJiaofu
+com.wlx.wsolandroid.R$id: int tv_renwuLevel
+com.wlx.wsolandroid.R$id: int tv_renwuMap
+com.wlx.wsolandroid.R$id: int tv_renwuName
+com.wlx.wsolandroid.R$id: int tv_renwuPeopleCount
+com.wlx.wsolandroid.R$id: int tv_renwuZhifa
+com.wlx.wsolandroid.R$id: int tv_renwu_1
 com.wlx.wsolandroid.R$id: int tv_renwu_2
 com.wlx.wsolandroid.R$id: int tv_reply
 com.wlx.wsolandroid.R$id: int tv_rise_gongjili
+com.wlx.wsolandroid.R$id: int tv_shangyePoint
 com.wlx.wsolandroid.R$id: int tv_slotNumber_gongji
 com.wlx.wsolandroid.R$id: int tv_slot_gongji
 com.wlx.wsolandroid.R$id: int tv_sui
 com.wlx.wsolandroid.R$id: int tv_tesu_yidongli
 com.wlx.wsolandroid.R$id: int tv_title
 com.wlx.wsolandroid.R$id: int tv_totalCount
+com.wlx.wsolandroid.R$id: int tv_totalPlayTime
 com.wlx.wsolandroid.R$id: int tv_tu
 com.wlx.wsolandroid.R$id: int tv_url
 com.wlx.wsolandroid.R$id: int tv_videoName
@@ -1779,6 +1827,7 @@ com.wlx.wsolandroid.R$id: int tv_yijian
 com.wlx.wsolandroid.R$id: int tv_zhen
 com.wlx.wsolandroid.R$id: int tv_zhengju
 com.wlx.wsolandroid.R$id: int tv_zhenmo
+com.wlx.wsolandroid.R$id: int tv_zhianPoint
 com.wlx.wsolandroid.R$id: int visible
 com.wlx.wsolandroid.R$id: int wb
 com.wlx.wsolandroid.R$id: int wb_content
@@ -1789,6 +1838,7 @@ com.wlx.wsolandroid.R$layout: int activity_login
 com.wlx.wsolandroid.R$layout: int activity_main
 com.wlx.wsolandroid.R$layout: int activity_play_music
 com.wlx.wsolandroid.R$layout: int activity_regist
+com.wlx.wsolandroid.R$layout: int activity_renwu_detail
 com.wlx.wsolandroid.R$layout: int activity_scaleimage
 com.wlx.wsolandroid.R$layout: int activity_weapon_xishu
 com.wlx.wsolandroid.R$layout: int activity_welcome
@@ -1797,6 +1847,7 @@ com.wlx.wsolandroid.R$layout: int adapter_item_music
 com.wlx.wsolandroid.R$layout: int adapter_item_near_user
 com.wlx.wsolandroid.R$layout: int adapter_item_neizhengdengji
 com.wlx.wsolandroid.R$layout: int adapter_item_pianzimingdan
+com.wlx.wsolandroid.R$layout: int adapter_item_renwu_list
 com.wlx.wsolandroid.R$layout: int adapter_item_transation
 com.wlx.wsolandroid.R$layout: int adapter_item_video
 com.wlx.wsolandroid.R$layout: int adapter_item_weapon
@@ -1887,6 +1938,8 @@ com.wlx.wsolandroid.R$styleable: int Themes_numberProgressBarStyle
 com.wlx.wsolandroid.RegistActivity
 com.wlx.wsolandroid.RegistActivity: RegistActivity()
 com.wlx.wsolandroid.RegistActivity: void onClick(android.view.View)
+com.wlx.wsolandroid.RenwuDetailActivity
+com.wlx.wsolandroid.RenwuDetailActivity: RenwuDetailActivity()
 com.wlx.wsolandroid.ScaleImageActivity
 com.wlx.wsolandroid.ScaleImageActivity: ScaleImageActivity()
 com.wlx.wsolandroid.WeaponXishuActivity
@@ -1907,11 +1960,18 @@ com.wlx.wsolandroid.model.Information: void setType(java.lang.String)
 com.wlx.wsolandroid.model.Information: java.lang.String getDes()
 com.wlx.wsolandroid.model.Information: void setDes(java.lang.String)
 com.wlx.wsolandroid.model.Music
+com.wlx.wsolandroid.model.Music: long serialVersionUID
+com.wlx.wsolandroid.model.Music: int duration
 com.wlx.wsolandroid.model.Music: cn.bmob.v3.datatype.BmobFile musicFile
 com.wlx.wsolandroid.model.Music: int musicId
 com.wlx.wsolandroid.model.Music: java.lang.String musicName
+com.wlx.wsolandroid.model.Music: java.lang.String data
 com.wlx.wsolandroid.model.Music: Music()
 com.wlx.wsolandroid.model.Music: cn.bmob.v3.datatype.BmobFile getMusicFile()
+com.wlx.wsolandroid.model.Music: java.lang.String getData()
+com.wlx.wsolandroid.model.Music: void setData(java.lang.String)
+com.wlx.wsolandroid.model.Music: int getDuration()
+com.wlx.wsolandroid.model.Music: void setDuration(int)
 com.wlx.wsolandroid.model.Music: void setMusicFile(cn.bmob.v3.datatype.BmobFile)
 com.wlx.wsolandroid.model.Music: int getMusicId()
 com.wlx.wsolandroid.model.Music: void setMusicId(int)
@@ -2219,6 +2279,11 @@ com.wlx.wsolandroid.model.YijianReply: java.lang.String getContent()
 com.wlx.wsolandroid.model.YijianReply: void setContent(java.lang.String)
 com.wlx.wsolandroid.model.YijianReply: java.lang.String getReplyId()
 com.wlx.wsolandroid.model.YijianReply: void setReplyId(java.lang.String)
+com.wlx.wsolandroid.music.PlayMusicActivity
+com.wlx.wsolandroid.music.PlayMusicActivity: PlayMusicActivity()
+com.wlx.wsolandroid.music.PlayMusicActivity: void onClick(android.view.View)
+com.wlx.wsolandroid.music.PlayMusicService
+com.wlx.wsolandroid.music.PlayMusicService: PlayMusicService()
 com.wlx.wsolandroid.widget.MarqueeTextView
 com.wlx.wsolandroid.widget.MarqueeTextView: MarqueeTextView(android.content.Context,android.util.AttributeSet)
 com.wlx.wsolandroid.widget.MyActionBar: void setData(java.lang.Object)

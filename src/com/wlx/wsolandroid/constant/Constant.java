@@ -15,14 +15,16 @@ public class Constant {
 	public static int APP_BACK_COLOR_NUM = 13;
 	public static String SP_PARAM_JINPAIWEAPON_DATA_TYPE = "sp_param_jinpaiweapon_data_type";
 	
+	public static String SP_JINPAI_DATA = "sp_jinpai_data";
+	
 	public static final String BMOB_ACCESSKEY = "f42ab7d36b6c0ec9ee85440e61c071ec";
 	
     /** 金牌武器上升值 */
     public static final String JINPAIWUQI    = "jinpaiwuqi";
     /** 武器锻造模拟器 */
     public static final String WUQIDUANZAO    = "wuqiduanzao";
-    /** 任务报酬一览 */
-    public static final String RENWUBAOCHOU  = "renwubaochou";
+    /** 任务列表 */
+    public static final String RENWULIEBIAO  = "renwuliebiao";
     /** 内政等级表 */
     public static final String NEIZHENGDENGJI   = "neizhengdengji";
     /** 副将技能和属性 */

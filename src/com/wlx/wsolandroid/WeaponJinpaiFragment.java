@@ -31,6 +31,8 @@ import android.widget.RelativeLayout.LayoutParams;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.listener.FindListener;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
 import com.umeng.analytics.MobclickAgent;
 import com.wlx.wsolandroid.adapter.WeaponListAdapter;
 import com.wlx.wsolandroid.constant.Constant;
@@ -106,11 +108,13 @@ public class WeaponJinpaiFragment extends BaseFragment implements
 		lv1 = (ListView) view.findViewById(R.id.lv1);
 		lv1.addHeaderView(v_head);
 
-		SharedPreferences sp = getActivity().getSharedPreferences(Constant.SP_NAME,
-				Activity.MODE_PRIVATE);
-		currentDataType = sp.getInt(Constant.SP_PARAM_JINPAIWEAPON_DATA_TYPE, 0);
-		
-		adapter = new WeaponListAdapter(getActivity(), allWeapons,currentDataType);
+		SharedPreferences sp = getActivity().getSharedPreferences(
+				Constant.SP_NAME, Activity.MODE_PRIVATE);
+		currentDataType = sp
+				.getInt(Constant.SP_PARAM_JINPAIWEAPON_DATA_TYPE, 0);
+
+		adapter = new WeaponListAdapter(getActivity(), allWeapons,
+				currentDataType);
 
 		lv1.setAdapter(adapter);
 		lv1.setOnItemClickListener(this);
@@ -123,9 +127,20 @@ public class WeaponJinpaiFragment extends BaseFragment implements
 				android.R.color.holo_blue_bright,
 				android.R.color.holo_orange_light);
 		swipeRefreshLayout.setOnRefreshListener(this);
-		swipeRefreshLayout.setRefreshing(true);
 
-		this.loadData();
+		String sp_jinpaiData = sp.getString(Constant.SP_JINPAI_DATA, "");
+		if (TextUtils.isEmpty(sp_jinpaiData)) {
+			swipeRefreshLayout.setRefreshing(true);
+			this.loadData();
+		} else {
+			List<WeaponJinpai> weaponJinpais = JSON.parseObject(sp_jinpaiData,
+					new TypeReference<List<WeaponJinpai>>() {
+					});
+			allWeapons.addAll(weaponJinpais);
+			adapter.notifyDataSetChanged();
+			this.backGroundLoadData();
+		}
+
 	}
 
 	private void initActionBar(View view) {
@@ -140,28 +155,65 @@ public class WeaponJinpaiFragment extends BaseFragment implements
 				mClicklistener.menuClick();
 			}
 		});
-		
+
 		actionBar.setRightText("变化");
 		actionBar.setRightClickListenner(new OnClickListener() {
-			
+
 			@Override
-			public void onClick(View v) {				
+			public void onClick(View v) {
 				if (currentDataType == 0) {
 					currentDataType = 1;
-				}
-				else {
+				} else {
 					currentDataType = 0;
 				}
 				adapter.setDataType(currentDataType);
-				SharedPreferences sp = getActivity().getSharedPreferences(Constant.SP_NAME,
-						Activity.MODE_PRIVATE);
+				SharedPreferences sp = getActivity().getSharedPreferences(
+						Constant.SP_NAME, Activity.MODE_PRIVATE);
 				SharedPreferences.Editor editor = sp.edit();
-				editor.putInt(Constant.SP_PARAM_JINPAIWEAPON_DATA_TYPE, currentDataType).commit();
+				editor.putInt(Constant.SP_PARAM_JINPAIWEAPON_DATA_TYPE,
+						currentDataType).commit();
 				adapter.notifyDataSetChanged();
 			}
 		});
-		RelativeLayout actionbar = (RelativeLayout) view.findViewById(R.id.rl_actionbar);
+		RelativeLayout actionbar = (RelativeLayout) view
+				.findViewById(R.id.rl_actionbar);
 		actionbar.addView(actionBar);
+	}
+
+	/** 背后加载金牌数据 */
+	private void backGroundLoadData() {
+		BmobQuery<WeaponJinpai> bmobQuery = new BmobQuery<WeaponJinpai>();
+		// bmobQuery.setLimit(1000);
+		bmobQuery.order("weaponId");
+		bmobQuery.findObjects(getActivity(), new FindListener<WeaponJinpai>() {
+
+			@Override
+			public void onSuccess(List<WeaponJinpai> weapons) {
+
+				// 把金牌武器数值实体类转化成json，并保存到sp
+				String jinpaiJson = JSON.toJSON(weapons).toString();
+				SharedPreferences sp = getActivity().getSharedPreferences(
+						Constant.SP_NAME, Activity.MODE_PRIVATE);
+				// 得到已经存在SP的金牌数值做比较，如果不同，则覆盖一下原来的数值
+				String sp_jinpaiData = sp
+						.getString(Constant.SP_JINPAI_DATA, "");
+				if (!jinpaiJson.equals(sp_jinpaiData)) {
+					SharedPreferences.Editor editor = sp.edit();
+					editor.putString(Constant.SP_JINPAI_DATA, jinpaiJson)
+							.commit();
+					swipeRefreshLayout.setRefreshing(false);
+					allWeapons.clear();
+					allWeapons.addAll(weapons);
+					adapter.notifyDataSetChanged();
+				}
+
+			}
+
+			@Override
+			public void onError(int arg0, String arg1) {
+				swipeRefreshLayout.setRefreshing(false);
+			}
+		});
 	}
 
 	private void loadData() {
@@ -172,9 +224,21 @@ public class WeaponJinpaiFragment extends BaseFragment implements
 
 			@Override
 			public void onSuccess(List<WeaponJinpai> weapons) {
+
+				// 把金牌武器数值实体类转化成json，并保存到sp
+				String jinpaiJson = JSON.toJSON(weapons).toString();
+				SharedPreferences sp = getActivity().getSharedPreferences(
+						Constant.SP_NAME, Activity.MODE_PRIVATE);
+				// 主动刷新数据，所以覆盖一下原来的数值
+
+				SharedPreferences.Editor editor = sp.edit();
+				editor.putString(Constant.SP_JINPAI_DATA, jinpaiJson).commit();
+
 				swipeRefreshLayout.setRefreshing(false);
+				allWeapons.clear();
 				allWeapons.addAll(weapons);
 				adapter.notifyDataSetChanged();
+
 			}
 
 			@Override

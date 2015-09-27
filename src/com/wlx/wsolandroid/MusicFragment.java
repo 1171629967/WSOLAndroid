@@ -45,22 +45,25 @@ import com.wlx.wsolandroid.model.Music;
 import com.wlx.wsolandroid.model.WeaponJinpai;
 import com.wlx.wsolandroid.model.Weilixishu;
 import com.wlx.wsolandroid.model.Yijian;
+import com.wlx.wsolandroid.music.PlayMusicActivity;
 import com.wlx.wsolandroid.utils.Utils;
 import com.wlx.wsolandroid.widget.MyActionBar;
 import com.wlx.wsolandroid.widget.NumberProgressBar;
 
-public class MusicFragment extends BaseFragment implements OnItemClickListener, OnRefreshListener {
+public class MusicFragment extends BaseFragment implements OnItemClickListener,
+		OnRefreshListener {
 	private ListView lv;
 	private MusicListAdapter adapter;
 
 	private List<Music> musics = new ArrayList<Music>();
 
 	private SwipeRefreshLayout swipeRefreshLayout;
-	
+
 	private NumberProgressBar numberProgressBar;
 
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_musiclist, null);
 		this.initActionBar(view);
 		this.initView(view);
@@ -72,17 +75,21 @@ public class MusicFragment extends BaseFragment implements OnItemClickListener, 
 		adapter = new MusicListAdapter(getActivity(), musics);
 		lv.setAdapter(adapter);
 		lv.setOnItemClickListener(this);
-		
-		numberProgressBar = (NumberProgressBar) view.findViewById(R.id.numberbar);
-		
 
-		swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
+		numberProgressBar = (NumberProgressBar) view
+				.findViewById(R.id.numberbar);
+
+		swipeRefreshLayout = (SwipeRefreshLayout) view
+				.findViewById(R.id.swipeRefreshLayout);
 		// 顶部刷新的样式
-		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light, android.R.color.holo_green_light, android.R.color.holo_blue_bright, android.R.color.holo_orange_light);
+		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light,
+				android.R.color.holo_green_light,
+				android.R.color.holo_blue_bright,
+				android.R.color.holo_orange_light);
 		swipeRefreshLayout.setOnRefreshListener(this);
 		swipeRefreshLayout.setRefreshing(true);
 		loadData();
-			
+
 	}
 
 	private void initActionBar(View view) {
@@ -97,7 +104,8 @@ public class MusicFragment extends BaseFragment implements OnItemClickListener, 
 				mClicklistener.menuClick();
 			}
 		});
-		RelativeLayout actionbar = (RelativeLayout) view.findViewById(R.id.rl_actionbar);
+		RelativeLayout actionbar = (RelativeLayout) view
+				.findViewById(R.id.rl_actionbar);
 		actionbar.addView(actionBar);
 	}
 
@@ -135,50 +143,59 @@ public class MusicFragment extends BaseFragment implements OnItemClickListener, 
 	}
 
 	@Override
-	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+	public void onItemClick(AdapterView<?> arg0, View arg1, final int position,
+			long arg3) {
 
-		String downLoadPath = Utils.getDownLoadMusicDir() + musics.get(position).getMusicFile().getFilename();
+		String downLoadPath = Utils.getDownLoadMusicDir()
+				+ musics.get(position).getMusicFile().getFilename();
 		if (downLoadPath != null && new File(downLoadPath).exists()) {
-			openMusic(downLoadPath);
+			
+			openMusic(musics.get(position));
 			return;
 		}
 
-		final String downLoadUrl = musics.get(position).getMusicFile().getFileUrl(getActivity());
+		final String downLoadUrl = musics.get(position).getMusicFile()
+				.getFileUrl(getActivity());
 		FinalHttp finalHttp = new FinalHttp();
-		
-		finalHttp.download(downLoadUrl, downLoadPath,true, new AjaxCallBack<File>() {
 
-			
-			@Override
-			public void onStart() {
-				numberProgressBar.setVisibility(View.VISIBLE);
-				numberProgressBar.setProgress(0);
-				Toast.makeText(getActivity(), "开始下载音乐", Toast.LENGTH_SHORT).show();
-				super.onStart();
-			}
-			
-			@Override
-			public void onLoading(long count, long current) {
-				numberProgressBar.setProgress((int)(current * 100 / count));
-				super.onLoading(count, current);
-			}
+		finalHttp.download(downLoadUrl, downLoadPath, true,
+				new AjaxCallBack<File>() {
 
-			@Override
-			public void onSuccess(File t) {
-				numberProgressBar.setVisibility(View.GONE);
-				Toast.makeText(getActivity(), "下载音乐成功", Toast.LENGTH_SHORT).show();
-				openMusic(downLoadUrl);
-				super.onSuccess(t);
-			}
+					@Override
+					public void onStart() {
+						numberProgressBar.setVisibility(View.VISIBLE);
+						numberProgressBar.setProgress(0);
+						Toast.makeText(getActivity(), "开始下载音乐",
+								Toast.LENGTH_SHORT).show();
+						super.onStart();
+					}
 
-			@Override
-			public void onFailure(Throwable t, int errorNo, String strMsg) {
-				numberProgressBar.setVisibility(View.GONE);
-				Toast.makeText(getActivity(), "下载音乐失败："+strMsg, Toast.LENGTH_LONG).show();
-				super.onFailure(t, errorNo, strMsg);
-			}
+					@Override
+					public void onLoading(long count, long current) {
+						numberProgressBar
+								.setProgress((int) (current * 100 / count));
+						super.onLoading(count, current);
+					}
 
-		});
+					@Override
+					public void onSuccess(File t) {
+						numberProgressBar.setVisibility(View.GONE);
+						Toast.makeText(getActivity(), "下载音乐成功",
+								Toast.LENGTH_SHORT).show();
+						openMusic(musics.get(position));
+						super.onSuccess(t);
+					}
+
+					@Override
+					public void onFailure(Throwable t, int errorNo,
+							String strMsg) {
+						numberProgressBar.setVisibility(View.GONE);
+						Toast.makeText(getActivity(), "下载音乐失败：" + strMsg,
+								Toast.LENGTH_LONG).show();
+						super.onFailure(t, errorNo, strMsg);
+					}
+
+				});
 
 	}
 
@@ -187,21 +204,23 @@ public class MusicFragment extends BaseFragment implements OnItemClickListener, 
 		musics.clear();
 		this.loadData();
 	}
-	
-	
-	private void openMusic(String musicPath){
-		 
-	        Uri uri = Uri.parse(musicPath);
-	        Intent intent = new Intent(Intent.ACTION_VIEW);
-//	        intent.addCategory(Intent.CATEGORY_APP_MUSIC);
-	        intent.setDataAndType(uri, "audio/*");
-	        startActivity(intent);
+
+	private void openMusic(Music music) {
+		String downLoadPath = Utils.getDownLoadMusicDir()
+				+ music.getMusicFile().getFilename();
+		music.setData(downLoadPath);
+		Intent intent = new Intent(getActivity(), PlayMusicActivity.class);
+		Bundle bundle = new Bundle();
+		bundle.putSerializable("music", music);
+		intent.putExtras(bundle);
+		startActivity(intent);
+
+		//
+		// Uri uri = Uri.parse(musicPath);
+		// Intent intent = new Intent(Intent.ACTION_VIEW);
+		// //intent.addCategory(Intent.CATEGORY_APP_MUSIC);
+		// intent.setDataAndType(uri, "audio/*");
+		// startActivity(intent);
 	}
-	
-	
-	
-	
-	
-	
-	
+
 }

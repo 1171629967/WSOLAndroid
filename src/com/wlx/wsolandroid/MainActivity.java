@@ -3,8 +3,11 @@ package com.wlx.wsolandroid;
 import java.util.List;
 
 import net.tsz.afinal.FinalBitmap;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
@@ -31,6 +34,7 @@ import com.umeng.analytics.MobclickAgent;
 import com.wlx.wsolandroid.BaseFragment.menuClicklistener;
 import com.wlx.wsolandroid.application.WSOLApplication;
 import com.wlx.wsolandroid.constant.Constant;
+import com.wlx.wsolandroid.model.AppVersion;
 import com.wlx.wsolandroid.model.Information;
 import com.wlx.wsolandroid.model.User;
 import com.wlx.wsolandroid.utils.Utils;
@@ -39,7 +43,7 @@ import com.wlx.wsolandroid.widget.MarqueeTextView;
 public class MainActivity extends FragmentActivity implements OnClickListener,
 		menuClicklistener {
 	public SlidingMenu menu;
-	private TextView tv_wuqi_1, tv_renwu_2, tv_qita_1, tv_qita_2, tv_qita_3,
+	private TextView tv_wuqi_1,tv_renwu_1, tv_renwu_2, tv_qita_1, tv_qita_2, tv_qita_3,
 			tv_qita_4, tv_qita_5, tv_qita_6, tv_qita_7, tv_music_1,
 			tv_fujiang_1;
 	private String currentFragment;
@@ -83,6 +87,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 			}
 		}, 1000);
 
+		checkVersion();
 	}
 
 	private void initView() {
@@ -101,7 +106,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 
 		tv_wuqi_1 = (TextView) menu.findViewById(R.id.tv_wuqi_1);
 		// tv_wuqi_2 = (TextView) menu.findViewById(R.id.tv_wuqi_2);
-		// tv_renwu_1 = (TextView) menu.findViewById(R.id.tv_renwu_1);
+		 tv_renwu_1 = (TextView) menu.findViewById(R.id.tv_renwu_1);
 		tv_renwu_2 = (TextView) menu.findViewById(R.id.tv_renwu_2);
 		tv_qita_1 = (TextView) menu.findViewById(R.id.tv_qita_1);
 		tv_qita_2 = (TextView) menu.findViewById(R.id.tv_qita_2);
@@ -115,7 +120,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		tv_fujiang_1 = (TextView) menu.findViewById(R.id.tv_fujiang_1);
 		tv_wuqi_1.setOnClickListener(this);
 		// tv_wuqi_2.setOnClickListener(this);
-		// tv_renwu_1.setOnClickListener(this);
+		 tv_renwu_1.setOnClickListener(this);
 		tv_renwu_2.setOnClickListener(this);
 		tv_qita_1.setOnClickListener(this);
 		tv_qita_2.setOnClickListener(this);
@@ -165,17 +170,14 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		// .replace(R.id.fl_fragments, new WeaponDuanzaoFragment()).commit();
 		// currentFragment = Constant.WUQIDUANZAO;
 		// }
-		// 任务报酬一览----------------------------->
-		// else if (v == tv_renwu_1
-		// && !currentFragment.equals(Constant.RENWUBAOCHOU)) {
-		// LoadhtmlFragment fragment = new LoadhtmlFragment();
-		// Bundle bundle = new Bundle();
-		// bundle.putString("htmlName", "renwubaochou.html");
-		// fragment.setArguments(bundle);
-		// getSupportFragmentManager().beginTransaction()
-		// .replace(R.id.fl_fragments, fragment).commit();
-		// currentFragment = Constant.RENWUBAOCHOU;
-		// }
+		// 任务列表----------------------------->
+		else if (v == tv_renwu_1
+				&& !currentFragment.equals(Constant.RENWULIEBIAO)) {
+			RenwuListFragment fragment = new RenwuListFragment();
+			getSupportFragmentManager().beginTransaction()
+					.replace(R.id.fl_fragments, fragment).commit();
+			currentFragment = Constant.RENWULIEBIAO;
+		}
 		// 内政等级表----------------------------->
 		else if (v == tv_renwu_2
 				&& !currentFragment.equals(Constant.NEIZHENGDENGJI)) {
@@ -322,6 +324,50 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		FinalBitmap.create(this).display(iv_avator, trueFaceUrl);
 		tv_nickName.setText(currentUser.getNickName());
 	}
+	
+	
+	
+	/** 检查app版本是否需要更新 */
+	private void checkVersion(){
+		
+		
+		BmobQuery<AppVersion> bmobQuery = new BmobQuery<AppVersion>();
+		bmobQuery.addWhereEqualTo("osType", "android");
+		bmobQuery.findObjects(this, new FindListener<AppVersion>() {
+
+			@Override
+			public void onSuccess(List<AppVersion> appVersions) {
+				AppVersion appVersion = appVersions.get(0);
+				int versionCode = appVersion.getVersionCode();
+				//有新版本
+				if (versionCode > Utils.getVersionCode(MainActivity.this)) {
+					AlertDialog.Builder builder = new Builder(MainActivity.this);
+					String lastVersionDes = appVersion.getLastVersionDes();
+					builder.setMessage(lastVersionDes.replace("$", "\n"));
+					builder.setTitle("有新版本可以更新");
+					builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							dialog.dismiss();
+						}
+					});
+					builder.show();
+				}
+				
+				
+				
+			}
+
+			@Override
+			public void onError(int arg0, String arg1) {
+				
+			}
+		});
+		
+		
+	}
+	
+	
+	
 
 	private void loadPaomadengMessage() {
 		BmobQuery<Information> bmobQuery = new BmobQuery<Information>();

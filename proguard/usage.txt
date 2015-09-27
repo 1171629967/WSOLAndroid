@@ -1419,6 +1419,480 @@ android.support.v4.widget.ViewDragHelper:
 android.support.v4.widget.ViewDragHelper$2
 android.support.v4.widget.ViewDragHelper$Callback:
     148:148:public ViewDragHelper$Callback()
+com.alibaba.fastjson.JSON:
+    public static final java.lang.String VERSION
+    99:99:public static final java.lang.Object parse(java.lang.String)
+    103:114:public static final java.lang.Object parse(java.lang.String,int)
+    118:118:public static final varargs java.lang.Object parse(byte[],com.alibaba.fastjson.parser.Feature[])
+    122:131:public static final varargs java.lang.Object parse(byte[],int,int,java.nio.charset.CharsetDecoder,com.alibaba.fastjson.parser.Feature[])
+    135:153:public static final java.lang.Object parse(byte[],int,int,java.nio.charset.CharsetDecoder,int)
+    157:162:public static final varargs java.lang.Object parse(java.lang.String,com.alibaba.fastjson.parser.Feature[])
+    166:166:public static final varargs com.alibaba.fastjson.JSONObject parseObject(java.lang.String,com.alibaba.fastjson.parser.Feature[])
+    170:175:public static final com.alibaba.fastjson.JSONObject parseObject(java.lang.String)
+    185:185:public static final varargs java.lang.Object parseObject(java.lang.String,java.lang.Class,com.alibaba.fastjson.parser.Feature[])
+    190:190:public static final varargs java.lang.Object parseObject(java.lang.String,java.lang.Class,com.alibaba.fastjson.parser.deserializer.ParseProcess,com.alibaba.fastjson.parser.Feature[])
+    196:196:public static final varargs java.lang.Object parseObject(java.lang.String,java.lang.reflect.Type,com.alibaba.fastjson.parser.Feature[])
+    201:201:public static final varargs java.lang.Object parseObject(java.lang.String,java.lang.reflect.Type,com.alibaba.fastjson.parser.deserializer.ParseProcess,com.alibaba.fastjson.parser.Feature[])
+    206:221:public static final varargs java.lang.Object parseObject(java.lang.String,java.lang.reflect.Type,int,com.alibaba.fastjson.parser.Feature[])
+    261:261:public static final varargs java.lang.Object parseObject(byte[],java.lang.reflect.Type,com.alibaba.fastjson.parser.Feature[])
+    267:278:public static final varargs java.lang.Object parseObject(byte[],int,int,java.nio.charset.CharsetDecoder,java.lang.reflect.Type,com.alibaba.fastjson.parser.Feature[])
+    283:299:public static final varargs java.lang.Object parseObject(char[],int,java.lang.reflect.Type,com.alibaba.fastjson.parser.Feature[])
+    303:303:public static final java.lang.Object parseObject(java.lang.String,java.lang.Class)
+    307:330:public static final com.alibaba.fastjson.JSONArray parseArray(java.lang.String)
+    334:354:public static final java.util.List parseArray(java.lang.String,java.lang.Class)
+    358:376:public static final java.util.List parseArray(java.lang.String,java.lang.reflect.Type[])
+    406:424:public static final varargs java.lang.String toJSONStringWithDateFormat(java.lang.Object,java.lang.String,com.alibaba.fastjson.serializer.SerializerFeature[])
+    429:445:public static final varargs java.lang.String toJSONString(java.lang.Object,com.alibaba.fastjson.serializer.SerializeFilter,com.alibaba.fastjson.serializer.SerializerFeature[])
+    450:466:public static final varargs java.lang.String toJSONString(java.lang.Object,com.alibaba.fastjson.serializer.SerializeFilter[],com.alibaba.fastjson.serializer.SerializerFeature[])
+    471:483:public static final varargs byte[] toJSONBytes(java.lang.Object,com.alibaba.fastjson.serializer.SerializerFeature[])
+    488:488:public static final varargs java.lang.String toJSONString(java.lang.Object,com.alibaba.fastjson.serializer.SerializeConfig,com.alibaba.fastjson.serializer.SerializerFeature[])
+    493:507:public static final varargs java.lang.String toJSONString(java.lang.Object,com.alibaba.fastjson.serializer.SerializeConfig,com.alibaba.fastjson.serializer.SerializeFilter,com.alibaba.fastjson.serializer.SerializerFeature[])
+    513:527:public static final varargs java.lang.String toJSONString(java.lang.Object,com.alibaba.fastjson.serializer.SerializeConfig,com.alibaba.fastjson.serializer.SerializeFilter[],com.alibaba.fastjson.serializer.SerializerFeature[])
+    532:541:public static final varargs java.lang.String toJSONStringZ(java.lang.Object,com.alibaba.fastjson.serializer.SerializeConfig,com.alibaba.fastjson.serializer.SerializerFeature[])
+    546:558:public static final varargs byte[] toJSONBytes(java.lang.Object,com.alibaba.fastjson.serializer.SerializeConfig,com.alibaba.fastjson.serializer.SerializerFeature[])
+    563:567:public static final java.lang.String toJSONString(java.lang.Object,boolean)
+    571:583:public static final varargs void writeJSONStringTo(java.lang.Object,java.io.Writer,com.alibaba.fastjson.serializer.SerializerFeature[])
+    701:701:public static final java.lang.Object toJavaObject(com.alibaba.fastjson.JSON,java.lang.Class)
+    705:708:private static varargs void setFilter(com.alibaba.fastjson.serializer.JSONSerializer,com.alibaba.fastjson.serializer.SerializeFilter[])
+    711:738:private static void setFilter(com.alibaba.fastjson.serializer.JSONSerializer,com.alibaba.fastjson.serializer.SerializeFilter)
+com.alibaba.fastjson.JSONArray:
+    private static final long serialVersionUID
+    180:186:public com.alibaba.fastjson.JSONObject getJSONObject(int)
+    190:196:public com.alibaba.fastjson.JSONArray getJSONArray(int)
+    200:201:public java.lang.Object getObject(int,java.lang.Class)
+    205:211:public java.lang.Boolean getBoolean(int)
+    215:221:public boolean getBooleanValue(int)
+    225:227:public java.lang.Byte getByte(int)
+    231:237:public byte getByteValue(int)
+    241:243:public java.lang.Short getShort(int)
+    247:253:public short getShortValue(int)
+    263:269:public int getIntValue(int)
+    279:285:public long getLongValue(int)
+    289:291:public java.lang.Float getFloat(int)
+    295:301:public float getFloatValue(int)
+    305:307:public java.lang.Double getDouble(int)
+    311:317:public double getDoubleValue(int)
+    321:323:public java.math.BigDecimal getBigDecimal(int)
+    327:329:public java.math.BigInteger getBigInteger(int)
+    333:335:public java.lang.String getString(int)
+    339:341:public java.util.Date getDate(int)
+    345:347:public java.sql.Date getSqlDate(int)
+    351:353:public java.sql.Timestamp getTimestamp(int)
+com.alibaba.fastjson.JSONException:
+    private static final long serialVersionUID
+com.alibaba.fastjson.JSONObject:
+    private static final long serialVersionUID
+    private static final int DEFAULT_INITIAL_CAPACITY
+    103:109:public com.alibaba.fastjson.JSONObject getJSONObject(java.lang.String)
+    113:119:public com.alibaba.fastjson.JSONArray getJSONArray(java.lang.String)
+    123:124:public java.lang.Object getObject(java.lang.String,java.lang.Class)
+    128:134:public java.lang.Boolean getBoolean(java.lang.String)
+    138:144:public byte[] getBytes(java.lang.String)
+    148:154:public boolean getBooleanValue(java.lang.String)
+    158:160:public java.lang.Byte getByte(java.lang.String)
+    164:170:public byte getByteValue(java.lang.String)
+    174:176:public java.lang.Short getShort(java.lang.String)
+    180:186:public short getShortValue(java.lang.String)
+    190:192:public java.lang.Integer getInteger(java.lang.String)
+    196:202:public int getIntValue(java.lang.String)
+    206:208:public java.lang.Long getLong(java.lang.String)
+    212:218:public long getLongValue(java.lang.String)
+    222:224:public java.lang.Float getFloat(java.lang.String)
+    228:234:public float getFloatValue(java.lang.String)
+    238:240:public java.lang.Double getDouble(java.lang.String)
+    244:250:public double getDoubleValue(java.lang.String)
+    254:256:public java.math.BigDecimal getBigDecimal(java.lang.String)
+    260:262:public java.math.BigInteger getBigInteger(java.lang.String)
+    266:272:public java.lang.String getString(java.lang.String)
+    276:278:public java.util.Date getDate(java.lang.String)
+    282:284:public java.sql.Date getSqlDate(java.lang.String)
+    288:290:public java.sql.Timestamp getTimestamp(java.lang.String)
+com.alibaba.fastjson.JSONPObject
+com.alibaba.fastjson.JSONPath
+com.alibaba.fastjson.JSONPath$ArrayAccessSegement
+com.alibaba.fastjson.JSONPath$Filter
+com.alibaba.fastjson.JSONPath$FilterSegement
+com.alibaba.fastjson.JSONPath$IntBetweenSegement
+com.alibaba.fastjson.JSONPath$IntInSegement
+com.alibaba.fastjson.JSONPath$IntObjInSegement
+com.alibaba.fastjson.JSONPath$IntOpSegement
+com.alibaba.fastjson.JSONPath$JSONPathParser
+com.alibaba.fastjson.JSONPath$MatchSegement
+com.alibaba.fastjson.JSONPath$MultiIndexSegement
+com.alibaba.fastjson.JSONPath$MultiPropertySegement
+com.alibaba.fastjson.JSONPath$NotNullSegement
+com.alibaba.fastjson.JSONPath$NullSegement
+com.alibaba.fastjson.JSONPath$Operator
+com.alibaba.fastjson.JSONPath$PropertySegement
+com.alibaba.fastjson.JSONPath$RangeSegement
+com.alibaba.fastjson.JSONPath$RlikeSegement
+com.alibaba.fastjson.JSONPath$Segement
+com.alibaba.fastjson.JSONPath$SelfSegement
+com.alibaba.fastjson.JSONPath$SizeSegement
+com.alibaba.fastjson.JSONPath$StringInSegement
+com.alibaba.fastjson.JSONPath$StringOpSegement
+com.alibaba.fastjson.JSONPath$WildCardSegement
+com.alibaba.fastjson.JSONPathException
+com.alibaba.fastjson.JSONReader
+com.alibaba.fastjson.JSONStreamContext
+com.alibaba.fastjson.JSONWriter
+com.alibaba.fastjson.annotation.JSONField:
+    public abstract com.alibaba.fastjson.parser.Feature[] parseFeatures()
+com.alibaba.fastjson.asm.ASMException:
+    private static final long serialVersionUID
+com.alibaba.fastjson.asm.ClassWriter:
+    public static final int COMPUTE_MAXS
+    public static final int COMPUTE_FRAMES
+    static final int ACC_SYNTHETIC_ATTRIBUTE
+    static final int NOARG_INSN
+    static final int SBYTE_INSN
+    static final int SHORT_INSN
+    static final int VAR_INSN
+    static final int IMPLVAR_INSN
+    static final int TYPE_INSN
+    static final int FIELDORMETH_INSN
+    static final int ITFDYNMETH_INSN
+    static final int LABEL_INSN
+    static final int LABELW_INSN
+    static final int LDC_INSN
+    static final int LDCW_INSN
+    static final int IINC_INSN
+    static final int TABL_INSN
+    static final int LOOK_INSN
+    static final int MANA_INSN
+    static final int WIDE_INSN
+    static final int CLASS
+    static final int FIELD
+    static final int METH
+    static final int IMETH
+    static final int STR
+    static final int INT
+    static final int FLOAT
+    static final int LONG
+    static final int DOUBLE
+    static final int NAME_TYPE
+    static final int UTF8
+    static final int TYPE_NORMAL
+    static final int TYPE_UNINIT
+    static final int TYPE_MERGED
+    com.alibaba.fastjson.asm.Item[] typeTable
+com.alibaba.fastjson.asm.Label:
+    static final int RESOLVED
+    public java.lang.Object info
+    int line
+    int inputStackTop
+    int outputStackMax
+    com.alibaba.fastjson.asm.Label successor
+    com.alibaba.fastjson.asm.Label next
+com.alibaba.fastjson.asm.MethodWriter:
+    static final int ACC_CONSTRUCTOR
+    static final int SAME_FRAME
+    static final int SAME_LOCALS_1_STACK_ITEM_FRAME
+    static final int RESERVED
+    static final int SAME_LOCALS_1_STACK_ITEM_FRAME_EXTENDED
+    static final int CHOP_FRAME
+    static final int SAME_FRAME_EXTENDED
+    static final int APPEND_FRAME
+    static final int FULL_FRAME
+    int classReaderLength
+com.alibaba.fastjson.asm.Opcodes
+com.alibaba.fastjson.asm.Type:
+    public static final int VOID
+    public static final int BOOLEAN
+    public static final int CHAR
+    public static final int BYTE
+    public static final int SHORT
+    public static final int INT
+    public static final int FLOAT
+    public static final int LONG
+    public static final int DOUBLE
+    public static final int ARRAY
+    public static final int OBJECT
+com.alibaba.fastjson.parser.DefaultExtJSONParser
+com.alibaba.fastjson.parser.DefaultJSONParser:
+    public static final int NONE
+    public static final int NeedToResolve
+    public static final int TypeNameRedirect
+    127:127:public java.lang.String getDateFomartPattern()
+    138:140:public void setDateFormat(java.lang.String)
+    143:144:public void setDateFomrat(java.text.DateFormat)
+    147:148:public DefaultJSONParser(java.lang.String)
+    151:152:public DefaultJSONParser(java.lang.String,com.alibaba.fastjson.parser.ParserConfig)
+    159:160:public DefaultJSONParser(char[],int,com.alibaba.fastjson.parser.ParserConfig,int)
+    163:164:public DefaultJSONParser(com.alibaba.fastjson.parser.JSONLexer)
+    167:168:public DefaultJSONParser(com.alibaba.fastjson.parser.JSONLexer,com.alibaba.fastjson.parser.ParserConfig)
+    184:187:public java.lang.String getInput()
+    517:518:public void setConfig(com.alibaba.fastjson.parser.ParserConfig)
+    560:562:public java.util.List parseArray(java.lang.Class)
+    566:567:public void parseArray(java.lang.Class,java.util.Collection)
+    654:764:public java.lang.Object[] parseArray(java.lang.reflect.Type[])
+    768:848:public void parseObject(java.lang.Object)
+    851:918:public java.lang.Object parseArrayWithType(java.lang.reflect.Type)
+    1114:1117:public java.util.List getResolveTaskList()
+    1121:1121:public java.util.List getResolveTaskListDirect()
+    1209:1214:public java.lang.Object parseKey()
+    1300:1301:public void config(com.alibaba.fastjson.parser.Feature,boolean)
+    1322:1329:public final void accept(int,int)
+com.alibaba.fastjson.parser.JSONLexer:
+    public static final byte EOI
+    public static final int NOT_MATCH
+    public static final int NOT_MATCH_NAME
+    public static final int UNKOWN
+    public static final int OBJECT
+    public static final int ARRAY
+    public static final int VALUE
+    public static final int END
+    public abstract void config(com.alibaba.fastjson.parser.Feature,boolean)
+    public abstract java.lang.String scanSymbolWithSeperator(com.alibaba.fastjson.parser.SymbolTable,char)
+    public abstract java.util.Collection scanStringArray(java.lang.Class,char)
+com.alibaba.fastjson.parser.JSONLexerBase:
+    protected static final long MULTMIN_RADIX_TEN
+    protected static final long N_MULTMAX_RADIX_TEN
+    protected static final int INT_MULTMIN_RADIX_TEN
+    protected static final int INT_N_MULTMAX_RADIX_TEN
+    109:109:public final int matchStat()
+    372:373:public final void nextTokenWithComma()
+    511:512:public final void nextTokenWithComma(int)
+    515:590:public final void nextTokenWithChar(char,int)
+    601:602:public void config(com.alibaba.fastjson.parser.Feature,boolean)
+    public abstract byte[] bytesValue()
+    1099:1145:public int scanType(java.lang.String)
+    1149:1166:public final boolean matchField(char[])
+    1174:1256:public java.lang.String scanFieldString(char[])
+    1331:1404:public java.lang.String scanFieldSymbol(char[],com.alibaba.fastjson.parser.SymbolTable)
+    1483:1592:public java.util.Collection scanFieldStringArray(char[],java.lang.Class)
+    1597:1698:public java.util.Collection scanStringArray(java.lang.Class,char)
+    1703:1772:public int scanFieldInt(char[])
+    1776:1814:public boolean scanBoolean(char)
+    1860:1948:public boolean scanFieldBoolean(char[])
+    1952:2021:public long scanFieldLong(char[])
+    2066:2149:public final float scanFieldFloat(char[])
+    2153:2203:public final float scanFloat(char)
+    2208:2305:public final double scanFieldDouble(char[])
+    2309:2373:public final double scanFieldDouble(char)
+    protected abstract boolean charArrayCompare(char[])
+com.alibaba.fastjson.parser.JSONReaderScanner
+com.alibaba.fastjson.parser.JSONScanner:
+    70:71:public JSONScanner(char[],int)
+    74:75:public JSONScanner(char[],int,int)
+    84:130:public final int scanType(java.lang.String)
+    134:145:static final boolean charArrayCompare(java.lang.String,int,char[])
+    149:149:public final boolean charArrayCompare(char[])
+    607:673:public int scanFieldInt(char[])
+    677:789:public java.lang.String scanFieldString(char[])
+    793:856:public java.lang.String scanFieldSymbol(char[],com.alibaba.fastjson.parser.SymbolTable)
+    861:960:public java.util.Collection scanFieldStringArray(char[],java.lang.Class)
+    964:1035:public long scanFieldLong(char[])
+    1039:1121:public boolean scanFieldBoolean(char[])
+com.alibaba.fastjson.parser.JSONToken:
+    public static final int ERROR
+    public static final int LITERAL_INT
+    public static final int LITERAL_FLOAT
+    public static final int LITERAL_STRING
+    public static final int LITERAL_ISO8601_DATE
+    public static final int TRUE
+    public static final int FALSE
+    public static final int NULL
+    public static final int NEW
+    public static final int LPAREN
+    public static final int RPAREN
+    public static final int LBRACE
+    public static final int RBRACE
+    public static final int LBRACKET
+    public static final int RBRACKET
+    public static final int COMMA
+    public static final int COLON
+    public static final int IDENTIFIER
+    public static final int FIELD_NAME
+    public static final int EOF
+    public static final int SET
+    public static final int TREE_SET
+    public static final int UNDEFINED
+    21:21:public JSONToken()
+com.alibaba.fastjson.parser.JavaBeanMapping
+com.alibaba.fastjson.parser.ParserConfig:
+    160:161:public ParserConfig(java.lang.ClassLoader)
+    164:165:public ParserConfig(com.alibaba.fastjson.parser.deserializer.ASMDeserializerFactory)
+    328:328:public boolean isAsmEnable()
+    332:333:public void setAsmEnable(boolean)
+    340:340:public com.alibaba.fastjson.util.IdentityHashMap getDerializers()
+com.alibaba.fastjson.parser.SymbolTable:
+    public static final int DEFAULT_TABLE_SIZE
+    public static final int MAX_BUCKET_LENTH
+    public static final int MAX_SIZE
+    52:53:public java.lang.String addSymbol(char[],int,int)
+    208:208:public int size()
+    212:218:public static final int hash(char[],int,int)
+com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer:
+    15:19:public ASMJavaBeanDeserializer(com.alibaba.fastjson.parser.ParserConfig,java.lang.Class)
+    29:29:public java.lang.Object deserialze(com.alibaba.fastjson.parser.DefaultJSONParser,java.lang.reflect.Type,java.lang.Object)
+    33:33:public int getFastMatchToken()
+    37:37:public java.lang.Object createInstance(com.alibaba.fastjson.parser.DefaultJSONParser)
+    45:45:public com.alibaba.fastjson.parser.deserializer.FieldDeserializer getFieldDeserializer(java.lang.String)
+    49:49:public java.lang.reflect.Type getFieldType(java.lang.String)
+    95:95:public boolean isSupportArrayToBean(com.alibaba.fastjson.parser.JSONLexer)
+    100:102:public java.lang.Object parseRest(com.alibaba.fastjson.parser.DefaultJSONParser,java.lang.reflect.Type,java.lang.Object,java.lang.Object)
+com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer$1
+com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer$InnerJavaBeanDeserializer:
+    80:82:private ASMJavaBeanDeserializer$InnerJavaBeanDeserializer(com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer,com.alibaba.fastjson.parser.ParserConfig,java.lang.Class)
+    78:78:synthetic ASMJavaBeanDeserializer$InnerJavaBeanDeserializer(com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer,com.alibaba.fastjson.parser.ParserConfig,java.lang.Class,com.alibaba.fastjson.parser.deserializer.ASMJavaBeanDeserializer$1)
+com.alibaba.fastjson.parser.deserializer.FieldDeserializer:
+    28:28:public com.alibaba.fastjson.util.FieldInfo getFieldInfo()
+com.alibaba.fastjson.parser.deserializer.JavaBeanDeserializer:
+    61:73:public com.alibaba.fastjson.parser.deserializer.FieldDeserializer getFieldDeserializer(java.lang.String)
+    77:77:public java.lang.Class getClazz()
+    449:449:public java.util.List getSortedFieldDeserializers()
+com.alibaba.fastjson.serializer.ASMJavaBeanSerializer
+com.alibaba.fastjson.serializer.ASMSerializerFactory$Context:
+    80:80:public int features()
+com.alibaba.fastjson.serializer.AfterFilter:
+    22:28:protected final void writeKeyValue(java.lang.String,java.lang.Object)
+com.alibaba.fastjson.serializer.BeforeFilter:
+    19:25:protected final void writeKeyValue(java.lang.String,java.lang.Object)
+com.alibaba.fastjson.serializer.DoubleSerializer:
+    35:37:public DoubleSerializer(java.text.DecimalFormat)
+    40:41:public DoubleSerializer(java.lang.String)
+com.alibaba.fastjson.serializer.FieldSerializer:
+    71:71:public java.lang.reflect.Method getMethod()
+com.alibaba.fastjson.serializer.FilterUtils:
+    10:10:public FilterUtils()
+    77:86:public static java.lang.String processKey(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,byte)
+    90:99:public static java.lang.String processKey(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,short)
+    103:112:public static java.lang.String processKey(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,int)
+    116:125:public static java.lang.String processKey(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,long)
+    129:138:public static java.lang.String processKey(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,float)
+    142:151:public static java.lang.String processKey(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,double)
+    155:164:public static java.lang.String processKey(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,boolean)
+    168:177:public static java.lang.String processKey(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,char)
+    213:228:public static boolean apply(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,byte)
+    232:247:public static boolean apply(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,short)
+    251:266:public static boolean apply(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,int)
+    270:285:public static boolean apply(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,char)
+    289:304:public static boolean apply(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,long)
+    308:323:public static boolean apply(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,float)
+    327:342:public static boolean apply(com.alibaba.fastjson.serializer.JSONSerializer,java.lang.Object,java.lang.String,double)
+com.alibaba.fastjson.serializer.JSONLibDataFormatSerializer
+com.alibaba.fastjson.serializer.JSONSerializer:
+    64:65:public JSONSerializer(com.alibaba.fastjson.serializer.SerializeConfig)
+    69:70:public JSONSerializer(com.alibaba.fastjson.serializer.JSONSerializerMap)
+    78:81:public java.lang.String getDateFormatPattern()
+    95:99:public void setDateFormat(java.text.DateFormat)
+    102:106:public void setDateFormat(java.lang.String)
+    133:134:public void setContext(java.lang.Object,java.lang.Object)
+    137:140:public void popContext()
+    219:223:public java.util.List getValueFilters()
+    231:231:public int getIndentCount()
+    250:254:public java.util.List getBeforeFilters()
+    262:266:public java.util.List getAfterFilters()
+    274:278:public java.util.List getNameFilters()
+    286:290:public java.util.List getPropertyPreFilters()
+    298:302:public java.util.List getPropertyFilters()
+    330:330:public com.alibaba.fastjson.serializer.SerializeConfig getMapping()
+    334:344:public static final void write(java.io.Writer,java.lang.Object)
+    347:349:public static final void write(com.alibaba.fastjson.serializer.SerializeWriter,java.lang.Object)
+    372:377:protected final void writeKeyValue(char,java.lang.String,java.lang.Object)
+    418:419:public void close()
+com.alibaba.fastjson.serializer.JSONSerializerContext
+com.alibaba.fastjson.serializer.JSONSerializerContext$Entry
+com.alibaba.fastjson.serializer.JSONSerializerMap
+com.alibaba.fastjson.serializer.JavaBeanSerializer:
+    private transient java.util.Map getterMap
+    45:45:public com.alibaba.fastjson.serializer.FieldSerializer[] getGetters()
+    53:54:public varargs JavaBeanSerializer(java.lang.Class,java.lang.String[])
+    57:62:static varargs java.util.Map createAliasMap(java.lang.String[])
+    293:300:public java.util.Map getGetterMap()
+    304:311:public java.lang.Object getFieldValue(java.lang.Object,java.lang.String)
+    315:320:public java.util.List getFieldValues(java.lang.Object)
+com.alibaba.fastjson.serializer.PascalNameFilter
+com.alibaba.fastjson.serializer.SerialContext:
+    32:32:public java.lang.Object getFieldName()
+    57:57:public boolean isEnabled(com.alibaba.fastjson.serializer.SerializerFeature)
+com.alibaba.fastjson.serializer.SerialWriterStringEncoder
+com.alibaba.fastjson.serializer.SerializeConfig:
+    80:80:public java.lang.String getTypeKey()
+    84:85:public void setTypeKey(java.lang.String)
+    133:133:public boolean isAsmEnable()
+    137:138:public void setAsmEnable(boolean)
+com.alibaba.fastjson.serializer.SerializeFilter
+com.alibaba.fastjson.serializer.SerializeWriter:
+    74:75:public varargs SerializeWriter(com.alibaba.fastjson.serializer.SerializerFeature[])
+    77:96:public varargs SerializeWriter(java.io.Writer,com.alibaba.fastjson.serializer.SerializerFeature[])
+    99:99:public int getBufferLength()
+    103:104:public SerializeWriter(int)
+    106:113:public SerializeWriter(java.io.Writer,int)
+    249:253:public void writeTo(java.io.Writer)
+    256:257:public void writeTo(java.io.OutputStream,java.lang.String)
+    260:265:public void writeTo(java.io.OutputStream,java.nio.charset.Charset)
+    285:286:public void reset()
+    294:300:public char[] toCharArray()
+    304:315:public byte[] toBytes(java.lang.String)
+    319:319:public int size()
+    457:463:public void writeFloatAndChar(float,char)
+    466:472:public void writeDoubleAndChar(double,char)
+    475:494:public void writeBooleanAndChar(boolean,char)
+    497:499:public void writeCharacterAndChar(char,char)
+    502:519:public void writeEnum(java.lang.Enum,char)
+    522:534:private void writeEnumValue(java.lang.String,char)
+    537:561:public void writeIntAndChar(int,char)
+    952:955:public void writeFieldNull(char,java.lang.String)
+    958:961:public void writeFieldEmptyList(char,java.lang.String)
+    964:971:public void writeFieldNullString(char,java.lang.String)
+    974:981:public void writeFieldNullBoolean(char,java.lang.String)
+    984:991:public void writeFieldNullList(char,java.lang.String)
+    994:1001:public void writeFieldNullNumber(char,java.lang.String)
+    1004:1011:public void writeFieldValue(char,java.lang.String,char)
+    1015:1050:public void writeFieldValue(char,java.lang.String,boolean)
+    1149:1164:public void writeFieldValue(char,java.lang.String,float)
+    1434:1448:public void writeFieldValue(char,java.lang.String,java.lang.Enum)
+    1451:1456:private void writeEnumFieldValue(char,java.lang.String,java.lang.String)
+    1459:1466:public void writeFieldValue(char,java.lang.String,java.math.BigDecimal)
+    1469:1475:public void writeString(java.lang.String,char)
+com.alibaba.fastjson.serializer.SerializerFeature:
+    148:154:public static int config(int,com.alibaba.fastjson.serializer.SerializerFeature,boolean)
+com.alibaba.fastjson.serializer.SimpleDateFormatSerializer
+com.alibaba.fastjson.serializer.SimplePropertyPreFilter
+com.alibaba.fastjson.support.odps.udf.CodecCheck
+com.alibaba.fastjson.support.odps.udf.CodecCheck$A
+com.alibaba.fastjson.support.odps.udf.JSONArrayAdd
+com.alibaba.fastjson.support.odps.udf.JSONContains
+com.alibaba.fastjson.support.odps.udf.JSONContainsValue
+com.alibaba.fastjson.support.odps.udf.JSONExtract
+com.alibaba.fastjson.support.odps.udf.JSONSet
+com.alibaba.fastjson.support.odps.udf.JSONSize
+com.alibaba.fastjson.support.odps.udf.JSONTuple
+com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter
+com.alibaba.fastjson.support.spring.FastJsonJsonView
+com.alibaba.fastjson.util.ASMUtils:
+    13:13:public ASMUtils()
+    92:96:public static java.lang.reflect.Type getMethodType(java.lang.Class,java.lang.String)
+    102:106:public static java.lang.reflect.Type getFieldType(java.lang.Class,java.lang.String)
+    117:136:public static void parseArray(java.util.Collection,com.alibaba.fastjson.parser.deserializer.ObjectDeserializer,com.alibaba.fastjson.parser.DefaultJSONParser,java.lang.reflect.Type,java.lang.Object)
+com.alibaba.fastjson.util.Base64:
+    11:11:public Base64()
+    35:85:public static final byte[] decodeFast(char[],int,int)
+com.alibaba.fastjson.util.FieldInfo:
+    31:32:public FieldInfo(java.lang.String,java.lang.Class,java.lang.Class,java.lang.reflect.Type,java.lang.reflect.Field)
+    50:51:public FieldInfo(java.lang.String,java.lang.reflect.Method,java.lang.reflect.Field)
+com.alibaba.fastjson.util.IOUtils:
+    30:30:public IOUtils()
+    247:269:public static void getChars(byte,int,char[])
+    302:318:public static void decode(java.nio.charset.CharsetDecoder,java.nio.ByteBuffer,java.nio.CharBuffer)
+    331:331:public static boolean firstIdentifier(char)
+    335:335:public static boolean isIdent(char)
+com.alibaba.fastjson.util.IdentityHashMap:
+    public static final int DEFAULT_TABLE_SIZE
+    71:77:public int size()
+com.alibaba.fastjson.util.ServiceLoader:
+    private static final java.lang.String PREFIX
+    13:13:public ServiceLoader()
+com.alibaba.fastjson.util.ThreadLocalCache
+com.alibaba.fastjson.util.TypeUtils:
+    66:66:public TypeUtils()
+    525:525:public static final java.lang.Object castToJavaBean(java.lang.Object,java.lang.Class)
+    914:916:public static void clearClassMapping()
+    1353:1353:public static com.alibaba.fastjson.annotation.JSONType getJSONType(java.lang.Class)
+com.alibaba.fastjson.util.UTF8Decoder
+com.alibaba.fastjson.util.UTF8Decoder$Surrogate
 com.baidu.a.a.a.a
 com.baidu.a.a.a.a$a
 com.baidu.a.a.a.a$a$a
@@ -1428,35 +1902,13 @@ com.baidu.a.a.a.b$a$a
 com.baidu.a.a.a.c
 com.baidu.a.a.a.c$a
 com.baidu.a.a.a.c$a$a
-com.baidu.lbsapi.auth.ErrorMessage
-com.baidu.lbsapi.auth.LBSAuthManager
-com.baidu.lbsapi.auth.LBSAuthManagerListener
-com.baidu.lbsapi.auth.a
-com.baidu.lbsapi.auth.b
-com.baidu.lbsapi.auth.b$a
-com.baidu.lbsapi.auth.c
-com.baidu.lbsapi.auth.c$a
-com.baidu.lbsapi.auth.c$b
-com.baidu.lbsapi.auth.d
-com.baidu.lbsapi.auth.e
-com.baidu.lbsapi.auth.f
-com.baidu.lbsapi.auth.f$a
-com.baidu.lbsapi.auth.f$b
-com.baidu.lbsapi.auth.g
-com.baidu.lbsapi.auth.h
-com.baidu.lbsapi.auth.i
-com.baidu.lbsapi.auth.j
-com.baidu.lbsapi.auth.k
-com.baidu.lbsapi.auth.l
-com.baidu.lbsapi.auth.m
-com.baidu.location.BDErrorReport:
-    private java.lang.String a
-    public BDErrorReport()
-    public BDErrorReport(com.baidu.location.BDErrorReport)
-    public int setErrorInfo(boolean,double,double,boolean,java.lang.String,double,double,java.lang.String,java.lang.String)
-    public android.os.Bundle getErrorInfo()
-com.baidu.location.BDGeofence
-com.baidu.location.BDGeofence$Builder
+com.baidu.lbsapi.auth.ErrorMessage:
+    ErrorMessage()
+com.baidu.location.Address$Builder:
+    private static final java.lang.String do
+    private static final java.lang.String int
+    private static final java.lang.String case
+    private static final java.lang.String a
 com.baidu.location.BDLocation:
     public static final int TypeNone
     public static final int TypeGpsLocation
@@ -1475,21 +1927,17 @@ com.baidu.location.BDLocation:
     public static final int OPERATORS_TYPE_MOBILE
     public static final int OPERATORS_TYPE_UNICOM
     public static final int OPERATORS_TYPE_TELECOMU
-    private java.lang.String do(java.lang.Throwable)
-    protected java.lang.String c6()
+    public static final java.lang.String BDLOCATION_GCJ02_TO_BD09
+    public static final java.lang.String BDLOCATION_GCJ02_TO_BD09LL
+    public static final java.lang.String BDLOCATION_BD09_TO_GCJ02
+    public static final java.lang.String BDLOCATION_BD09LL_TO_GCJ02
     public boolean isCellChangeFlag()
     public double getAltitude()
-    public float getSpeed()
-    public java.lang.String getCoorType()
-    public void setCoorType(java.lang.String)
     public boolean hasAltitude()
     public boolean hasSpeed()
     public boolean hasRadius()
-    protected com.baidu.location.BDLocation v(java.lang.String)
-    public int getSatelliteNumber()
-    public float getDirection()
+    public float getDerect()
     public boolean hasSateNumber()
-    public java.lang.String getAddrStr()
     public java.lang.String getProvince()
     public java.lang.String getCity()
     public java.lang.String getCityCode()
@@ -1499,479 +1947,524 @@ com.baidu.location.BDLocation:
     public java.lang.String getStreet()
     public java.lang.String getStreetNumber()
     public java.lang.String getFloor()
-    public int getOperators()
-    private java.lang.String c8()
+    public void setFloor(java.lang.String)
+    public java.lang.String getBuildingID()
+    public void setBuildingID(java.lang.String)
+    public java.lang.String getBuildingName()
+    public void setBuildingName(java.lang.String)
+    public int isParkAvailable()
+    public void setParkAvailable(int)
+    public boolean isIndoorLocMode()
+    public void setIndoorLocMode(boolean)
+    public java.lang.String getSemaAptag()
+    private java.lang.String dE()
+    private java.lang.String dG()
+    private java.lang.String dF()
     public java.lang.String getAdUrl(java.lang.String)
-    private static java.lang.String da()
-com.baidu.location.BDLocationStatusCodes
+    private static java.lang.String dH()
+    public void internalSet(int,java.lang.String)
 com.baidu.location.BDNotifyListener:
     public void SetNotifyLocation(double,double,float,java.lang.String)
-com.baidu.location.CommonEncrypt
-com.baidu.location.GeofenceClient:
-    private static final int bm
-    public static final java.lang.String BUNDLE_FOR_GEOFENCE_ID
-    private android.content.Context bi
-    private boolean bo
-    private android.os.Messenger bn
-    private com.baidu.location.GeofenceClient$a bp
-    private android.os.Messenger bl
-    private com.baidu.location.GeofenceClient$OnGeofenceTriggerListener bj
-    private android.content.ServiceConnection bk
-    public GeofenceClient(android.content.Context)
-    public void start()
-    private void d()
-    public void setInterval(long)
-    public boolean isStarted()
-    public void registerGeofenceTriggerListener(com.baidu.location.GeofenceClient$OnGeofenceTriggerListener)
-    public void addBDGeofence(com.baidu.location.BDGeofence,com.baidu.location.GeofenceClient$OnAddBDGeofencesResultListener)
-    public void removeBDGeofences(java.util.List,com.baidu.location.GeofenceClient$OnRemoveBDGeofencesResultListener)
-    private void for(java.lang.String)
-    private void int(java.lang.String)
-    public void startGeofenceScann()
-    public void stop()
-    private void void()
-    static synthetic android.os.Messenger if(com.baidu.location.GeofenceClient,android.os.Messenger)
-    static synthetic android.os.Messenger if(com.baidu.location.GeofenceClient)
-    static synthetic boolean if(com.baidu.location.GeofenceClient,boolean)
-    static synthetic void do(com.baidu.location.GeofenceClient,java.lang.String)
-    static synthetic void do(com.baidu.location.GeofenceClient)
-    static synthetic void if(com.baidu.location.GeofenceClient,java.lang.String)
-com.baidu.location.GeofenceClient$1
-com.baidu.location.GeofenceClient$OnGeofenceTriggerListener
-com.baidu.location.GeofenceClient$a
 com.baidu.location.Jni:
-    Jni()
+    public Jni()
+    private static native java.lang.String ib(byte[],byte[])
+    private static native byte[] encrypt(byte[])
     private static native java.lang.String g(byte[])
     private static native void f(byte[],byte[])
+    public static java.lang.String if(byte[],byte[])
     public static void int(java.lang.String,java.lang.String)
-    public static java.lang.String m(java.lang.String)
+    public static java.lang.String L(java.lang.String)
+    public static java.lang.String E(java.lang.String)
+    private static java.lang.String if(byte[])
 com.baidu.location.LocationClient:
-    private static final java.lang.String jG
-    private static final int jK
-    private static final int kc
-    private static final int jS
-    private static final int ko
-    private static final int j8
-    private static final int kb
-    private static final int j0
-    private static final int jV
-    private static final int jY
-    private static final int jE
-    private static final int kl
-    private static final int j9
-    private static final int jO
-    private boolean ki
-    private boolean kj
-    private java.lang.String kh
-    private boolean jT
-    private com.baidu.location.an kp
-    public LocationClient(android.content.Context)
+    private static final java.lang.String lh
+    private static final int lk
+    private static final int lJ
+    private static final int lr
+    private static final int lU
+    private static final int lF
+    private static final int lI
+    private static final int lx
+    private static final int ls
+    private static final int lv
+    private static final int lf
+    private static final int lQ
+    private static final int lG
+    private static final int lo
+    private java.lang.String lO
     public LocationClient(android.content.Context,com.baidu.location.LocationClientOption)
     public com.baidu.location.LocationClientOption getLocOption()
-    public void setLocOption(com.baidu.location.LocationClientOption)
     public boolean updateLocation(android.location.Location)
     public int requestOfflineLocation()
     public int requestLocation()
     public boolean isStarted()
     public com.baidu.location.BDLocation getLastKnownLocation()
     public java.lang.String getVersion()
-    public void start()
-    public void stop()
     public void registerNotify(com.baidu.location.BDNotifyListener)
     public void removeNotifyEvent(com.baidu.location.BDNotifyListener)
-    private android.os.Bundle c5()
-    public void registerNotifyLocationListener(com.baidu.location.BDLocationListener)
-    public void registerLocationListener(com.baidu.location.BDLocationListener)
     public void unRegisterLocationListener(com.baidu.location.BDLocationListener)
-    public void setForBaiduMap(boolean)
-    public void setDebug(boolean)
-    public boolean notifyError()
-    public int reportErrorWithInfo(com.baidu.location.BDErrorReport)
-    public void cancleError()
-    private boolean e(int)
     public java.lang.String getAccessKey()
-    public void onReceiveLocation(com.baidu.location.BDLocation)
+    public static com.baidu.location.BDLocation getBDLocationInCoorType(com.baidu.location.BDLocation,java.lang.String)
     static synthetic java.lang.Boolean if(com.baidu.location.LocationClient,java.lang.Boolean)
-com.baidu.location.LocationClient$1:
-    LocationClient$1(com.baidu.location.LocationClient)
-com.baidu.location.LocationClient$a:
-    private LocationClient$a(com.baidu.location.LocationClient)
-    synthetic LocationClient$a(com.baidu.location.LocationClient,com.baidu.location.LocationClient$1)
 com.baidu.location.LocationClientOption:
     public static final int MIN_SCAN_SPAN
-    public static final int MIN_SCAN_SPAN_NETWORK
-    protected static final int byte
-    protected static final int void
-    protected static final int try
-    public java.lang.String getCoorType()
-    public void setCoorType(java.lang.String)
-    public java.lang.String getAddrType()
+    public static final int GpsFirst
+    public static final int NetWorkFirst
+    public static final int GpsOnly
     public void setAddrType(java.lang.String)
-    public void setIsNeedAddress(boolean)
     public boolean isOpenGps()
     public void setOpenGps(boolean)
     public boolean isLocationNotify()
     public void setLocationNotify(boolean)
     public int getScanSpan()
-    public void setScanSpan(int)
     public int getTimeOut()
     public void setTimeOut(int)
     public java.lang.String getProdName()
     public void setProdName(java.lang.String)
-    public void setLocationMode(com.baidu.location.LocationClientOption$LocationMode)
+    public int getPriority()
+    public void setPriority(int)
+    public com.baidu.location.LocationClientOption$LocationMode getLocationMode()
     public void setNeedDeviceDirect(boolean)
+    public java.lang.String getServiceName()
+    public void setServiceName(java.lang.String)
+    public void setIsNeedLocationDescribe(boolean)
+    private void a(boolean)
+    public void setIsNeedLocationPoiList(boolean)
+    public void setSema(boolean,boolean,boolean)
+    public void disableCache(boolean)
     public void SetIgnoreCacheException(boolean)
     public void setIgnoreKillProcess(boolean)
-com.baidu.location.LocationClientOption$1
-com.baidu.location.a
-com.baidu.location.a.a
-com.baidu.location.a.b
-com.baidu.location.a0:
-    public boolean int()
-com.baidu.location.a1:
-    public static final java.lang.String o
-    public static final int M
-    public static final int void
-    public static final int char
-    public static final int q
-    public static final int x
-    public static final int V
-    public static final int j
-    public static final int S
-    public static final int X
-    public static final int d
-    public static final int L
-    public static final int e
-    public static final int w
-    public static final int R
-    public static final int N
-    public static final int u
+    public void setEnableSimulateGps(boolean)
+com.baidu.location.a.a:
+    public static android.os.Handler dQ()
+    public static long dP()
+com.baidu.location.b.a:
+    public java.lang.String if()
+    public void a(java.lang.String)
+    public void if(java.lang.String)
+    public boolean a()
+    public void a(boolean)
+com.baidu.location.b.b
+com.baidu.location.b.c:
+    public java.lang.String P()
+    public java.lang.String M()
+com.baidu.location.b.d:
+    public java.lang.String V()
+com.baidu.location.b.e:
+    private static final java.lang.String do
+com.baidu.location.b.f
+com.baidu.location.b.g:
     public static final int g
-    public static final int case
-    public static final int c
-    public static final int v
-    public static final int t
-    public static final int n
-    public static final int D
-    public static final int k
-    public static final int b
-    public static final int J
-    public static final int l
-    public static final int K
-    public static final int G
-    public static final int I
-    public static final int F
-    public static final int s
-    public static final int T
-    public static final int A
-    public static final int y
     public static final int U
+    public static final int aa
+    public static final int goto
     public static final int O
+    public static final int long
+    public static final int u
+    public static final int T
+    public static final int Q
+    public static final int s
+    public static final int b
+    public static final int do
+    public static final int else
+    public static final int t
+    public static final int r
+    public static final int l
+    public static final int D
+    public static final int h
+    public static final int case
+    public static final int M
+    public static final int i
+    public static final int N
+    public static final int G
+    public static final int L
+    public static final int F
+    public static final int q
+    public static final int V
+    public static final int z
+    public static final int x
+    public static final int W
+    public static final int R
     public static final int C
     public static final int E
     public static final int B
-    public static final int long
-    public static final int r
-    public static final int m
-    public static final int else
-    public static final int z
-    public static final int f
-    public static final int byte
-    public static final int h
-    public static final int W
+    public static final int try
     public static final int p
-    public static final int Q
-    public static final int goto
-    public static final int i
-    public static final int H
-com.baidu.location.a2:
-    public void cT()
-    public com.baidu.location.BDLocation do(java.lang.String,java.util.List)
-com.baidu.location.a3:
-    private android.hardware.Sensor jA
-    public java.lang.String cZ()
-    public java.lang.String cX()
-    public java.lang.String u(java.lang.String)
-com.baidu.location.a4:
-    private static final int lb
-    private static final int lt
-    private static final int lc
-    private static final int lv
-    public static final long lk
-    private static final int le
-    public static final java.lang.String lA
-    private static final java.lang.String ls
-    private static final java.lang.String lC
-    private static final java.lang.String lm
-    private static final java.lang.String lz
-    private static final java.lang.String k9
-    private static final java.lang.String lh
-    public void new(android.content.Context)
-com.baidu.location.a4$a:
-    private static final java.lang.String d2
-    private static final java.lang.String d5
-    private static final java.lang.String d4
-    private static final java.lang.String d6
-    private static final java.lang.String d8
-com.baidu.location.aa:
-    private static final int gs
-com.baidu.location.ab:
-    public static final java.lang.String gF
-    private com.baidu.location.ab$a gE
-    public ab(android.content.Context,com.baidu.location.LocationClient)
-    public void if(com.baidu.location.BDNotifyListener)
-    private void new(com.baidu.location.BDLocation)
-    static synthetic void if(com.baidu.location.ab,com.baidu.location.BDLocation)
-com.baidu.location.ab$a
-com.baidu.location.ab$b:
-    public ab$b(com.baidu.location.ab)
-com.baidu.location.ae
-com.baidu.location.af
-com.baidu.location.af$1
-com.baidu.location.af$2
-com.baidu.location.af$3
-com.baidu.location.af$a
-com.baidu.location.af$b
-com.baidu.location.ai:
-    public boolean b3()
-    public java.lang.String b2()
-com.baidu.location.ak:
-    private boolean aE()
-    public void for(com.baidu.location.BDLocation)
-com.baidu.location.al:
-    static synthetic boolean if(com.baidu.location.al,boolean)
-    static synthetic boolean do(com.baidu.location.al)
-    static synthetic android.os.Handler if(com.baidu.location.al)
-com.baidu.location.al$2
-com.baidu.location.am
-com.baidu.location.am$1
-com.baidu.location.am$2
-com.baidu.location.an
-com.baidu.location.an$1
-com.baidu.location.an$a
-com.baidu.location.an$b
-com.baidu.location.an$c
-com.baidu.location.an$d
-com.baidu.location.ap
-com.baidu.location.aq
-com.baidu.location.aq$a
-com.baidu.location.ar
-com.baidu.location.as:
-    as()
-com.baidu.location.at
-com.baidu.location.au:
-    private static final int d
-    private static final long void
+    public static final int k
     public static final int int
-    private static final int e
-    private static final java.lang.String for
-    private static final java.lang.String byte
-    private static final int else
-    private static final int case
-    private static final int i
-    private long h
-    public long goto()
-    public boolean byte()
-    public long else()
-    public void a(long)
-    public int new()
-com.baidu.location.av:
-    private static final int ii
-    public static double if(com.baidu.location.av$b,com.baidu.location.av$b)
-com.baidu.location.av$b:
-    public av$b(com.baidu.location.av,com.baidu.location.av$b)
-com.baidu.location.aw:
-    public boolean do(com.baidu.location.av$b)
-    public int byte(com.baidu.location.BDLocation)
-com.baidu.location.ax:
-    public int cI()
-    public java.lang.String cF()
-com.baidu.location.ay:
-    public static final int iS
-    private static final java.lang.String o
-    private static final java.lang.String iQ
-    private static final java.lang.String iT
-    private static final java.lang.String iV
-    private static final java.lang.String iX
-    private static final java.lang.String iU
-    private static final java.lang.String i4
-    private static final int i2
-    private static final int i1
-    private static final int iR
-    private static final int i0
-    public void if(com.baidu.location.au,com.baidu.location.GeofenceClient$OnAddBDGeofencesResultListener)
-    public void if(java.util.List,com.baidu.location.GeofenceClient$OnRemoveBDGeofencesResultListener)
-    private synchronized long cO()
-    private void cM()
-    private final void cN()
-    private synchronized int if(com.baidu.location.au,java.lang.String)
-    private synchronized int do(java.util.List)
-    private void if(com.baidu.location.GeofenceClient$OnAddBDGeofencesResultListener,int,java.lang.String)
-    static synthetic android.content.Context if(com.baidu.location.ay)
-    static synthetic void if(com.baidu.location.ay,com.baidu.location.GeofenceClient$OnAddBDGeofencesResultListener,int,java.lang.String)
-    static synthetic com.baidu.location.ay$a do(com.baidu.location.ay)
-    static synthetic int if(com.baidu.location.ay,com.baidu.location.au,java.lang.String)
-    static synthetic int if(com.baidu.location.ay,java.util.List)
-com.baidu.location.ay$a:
     public static final int if
-    public static final int do
-    public static final int for
-com.baidu.location.ay$b
-com.baidu.location.ay$c
-com.baidu.location.ay$d
-com.baidu.location.az
-com.baidu.location.b
-com.baidu.location.b.a.a:
+    public static final int K
+    public static final int char
+    public static final int J
+    public static final int y
+    public static final int void
+    public static final int a
+    public static final int c
+    public static final int Z
+    public static final int n
+    public static final int S
+    public static final int new
+    public static final int f
+    public static final int j
+    public static final int e
+    public static final int A
+    public static final int I
+    public static final int w
+    public static final int H
+    public static final int Y
+    public g()
+com.baidu.location.b.i
+com.baidu.location.b.j:
+    public j()
+com.baidu.location.b.j$a:
+    j$a()
+com.baidu.location.b.k:
+    public static final boolean ce
+    public k()
+    static float do(java.lang.String,java.lang.String,java.lang.String)
+    static double int(java.lang.String,java.lang.String,java.lang.String)
+    static java.lang.String if(java.lang.String,java.lang.String,java.lang.String,double)
+    static java.lang.String X()
+    public static java.lang.String if(com.baidu.location.h.h,com.baidu.location.h.f,android.location.Location,java.lang.String)
+    public static java.lang.String aa()
+    public static java.lang.String ae()
+    public static java.lang.String ag()
+    public static java.lang.String Y()
+com.baidu.location.b.l:
+    public static final java.lang.String c2
+    public static final java.lang.String cV
+    public static final java.lang.String cZ
+    public static final java.lang.String cW
+    public static final java.lang.String c0
+    public static final java.lang.String cX
+com.baidu.location.b.m:
+    public void at()
+    public void an()
+    public static boolean int(android.content.Context)
+com.baidu.location.b.m$4
+com.baidu.location.b.m$5
+com.baidu.location.b.n:
+    public long a()
+    public void do(long)
+    public long int()
+    public void if(long)
+com.baidu.location.b.o:
+    private static final int fc
+    private static final int e9
+    private static final int e5
+    private static final int e2
+com.baidu.location.c.a:
+    static final int i
+    private static final int else
+    private static final int p
+    private static final int n
+    private static final int d
+    private static final int u
+    private static final int char
+    private static final int c
+    private static final double w
+    private static final double for
+    private static final int j
+    private static final int l
+    private static final int v
+    private static final int if
+    private static final int try
+    private static final int h
+    private static final int g
+    private static final int f
+    private static final int e
+    static final int s
+    void do()
+com.baidu.location.c.a$b:
+    private static final int dm
+    private static final int dz
+    private static final java.lang.String dq
+    private static final java.lang.String dA
+    private static final java.lang.String dE
+    private static final java.lang.String dx
+    private static final int dw
+    private static final long dy
+    private static final long dt
+com.baidu.location.c.b:
+    private static final int fj
+    private static final int fe
+    private static final int fv
+    private static final java.lang.String fo
+    private static final java.lang.String ft
+com.baidu.location.c.c:
+    private static final java.lang.String R
+    private static final java.lang.String Z
+    private static final java.lang.String U
+    private static final java.lang.String M
+    private static final java.lang.String Y
+    private static final java.lang.String A
+    private static final java.lang.String J
+    private static final java.lang.String aa
+    private static final java.lang.String I
+    private static final java.lang.String K
+    private static final java.lang.String S
+    private static final java.lang.String T
+    private static final java.lang.String X
+    private static final java.lang.String N
+    private static final java.lang.String W
+    private static final java.lang.String F
+    private static final java.lang.String E
+    private static final java.lang.String L
+    private static final java.lang.String Q
+    private static final java.lang.String z
+    private static final java.lang.String C
+    private static final java.lang.String B
+    private static final java.lang.String P
+    private static final java.lang.String y
+    private static final java.lang.String V
+    private static final java.lang.String G
+    private static final java.lang.String O
+    private c()
+com.baidu.location.c.c$a:
+    private static final java.lang.String a
+    private static final java.lang.String case
+com.baidu.location.c.d:
+    public static final java.lang.String ao
+    public static final java.lang.String ap
+    public static final java.lang.String ai
+    private static final java.lang.String ag
+    private static final java.lang.String ad
+    private static final java.lang.String am
+    private static final java.lang.String ar
+    private static final java.lang.String ae
+    private static final java.lang.String as
+    private static final int at
+    public android.database.Cursor for(java.lang.String[])
+    public boolean m()
+    public boolean do(java.lang.String)
+com.baidu.location.c.e:
+    private static final java.lang.String au
+    boolean new(java.lang.String)
+com.baidu.location.c.e$a:
+    private static final java.lang.String ee
+    private static final java.lang.String dO
+    private static final java.lang.String dP
+    private static final java.lang.String ef
+    private static final java.lang.String dX
+    private static final java.lang.String dI
+    private static final java.lang.String d7
+    private static final java.lang.String dS
+    private static final java.lang.String dT
+    private static final java.lang.String d1
+    private static final java.lang.String eb
+    private static final java.lang.String d4
+    private static final java.lang.String dZ
+    private static final java.lang.String d6
+    private static final java.lang.String dL
+    private static final java.lang.String d8
+    private static final java.lang.String dK
+    private static final java.lang.String ec
+    private static final java.lang.String d0
+    private static final java.lang.String dR
+    private static final java.lang.String d5
+    private static final java.lang.String dH
+    private static final java.lang.String dV
+    private static final java.lang.String d3
+    private static final java.lang.String d2
+    private static final java.lang.String ed
+    private static final int dQ
+    private static final int dY
+    private static final long dW
+com.baidu.location.c.f:
+    static final java.lang.String aV
+    static final int a1
+    static final int a0
+    private static final double a2
+    private static final double a5
+    private static final double a3
+    private static final double a6
+    private static final java.lang.String aZ
+com.baidu.location.c.f$b:
+    private static final int byte
+    private static final java.lang.String new
+com.baidu.location.c.g:
+    private static final int bd
+    private static final int bc
+com.baidu.location.c.g$a:
+    private static final int et
+    private static final java.lang.String eu
+    private static final java.lang.String el
+    private static final java.lang.String es
+    private static final java.lang.String ej
+    private static final int eq
+    private static final int eo
+    private static final long ei
+com.baidu.location.d.a:
+    public static final java.lang.String fA
+    public void if(com.baidu.location.BDNotifyListener)
+com.baidu.location.e.a:
+    public a()
+com.baidu.location.e.c:
+    public boolean bo()
+    public boolean bp()
+    public void bm()
+    public void bl()
+com.baidu.location.e.c$a:
+    public void if()
+    public void do()
+com.baidu.location.e.f:
+    private static final int gB
+com.baidu.location.e.g
+com.baidu.location.e.h:
+    private static final int gX
+    private static final java.lang.String g5
+    private static final long gL
+    private static final java.lang.String hg
+    private static final int hq
+    private static final java.lang.String gV
+    private static final java.lang.String g1
+    private static final java.lang.String hh
+    public void bM()
+    static synthetic android.os.Handler if(com.baidu.location.e.h)
+com.baidu.location.e.h$3
+com.baidu.location.e.i:
+    public void bZ()
+com.baidu.location.e.k:
+    private static final int hJ
+    private static final int hS
+    private static final int h0
+    private static final int h3
+    private static final int hZ
+    private static final int h1
+    private static final int hL
+    private static final int hN
+    private void b7()
+    public void cb()
+    private boolean ca()
+    private void b5()
+com.baidu.location.e.m:
+    private boolean a8()
+    private boolean if(com.baidu.location.h.f)
+    public void int(com.baidu.location.BDLocation)
+    public com.baidu.location.BDLocation a7()
+com.baidu.location.e.n:
+    public n()
+com.baidu.location.e.o:
+    private static final int it
+    private static final int iB
+    private static final int iC
+    private static final int iJ
+    public static void new(double,double,double,double)
+    public void cl()
+    public void cm()
+    public void z(java.lang.String)
+    public static java.lang.String if(com.baidu.location.h.h,com.baidu.location.h.f,android.location.Location,java.lang.String,java.lang.String)
+com.baidu.location.e.o$a
+com.baidu.location.e.p:
+    public java.lang.String char(int)
+com.baidu.location.f:
+    private static final java.lang.String lZ
+    public static java.lang.String getJarFileName()
+com.baidu.location.f.a.a:
     private static final boolean a
-com.baidu.location.b.a.b:
+com.baidu.location.f.a.b:
     private static final java.lang.String do
     private static final boolean a
     private static final java.lang.String int
     private static final java.lang.String for
     private static final java.lang.String if
     private b()
-com.baidu.location.b.a.b$a:
+com.baidu.location.f.a.b$a:
     private static final java.lang.String do
-com.baidu.location.b.a.c:
+com.baidu.location.f.a.c:
     private c()
-com.baidu.location.b.b.a:
+com.baidu.location.f.b.a:
     private static final java.lang.String if
     private static final java.lang.String a
     private a()
-com.baidu.location.b.b.b:
+com.baidu.location.f.b.b:
     private b()
-com.baidu.location.c:
-    public static final boolean aF
-    c()
-    static float if(java.lang.String,java.lang.String,java.lang.String)
-    static double for(java.lang.String,java.lang.String,java.lang.String)
-    static java.lang.String if(java.lang.String,java.lang.String,java.lang.String,double)
-    static java.lang.String if()
-    public static void if(java.lang.String)
-    public static void do(java.lang.String)
-    public static java.lang.String do()
-com.baidu.location.f:
-    private static final java.lang.String i6
-com.baidu.location.i:
-    i()
-com.baidu.location.j:
-    public boolean l()
-    public void j()
-com.baidu.location.j$a:
-    public void a()
-com.baidu.location.k:
-    private java.lang.String bJ
-    private static final int bN
-    private static final int bZ
-    private static final int b8
-    private final long bB
-    private final int b4
-    private long b0
-    private long[] bF
-    private int bK
-    private com.baidu.location.t$a bU
-    public static final java.lang.String bP
-    private java.lang.String bQ
-    private int b6
-    private boolean bI
-    private boolean bS
-    private boolean b7
-    private final int bW
-    private long bV
-    private int b5
-    private long bT
-    private long bR
-    com.baidu.location.k$c bA
-    java.lang.String bX
-    public k(android.content.Context)
-    void w()
-    private void if(boolean)
-    private void u()
-    public static void r()
-    public boolean s()
-    boolean if(double,double)
-com.baidu.location.k$1
-com.baidu.location.k$a:
-    public k$a(com.baidu.location.k)
-com.baidu.location.k$b
-com.baidu.location.k$c
-com.baidu.location.l:
-    private static final java.lang.String do
-    private static final int if
-com.baidu.location.m
-com.baidu.location.n
-com.baidu.location.n$1
-com.baidu.location.n$a
-com.baidu.location.o
-com.baidu.location.p:
-    private static final int cd
-    private static final int ce
-    private static final int cJ
-    private static final int cs
-    private static final int cu
-    private static final int cm
-    public static void if(double,double,double,double)
-    public void A()
-    public void B()
-    public static void if(java.lang.String,int)
-    public static void if(java.lang.String,int,boolean)
-    public static void if(int,int)
-    public static void if(int,int,boolean)
-    public static void D()
-    public static void G()
-com.baidu.location.s:
-    public void V()
-    public void P()
-    public static boolean if(android.content.Context)
-com.baidu.location.s$3
-com.baidu.location.s$4
-com.baidu.location.t:
-    public boolean az()
-    public java.lang.String ax()
-com.baidu.location.t$a:
-    public java.lang.String byte()
-com.baidu.location.u:
-    static final int eY
-com.baidu.location.v:
-    v()
-com.baidu.location.v$a:
-    v$a()
-com.baidu.location.w
-com.baidu.location.x:
-    private static final int e2
-    private static final int fb
-    private static final int fj
-    private static final int fm
-    private static final int fi
-    private static final int fk
-    private static final int e4
-    private static final int e6
-    private void aV()
-    public void aY()
-    private boolean aX()
-    private void aS()
-com.baidu.location.y:
-    public y()
-com.baidu.location.z:
-    private static final int f2
-    private static final int f7
-    private static final int fX
-    private static final int fN
-    private static final double fL
-    private static final int f4
-    private static final int gg
-    private android.location.Location fH
-    private android.location.Location fT
-    private long f5
-    private long fS
-    public boolean a9()
-    public java.lang.String a6()
-    private boolean a1()
-    private void try(android.location.Location)
-com.baidu.mapapi.SDKInitializer
-com.baidu.mapapi.VersionInfo
-com.baidu.mapapi.a
-com.baidu.mapapi.b
+com.baidu.location.g.a:
+    public java.lang.String cy()
+com.baidu.location.g.b$a
+com.baidu.location.h.a:
+    private static final int jv
+    public boolean cM()
+    public java.lang.String cL()
+com.baidu.location.h.b:
+    public static final long jV
+    public static final int jY
+    public java.lang.String cQ()
+com.baidu.location.h.c:
+    public static final int case
+    public static final int e
+    public static final int goto
+    public static final int f
+    public static final int int
+    public static final int b
+    public static final int new
+    public static final int else
+    public static final int char
+    public static final int d
+    public static final int byte
+    public static final int a
+    public static final int for
+    public static final int try
+    public static final int long
+    public static final int void
+    public static final java.lang.String g
+    public static final java.lang.String h
+    public static final java.lang.String c
+    public static final java.lang.String if
+    public static final java.lang.String do
+    public c()
+com.baidu.location.h.d:
+    public d()
+com.baidu.location.h.e:
+    public static final int j5
+    public static final long j4
+    public static final long ka
+    public static final long kc
+    public boolean c2()
+    public void c3()
+    public boolean c1()
+    public static boolean if(java.util.List,java.util.List,float)
+    public static double if(com.baidu.location.h.f,com.baidu.location.h.f)
+    public com.baidu.location.h.f do(java.util.List)
+com.baidu.location.h.f:
+    private static final long kj
+    public f(com.baidu.location.h.f)
+    public java.lang.String dk()
+    public static java.lang.String if(int,java.util.List)
+    public java.lang.String dq()
+    public java.lang.String h(int)
+com.baidu.location.h.h:
+    public java.lang.String dB()
+com.baidu.location.h.j:
+    public java.lang.String cQ()
+    public void goto(int)
+    public void C(java.lang.String)
+    public void long(int)
+com.baidu.location.h.k:
+    public boolean c2()
+    public com.baidu.location.h.f do(java.util.List)
+    public boolean c1()
+    public void c3()
+com.baidu.location.h.l:
+    public l()
+com.baidu.mapapi.SDKInitializer:
+    public static final java.lang.String SDK_BROADTCAST_ACTION_STRING_PERMISSION_CHECK_ERROR
+    public static final java.lang.String SDK_BROADCAST_ACTION_STRING_NETWORK_ERROR
+    public static final java.lang.String SDK_BROADTCAST_INTENT_EXTRA_INFO_KEY_ERROR_CODE
+    private SDKInitializer()
+com.baidu.mapapi.VersionInfo:
+    public static final java.lang.String VERSION_INFO
+    public static final java.lang.String VERSION_DESC
+    public VersionInfo()
+    public static java.lang.String getVersionDesc()
+com.baidu.mapapi.a:
+    private com.baidu.platform.comapi.a d
+    private int e
+    public void b()
+    public void d()
+    public android.content.Context e()
+    private void f()
+    private void g()
 com.baidu.mapapi.cloud.BaseCloudSearchInfo
 com.baidu.mapapi.cloud.BaseSearchInfo
 com.baidu.mapapi.cloud.BaseSearchResult
@@ -2002,6 +2495,7 @@ com.baidu.mapapi.map.BaiduMap$OnMapTouchListener
 com.baidu.mapapi.map.BaiduMap$OnMarkerClickListener
 com.baidu.mapapi.map.BaiduMap$OnMarkerDragListener
 com.baidu.mapapi.map.BaiduMap$OnMyLocationClickListener
+com.baidu.mapapi.map.BaiduMap$OnPolylineClickListener
 com.baidu.mapapi.map.BaiduMap$SnapshotReadyCallback
 com.baidu.mapapi.map.BaiduMapOptions
 com.baidu.mapapi.map.BitmapDescriptor
@@ -2065,10 +2559,17 @@ com.baidu.mapapi.map.offline.MKOLUpdateElement
 com.baidu.mapapi.map.offline.MKOfflineMap
 com.baidu.mapapi.map.offline.MKOfflineMapListener
 com.baidu.mapapi.map.offline.a
-com.baidu.mapapi.model.LatLng
 com.baidu.mapapi.model.LatLngBounds
 com.baidu.mapapi.model.LatLngBounds$Builder
-com.baidu.mapapi.model.a
+com.baidu.mapapi.model.a:
+    static com.baidu.mapapi.model.a$a a(com.baidu.mapapi.model.a$a,double[])
+    public static com.baidu.mapapi.model.LatLng a(com.baidu.platform.comapi.a.b)
+    public static com.baidu.platform.comapi.a.b a(com.baidu.mapapi.model.LatLng)
+    public static int a(com.baidu.mapapi.model.LatLng,int)
+    public static com.baidu.mapapi.model.LatLng a(java.lang.String)
+    public static com.baidu.mapapi.model.LatLng b(java.lang.String)
+    public static java.util.List c(java.lang.String)
+    public static java.util.List d(java.lang.String)
 com.baidu.mapapi.model.a$a
 com.baidu.mapapi.navi.BaiduMapAppNotSupportNaviException
 com.baidu.mapapi.navi.BaiduMapNavigation
@@ -2081,6 +2582,17 @@ com.baidu.mapapi.overlayutil.PoiOverlay
 com.baidu.mapapi.overlayutil.TransitRouteOverlay
 com.baidu.mapapi.overlayutil.TransitRouteOverlay$1
 com.baidu.mapapi.overlayutil.WalkingRouteOverlay
+com.baidu.mapapi.radar.RadarNearbyInfo
+com.baidu.mapapi.radar.RadarNearbyResult
+com.baidu.mapapi.radar.RadarNearbySearchOption
+com.baidu.mapapi.radar.RadarNearbySearchSortType
+com.baidu.mapapi.radar.RadarSearchError
+com.baidu.mapapi.radar.RadarSearchListener
+com.baidu.mapapi.radar.RadarSearchManager
+com.baidu.mapapi.radar.RadarUploadInfo
+com.baidu.mapapi.radar.RadarUploadInfoCallback
+com.baidu.mapapi.radar.a
+com.baidu.mapapi.radar.b
 com.baidu.mapapi.search.busline.BusLineResult
 com.baidu.mapapi.search.busline.BusLineResult$BusStation
 com.baidu.mapapi.search.busline.BusLineResult$BusStep
@@ -2165,24 +2677,46 @@ com.baidu.mapapi.utils.AreaUtil
 com.baidu.mapapi.utils.CoordinateConverter
 com.baidu.mapapi.utils.CoordinateConverter$1
 com.baidu.mapapi.utils.CoordinateConverter$CoordType
-com.baidu.mapapi.utils.DistanceUtil
+com.baidu.mapapi.utils.DistanceUtil:
+    public DistanceUtil()
 com.baidu.mapapi.utils.OpenClientUtil
-com.baidu.mapapi.utils.PermissionCheck
-com.baidu.mapapi.utils.PermissionCheck$1
-com.baidu.mapapi.utils.PermissionCheck$a
-com.baidu.mapapi.utils.PermissionCheck$b
-com.baidu.mapapi.utils.PermissionCheck$c
+com.baidu.mapapi.utils.PermissionCheck:
+    public static void destory()
 com.baidu.mapapi.utils.SpatialRelationUtil
-com.baidu.mapapi.utils.a
-com.baidu.mapapi.utils.a$a
-com.baidu.mapapi.utils.b
+com.baidu.mapapi.utils.b:
+    static java.lang.String b
+    static java.lang.String c
+    static int d
+    static int e
+    static int f
+    public static void a(android.content.Context)
+    public static java.lang.String a()
+    public static java.lang.String b()
+    public static java.lang.String c()
+    public static int d()
+    public static int e()
+    public static int f()
 com.baidu.mapapi.utils.c
 com.baidu.mapapi.utils.d
 com.baidu.mapapi.utils.e
 com.baidu.mapapi.utils.f
 com.baidu.mapapi.utils.g
 com.baidu.mapapi.utils.h
-com.baidu.mapapi.utils.i
+com.baidu.mapapi.utils.i:
+    private boolean b
+    private boolean c
+    private final java.util.List d
+    private com.baidu.mapapi.utils.h e
+    private java.lang.String f
+    public static com.baidu.mapapi.utils.i a()
+    private i()
+    public void a(android.content.Context)
+    private void c(android.content.Context)
+    private void d(android.content.Context)
+    public com.baidu.mapapi.utils.h b()
+    public com.baidu.mapapi.utils.h b(android.content.Context)
+    public boolean a(android.content.Context,com.baidu.mapapi.utils.h)
+    private boolean a(java.lang.String)
 com.baidu.mapapi.utils.poi.BaiduMapPoiSearch
 com.baidu.mapapi.utils.poi.IllegalPoiSearchArgumentException
 com.baidu.mapapi.utils.poi.PoiParaOption
@@ -2193,7 +2727,9 @@ com.baidu.mapapi.utils.route.RouteParaOption$EBusStrategyType
 com.baidu.platform.comapi.a.a
 com.baidu.platform.comapi.a.b
 com.baidu.platform.comapi.a.c
-com.baidu.platform.comapi.a.d
+com.baidu.platform.comapi.a.d:
+    public int a()
+    public int b()
 com.baidu.platform.comapi.b.a
 com.baidu.platform.comapi.b.b
 com.baidu.platform.comapi.b.b$1
@@ -2204,33 +2740,14 @@ com.baidu.platform.comapi.c.a
 com.baidu.platform.comapi.c.b
 com.baidu.platform.comapi.c.c
 com.baidu.platform.comapi.c.d
-com.baidu.platform.comapi.c.e
-com.baidu.platform.comapi.c.f
 com.baidu.platform.comapi.d.a
-com.baidu.platform.comapi.d.c:
-    static java.lang.String d
-    static int h
-    static int k
-    static int l
-    static java.lang.String n
-    static java.lang.String o
-    static java.lang.String p
-    static java.lang.String r
-    static java.lang.String s
-    static java.lang.String y
-    static java.lang.String z
-    private static void d(android.content.Context)
-    private static void e(android.content.Context)
-    private static void f(android.content.Context)
-    private static void g(android.content.Context)
-    private static void h(android.content.Context)
-    public static byte[] a(android.content.Context)
-    private static void i(android.content.Context)
-    public static void b(android.content.Context)
-    public static void c(android.content.Context)
-    public static android.os.Bundle a()
-    public static void b()
-    public static void a(java.lang.String,java.lang.String)
+com.baidu.platform.comapi.d.b
+com.baidu.platform.comapi.d.c
+com.baidu.platform.comapi.d.d
+com.baidu.platform.comapi.d.e
+com.baidu.platform.comapi.d.f
+com.baidu.platform.comapi.e.a
+com.baidu.platform.comapi.e.c:
     public static java.lang.String k()
 com.baidu.platform.comapi.map.A
 com.baidu.platform.comapi.map.B
@@ -2269,37 +2786,42 @@ com.baidu.platform.comapi.map.z$a
 com.baidu.platform.comapi.map.z$b
 com.baidu.platform.comjni.engine.AppEngine:
     public AppEngine()
-    public static void despatchMessage(int,int,int,int)
-    public static void InitClass()
+    public static void despatchMessage(int,int,int,long)
     public static boolean InitEngine(android.content.Context,android.os.Bundle)
     public static boolean UnInitEngine()
     public static boolean StartSocketProc()
 com.baidu.platform.comjni.engine.JNIEngine:
-    public static native int initClass(java.lang.Object,int)
     public static native boolean InitEngine(android.content.Context,android.os.Bundle)
     public static native boolean UnInitEngine()
     public static native boolean StartSocketProc()
-com.baidu.platform.comjni.engine.a
+com.baidu.platform.comjni.engine.a:
+    public static void b(int,android.os.Handler)
+    public static void a(int,int,int,long)
+    public static void a()
 com.baidu.platform.comjni.map.basemap.BaseMapCallback
 com.baidu.platform.comjni.map.basemap.JNIBaseMap
 com.baidu.platform.comjni.map.basemap.a
 com.baidu.platform.comjni.map.basemap.b
 com.baidu.platform.comjni.map.cloud.JniCloud
 com.baidu.platform.comjni.map.cloud.a
-com.baidu.platform.comjni.map.commonmemcache.JNICommonMemCache:
-    public native int Create()
-com.baidu.platform.comjni.map.commonmemcache.a:
-    public int a()
 com.baidu.platform.comjni.map.favorite.JNIFavorite
 com.baidu.platform.comjni.map.favorite.a
 com.baidu.platform.comjni.map.favorite.a$a
+com.baidu.platform.comjni.map.radar.JNIRadar
+com.baidu.platform.comjni.map.radar.a
 com.baidu.platform.comjni.map.search.JNISearch
 com.baidu.platform.comjni.map.search.a
 com.baidu.platform.comjni.tools.BundleKeySet
-com.baidu.platform.comjni.tools.JNITools
+com.baidu.platform.comjni.tools.JNITools:
+    public static native boolean TransGeoStr2Pt(java.lang.Object)
+    public static native void TransNodeStr2Pt(java.lang.Object)
+    public static native boolean TransGeoStr2ComplexPt(java.lang.Object)
+    public static native java.lang.String GetToken()
 com.baidu.platform.comjni.tools.ParcelItem:
     public android.os.Bundle getBundle()
-com.baidu.platform.comjni.tools.a
+com.baidu.platform.comjni.tools.a:
+    public static com.baidu.platform.comapi.a.a a(java.lang.String)
+    public static java.lang.String a()
 com.baidu.vi.VDeviceAPI
 com.baidu.vi.VMsg
 com.baidu.vi.VMsg$a
@@ -2766,7 +3288,7 @@ com.wlx.wsolandroid.R$layout
 com.wlx.wsolandroid.R$string
 com.wlx.wsolandroid.R$style
 com.wlx.wsolandroid.R$styleable:
-    1117:1117:public R$styleable()
+    1139:1139:public R$styleable()
 com.wlx.wsolandroid.TransationFragment:
     boolean running
 com.wlx.wsolandroid.VideoListFragment
@@ -2781,6 +3303,8 @@ com.wlx.wsolandroid.adapter.MusicListAdapter:
     41:42:public void setData(java.util.List)
 com.wlx.wsolandroid.adapter.NearUserAdapter:
     53:54:public void setData(java.util.List)
+com.wlx.wsolandroid.adapter.RenwuListAdapter:
+    39:40:public void setData(java.util.List)
 com.wlx.wsolandroid.adapter.TransationAdapter:
     50:51:public void setData(java.util.List)
 com.wlx.wsolandroid.adapter.VideoListAdapter
@@ -2795,19 +3319,11 @@ com.wlx.wsolandroid.adapter.YijianReplyAdapter:
     40:41:public void setData(java.util.List)
 com.wlx.wsolandroid.adapter.YijianyilanAdapter:
     38:39:public void setData(java.util.List)
-com.wlx.wsolandroid.application.WSOLApplication:
-    public com.baidu.location.LocationClient mLocationClient
-    public com.baidu.location.GeofenceClient mGeofenceClient
-    public com.wlx.wsolandroid.application.WSOLApplication$MyLocationListener mMyLocationListener
-    89:104:private void updateUserLacation(cn.bmob.v3.datatype.BmobGeoPoint,java.lang.String)
-    88:88:static synthetic void access$0(com.wlx.wsolandroid.application.WSOLApplication,cn.bmob.v3.datatype.BmobGeoPoint,java.lang.String)
-com.wlx.wsolandroid.application.WSOLApplication$1
-com.wlx.wsolandroid.application.WSOLApplication$MyLocationListener
 com.wlx.wsolandroid.constant.Constant:
     public static final java.lang.String BMOB_ACCESSKEY
     public static final java.lang.String JINPAIWUQI
     public static final java.lang.String WUQIDUANZAO
-    public static final java.lang.String RENWUBAOCHOU
+    public static final java.lang.String RENWULIEBIAO
     public static final java.lang.String NEIZHENGDENGJI
     public static final java.lang.String FUJIANG
     public static final java.lang.String ABOUTAPP
@@ -2828,11 +3344,63 @@ com.wlx.wsolandroid.constant.Constant:
     public static final java.lang.String weaponDataR1W
     public static final java.lang.String renwudengjiTotalCountArray
     3:3:public Constant()
+com.wlx.wsolandroid.model.AppVersion:
+    private java.lang.String osType
+    private java.lang.String versionName
+    private boolean mustUpDate
+    private int lastVersionCode
+    13:13:public java.lang.String getOsType()
+    16:17:public void setOsType(java.lang.String)
+    22:23:public void setVersionCode(int)
+    25:25:public java.lang.String getVersionName()
+    28:29:public void setVersionName(java.lang.String)
+    31:31:public boolean isMustUpDate()
+    34:35:public void setMustUpDate(boolean)
+    37:37:public int getLastVersionCode()
+    40:41:public void setLastVersionCode(int)
+    46:47:public void setLastVersionDes(java.lang.String)
+com.wlx.wsolandroid.model.Renwu:
+    13:14:public void setRenwuId(int)
+    19:20:public void setRenwuLevel(java.lang.String)
+    25:26:public void setRenwuName(java.lang.String)
+com.wlx.wsolandroid.model.RenwuDetail:
+    private int renwuId
+    24:24:public int getRenwuId()
+    27:28:public void setRenwuId(int)
+    33:34:public void setRenwuName(java.lang.String)
+    39:40:public void setRenwuLevel(java.lang.String)
+    45:46:public void setRenwuPeopleCount(int)
+    51:52:public void setRenwuJiaofu(java.lang.String)
+    57:58:public void setRenwuMap(java.lang.String)
+    63:64:public void setRenwuZhifa(java.lang.String)
+    69:70:public void setRenwuGetDaoju(java.lang.String)
+    75:76:public void setShangyePoint(int)
+    81:82:public void setLiutongPoint(int)
+    87:88:public void setJishuPoint(int)
+    93:94:public void setJunshiPoint(int)
+    99:100:public void setZhianPoint(int)
+    105:106:public void setJunfeiPoint(int)
+    111:112:public void setRenwuBeizhu(java.lang.String)
+com.wlx.wsolandroid.music.PlayMusicActivity:
+    private static final int PLAY
+    private static final int REPLAY
+    private static final int PAUSE
+    private static final int STOP
+    protected static final int SET_SEEKBAR_POSITION
+com.wlx.wsolandroid.music.PlayMusicService:
+    private static final int PLAY
+    private static final int REPLAY
+    private static final int PAUSE
+    private static final int STOP
+    public static final java.lang.String CHANGE_PLAYMUSIC_BUTTON_STATE
+    public static final int CHANGE_PAUSE_BUTTON_TEXT1
+    public static final int CHANGE_PAUSE_BUTTON_TEXT2
 com.wlx.wsolandroid.utils.APIUtils
 com.wlx.wsolandroid.utils.JsonUtils
 com.wlx.wsolandroid.utils.Utils:
-    28:28:public Utils()
-    95:110:public static int getDisplay(android.app.Activity,int)
+    30:30:public Utils()
+    97:112:public static int getDisplay(android.app.Activity,int)
+    205:205:public static java.lang.String getVersionName(android.content.Context)
 com.wlx.wsolandroid.weapondata.ClothesXiandingData
 com.wlx.wsolandroid.weapondata.R1WeaponData
 com.wlx.wsolandroid.weapondata.R2WeaponData

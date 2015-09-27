@@ -67,12 +67,12 @@
                     style="@style/style1"
                     android:text="任务" />
 
-                <!--
+                
                      <TextView
                     android:id="@+id/tv_renwu_1"
                     style="@style/style2"
-                    android:text="任务报酬一览" />
-                -->
+                    android:text="任务列表" />
+                
 
                 <TextView
                     android:id="@+id/tv_renwu_2"

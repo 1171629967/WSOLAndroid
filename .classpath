@@ -8,6 +8,5 @@
 	<classpathentry exported="true" kind="lib" path="libs/BmobSDK_V3.3.5_0408.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="libs/locSDK_5.2.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

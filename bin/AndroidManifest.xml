@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wlx.wsolandroid"
-    android:versionCode="13"
-    android:versionName="2.0.0" >
+    android:versionCode="14"
+    android:versionName="2.1.0" >
 
     <uses-sdk
         android:minSdkVersion="9"
@@ -61,6 +61,16 @@
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
+            android:name=".RenwuDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".music.PlayMusicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
             android:name=".WelcomeActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" >
@@ -93,6 +103,9 @@
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote" >
+        </service>
+        <!-- 播放音乐的服务 -->
+        <service android:name=".music.PlayMusicService" >
         </service>
     </application>
 

@@ -8,7 +8,6 @@ import cn.bmob.v3.listener.UpdateListener;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
-import com.baidu.location.GeofenceClient;
 import com.baidu.location.LocationClient;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.model.LatLng;
@@ -18,7 +17,7 @@ import com.wlx.wsolandroid.model.User;
 
 public class WSOLApplication extends Application {
 	public LocationClient mLocationClient;
-	public GeofenceClient mGeofenceClient;
+	//public GeofenceClient mGeofenceClient;
 	public MyLocationListener mMyLocationListener;
 
 
@@ -34,7 +33,7 @@ public class WSOLApplication extends Application {
      	mLocationClient = new LocationClient(this.getApplicationContext());
 		mMyLocationListener = new MyLocationListener();
 		mLocationClient.registerLocationListener(mMyLocationListener);
-		mGeofenceClient = new GeofenceClient(getApplicationContext());
+		//mGeofenceClient = new GeofenceClient(getApplicationContext());
        
     }
 
