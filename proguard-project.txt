@@ -35,9 +35,14 @@
 -keep class com.wlx.wsolandroid.model.Video{*;}
 -keep class com.wlx.wsolandroid.model.Transation{*;}
 -keep class com.wlx.wsolandroid.model.User{*;}
+-keep class com.wlx.wsolandroid.model.Renwu{*;}
+-keep class com.wlx.wsolandroid.model.RenwuDetail{*;}
+
 -keep class com.wlx.wsolandroid.model.WeaponJinpai{*;}
 
-
+-keep class com.baidu.** {*;}
+-keep class vi.com.** {*;}    
+-dontwarn com.baidu.**
 
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface

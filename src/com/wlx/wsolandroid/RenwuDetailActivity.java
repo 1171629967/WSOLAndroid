@@ -24,8 +24,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.GetListener;
+import cn.bmob.v3.listener.ResetPasswordListener;
 
 import com.umeng.analytics.MobclickAgent;
 import com.wlx.wsolandroid.model.Information;
@@ -59,6 +61,11 @@ public class RenwuDetailActivity extends Activity implements OnRefreshListener {
 		this.initActionBar();
 		this.initView();
 		this.loadData();
+		
+		
+		
+		
+		
 	}
 
 	private void initActionBar() {

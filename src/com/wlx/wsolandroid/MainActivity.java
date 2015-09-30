@@ -44,8 +44,9 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		menuClicklistener {
 	public SlidingMenu menu;
 	private TextView tv_wuqi_1,tv_renwu_1, tv_renwu_2, tv_qita_1, tv_qita_2, tv_qita_3,
-			tv_qita_4, tv_qita_5, tv_qita_6, tv_qita_7, tv_music_1,
+			tv_qita_4, tv_qita_5, tv_qita_6, tv_music_1,
 			tv_fujiang_1;
+	private TextView tv_qita_7;
 	private String currentFragment;
 	/** 公告栏，跑马灯效果 */
 	private MarqueeTextView tv_pamadeng;
