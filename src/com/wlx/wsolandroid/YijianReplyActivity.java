@@ -9,6 +9,7 @@ import cn.bmob.v3.listener.SaveListener;
 
 import com.wlx.wsolandroid.adapter.YijianReplyAdapter;
 import com.wlx.wsolandroid.model.Information;
+import com.wlx.wsolandroid.model.User;
 import com.wlx.wsolandroid.model.Weilixishu;
 import com.wlx.wsolandroid.model.Yijian;
 import com.wlx.wsolandroid.model.YijianReply;
@@ -118,6 +119,8 @@ public class YijianReplyActivity extends Activity implements OnRefreshListener {
 		bmobQuery.setLimit(1000);
 		bmobQuery.order("-createdAt");
 		bmobQuery.addWhereEqualTo("replyId", objectId);
+		
+		
 		bmobQuery.findObjects(this, new FindListener<YijianReply>() {
 
 			@Override
@@ -144,6 +147,8 @@ public class YijianReplyActivity extends Activity implements OnRefreshListener {
 		yijianReply.setContent(et_reply.getText().toString());
 		yijianReply.setReplyId(objectId);
 		yijianReply.setFrom(0);
+		yijianReply.setUsername(User.getCurrentUser(this, User.class).getUsername());
+		yijianReply.setFromOS("Android  " + android.os.Build.VERSION.RELEASE);
 
 		yijianReply.save(this, new SaveListener() {
 
