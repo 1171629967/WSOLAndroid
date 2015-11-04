@@ -33,6 +33,8 @@ public class MyActionBar extends MyRelativeLayoutView {
     protected int initLayout() {
         return R.layout.actionbar_normal;
     }
+    
+    
 
     @Override
     protected void initView() {
@@ -211,6 +213,11 @@ public class MyActionBar extends MyRelativeLayoutView {
      */
     public void setRightClickListenner(OnClickListener listener) {
         rightLayout.setOnClickListener(listener);
+    }
+    
+    
+    public LinearLayout getRightLayout(){
+    	return rightLayout;
     }
 
 }

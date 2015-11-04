@@ -13,6 +13,7 @@ public class Weilixishu extends BmobObject {
 	/** 是否有该武器的威力系数数据 */
 	private int haveData;
 	private String beizhu;
+	private String weaponDes;
  
     private String            N1;
     private String            N2;
@@ -148,6 +149,14 @@ public class Weilixishu extends BmobObject {
 
 	public String getZhencolor() {
 		return zhencolor;
+	}
+
+	public String getWeaponDes() {
+		return weaponDes;
+	}
+
+	public void setWeaponDes(String weaponDes) {
+		this.weaponDes = weaponDes;
 	}
 
 	public void setZhencolor(String zhencolor) {

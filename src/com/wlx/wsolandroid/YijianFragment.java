@@ -26,7 +26,7 @@ import com.wlx.wsolandroid.widget.MyActionBar;
 import com.wlx.wsolandroid.widget.ProgressWheel;
 
 public class YijianFragment extends BaseFragment {
-
+	private MyActionBar actionBar;
 	private EditText et_content;
 	private ProgressWheel progressWheel;
 	
@@ -58,7 +58,7 @@ public class YijianFragment extends BaseFragment {
 	
 
 	private void initActionBar(View view) {
-		MyActionBar actionBar = new MyActionBar(getActivity());
+		actionBar = new MyActionBar(getActivity());
 		actionBar.setTitle("意见和建议");
 		actionBar.setLeftEnable(true);
 		actionBar.setLeftText("菜单");
@@ -89,8 +89,8 @@ public class YijianFragment extends BaseFragment {
 	}
 
 	private void upLoadYijian() {
+		actionBar.getRightLayout().setEnabled(false);
 		progressWheel.setVisibility(View.VISIBLE);
-
 		Yijian yijian = new Yijian();
 		yijian.setUsername(User.getCurrentUser(getActivity(), User.class).getUsername());
 		yijian.setContent(et_content.getText().toString());		
@@ -100,13 +100,21 @@ public class YijianFragment extends BaseFragment {
 
 			@Override
 			public void onSuccess() {
+				actionBar.getRightLayout().setEnabled(true);
 				progressWheel.setVisibility(View.GONE);
 				Toast.makeText(getActivity(), "谢谢您的反馈，祝您游戏愉快",
 						Toast.LENGTH_LONG).show();
 			}
+			
+			@Override
+			public void onFinish() {
+				super.onFinish();
+				actionBar.getRightLayout().setEnabled(true);
+			}
 
 			@Override
 			public void onFailure(int code, String arg0) {
+				actionBar.getRightLayout().setEnabled(true);
 				progressWheel.setVisibility(View.GONE);
 				Toast.makeText(getActivity(), "提交失败，请重试", Toast.LENGTH_LONG)
 						.show();
@@ -117,9 +125,7 @@ public class YijianFragment extends BaseFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-
 		MobclickAgent.onPageStart("意见和建议");
-
 	}
 
 	@Override

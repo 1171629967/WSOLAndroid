@@ -37,14 +37,18 @@ import com.wlx.wsolandroid.widget.MyActionBar;
  * 
  * @author wanglixin
  */
-public class WeaponXishuActivity extends Activity implements OnRefreshListener, OnClickListener {
-	private TextView tv_N1, tv_N2, tv_N3, tv_N4, tv_N5, tv_N6, tv_E6, tv_E7, tv_E8, tv_E9, tv_D, tv_JA, tv_JC, tv_C2, tv_C3, tv_C4, tv_C5, tv_tu, tv_dun, tv_sui, tv_zhen, tv_wei,
-			tv_ba, tv_puwuAndZhenwu, tv_pumo, tv_zhenmo;
+public class WeaponXishuActivity extends Activity implements OnRefreshListener,
+		OnClickListener {
+	private TextView tv_N1, tv_N2, tv_N3, tv_N4, tv_N5, tv_N6, tv_E6, tv_E7,
+			tv_E8, tv_E9, tv_D, tv_JA, tv_JC, tv_C2, tv_C3, tv_C4, tv_C5,
+			tv_tu, tv_dun, tv_sui, tv_zhen, tv_wei, tv_ba, tv_puwuAndZhenwu,
+			tv_pumo, tv_zhenmo;
 
 	// private Weilixishu weilixishu;
 	private String weaponName;
 	private SwipeRefreshLayout swipeRefreshLayout;
-	private TextView tv_weaponName, tv_explain, tv_explainClick, tv_beizhu;
+	private TextView tv_weaponName, tv_explain, tv_weaponDes, tv_explainClick,
+			tv_beizhu;
 	private LinearLayout ll;
 
 	@Override
@@ -68,16 +72,21 @@ public class WeaponXishuActivity extends Activity implements OnRefreshListener, 
 	}
 
 	private void initView() {
-		Utils.setAppBackgroundColor(WeaponXishuActivity.this, findViewById(R.id.linearLayout));
-		
+		Utils.setAppBackgroundColor(WeaponXishuActivity.this,
+				findViewById(R.id.linearLayout));
+
 		swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
 		// 顶部刷新的样式
-		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light, android.R.color.holo_green_light, android.R.color.holo_blue_bright, android.R.color.holo_orange_light);
+		swipeRefreshLayout.setColorScheme(android.R.color.holo_red_light,
+				android.R.color.holo_green_light,
+				android.R.color.holo_blue_bright,
+				android.R.color.holo_orange_light);
 		swipeRefreshLayout.setOnRefreshListener(this);
 		swipeRefreshLayout.setRefreshing(true);
 
 		ll = (LinearLayout) findViewById(R.id.ll);
 		tv_beizhu = (TextView) findViewById(R.id.tv_beizhu);
+		tv_weaponDes = (TextView) findViewById(R.id.tv_weaponDes);
 		tv_explain = (TextView) findViewById(R.id.tv_explain);
 		tv_explainClick = (TextView) findViewById(R.id.tv_explainClick);
 		tv_explainClick.setOnClickListener(this);
@@ -157,12 +166,23 @@ public class WeaponXishuActivity extends Activity implements OnRefreshListener, 
 	/** 设置各个控件的数值 */
 	private void setData(Weilixishu weilixishu) {
 		// 设置备注
-		if (!TextUtils.isEmpty(weilixishu.getBeizhu())) {
-			tv_beizhu.setText(weilixishu.getBeizhu());
+		String beizhu = weilixishu.getBeizhu();
+		if (!TextUtils.isEmpty(beizhu)) {
+			String finalBeizhu = beizhu.replace("$", "\n");
+			tv_beizhu.setText(finalBeizhu);
 			tv_beizhu.setVisibility(View.VISIBLE);
-		}
-		else {
+		} else {
 			tv_beizhu.setVisibility(View.GONE);
+		}
+
+		// 设置武器介绍
+		String weaponDes = weilixishu.getWeaponDes();		
+		if (!TextUtils.isEmpty(weaponDes)) {
+			String finalWeaponDes = weaponDes.replace("$", "\n");
+			tv_weaponDes.setText(finalWeaponDes);
+			tv_weaponDes.setVisibility(View.VISIBLE);
+		} else {
+			tv_weaponDes.setVisibility(View.GONE);
 		}
 
 		if (weilixishu.getHaveData() == 0) {
@@ -198,7 +218,8 @@ public class WeaponXishuActivity extends Activity implements OnRefreshListener, 
 		setColor(tv_wei, weilixishu.getWei(), weilixishu.getWeicolor());
 		setColor(tv_ba, weilixishu.getBa(), weilixishu.getBacolor());
 
-		setColor(tv_puwuAndZhenwu, weilixishu.getPuwuAndZhenwu(), weilixishu.getPuwuAndZhenwucolor());
+		setColor(tv_puwuAndZhenwu, weilixishu.getPuwuAndZhenwu(),
+				weilixishu.getPuwuAndZhenwucolor());
 		setColor(tv_pumo, weilixishu.getPumo(), weilixishu.getPumocolor());
 		setColor(tv_zhenmo, weilixishu.getZhenmo(), weilixishu.getZhenmocolor());
 
@@ -208,7 +229,7 @@ public class WeaponXishuActivity extends Activity implements OnRefreshListener, 
 		if (TextUtils.isEmpty(colorString) || TextUtils.isEmpty(xishuString)) {
 			return;
 		}
-		
+
 		String[] colors = colorString.split("\\|");
 		int colorSize = colors.length;
 		SpannableStringBuilder builder = new SpannableStringBuilder(xishuString);
@@ -229,7 +250,8 @@ public class WeaponXishuActivity extends Activity implements OnRefreshListener, 
 				break;
 			// 蓝色 （带属性）
 			case 1:
-				redSpan = new ForegroundColorSpan(getResources().getColor(R.color.hava_shuxing_color));
+				redSpan = new ForegroundColorSpan(getResources().getColor(
+						R.color.hava_shuxing_color));
 				break;
 			// 红色 （自带炎属性）
 			case 2:
@@ -241,7 +263,8 @@ public class WeaponXishuActivity extends Activity implements OnRefreshListener, 
 				break;
 			// 紫色 （自带斩属性）
 			case 4:
-				redSpan = new ForegroundColorSpan(getResources().getColor(R.color.purple));
+				redSpan = new ForegroundColorSpan(getResources().getColor(
+						R.color.purple));
 				break;
 			// 绿色 （自带风属性）
 			case 5:
@@ -252,7 +275,8 @@ public class WeaponXishuActivity extends Activity implements OnRefreshListener, 
 				redSpan = new ForegroundColorSpan(Color.YELLOW);
 				break;
 			}
-			builder.setSpan(redSpan, intValues[0], intValues[0] + intValues[1], Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+			builder.setSpan(redSpan, intValues[0], intValues[0] + intValues[1],
+					Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 		}
 
 		tv.setText(builder);

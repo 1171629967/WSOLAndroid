@@ -88,6 +88,8 @@ public class WSOLApplication extends Application {
 		User newUser = new User();	
 		newUser.setLastGeoPoint(point);
 		newUser.setLastAddress(address);
+		newUser.setLastUseOS("Android  " + android.os.Build.VERSION.RELEASE);
+
 		BmobUser bmobUser = BmobUser.getCurrentUser(this);
 		newUser.update(this, bmobUser.getObjectId(), new UpdateListener() {
 			@Override

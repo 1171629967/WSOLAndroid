@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/linearLayout"
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -61,21 +61,36 @@
                     android:textSize="14sp"
                     android:visibility="gone" />
 
+                <TextView
+                    android:id="@+id/tv_beizhu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_weaponDes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="1px"
                     android:layout_marginBottom="15dp"
                     android:layout_marginTop="15dp"
                     android:background="@color/gray" />
-
-                <TextView
-                    android:id="@+id/tv_beizhu"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:textColor="@color/orange"
-                    android:textSize="14sp"
-                    android:visibility="gone" />
 
                 <LinearLayout
                     android:id="@+id/ll"

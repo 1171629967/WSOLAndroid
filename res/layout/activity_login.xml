@@ -108,5 +108,21 @@
         android:text="注册新账号"
         android:textColor="@color/white"
         android:textSize="20sp" />
+    
+    
+    
+    <Button
+        android:id="@+id/bt_findPassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/borner_login_out"
+        android:gravity="center"
+        android:text="找回密码"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
 </LinearLayout>

@@ -1,4 +1,3 @@
-android.support.v4.app.BackStackState
 android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
 android.support.v4.app.Fragment: android.support.v4.util.SimpleArrayMap sClassMap
 android.support.v4.app.Fragment: int INITIALIZING
@@ -146,16 +145,12 @@ android.support.v4.app.Fragment: void performReallyStop()
 android.support.v4.app.Fragment: void performDestroyView()
 android.support.v4.app.Fragment: void performDestroy()
 android.support.v4.app.Fragment: void <clinit>()
-android.support.v4.app.Fragment$SavedState
 android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.app.FragmentActivity
 android.support.v4.app.FragmentActivity: FragmentActivity()
-android.support.v4.app.FragmentManagerState
 android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
-android.support.v4.app.FragmentState
 android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
 android.support.v4.app.FragmentTabHost: void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener)
-android.support.v4.app.FragmentTabHost$SavedState
 android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.app.NotificationCompatSideChannelService
 android.support.v4.content.FileProvider
@@ -195,12 +190,10 @@ android.support.v4.view.ViewPager: int getPageMargin()
 android.support.v4.view.ViewPager: void setPageMarginDrawable(android.graphics.drawable.Drawable)
 android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
 android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
-android.support.v4.view.ViewPager$SavedState
 android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.widget.DrawerLayout: void setScrimColor(int)
 android.support.v4.widget.DrawerLayout: void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener)
 android.support.v4.widget.DrawerLayout: void setDrawerLockMode(int)
-android.support.v4.widget.DrawerLayout$SavedState
 android.support.v4.widget.DrawerLayout$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.widget.SlidingPaneLayout: void setParallaxDistance(int)
 android.support.v4.widget.SlidingPaneLayout: int getParallaxDistance()
@@ -215,7 +208,6 @@ android.support.v4.widget.SlidingPaneLayout: void setShadowDrawableRight(android
 android.support.v4.widget.SlidingPaneLayout: void setShadowResource(int)
 android.support.v4.widget.SlidingPaneLayout: void setShadowResourceLeft(int)
 android.support.v4.widget.SlidingPaneLayout: void setShadowResourceRight(int)
-android.support.v4.widget.SlidingPaneLayout$SavedState
 android.support.v4.widget.SlidingPaneLayout$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.widget.SwipeRefreshLayout
 android.support.v4.widget.SwipeRefreshLayout: SwipeRefreshLayout(android.content.Context)
@@ -7940,7 +7932,6 @@ com.jeremyfeinstein.slidingmenu.lib.SlidingMenu: void setSecondaryOnOpenListner(
 com.jeremyfeinstein.slidingmenu.lib.SlidingMenu: void setOnCloseListener(com.jeremyfeinstein.slidingmenu.lib.SlidingMenu$OnCloseListener)
 com.jeremyfeinstein.slidingmenu.lib.SlidingMenu: void setOnOpenedListener(com.jeremyfeinstein.slidingmenu.lib.SlidingMenu$OnOpenedListener)
 com.jeremyfeinstein.slidingmenu.lib.SlidingMenu: void setOnClosedListener(com.jeremyfeinstein.slidingmenu.lib.SlidingMenu$OnClosedListener)
-com.jeremyfeinstein.slidingmenu.lib.SlidingMenu$SavedState
 com.jeremyfeinstein.slidingmenu.lib.SlidingMenu$SavedState: android.os.Parcelable$Creator CREATOR
 com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivity
 com.jeremyfeinstein.slidingmenu.lib.app.SlidingActivity: void setContentView(android.view.View)
@@ -8001,6 +7992,9 @@ com.umeng.analytics.social.UMPlatformData$UMedia: com.umeng.analytics.social.UMP
 com.wlx.wsolandroid.CompletePersonInfoActivity
 com.wlx.wsolandroid.CompletePersonInfoActivity: CompletePersonInfoActivity()
 com.wlx.wsolandroid.CompletePersonInfoActivity: void onClick(android.view.View)
+com.wlx.wsolandroid.FindPasswordActivity
+com.wlx.wsolandroid.FindPasswordActivity: FindPasswordActivity()
+com.wlx.wsolandroid.FindPasswordActivity: void onClick(android.view.View)
 com.wlx.wsolandroid.LoginActivity
 com.wlx.wsolandroid.LoginActivity: LoginActivity()
 com.wlx.wsolandroid.LoginActivity: void onClick(android.view.View)
@@ -8236,11 +8230,13 @@ com.wlx.wsolandroid.R$drawable: int weapon_appreciate_listview_back
 com.wlx.wsolandroid.R$drawable: int welcome_img4
 com.wlx.wsolandroid.R$id: int bt_changeMoshi
 com.wlx.wsolandroid.R$id: int bt_confirm
+com.wlx.wsolandroid.R$id: int bt_findPassword
 com.wlx.wsolandroid.R$id: int bt_login
 com.wlx.wsolandroid.R$id: int bt_loginout
 com.wlx.wsolandroid.R$id: int bt_pause
 com.wlx.wsolandroid.R$id: int bt_regist
 com.wlx.wsolandroid.R$id: int bt_replay
+com.wlx.wsolandroid.R$id: int bt_sendEmail
 com.wlx.wsolandroid.R$id: int bt_stop
 com.wlx.wsolandroid.R$id: int et_city
 com.wlx.wsolandroid.R$id: int et_content
@@ -8408,6 +8404,7 @@ com.wlx.wsolandroid.R$id: int tv_totalPlayTime
 com.wlx.wsolandroid.R$id: int tv_tu
 com.wlx.wsolandroid.R$id: int tv_url
 com.wlx.wsolandroid.R$id: int tv_videoName
+com.wlx.wsolandroid.R$id: int tv_weaponDes
 com.wlx.wsolandroid.R$id: int tv_weaponName
 com.wlx.wsolandroid.R$id: int tv_weaponRank
 com.wlx.wsolandroid.R$id: int tv_wei
@@ -8426,6 +8423,7 @@ com.wlx.wsolandroid.R$id: int wb_content
 com.wlx.wsolandroid.R$id: int welcome_activity_layout
 com.wlx.wsolandroid.R$layout: int actionbar_normal
 com.wlx.wsolandroid.R$layout: int activity_complete_personinfo
+com.wlx.wsolandroid.R$layout: int activity_find_password
 com.wlx.wsolandroid.R$layout: int activity_login
 com.wlx.wsolandroid.R$layout: int activity_main
 com.wlx.wsolandroid.R$layout: int activity_play_music
@@ -8663,7 +8661,13 @@ com.wlx.wsolandroid.model.User: java.lang.String nickName
 com.wlx.wsolandroid.model.User: java.lang.String gameName
 com.wlx.wsolandroid.model.User: cn.bmob.v3.datatype.BmobGeoPoint lastGeoPoint
 com.wlx.wsolandroid.model.User: java.lang.String lastAddress
+com.wlx.wsolandroid.model.User: java.lang.String registOS
+com.wlx.wsolandroid.model.User: java.lang.String lastUseOS
 com.wlx.wsolandroid.model.User: User()
+com.wlx.wsolandroid.model.User: java.lang.String getLastUseOS()
+com.wlx.wsolandroid.model.User: void setLastUseOS(java.lang.String)
+com.wlx.wsolandroid.model.User: java.lang.String getRegistOS()
+com.wlx.wsolandroid.model.User: void setRegistOS(java.lang.String)
 com.wlx.wsolandroid.model.User: java.lang.String getLastAddress()
 com.wlx.wsolandroid.model.User: void setLastAddress(java.lang.String)
 com.wlx.wsolandroid.model.User: cn.bmob.v3.datatype.BmobGeoPoint getLastGeoPoint()
@@ -8740,6 +8744,7 @@ com.wlx.wsolandroid.model.WeaponJinpai: void setW(int)
 com.wlx.wsolandroid.model.Weilixishu
 com.wlx.wsolandroid.model.Weilixishu: int haveData
 com.wlx.wsolandroid.model.Weilixishu: java.lang.String beizhu
+com.wlx.wsolandroid.model.Weilixishu: java.lang.String weaponDes
 com.wlx.wsolandroid.model.Weilixishu: java.lang.String N1
 com.wlx.wsolandroid.model.Weilixishu: java.lang.String N2
 com.wlx.wsolandroid.model.Weilixishu: java.lang.String N3
@@ -8812,6 +8817,8 @@ com.wlx.wsolandroid.model.Weilixishu: void setDuncolor(java.lang.String)
 com.wlx.wsolandroid.model.Weilixishu: java.lang.String getSuicolor()
 com.wlx.wsolandroid.model.Weilixishu: void setSuicolor(java.lang.String)
 com.wlx.wsolandroid.model.Weilixishu: java.lang.String getZhencolor()
+com.wlx.wsolandroid.model.Weilixishu: java.lang.String getWeaponDes()
+com.wlx.wsolandroid.model.Weilixishu: void setWeaponDes(java.lang.String)
 com.wlx.wsolandroid.model.Weilixishu: void setZhencolor(java.lang.String)
 com.wlx.wsolandroid.model.Weilixishu: java.lang.String getWeicolor()
 com.wlx.wsolandroid.model.Weilixishu: void setWeicolor(java.lang.String)
@@ -8922,6 +8929,8 @@ com.wlx.wsolandroid.model.YijianReply
 com.wlx.wsolandroid.model.YijianReply: java.lang.String replyId
 com.wlx.wsolandroid.model.YijianReply: java.lang.String content
 com.wlx.wsolandroid.model.YijianReply: int from
+com.wlx.wsolandroid.model.YijianReply: java.lang.String username
+com.wlx.wsolandroid.model.YijianReply: java.lang.String fromOS
 com.wlx.wsolandroid.model.YijianReply: YijianReply()
 com.wlx.wsolandroid.model.YijianReply: int getFrom()
 com.wlx.wsolandroid.model.YijianReply: void setFrom(int)
@@ -8929,6 +8938,10 @@ com.wlx.wsolandroid.model.YijianReply: java.lang.String getContent()
 com.wlx.wsolandroid.model.YijianReply: void setContent(java.lang.String)
 com.wlx.wsolandroid.model.YijianReply: java.lang.String getReplyId()
 com.wlx.wsolandroid.model.YijianReply: void setReplyId(java.lang.String)
+com.wlx.wsolandroid.model.YijianReply: java.lang.String getUsername()
+com.wlx.wsolandroid.model.YijianReply: void setUsername(java.lang.String)
+com.wlx.wsolandroid.model.YijianReply: java.lang.String getFromOS()
+com.wlx.wsolandroid.model.YijianReply: void setFromOS(java.lang.String)
 com.wlx.wsolandroid.music.PlayMusicActivity
 com.wlx.wsolandroid.music.PlayMusicActivity: PlayMusicActivity()
 com.wlx.wsolandroid.music.PlayMusicActivity: void onClick(android.view.View)
@@ -8951,6 +8964,7 @@ com.wlx.wsolandroid.widget.MyActionBar: void setRightText(int)
 com.wlx.wsolandroid.widget.MyActionBar: void setRightIcon(int)
 com.wlx.wsolandroid.widget.MyActionBar: void setRightIntent(android.content.Intent)
 com.wlx.wsolandroid.widget.MyActionBar: void setRightClickListenner(android.view.View$OnClickListener)
+com.wlx.wsolandroid.widget.MyActionBar: android.widget.LinearLayout getRightLayout()
 com.wlx.wsolandroid.widget.MyRelativeLayoutView: void setData(java.lang.Object)
 com.wlx.wsolandroid.widget.NumberProgressBar
 com.wlx.wsolandroid.widget.NumberProgressBar: NumberProgressBar(android.content.Context)

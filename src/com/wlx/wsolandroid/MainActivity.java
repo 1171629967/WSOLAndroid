@@ -23,7 +23,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.FindListener;
+import cn.bmob.v3.listener.ResetPasswordListener;
 
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
@@ -89,6 +91,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		}, 1000);
 
 		checkVersion();
+		
+		
 	}
 
 	private void initView() {
@@ -419,7 +423,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		option.setLocationMode(LocationMode.Hight_Accuracy);// 设置定位模式
 		option.setCoorType("gcj02");// 返回的定位结果是百度经纬度，默认值gcj02
 		int span = 30 * 1000;
-		option.setScanSpan(span);// 设置发起定位请求的间隔时间为10*1000ms
+		option.setScanSpan(span);// 设置发起定位请求的间隔时间为30*1000ms
 		option.setIsNeedAddress(true);
 		mLocationClient.setLocOption(option);
 		mLocationClient.start();
@@ -443,5 +447,15 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
             }  
         }           
     };  
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    
 
 }

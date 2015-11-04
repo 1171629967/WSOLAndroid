@@ -30,6 +30,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 	private EditText et_password;
 	private Button bt_login;
 	private Button bt_regist;
+	private Button bt_findPassword;
 	private LinearLayout ll;
 
 	@Override
@@ -60,6 +61,8 @@ public class LoginActivity extends Activity implements OnClickListener {
 		et_password = (EditText) findViewById(R.id.et_password);
 		bt_login = (Button) findViewById(R.id.bt_login);
 		bt_regist = (Button) findViewById(R.id.bt_regist);
+		bt_findPassword = (Button) findViewById(R.id.bt_findPassword);
+		bt_findPassword.setOnClickListener(this);
 		bt_login.setOnClickListener(this);
 		bt_regist.setOnClickListener(this);
 	}
@@ -80,6 +83,10 @@ public class LoginActivity extends Activity implements OnClickListener {
 		}
 		else if(v == bt_regist){
 			startActivity(new Intent(LoginActivity.this,RegistActivity.class));
+		}
+		else if(v == bt_findPassword){
+	        startActivity(new Intent(LoginActivity.this,FindPasswordActivity.class));
+
 		}
 	}
 	

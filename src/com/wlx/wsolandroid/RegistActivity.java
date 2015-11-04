@@ -79,6 +79,8 @@ public class RegistActivity extends Activity implements OnClickListener {
 		bu.setUsername(userName);
 		bu.setPassword(password);
 		bu.setEmail(userName);
+		bu.setRegistOS("Android  " + android.os.Build.VERSION.RELEASE);
+
 		bu.signUp(this, new SaveListener() {
 		    @Override
 		    public void onSuccess() {

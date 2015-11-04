@@ -18,12 +18,26 @@ public class User extends BmobUser{
 	private String gameName;
 	private BmobGeoPoint lastGeoPoint;
 	private String lastAddress;
+	private String registOS;
+	private String lastUseOS;
 	
 	
 	
 	
 	
 	
+	public String getLastUseOS() {
+		return lastUseOS;
+	}
+	public void setLastUseOS(String lastUseOS) {
+		this.lastUseOS = lastUseOS;
+	}
+	public String getRegistOS() {
+		return registOS;
+	}
+	public void setRegistOS(String registOS) {
+		this.registOS = registOS;
+	}
 	public String getLastAddress() {
 		return lastAddress;
 	}
