@@ -823,7 +823,45 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int yellow=0x7f060003;
     }
     public static final class dimen {
+        /**  ActionBar 主标题文字大小 
+         */
+        public static final int font_size_caption_1=0x7f070006;
+        /**  tableView（Item）文字大小 
+         */
+        public static final int font_size_caption_2=0x7f070007;
+        /**  说明文字 底部 
+         */
+        public static final int font_size_select=0x7f07000c;
+        /**  大铵钮文字，正文输入文字，顶部铵钮 
+         */
+        public static final int font_size_sub_caption=0x7f070008;
+        /**  说明文字 
+         */
+        public static final int font_size_tab_bar=0x7f07000b;
+        /**  副标题，说明性文字 
+         */
+        public static final int font_size_text_1=0x7f070009;
+        /**  灰色底部的说明，小版铵钮内的文字 
+         */
+        public static final int font_size_text_2=0x7f07000a;
+        /**  使用的文字尺寸 
+         */
+        public static final int font_size_title=0x7f070002;
+        public static final int height_min_empty_view_pinbaodetails=0x7f070010;
+        public static final int middle_text_content_font_size=0x7f07000e;
+        public static final int padding_larger=0x7f070005;
+        public static final int padding_medium=0x7f070004;
+        /**  边距 
+         */
+        public static final int padding_small=0x7f070003;
         public static final int sliding_menu_offset=0x7f070000;
+        public static final int small_text_content_font_size=0x7f07000f;
+        /**  内容 
+         */
+        public static final int text_content_font_size=0x7f07000d;
+        /**  title高度 
+         */
+        public static final int title_height=0x7f070001;
     }
     public static final class drawable {
         public static final int app_backgroundcolor0=0x7f020000;
@@ -841,21 +879,29 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int app_backgroundcolor8=0x7f02000c;
         public static final int app_backgroundcolor9=0x7f02000d;
         public static final int avator_default=0x7f02000e;
-        public static final int borner_login_out=0x7f02000f;
-        public static final int borner_weapon_duanzao=0x7f020010;
-        public static final int borner_weapon_search_cancel=0x7f020011;
-        public static final int icon=0x7f020012;
-        public static final int menu_left=0x7f020013;
-        public static final int menu_left_normal=0x7f020014;
-        public static final int menu_left_selected=0x7f020015;
-        public static final int narrow_gray=0x7f020016;
-        public static final int star=0x7f020017;
-        public static final int upnarrow=0x7f020018;
-        public static final int weapon_appreciate_listview_back=0x7f020019;
-        public static final int welcome_img4=0x7f02001a;
+        public static final int borner_choose_left_not_selected=0x7f02000f;
+        public static final int borner_choose_left_selected=0x7f020010;
+        public static final int borner_choose_middle_not_selected=0x7f020011;
+        public static final int borner_choose_middle_selected=0x7f020012;
+        public static final int borner_choose_right_not_selected=0x7f020013;
+        public static final int borner_choose_right_selected=0x7f020014;
+        public static final int borner_login_out=0x7f020015;
+        public static final int borner_weapon_duanzao=0x7f020016;
+        public static final int borner_weapon_search_cancel=0x7f020017;
+        public static final int downnarrow=0x7f020018;
+        public static final int gray_round_corner_bg=0x7f020019;
+        public static final int icon=0x7f02001a;
+        public static final int menu_left=0x7f02001b;
+        public static final int menu_left_normal=0x7f02001c;
+        public static final int menu_left_selected=0x7f02001d;
+        public static final int narrow_gray=0x7f02001e;
+        public static final int star=0x7f02001f;
+        public static final int upnarrow=0x7f020020;
+        public static final int weapon_appreciate_listview_back=0x7f020021;
+        public static final int welcome_img4=0x7f020022;
+        public static final int white_round_corner_bg=0x7f020023;
     }
     public static final class id {
-        public static final int bt_changeMoshi=0x7f05008f;
         public static final int bt_confirm=0x7f05002f;
         public static final int bt_findPassword=0x7f050026;
         public static final int bt_login=0x7f050024;
@@ -866,53 +912,58 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int bt_sendEmail=0x7f050022;
         public static final int bt_stop=0x7f05002b;
         public static final int et_city=0x7f05001c;
-        public static final int et_content=0x7f050099;
+        public static final int et_content=0x7f0500ad;
         public static final int et_gameName=0x7f050016;
         public static final int et_nickName=0x7f050014;
         public static final int et_password=0x7f050023;
         public static final int et_qq=0x7f050018;
-        public static final int et_search=0x7f0500bf;
+        public static final int et_search=0x7f0500d4;
         public static final int et_tiebaName=0x7f05001a;
         public static final int et_userName=0x7f050021;
         public static final int fl_fragments=0x7f050028;
         public static final int fullscreen=0x7f050003;
         public static final int image=0x7f050042;
-        public static final int include_fangyu=0x7f050094;
-        public static final int include_gongji=0x7f050092;
-        public static final int include_pohuai=0x7f050093;
-        public static final int include_tiaoyue=0x7f050098;
-        public static final int include_tili=0x7f050095;
-        public static final int include_wushuang=0x7f050096;
-        public static final int include_yidong=0x7f050097;
+        public static final int include_fangyu=0x7f0500a8;
+        public static final int include_gongji=0x7f0500a6;
+        public static final int include_pohuai=0x7f0500a7;
+        public static final int include_tiaoyue=0x7f0500ac;
+        public static final int include_tili=0x7f0500a9;
+        public static final int include_wushuang=0x7f0500aa;
+        public static final int include_yidong=0x7f0500ab;
         public static final int invisible=0x7f050006;
         public static final int iv=0x7f05006d;
         public static final int iv_avator=0x7f050065;
         public static final int iv_face=0x7f050012;
         public static final int iv_narrow=0x7f050072;
-        public static final int iv_upNarrow=0x7f0500bd;
-        public static final int iv_upNarrow_gongji_rise=0x7f0500b5;
+        public static final int iv_upNarrow=0x7f0500d2;
+        public static final int iv_upNarrow_duanzaoTime_rise=0x7f050094;
+        public static final int iv_upNarrow_gongji_rise=0x7f0500ca;
         public static final int layout=0x7f050041;
         public static final int left=0x7f050001;
         public static final int linearLayout=0x7f050030;
-        public static final int listView=0x7f050085;
+        public static final int listView=0x7f050087;
         public static final int ll=0x7f050020;
         public static final int ll_beizhu=0x7f050071;
         public static final int ll_city=0x7f05001b;
+        public static final int ll_duanzaoPart=0x7f050090;
+        public static final int ll_gaizaoMenu=0x7f0500a0;
+        public static final int ll_gaizaoPart=0x7f05008f;
         public static final int ll_game=0x7f050015;
-        public static final int ll_gongjicao=0x7f0500b7;
-        public static final int ll_gongjili=0x7f0500af;
+        public static final int ll_gongjicao=0x7f0500cc;
+        public static final int ll_gongjili=0x7f0500c4;
+        public static final int ll_moshi=0x7f050096;
         public static final int ll_nickName=0x7f050013;
         public static final int ll_qq=0x7f050017;
         public static final int ll_renwuBeizhu=0x7f050033;
-        public static final int ll_shuxingPart=0x7f050091;
-        public static final int ll_teshuqianghua=0x7f0500b1;
+        public static final int ll_shuxingPart=0x7f0500a5;
+        public static final int ll_teshuqianghua=0x7f0500c6;
         public static final int ll_tieba=0x7f050019;
-        public static final int ll_yidongcao=0x7f0500be;
+        public static final int ll_yidongcao=0x7f0500d3;
+        public static final int ll_yuanshi=0x7f05009b;
         public static final int ll_zhengju=0x7f05006f;
         public static final int lv=0x7f050063;
-        public static final int lv1=0x7f050087;
-        public static final int lv_weaponRank=0x7f05009a;
-        public static final int lv_weaponType=0x7f05009b;
+        public static final int lv1=0x7f050089;
+        public static final int lv_weaponType=0x7f0500ae;
         public static final int margin=0x7f050004;
         public static final int menu_head_left=0x7f050008;
         public static final int menu_head_left_iv=0x7f050009;
@@ -926,17 +977,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int numberbar=0x7f05001e;
         public static final int progressWheel=0x7f05001f;
         public static final int right=0x7f050002;
-        public static final int rl=0x7f050086;
+        public static final int rl=0x7f050088;
         public static final int rl_actionbar=0x7f050011;
-        public static final int rl_gongji1=0x7f0500ae;
-        public static final int rl_me=0x7f05009d;
-        public static final int rl_moshi=0x7f05008e;
-        public static final int rl_weaponGaizaoAndDuanzao=0x7f05008a;
-        public static final int rl_weaponNameAndRank=0x7f050088;
+        public static final int rl_gongji1=0x7f0500c3;
+        public static final int rl_me=0x7f0500b0;
+        public static final int rl_weaponGaizaoAndDuanzao=0x7f05008e;
+        public static final int rl_weaponNameAndRank=0x7f05008a;
         public static final int seekbar=0x7f05002c;
         public static final int selected_view=0x7f050000;
-        public static final int slidingmenulayout=0x7f05009c;
-        public static final int slidingmenumain=0x7f0500aa;
+        public static final int slidingmenulayout=0x7f0500af;
+        public static final int slidingmenumain=0x7f0500bf;
         public static final int sv=0x7f050010;
         public static final int swipeRefreshLayout=0x7f050031;
         public static final int tv_C2=0x7f050052;
@@ -959,47 +1009,57 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int tv_address=0x7f050068;
         public static final int tv_ba=0x7f05005e;
         public static final int tv_base=0x7f05007d;
-        public static final int tv_base_gongjili=0x7f0500b3;
-        public static final int tv_base_yidongli=0x7f0500bb;
+        public static final int tv_base_gongjili=0x7f0500c8;
+        public static final int tv_base_yidongli=0x7f0500d0;
         public static final int tv_beizhu=0x7f050046;
-        public static final int tv_content=0x7f050084;
-        public static final int tv_currentMoshi=0x7f050090;
+        public static final int tv_cancel=0x7f050084;
+        public static final int tv_comfirn=0x7f050085;
+        public static final int tv_content=0x7f050083;
         public static final int tv_currentPlayTime=0x7f05002d;
         public static final int tv_distance=0x7f050066;
-        public static final int tv_duanzao=0x7f05008c;
-        public static final int tv_duanzaoData=0x7f05008d;
+        public static final int tv_duanzao=0x7f050092;
+        public static final int tv_duanzaoData=0x7f050093;
+        public static final int tv_duanzaoTimeUp=0x7f050095;
         public static final int tv_dun=0x7f05005a;
         public static final int tv_explain=0x7f050045;
         public static final int tv_explainClick=0x7f050044;
         public static final int tv_from=0x7f050080;
-        public static final int tv_fujiang_1=0x7f0500a2;
-        public static final int tv_gaizaoData=0x7f05008b;
-        public static final int tv_gongjiDown=0x7f0500ac;
-        public static final int tv_gongjiUp=0x7f0500ad;
-        public static final int tv_gongjili=0x7f0500b0;
-        public static final int tv_headContent=0x7f0500ab;
+        public static final int tv_fujiang_1=0x7f0500b7;
+        public static final int tv_gaizaoData=0x7f050091;
+        public static final int tv_gaizao_jichuzhi=0x7f0500a4;
+        public static final int tv_gaizao_shangshengzhi=0x7f0500a3;
+        public static final int tv_gongjiDown=0x7f0500c1;
+        public static final int tv_gongjiUp=0x7f0500c2;
+        public static final int tv_gongjili=0x7f0500c5;
+        public static final int tv_headContent=0x7f0500c0;
+        public static final int tv_jiangai=0x7f0500a2;
         public static final int tv_jishuPoint=0x7f05003d;
         public static final int tv_junfeiPoint=0x7f050040;
         public static final int tv_junshiPoint=0x7f05003e;
         public static final int tv_lastDiffer=0x7f05006b;
         public static final int tv_liutongPoint=0x7f05003c;
         public static final int tv_lvNumber=0x7f050069;
+        public static final int tv_moshi_chuanshuohua=0x7f05009a;
+        public static final int tv_moshi_duanzao=0x7f050097;
+        public static final int tv_moshi_gaizao=0x7f050099;
+        public static final int tv_moshi_tesuqianghua=0x7f050098;
         public static final int tv_moveAndJump=0x7f05007e;
+        public static final int tv_music=0x7f0500b5;
         public static final int tv_musicName=0x7f050064;
-        public static final int tv_music_1=0x7f0500a1;
+        public static final int tv_music_1=0x7f0500b6;
         public static final int tv_name=0x7f05006e;
         public static final int tv_nextNeed=0x7f05006a;
         public static final int tv_nickName=0x7f050067;
         public static final int tv_pamadeng=0x7f050027;
         public static final int tv_pumo=0x7f050060;
         public static final int tv_puwuAndZhenwu=0x7f05005f;
-        public static final int tv_qita_1=0x7f0500a3;
-        public static final int tv_qita_2=0x7f0500a4;
-        public static final int tv_qita_3=0x7f0500a5;
-        public static final int tv_qita_4=0x7f0500a6;
-        public static final int tv_qita_5=0x7f0500a7;
-        public static final int tv_qita_6=0x7f0500a8;
-        public static final int tv_qita_7=0x7f0500a9;
+        public static final int tv_qita_1=0x7f0500b8;
+        public static final int tv_qita_2=0x7f0500b9;
+        public static final int tv_qita_3=0x7f0500ba;
+        public static final int tv_qita_4=0x7f0500bb;
+        public static final int tv_qita_5=0x7f0500bc;
+        public static final int tv_qita_6=0x7f0500bd;
+        public static final int tv_qita_7=0x7f0500be;
         public static final int tv_r1=0x7f050076;
         public static final int tv_r2=0x7f050077;
         public static final int tv_r3=0x7f050078;
@@ -1007,7 +1067,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int tv_r5=0x7f05007a;
         public static final int tv_r6=0x7f05007b;
         public static final int tv_r7=0x7f05007c;
-        public static final int tv_rank=0x7f050089;
+        public static final int tv_rank=0x7f05008c;
+        public static final int tv_rankDown=0x7f05008b;
+        public static final int tv_rankUp=0x7f05008d;
         public static final int tv_renwuBeizhu=0x7f050034;
         public static final int tv_renwuGetDaoju=0x7f05003a;
         public static final int tv_renwuJiaofu=0x7f050037;
@@ -1016,15 +1078,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int tv_renwuName=0x7f050032;
         public static final int tv_renwuPeopleCount=0x7f050036;
         public static final int tv_renwuZhifa=0x7f050039;
-        public static final int tv_renwu_1=0x7f05009f;
-        public static final int tv_renwu_2=0x7f0500a0;
+        public static final int tv_renwu_1=0x7f0500b3;
+        public static final int tv_renwu_2=0x7f0500b4;
         public static final int tv_reply=0x7f050081;
-        public static final int tv_rise_gongjili=0x7f0500b4;
+        public static final int tv_rise_gongjili=0x7f0500c9;
         public static final int tv_shangyePoint=0x7f05003b;
-        public static final int tv_slotNumber_gongji=0x7f0500b6;
-        public static final int tv_slot_gongji=0x7f0500b2;
+        public static final int tv_slotNumber_gongji=0x7f0500cb;
+        public static final int tv_slot_gongji=0x7f0500c7;
         public static final int tv_sui=0x7f05005b;
-        public static final int tv_tesu_yidongli=0x7f0500bc;
+        public static final int tv_tesu_yidongli=0x7f0500d1;
         public static final int tv_title=0x7f050073;
         public static final int tv_totalCount=0x7f05006c;
         public static final int tv_totalPlayTime=0x7f05002e;
@@ -1035,18 +1097,24 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int tv_weaponName=0x7f050043;
         public static final int tv_weaponRank=0x7f05007f;
         public static final int tv_wei=0x7f05005d;
-        public static final int tv_wuqi_1=0x7f05009e;
-        public static final int tv_yidongDown=0x7f0500b8;
-        public static final int tv_yidongUp=0x7f0500b9;
-        public static final int tv_yidongli=0x7f0500ba;
+        public static final int tv_wuqi_1=0x7f0500b1;
+        public static final int tv_wuqi_2=0x7f0500b2;
+        public static final int tv_yidongDown=0x7f0500cd;
+        public static final int tv_yidongUp=0x7f0500ce;
+        public static final int tv_yidongli=0x7f0500cf;
         public static final int tv_yijian=0x7f050082;
+        public static final int tv_yuanshi_25=0x7f05009d;
+        public static final int tv_yuanshi_26=0x7f05009e;
+        public static final int tv_yuanshi_28=0x7f05009f;
+        public static final int tv_yuanshi_jinpai=0x7f05009c;
         public static final int tv_zhen=0x7f05005c;
+        public static final int tv_zhengai=0x7f0500a1;
         public static final int tv_zhengju=0x7f050070;
         public static final int tv_zhenmo=0x7f050061;
         public static final int tv_zhianPoint=0x7f05003f;
         public static final int visible=0x7f050007;
-        public static final int wb=0x7f0500c0;
-        public static final int wb_content=0x7f050083;
+        public static final int wb=0x7f0500d5;
+        public static final int wb_content=0x7f050086;
         public static final int welcome_activity_layout=0x7f050062;
     }
     public static final class layout {
@@ -1074,28 +1142,29 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int adapter_item_weapontype=0x7f030015;
         public static final int adapter_item_yijian_reply=0x7f030016;
         public static final int adapter_item_yijianyilan=0x7f030017;
-        public static final int fragment_loadhtml=0x7f030018;
-        public static final int fragment_loadtxt=0x7f030019;
-        public static final int fragment_meizhouhuodong=0x7f03001a;
-        public static final int fragment_musiclist=0x7f03001b;
-        public static final int fragment_near_user=0x7f03001c;
-        public static final int fragment_neizhengdengji=0x7f03001d;
-        public static final int fragment_personinfo=0x7f03001e;
-        public static final int fragment_pianzimingdan=0x7f03001f;
-        public static final int fragment_transation=0x7f030020;
-        public static final int fragment_videolist=0x7f030021;
-        public static final int fragment_weapon=0x7f030022;
-        public static final int fragment_weapon_duanzao=0x7f030023;
-        public static final int fragment_yijian=0x7f030024;
-        public static final int fragment_yijianyilan=0x7f030025;
-        public static final int pop_choose_weapon=0x7f030026;
-        public static final int slidingmenu=0x7f030027;
-        public static final int slidingmenumain=0x7f030028;
-        public static final int transation_header=0x7f030029;
-        public static final int view_duanzao=0x7f03002a;
-        public static final int view_yidongtiaoyue=0x7f03002b;
-        public static final int weapon_search=0x7f03002c;
-        public static final int webtestactivity=0x7f03002d;
+        public static final int dialog_if_load_music=0x7f030018;
+        public static final int fragment_loadhtml=0x7f030019;
+        public static final int fragment_loadtxt=0x7f03001a;
+        public static final int fragment_meizhouhuodong=0x7f03001b;
+        public static final int fragment_musiclist=0x7f03001c;
+        public static final int fragment_near_user=0x7f03001d;
+        public static final int fragment_neizhengdengji=0x7f03001e;
+        public static final int fragment_personinfo=0x7f03001f;
+        public static final int fragment_pianzimingdan=0x7f030020;
+        public static final int fragment_transation=0x7f030021;
+        public static final int fragment_videolist=0x7f030022;
+        public static final int fragment_weapon=0x7f030023;
+        public static final int fragment_weapon_duanzao=0x7f030024;
+        public static final int fragment_yijian=0x7f030025;
+        public static final int fragment_yijianyilan=0x7f030026;
+        public static final int pop_choose_weapon=0x7f030027;
+        public static final int slidingmenu=0x7f030028;
+        public static final int slidingmenumain=0x7f030029;
+        public static final int transation_header=0x7f03002a;
+        public static final int view_duanzao=0x7f03002b;
+        public static final int view_yidongtiaoyue=0x7f03002c;
+        public static final int weapon_search=0x7f03002d;
+        public static final int webtestactivity=0x7f03002e;
     }
     public static final class string {
         public static final int app_name=0x7f080000;
@@ -1127,18 +1196,19 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f090001;
-        public static final int NumberProgressBar_Beauty_Red=0x7f090008;
-        public static final int NumberProgressBar_Default=0x7f090006;
-        public static final int NumberProgressBar_Funny_Orange=0x7f09000c;
-        public static final int NumberProgressBar_Grace_Yellow=0x7f09000b;
-        public static final int NumberProgressBar_Passing_Green=0x7f090007;
-        public static final int NumberProgressBar_Relax_Blue=0x7f09000a;
-        public static final int NumberProgressBar_Twinkle_Night=0x7f09000d;
-        public static final int NumberProgressBar_Warning_Red=0x7f090009;
-        public static final int progress_dialog=0x7f090002;
-        public static final int style1=0x7f090003;
-        public static final int style2=0x7f090004;
-        public static final int style_fenge=0x7f090005;
+        public static final int NumberProgressBar_Beauty_Red=0x7f090009;
+        public static final int NumberProgressBar_Default=0x7f090007;
+        public static final int NumberProgressBar_Funny_Orange=0x7f09000d;
+        public static final int NumberProgressBar_Grace_Yellow=0x7f09000c;
+        public static final int NumberProgressBar_Passing_Green=0x7f090008;
+        public static final int NumberProgressBar_Relax_Blue=0x7f09000b;
+        public static final int NumberProgressBar_Twinkle_Night=0x7f09000e;
+        public static final int NumberProgressBar_Warning_Red=0x7f09000a;
+        public static final int barcode_dialog=0x7f090002;
+        public static final int progress_dialog=0x7f090003;
+        public static final int style1=0x7f090004;
+        public static final int style2=0x7f090005;
+        public static final int style_fenge=0x7f090006;
     }
     public static final class styleable {
         /** Attributes that can be used with a NumberProgressBar.

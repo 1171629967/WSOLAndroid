@@ -11654,19 +11654,20 @@ com.wlx.wsolandroid.MainActivity -> com.wlx.wsolandroid.MainActivity:
     android.widget.TextView tv_qita_5 -> x
     android.widget.TextView tv_qita_6 -> y
     android.widget.TextView tv_music_1 -> z
-    android.widget.TextView tv_fujiang_1 -> A
-    android.widget.TextView tv_qita_7 -> B
-    java.lang.String currentFragment -> C
-    com.wlx.wsolandroid.widget.MarqueeTextView tv_pamadeng -> D
+    android.widget.TextView tv_music -> A
+    android.widget.TextView tv_fujiang_1 -> B
+    android.widget.TextView tv_qita_7 -> C
+    java.lang.String currentFragment -> D
+    com.wlx.wsolandroid.widget.MarqueeTextView tv_pamadeng -> E
     long waitTime -> o
     long touchTime -> p
-    android.widget.LinearLayout ll -> E
-    android.widget.FrameLayout fl_fragments -> F
-    android.widget.RelativeLayout rl_me -> G
-    android.widget.ImageView iv_avator -> H
-    android.widget.TextView tv_nickName -> I
-    com.baidu.location.LocationClient mLocationClient -> J
-    android.content.BroadcastReceiver mBroadcastReceiver -> K
+    android.widget.LinearLayout ll -> F
+    android.widget.FrameLayout fl_fragments -> G
+    android.widget.RelativeLayout rl_me -> H
+    android.widget.ImageView iv_avator -> I
+    android.widget.TextView tv_nickName -> J
+    com.baidu.location.LocationClient mLocationClient -> K
+    android.content.BroadcastReceiver mBroadcastReceiver -> L
     void onCreate(android.os.Bundle) -> onCreate
     void initView() -> g
     void initSlidingMenu() -> h
@@ -11683,7 +11684,7 @@ com.wlx.wsolandroid.MainActivity -> com.wlx.wsolandroid.MainActivity:
     void initLocation() -> l
     void registerBoradcastReceiver() -> f
     void access$0(com.wlx.wsolandroid.MainActivity) -> a
-    com.wlx.wsolandroid.widget.MarqueeTextView access$1(com.wlx.wsolandroid.MainActivity) -> b
+    com.wlx.wsolandroid.widget.MarqueeTextView access$6(com.wlx.wsolandroid.MainActivity) -> b
 com.wlx.wsolandroid.MainActivity$1 -> com.wlx.wsolandroid.m:
     com.wlx.wsolandroid.MainActivity this$0 -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
@@ -11697,7 +11698,7 @@ com.wlx.wsolandroid.MainActivity$3 -> com.wlx.wsolandroid.o:
 com.wlx.wsolandroid.MainActivity$3$1 -> com.wlx.wsolandroid.p:
     com.wlx.wsolandroid.MainActivity$3 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.wlx.wsolandroid.MainActivity$4 -> com.wlx.wsolandroid.q:
+com.wlx.wsolandroid.MainActivity$5 -> com.wlx.wsolandroid.q:
     com.wlx.wsolandroid.MainActivity this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
@@ -11727,6 +11728,7 @@ com.wlx.wsolandroid.MusicFragment -> com.wlx.wsolandroid.u:
     java.util.List musics -> d
     android.support.v4.widget.SwipeRefreshLayout swipeRefreshLayout -> e
     com.wlx.wsolandroid.widget.NumberProgressBar numberProgressBar -> f
+    com.wlx.wsolandroid.widget.CustomDialogLoadMusic customDialogLoadMusic -> g
     android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
     void initView(android.view.View) -> a
     void initActionBar(android.view.View) -> b
@@ -11736,11 +11738,14 @@ com.wlx.wsolandroid.MusicFragment -> com.wlx.wsolandroid.u:
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
     void onRefresh() -> a
     void openMusic(com.wlx.wsolandroid.model.Music) -> a
+    void loadMusic(int,java.lang.String) -> a
     android.support.v4.widget.SwipeRefreshLayout access$0(com.wlx.wsolandroid.MusicFragment) -> a
     java.util.List access$1(com.wlx.wsolandroid.MusicFragment) -> b
     com.wlx.wsolandroid.adapter.MusicListAdapter access$2(com.wlx.wsolandroid.MusicFragment) -> c
-    com.wlx.wsolandroid.widget.NumberProgressBar access$3(com.wlx.wsolandroid.MusicFragment) -> d
-    void access$4(com.wlx.wsolandroid.MusicFragment,com.wlx.wsolandroid.model.Music) -> a
+    com.wlx.wsolandroid.widget.CustomDialogLoadMusic access$3(com.wlx.wsolandroid.MusicFragment) -> d
+    void access$4(com.wlx.wsolandroid.MusicFragment,int,java.lang.String) -> a
+    com.wlx.wsolandroid.widget.NumberProgressBar access$5(com.wlx.wsolandroid.MusicFragment) -> e
+    void access$6(com.wlx.wsolandroid.MusicFragment,com.wlx.wsolandroid.model.Music) -> a
 com.wlx.wsolandroid.MusicFragment$1 -> com.wlx.wsolandroid.v:
     com.wlx.wsolandroid.MusicFragment this$0 -> a
     void onClick(android.view.View) -> onClick
@@ -11750,13 +11755,21 @@ com.wlx.wsolandroid.MusicFragment$2 -> com.wlx.wsolandroid.w:
     void onError(int,java.lang.String) -> onError
 com.wlx.wsolandroid.MusicFragment$3 -> com.wlx.wsolandroid.x:
     com.wlx.wsolandroid.MusicFragment this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.wlx.wsolandroid.MusicFragment$4 -> com.wlx.wsolandroid.y:
+    com.wlx.wsolandroid.MusicFragment this$0 -> a
+    int val$position -> b
+    java.lang.String val$downLoadPath -> c
+    void onClick(android.view.View) -> onClick
+com.wlx.wsolandroid.MusicFragment$5 -> com.wlx.wsolandroid.z:
+    com.wlx.wsolandroid.MusicFragment this$0 -> a
     int val$position -> b
     void onStart() -> a
     void onLoading(long,long) -> a
     void onSuccess(java.io.File) -> a
     void onFailure(java.lang.Throwable,int,java.lang.String) -> a
     void onSuccess(java.lang.Object) -> a
-com.wlx.wsolandroid.NearUserFragment -> com.wlx.wsolandroid.y:
+com.wlx.wsolandroid.NearUserFragment -> com.wlx.wsolandroid.aa:
     android.widget.ListView lv -> b
     com.wlx.wsolandroid.adapter.NearUserAdapter adapter -> c
     java.util.List users -> d
@@ -11772,14 +11785,14 @@ com.wlx.wsolandroid.NearUserFragment -> com.wlx.wsolandroid.y:
     android.support.v4.widget.SwipeRefreshLayout access$0(com.wlx.wsolandroid.NearUserFragment) -> a
     java.util.List access$1(com.wlx.wsolandroid.NearUserFragment) -> b
     com.wlx.wsolandroid.adapter.NearUserAdapter access$2(com.wlx.wsolandroid.NearUserFragment) -> c
-com.wlx.wsolandroid.NearUserFragment$1 -> com.wlx.wsolandroid.z:
+com.wlx.wsolandroid.NearUserFragment$1 -> com.wlx.wsolandroid.ab:
     com.wlx.wsolandroid.NearUserFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.NearUserFragment$2 -> com.wlx.wsolandroid.aa:
+com.wlx.wsolandroid.NearUserFragment$2 -> com.wlx.wsolandroid.ac:
     com.wlx.wsolandroid.NearUserFragment this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
-com.wlx.wsolandroid.NeizhengDengjiFragment -> com.wlx.wsolandroid.ab:
+com.wlx.wsolandroid.NeizhengDengjiFragment -> com.wlx.wsolandroid.ad:
     android.widget.ListView lv -> b
     com.wlx.wsolandroid.adapter.NeizhengdengjiListAdapter adapter -> c
     java.lang.String[] totalCountArray -> d
@@ -11788,10 +11801,10 @@ com.wlx.wsolandroid.NeizhengDengjiFragment -> com.wlx.wsolandroid.ab:
     void initActionBar(android.view.View) -> b
     void onResume() -> onResume
     void onPause() -> onPause
-com.wlx.wsolandroid.NeizhengDengjiFragment$1 -> com.wlx.wsolandroid.ac:
+com.wlx.wsolandroid.NeizhengDengjiFragment$1 -> com.wlx.wsolandroid.ae:
     com.wlx.wsolandroid.NeizhengDengjiFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.PianzimingdanFragment -> com.wlx.wsolandroid.ad:
+com.wlx.wsolandroid.PianzimingdanFragment -> com.wlx.wsolandroid.af:
     android.widget.ListView listView -> b
     com.wlx.wsolandroid.adapter.PianzimingdanAdapter adapter -> c
     android.view.View v_head -> d
@@ -11811,20 +11824,20 @@ com.wlx.wsolandroid.PianzimingdanFragment -> com.wlx.wsolandroid.ad:
     com.wlx.wsolandroid.adapter.PianzimingdanAdapter access$1(com.wlx.wsolandroid.PianzimingdanFragment) -> b
     java.util.List access$2(com.wlx.wsolandroid.PianzimingdanFragment) -> c
     android.support.v4.widget.SwipeRefreshLayout access$3(com.wlx.wsolandroid.PianzimingdanFragment) -> d
-com.wlx.wsolandroid.PianzimingdanFragment$1 -> com.wlx.wsolandroid.ae:
+com.wlx.wsolandroid.PianzimingdanFragment$1 -> com.wlx.wsolandroid.ag:
     com.wlx.wsolandroid.PianzimingdanFragment this$0 -> a
     void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
     void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     void afterTextChanged(android.text.Editable) -> afterTextChanged
-com.wlx.wsolandroid.PianzimingdanFragment$2 -> com.wlx.wsolandroid.af:
+com.wlx.wsolandroid.PianzimingdanFragment$2 -> com.wlx.wsolandroid.ah:
     com.wlx.wsolandroid.PianzimingdanFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.PianzimingdanFragment$3 -> com.wlx.wsolandroid.ag:
+com.wlx.wsolandroid.PianzimingdanFragment$3 -> com.wlx.wsolandroid.ai:
     com.wlx.wsolandroid.PianzimingdanFragment this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
-com.wlx.wsolandroid.R -> com.wlx.wsolandroid.ah:
-com.wlx.wsolandroid.R$styleable -> com.wlx.wsolandroid.ai:
+com.wlx.wsolandroid.R -> com.wlx.wsolandroid.aj:
+com.wlx.wsolandroid.R$styleable -> com.wlx.wsolandroid.ak:
     int[] NumberProgressBar -> NumberProgressBar
     int NumberProgressBar_max -> NumberProgressBar_max
     int NumberProgressBar_progress -> NumberProgressBar_progress
@@ -11878,7 +11891,7 @@ com.wlx.wsolandroid.RegistActivity -> com.wlx.wsolandroid.RegistActivity:
     void initView() -> b
     void onClick(android.view.View) -> onClick
     void registTask(java.lang.String,java.lang.String) -> a
-com.wlx.wsolandroid.RegistActivity$1 -> com.wlx.wsolandroid.aj:
+com.wlx.wsolandroid.RegistActivity$1 -> com.wlx.wsolandroid.al:
     com.wlx.wsolandroid.RegistActivity this$0 -> a
     void onSuccess() -> onSuccess
     void onFailure(int,java.lang.String) -> onFailure
@@ -11910,11 +11923,11 @@ com.wlx.wsolandroid.RenwuDetailActivity -> com.wlx.wsolandroid.RenwuDetailActivi
     void onPause() -> onPause
     android.support.v4.widget.SwipeRefreshLayout access$0(com.wlx.wsolandroid.RenwuDetailActivity) -> a
     void access$1(com.wlx.wsolandroid.RenwuDetailActivity,com.wlx.wsolandroid.model.RenwuDetail) -> a
-com.wlx.wsolandroid.RenwuDetailActivity$1 -> com.wlx.wsolandroid.ak:
+com.wlx.wsolandroid.RenwuDetailActivity$1 -> com.wlx.wsolandroid.am:
     com.wlx.wsolandroid.RenwuDetailActivity this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
-com.wlx.wsolandroid.RenwuListFragment -> com.wlx.wsolandroid.al:
+com.wlx.wsolandroid.RenwuListFragment -> com.wlx.wsolandroid.an:
     android.widget.ListView lv -> b
     com.wlx.wsolandroid.adapter.RenwuListAdapter adapter -> c
     java.util.List renwus -> d
@@ -11930,10 +11943,10 @@ com.wlx.wsolandroid.RenwuListFragment -> com.wlx.wsolandroid.al:
     android.support.v4.widget.SwipeRefreshLayout access$0(com.wlx.wsolandroid.RenwuListFragment) -> a
     java.util.List access$1(com.wlx.wsolandroid.RenwuListFragment) -> b
     com.wlx.wsolandroid.adapter.RenwuListAdapter access$2(com.wlx.wsolandroid.RenwuListFragment) -> c
-com.wlx.wsolandroid.RenwuListFragment$1 -> com.wlx.wsolandroid.am:
+com.wlx.wsolandroid.RenwuListFragment$1 -> com.wlx.wsolandroid.ao:
     com.wlx.wsolandroid.RenwuListFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.RenwuListFragment$2 -> com.wlx.wsolandroid.an:
+com.wlx.wsolandroid.RenwuListFragment$2 -> com.wlx.wsolandroid.ap:
     com.wlx.wsolandroid.RenwuListFragment this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
@@ -11942,7 +11955,7 @@ com.wlx.wsolandroid.ScaleImageActivity -> com.wlx.wsolandroid.ScaleImageActivity
     java.lang.String imgUrl -> b
     net.tsz.afinal.FinalBitmap finalBitmap -> c
     void onCreate(android.os.Bundle) -> onCreate
-com.wlx.wsolandroid.TransationFragment -> com.wlx.wsolandroid.ao:
+com.wlx.wsolandroid.TransationFragment -> com.wlx.wsolandroid.aq:
     android.support.v4.widget.SwipeRefreshLayout swipeRefreshLayout -> c
     android.widget.TextView tv_headContent -> d
     int progress -> b
@@ -11964,18 +11977,18 @@ com.wlx.wsolandroid.TransationFragment -> com.wlx.wsolandroid.ao:
     android.support.v4.widget.SwipeRefreshLayout access$2(com.wlx.wsolandroid.TransationFragment) -> c
     java.util.List access$3(com.wlx.wsolandroid.TransationFragment) -> d
     com.wlx.wsolandroid.adapter.TransationAdapter access$4(com.wlx.wsolandroid.TransationFragment) -> e
-com.wlx.wsolandroid.TransationFragment$1 -> com.wlx.wsolandroid.ap:
+com.wlx.wsolandroid.TransationFragment$1 -> com.wlx.wsolandroid.ar:
     com.wlx.wsolandroid.TransationFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.TransationFragment$2 -> com.wlx.wsolandroid.aq:
+com.wlx.wsolandroid.TransationFragment$2 -> com.wlx.wsolandroid.as:
     com.wlx.wsolandroid.TransationFragment this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
-com.wlx.wsolandroid.TransationFragment$3 -> com.wlx.wsolandroid.ar:
+com.wlx.wsolandroid.TransationFragment$3 -> com.wlx.wsolandroid.at:
     com.wlx.wsolandroid.TransationFragment this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
-com.wlx.wsolandroid.WeaponJinpaiFragment -> com.wlx.wsolandroid.as:
+com.wlx.wsolandroid.WeaponJinpaiFragment -> com.wlx.wsolandroid.au:
     android.widget.ListView lv1 -> b
     com.wlx.wsolandroid.adapter.WeaponListAdapter adapter -> c
     android.view.View v_head -> d
@@ -11999,24 +12012,24 @@ com.wlx.wsolandroid.WeaponJinpaiFragment -> com.wlx.wsolandroid.as:
     int access$3(com.wlx.wsolandroid.WeaponJinpaiFragment) -> d
     void access$4(com.wlx.wsolandroid.WeaponJinpaiFragment,int) -> a
     android.support.v4.widget.SwipeRefreshLayout access$5(com.wlx.wsolandroid.WeaponJinpaiFragment) -> e
-com.wlx.wsolandroid.WeaponJinpaiFragment$1 -> com.wlx.wsolandroid.at:
+com.wlx.wsolandroid.WeaponJinpaiFragment$1 -> com.wlx.wsolandroid.av:
     com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
     void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
     void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     void afterTextChanged(android.text.Editable) -> afterTextChanged
-com.wlx.wsolandroid.WeaponJinpaiFragment$2 -> com.wlx.wsolandroid.au:
+com.wlx.wsolandroid.WeaponJinpaiFragment$2 -> com.wlx.wsolandroid.aw:
     com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> b
-com.wlx.wsolandroid.WeaponJinpaiFragment$3 -> com.wlx.wsolandroid.av:
+com.wlx.wsolandroid.WeaponJinpaiFragment$3 -> com.wlx.wsolandroid.ax:
     com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.WeaponJinpaiFragment$4 -> com.wlx.wsolandroid.aw:
+com.wlx.wsolandroid.WeaponJinpaiFragment$4 -> com.wlx.wsolandroid.ay:
     com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.WeaponJinpaiFragment$5 -> com.wlx.wsolandroid.ax:
+com.wlx.wsolandroid.WeaponJinpaiFragment$5 -> com.wlx.wsolandroid.az:
     com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
-com.wlx.wsolandroid.WeaponJinpaiFragment$6 -> com.wlx.wsolandroid.ay:
+com.wlx.wsolandroid.WeaponJinpaiFragment$6 -> com.wlx.wsolandroid.ba:
     com.wlx.wsolandroid.WeaponJinpaiFragment this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
@@ -12067,11 +12080,11 @@ com.wlx.wsolandroid.WeaponXishuActivity -> com.wlx.wsolandroid.WeaponXishuActivi
     android.support.v4.widget.SwipeRefreshLayout access$0(com.wlx.wsolandroid.WeaponXishuActivity) -> a
     void access$1(com.wlx.wsolandroid.WeaponXishuActivity,com.wlx.wsolandroid.model.Weilixishu) -> a
     android.widget.TextView access$2(com.wlx.wsolandroid.WeaponXishuActivity) -> b
-com.wlx.wsolandroid.WeaponXishuActivity$1 -> com.wlx.wsolandroid.az:
+com.wlx.wsolandroid.WeaponXishuActivity$1 -> com.wlx.wsolandroid.bb:
     com.wlx.wsolandroid.WeaponXishuActivity this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
-com.wlx.wsolandroid.WeaponXishuActivity$2 -> com.wlx.wsolandroid.ba:
+com.wlx.wsolandroid.WeaponXishuActivity$2 -> com.wlx.wsolandroid.bc:
     com.wlx.wsolandroid.WeaponXishuActivity this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
@@ -12079,12 +12092,12 @@ com.wlx.wsolandroid.WelcomeActivity -> com.wlx.wsolandroid.WelcomeActivity:
     android.view.View vLayout -> a
     void onCreate(android.os.Bundle) -> onCreate
     void startImageAnimation() -> a
-com.wlx.wsolandroid.WelcomeActivity$1 -> com.wlx.wsolandroid.bb:
+com.wlx.wsolandroid.WelcomeActivity$1 -> com.wlx.wsolandroid.bd:
     com.wlx.wsolandroid.WelcomeActivity this$0 -> a
     void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
     void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
     void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
-com.wlx.wsolandroid.YijianFragment -> com.wlx.wsolandroid.bc:
+com.wlx.wsolandroid.YijianFragment -> com.wlx.wsolandroid.be:
     com.wlx.wsolandroid.widget.MyActionBar actionBar -> b
     android.widget.EditText et_content -> c
     com.wlx.wsolandroid.widget.ProgressWheel progressWheel -> d
@@ -12098,13 +12111,13 @@ com.wlx.wsolandroid.YijianFragment -> com.wlx.wsolandroid.bc:
     void access$1(com.wlx.wsolandroid.YijianFragment) -> b
     com.wlx.wsolandroid.widget.MyActionBar access$2(com.wlx.wsolandroid.YijianFragment) -> c
     com.wlx.wsolandroid.widget.ProgressWheel access$3(com.wlx.wsolandroid.YijianFragment) -> d
-com.wlx.wsolandroid.YijianFragment$1 -> com.wlx.wsolandroid.bd:
+com.wlx.wsolandroid.YijianFragment$1 -> com.wlx.wsolandroid.bf:
     com.wlx.wsolandroid.YijianFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.YijianFragment$2 -> com.wlx.wsolandroid.be:
+com.wlx.wsolandroid.YijianFragment$2 -> com.wlx.wsolandroid.bg:
     com.wlx.wsolandroid.YijianFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.YijianFragment$3 -> com.wlx.wsolandroid.bf:
+com.wlx.wsolandroid.YijianFragment$3 -> com.wlx.wsolandroid.bh:
     com.wlx.wsolandroid.YijianFragment this$0 -> a
     void onSuccess() -> onSuccess
     void onFinish() -> onFinish
@@ -12134,22 +12147,22 @@ com.wlx.wsolandroid.YijianReplyActivity -> com.wlx.wsolandroid.YijianReplyActivi
     com.wlx.wsolandroid.adapter.YijianReplyAdapter access$7(com.wlx.wsolandroid.YijianReplyActivity) -> f
     android.app.ProgressDialog access$8(com.wlx.wsolandroid.YijianReplyActivity) -> g
     void access$9(com.wlx.wsolandroid.YijianReplyActivity) -> h
-com.wlx.wsolandroid.YijianReplyActivity$1 -> com.wlx.wsolandroid.bg:
+com.wlx.wsolandroid.YijianReplyActivity$1 -> com.wlx.wsolandroid.bi:
     com.wlx.wsolandroid.YijianReplyActivity this$0 -> a
     void onClick(android.view.View) -> onClick
     com.wlx.wsolandroid.YijianReplyActivity access$0(com.wlx.wsolandroid.YijianReplyActivity$1) -> a
-com.wlx.wsolandroid.YijianReplyActivity$1$1 -> com.wlx.wsolandroid.bh:
+com.wlx.wsolandroid.YijianReplyActivity$1$1 -> com.wlx.wsolandroid.bj:
     com.wlx.wsolandroid.YijianReplyActivity$1 this$1 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.wlx.wsolandroid.YijianReplyActivity$2 -> com.wlx.wsolandroid.bi:
+com.wlx.wsolandroid.YijianReplyActivity$2 -> com.wlx.wsolandroid.bk:
     com.wlx.wsolandroid.YijianReplyActivity this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
-com.wlx.wsolandroid.YijianReplyActivity$3 -> com.wlx.wsolandroid.bj:
+com.wlx.wsolandroid.YijianReplyActivity$3 -> com.wlx.wsolandroid.bl:
     com.wlx.wsolandroid.YijianReplyActivity this$0 -> a
     void onSuccess() -> onSuccess
     void onFailure(int,java.lang.String) -> onFailure
-com.wlx.wsolandroid.YijianyilanFragment -> com.wlx.wsolandroid.bk:
+com.wlx.wsolandroid.YijianyilanFragment -> com.wlx.wsolandroid.bm:
     android.widget.ListView lv -> b
     com.wlx.wsolandroid.adapter.YijianyilanAdapter adapter -> c
     java.util.List yijians -> d
@@ -12165,10 +12178,10 @@ com.wlx.wsolandroid.YijianyilanFragment -> com.wlx.wsolandroid.bk:
     android.support.v4.widget.SwipeRefreshLayout access$0(com.wlx.wsolandroid.YijianyilanFragment) -> a
     java.util.List access$1(com.wlx.wsolandroid.YijianyilanFragment) -> b
     com.wlx.wsolandroid.adapter.YijianyilanAdapter access$2(com.wlx.wsolandroid.YijianyilanFragment) -> c
-com.wlx.wsolandroid.YijianyilanFragment$1 -> com.wlx.wsolandroid.bl:
+com.wlx.wsolandroid.YijianyilanFragment$1 -> com.wlx.wsolandroid.bn:
     com.wlx.wsolandroid.YijianyilanFragment this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.YijianyilanFragment$2 -> com.wlx.wsolandroid.bm:
+com.wlx.wsolandroid.YijianyilanFragment$2 -> com.wlx.wsolandroid.bo:
     com.wlx.wsolandroid.YijianyilanFragment this$0 -> a
     void onSuccess(java.util.List) -> onSuccess
     void onError(int,java.lang.String) -> onError
@@ -12445,6 +12458,9 @@ com.wlx.wsolandroid.model.User -> com.wlx.wsolandroid.model.User:
     java.lang.String lastAddress -> lastAddress
     java.lang.String registOS -> registOS
     java.lang.String lastUseOS -> lastUseOS
+    java.lang.String lastAppVersion -> lastAppVersion
+    java.lang.String getLastAppVersion() -> getLastAppVersion
+    void setLastAppVersion(java.lang.String) -> setLastAppVersion
     java.lang.String getLastUseOS() -> getLastUseOS
     void setLastUseOS(java.lang.String) -> setLastUseOS
     java.lang.String getRegistOS() -> getRegistOS
@@ -12825,12 +12841,22 @@ com.wlx.wsolandroid.utils.Utils -> com.wlx.wsolandroid.c.a:
     java.lang.String selectImage(android.content.Context,android.net.Uri) -> a
     java.lang.String getSelectPhotoPath(android.content.Context,android.net.Uri) -> b
     java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[]) -> a
-    int getVersionCode(android.content.Context) -> a
-    android.content.pm.PackageInfo getPackageInfo(android.content.Context) -> b
+    java.lang.String getVersionName(android.content.Context) -> a
+    int getVersionCode(android.content.Context) -> b
+    android.content.pm.PackageInfo getPackageInfo(android.content.Context) -> d
+    int GetNetype(android.content.Context) -> c
+com.wlx.wsolandroid.widget.CustomDialogLoadMusic -> com.wlx.wsolandroid.widget.a:
+    android.widget.TextView tv_comfirn -> a
+    android.widget.TextView tv_cancel -> b
+    android.view.View$OnClickListener cancelClickListener -> c
+    android.view.View$OnClickListener confirmClickListener -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void setCancelClick(android.view.View$OnClickListener) -> a
+    void setConfrimClick(android.view.View$OnClickListener) -> b
 com.wlx.wsolandroid.widget.MarqueeTextView -> com.wlx.wsolandroid.widget.MarqueeTextView:
     void onFocusChanged(boolean,int,android.graphics.Rect) -> onFocusChanged
     boolean isFocused() -> isFocused
-com.wlx.wsolandroid.widget.MyActionBar -> com.wlx.wsolandroid.widget.a:
+com.wlx.wsolandroid.widget.MyActionBar -> com.wlx.wsolandroid.widget.b:
     android.widget.LinearLayout leftLayout -> b
     android.widget.LinearLayout middleLayout -> c
     android.widget.LinearLayout rightLayout -> d
@@ -12861,18 +12887,18 @@ com.wlx.wsolandroid.widget.MyActionBar -> com.wlx.wsolandroid.widget.a:
     void setRightClickListenner(android.view.View$OnClickListener) -> setRightClickListenner
     android.widget.LinearLayout getRightLayout() -> getRightLayout
     android.app.Activity access$0(com.wlx.wsolandroid.widget.MyActionBar) -> a
-com.wlx.wsolandroid.widget.MyActionBar$1 -> com.wlx.wsolandroid.widget.b:
+com.wlx.wsolandroid.widget.MyActionBar$1 -> com.wlx.wsolandroid.widget.c:
     com.wlx.wsolandroid.widget.MyActionBar this$0 -> a
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.widget.MyActionBar$2 -> com.wlx.wsolandroid.widget.c:
-    com.wlx.wsolandroid.widget.MyActionBar this$0 -> a
-    android.content.Intent val$intent -> b
-    void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.widget.MyActionBar$3 -> com.wlx.wsolandroid.widget.d:
+com.wlx.wsolandroid.widget.MyActionBar$2 -> com.wlx.wsolandroid.widget.d:
     com.wlx.wsolandroid.widget.MyActionBar this$0 -> a
     android.content.Intent val$intent -> b
     void onClick(android.view.View) -> onClick
-com.wlx.wsolandroid.widget.MyRelativeLayoutView -> com.wlx.wsolandroid.widget.e:
+com.wlx.wsolandroid.widget.MyActionBar$3 -> com.wlx.wsolandroid.widget.e:
+    com.wlx.wsolandroid.widget.MyActionBar this$0 -> a
+    android.content.Intent val$intent -> b
+    void onClick(android.view.View) -> onClick
+com.wlx.wsolandroid.widget.MyRelativeLayoutView -> com.wlx.wsolandroid.widget.f:
     android.content.Context context -> a
     void initDefult() -> c
     int initLayout() -> a
@@ -12944,7 +12970,7 @@ com.wlx.wsolandroid.widget.NumberProgressBar -> com.wlx.wsolandroid.widget.Numbe
     float sp2px(float) -> b
     void setProgressTextVisibility(com.wlx.wsolandroid.widget.NumberProgressBar$ProgressTextVisibility) -> setProgressTextVisibility
     boolean getProgressTextVisibility() -> getProgressTextVisibility
-com.wlx.wsolandroid.widget.NumberProgressBar$ProgressTextVisibility -> com.wlx.wsolandroid.widget.f:
+com.wlx.wsolandroid.widget.NumberProgressBar$ProgressTextVisibility -> com.wlx.wsolandroid.widget.g:
     com.wlx.wsolandroid.widget.NumberProgressBar$ProgressTextVisibility Visible -> a
     com.wlx.wsolandroid.widget.NumberProgressBar$ProgressTextVisibility Invisible -> b
     com.wlx.wsolandroid.widget.NumberProgressBar$ProgressTextVisibility[] ENUM$VALUES -> c

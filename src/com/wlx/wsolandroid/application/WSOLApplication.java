@@ -13,7 +13,9 @@ import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.utils.DistanceUtil;
 import com.umeng.analytics.MobclickAgent;
+import com.wlx.wsolandroid.MainActivity;
 import com.wlx.wsolandroid.model.User;
+import com.wlx.wsolandroid.utils.Utils;
 
 public class WSOLApplication extends Application {
 	public LocationClient mLocationClient;
@@ -89,6 +91,9 @@ public class WSOLApplication extends Application {
 		newUser.setLastGeoPoint(point);
 		newUser.setLastAddress(address);
 		newUser.setLastUseOS("Android  " + android.os.Build.VERSION.RELEASE);
+		newUser.setLastAppVersion("Android  " + Utils.getVersionName(this));
+
+		
 
 		BmobUser bmobUser = BmobUser.getCurrentUser(this);
 		newUser.update(this, bmobUser.getObjectId(), new UpdateListener() {

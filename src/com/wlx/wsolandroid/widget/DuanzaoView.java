@@ -73,7 +73,6 @@ public class DuanzaoView extends View {
     
     public void changeWidth(float selfWidth){
     	this.selfWidth = selfWidth;
-    	
     }
     
  

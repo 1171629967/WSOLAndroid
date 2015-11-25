@@ -20,12 +20,19 @@ public class User extends BmobUser{
 	private String lastAddress;
 	private String registOS;
 	private String lastUseOS;
+	private String lastAppVersion;
 	
 	
 	
 	
 	
 	
+	public String getLastAppVersion() {
+		return lastAppVersion;
+	}
+	public void setLastAppVersion(String lastAppVersion) {
+		this.lastAppVersion = lastAppVersion;
+	}
 	public String getLastUseOS() {
 		return lastUseOS;
 	}

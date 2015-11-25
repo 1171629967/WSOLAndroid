@@ -45,8 +45,8 @@ import com.wlx.wsolandroid.widget.MarqueeTextView;
 public class MainActivity extends FragmentActivity implements OnClickListener,
 		menuClicklistener {
 	public SlidingMenu menu;
-	private TextView tv_wuqi_1,tv_renwu_1, tv_renwu_2, tv_qita_1, tv_qita_2, tv_qita_3,
-			tv_qita_4, tv_qita_5, tv_qita_6, tv_music_1,
+	private TextView tv_wuqi_1,tv_wuqi_2, tv_renwu_1, tv_renwu_2, tv_qita_1, tv_qita_2,
+			tv_qita_3, tv_qita_4, tv_qita_5, tv_qita_6, tv_music_1,tv_music,
 			tv_fujiang_1;
 	private TextView tv_qita_7;
 	private String currentFragment;
@@ -62,8 +62,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 	private RelativeLayout rl_me;
 	private ImageView iv_avator;
 	private TextView tv_nickName;
-	
-	public final static String  ACTION_FINISH_MAIN_ACTIVITY = "com.wlx.wsolandroid.action_finish_main_activity";
+
+	public final static String ACTION_FINISH_MAIN_ACTIVITY = "com.wlx.wsolandroid.action_finish_main_activity";
 
 	// 百度定位
 	private LocationClient mLocationClient;
@@ -87,12 +87,12 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 			@Override
 			public void run() {
 				loadPaomadengMessage();
+				//configTiebaAbout();
 			}
 		}, 1000);
 
 		checkVersion();
-		
-		
+
 	}
 
 	private void initView() {
@@ -110,8 +110,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		setFaceAndNickname();
 
 		tv_wuqi_1 = (TextView) menu.findViewById(R.id.tv_wuqi_1);
-		// tv_wuqi_2 = (TextView) menu.findViewById(R.id.tv_wuqi_2);
-		 tv_renwu_1 = (TextView) menu.findViewById(R.id.tv_renwu_1);
+		tv_wuqi_2 = (TextView) menu.findViewById(R.id.tv_wuqi_2);
+		tv_renwu_1 = (TextView) menu.findViewById(R.id.tv_renwu_1);
 		tv_renwu_2 = (TextView) menu.findViewById(R.id.tv_renwu_2);
 		tv_qita_1 = (TextView) menu.findViewById(R.id.tv_qita_1);
 		tv_qita_2 = (TextView) menu.findViewById(R.id.tv_qita_2);
@@ -121,11 +121,13 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		tv_qita_6 = (TextView) menu.findViewById(R.id.tv_qita_6);
 		tv_qita_7 = (TextView) menu.findViewById(R.id.tv_qita_7);
 		tv_music_1 = (TextView) menu.findViewById(R.id.tv_music_1);
+		tv_music = (TextView) menu.findViewById(R.id.tv_music);
+
 		// tv_video_1 = (TextView) menu.findViewById(R.id.tv_video_1);
 		tv_fujiang_1 = (TextView) menu.findViewById(R.id.tv_fujiang_1);
 		tv_wuqi_1.setOnClickListener(this);
-		// tv_wuqi_2.setOnClickListener(this);
-		 tv_renwu_1.setOnClickListener(this);
+		tv_wuqi_2.setOnClickListener(this);
+		tv_renwu_1.setOnClickListener(this);
 		tv_renwu_2.setOnClickListener(this);
 		tv_qita_1.setOnClickListener(this);
 		tv_qita_2.setOnClickListener(this);
@@ -169,12 +171,12 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 			currentFragment = Constant.JINPAIWUQI;
 		}
 		// 武器锻造模拟器----------------------------->
-		// if (v == tv_wuqi_2 && !currentFragment.equals(Constant.WUQIDUANZAO))
-		// {
-		// getSupportFragmentManager().beginTransaction()
-		// .replace(R.id.fl_fragments, new WeaponDuanzaoFragment()).commit();
-		// currentFragment = Constant.WUQIDUANZAO;
-		// }
+		 if (v == tv_wuqi_2 && !currentFragment.equals(Constant.WUQIDUANZAO))
+		 {
+		 getSupportFragmentManager().beginTransaction()
+		 .replace(R.id.fl_fragments, new WeaponDuanzaoFragment()).commit();
+		 currentFragment = Constant.WUQIDUANZAO;
+		 }
 		// 任务列表----------------------------->
 		else if (v == tv_renwu_1
 				&& !currentFragment.equals(Constant.RENWULIEBIAO)) {
@@ -329,13 +331,10 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		FinalBitmap.create(this).display(iv_avator, trueFaceUrl);
 		tv_nickName.setText(currentUser.getNickName());
 	}
-	
-	
-	
+
 	/** 检查app版本是否需要更新 */
-	private void checkVersion(){
-		
-		
+	private void checkVersion() {
+
 		BmobQuery<AppVersion> bmobQuery = new BmobQuery<AppVersion>();
 		bmobQuery.addWhereEqualTo("osType", "android");
 		bmobQuery.findObjects(this, new FindListener<AppVersion>() {
@@ -344,35 +343,66 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 			public void onSuccess(List<AppVersion> appVersions) {
 				AppVersion appVersion = appVersions.get(0);
 				int versionCode = appVersion.getVersionCode();
-				//有新版本
+				// 有新版本
 				if (versionCode > Utils.getVersionCode(MainActivity.this)) {
 					AlertDialog.Builder builder = new Builder(MainActivity.this);
 					String lastVersionDes = appVersion.getLastVersionDes();
 					builder.setMessage(lastVersionDes.replace("$", "\n"));
 					builder.setTitle("有新版本可以更新");
-					builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog, int which) {
-							dialog.dismiss();
-						}
-					});
+					builder.setPositiveButton("确定",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int which) {
+									dialog.dismiss();
+								}
+							});
 					builder.show();
 				}
-				
-				
-				
+
 			}
 
 			@Override
 			public void onError(int arg0, String arg1) {
-				
+
 			}
 		});
-		
-		
+
 	}
-	
-	
-	
+
+	/** 控制是否显示贴吧相关的模块，如吧主担保交易，骗子名单 */
+	private void configTiebaAbout() {
+		BmobQuery<Information> bmobQuery = new BmobQuery<Information>();
+		bmobQuery.addWhereEqualTo("type", "open_or_close_some_parts_android");
+		bmobQuery.findObjects(this, new FindListener<Information>() {
+
+			@Override
+			public void onSuccess(List<Information> infos) {
+				Information info = infos.get(0);
+				String des = info.getDes();
+				if (des.equals("false")) {
+					tv_qita_2.setVisibility(View.GONE);
+					tv_qita_3.setVisibility(View.GONE);
+					tv_qita_6.setVisibility(View.GONE);
+					tv_music_1.setVisibility(View.GONE);
+					tv_music.setVisibility(View.GONE);
+
+				} else {
+					tv_qita_2.setVisibility(View.VISIBLE);
+					tv_qita_3.setVisibility(View.VISIBLE);
+					tv_qita_6.setVisibility(View.VISIBLE);
+					tv_music_1.setVisibility(View.VISIBLE);
+					tv_music.setVisibility(View.VISIBLE);
+
+				}
+			}
+
+			@Override
+			public void onError(int arg0, String arg1) {
+				tv_pamadeng.setVisibility(View.GONE);
+			}
+		});
+
+	}
 
 	private void loadPaomadengMessage() {
 		BmobQuery<Information> bmobQuery = new BmobQuery<Information>();
@@ -428,34 +458,22 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		mLocationClient.setLocOption(option);
 		mLocationClient.start();
 	}
-	
-	
-	
-	public void registerBoradcastReceiver(){  
-        IntentFilter myIntentFilter = new IntentFilter();  
-        myIntentFilter.addAction(ACTION_FINISH_MAIN_ACTIVITY);  
-        //注册广播        
-        registerReceiver(mBroadcastReceiver, myIntentFilter);  
-    }  
-	
-	private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver(){  
-        @Override  
-        public void onReceive(Context context, Intent intent) {  
-            String action = intent.getAction();  
-            if(action.equals(ACTION_FINISH_MAIN_ACTIVITY)){  
-                finish();
-            }  
-        }           
-    };  
-    
-    
-    
-    
-    
-    
-   
-    
-    
-    
+
+	public void registerBoradcastReceiver() {
+		IntentFilter myIntentFilter = new IntentFilter();
+		myIntentFilter.addAction(ACTION_FINISH_MAIN_ACTIVITY);
+		// 注册广播
+		registerReceiver(mBroadcastReceiver, myIntentFilter);
+	}
+
+	private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			String action = intent.getAction();
+			if (action.equals(ACTION_FINISH_MAIN_ACTIVITY)) {
+				finish();
+			}
+		}
+	};
 
 }

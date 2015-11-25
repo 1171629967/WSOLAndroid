@@ -47,6 +47,7 @@ import com.wlx.wsolandroid.model.Weilixishu;
 import com.wlx.wsolandroid.model.Yijian;
 import com.wlx.wsolandroid.music.PlayMusicActivity;
 import com.wlx.wsolandroid.utils.Utils;
+import com.wlx.wsolandroid.widget.CustomDialogLoadMusic;
 import com.wlx.wsolandroid.widget.MyActionBar;
 import com.wlx.wsolandroid.widget.NumberProgressBar;
 
@@ -60,6 +61,8 @@ public class MusicFragment extends BaseFragment implements OnItemClickListener,
 	private SwipeRefreshLayout swipeRefreshLayout;
 
 	private NumberProgressBar numberProgressBar;
+	
+	private CustomDialogLoadMusic customDialogLoadMusic;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -146,18 +149,78 @@ public class MusicFragment extends BaseFragment implements OnItemClickListener,
 	public void onItemClick(AdapterView<?> arg0, View arg1, final int position,
 			long arg3) {
 
-		String downLoadPath = Utils.getDownLoadMusicDir()
+		final String downLoadPath = Utils.getDownLoadMusicDir()
 				+ musics.get(position).getMusicFile().getFilename();
 		if (downLoadPath != null && new File(downLoadPath).exists()) {
-			
 			openMusic(musics.get(position));
 			return;
 		}
 
+		// 判断一下网络
+		switch (Utils.GetNetype(getActivity())) {
+		case -1:
+			Toast.makeText(getActivity(), "当前网络状况不可用，请检查是否打开了网络", Toast.LENGTH_LONG).show();
+			break;
+		case 1:
+			loadMusic(position, downLoadPath);
+			break;
+		case 2:			
+		case 3:
+			customDialogLoadMusic = new CustomDialogLoadMusic(getActivity());
+			customDialogLoadMusic.show();
+			customDialogLoadMusic.setCancelClick(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					customDialogLoadMusic.dismiss();
+				}
+			});
+			customDialogLoadMusic.setConfrimClick(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					customDialogLoadMusic.dismiss();
+					loadMusic(position, downLoadPath);
+				}
+			});
+			break;
+		default:
+			break;
+		}
+
+		
+	}
+
+	@Override
+	public void onRefresh() {
+		musics.clear();
+		this.loadData();
+	}
+
+	private void openMusic(Music music) {
+		String downLoadPath = Utils.getDownLoadMusicDir()
+				+ music.getMusicFile().getFilename();
+		music.setData(downLoadPath);
+		Intent intent = new Intent(getActivity(), PlayMusicActivity.class);
+		Bundle bundle = new Bundle();
+		bundle.putSerializable("music", music);
+		intent.putExtras(bundle);
+		startActivity(intent);
+
+		//
+		// Uri uri = Uri.parse(musicPath);
+		// Intent intent = new Intent(Intent.ACTION_VIEW);
+		// //intent.addCategory(Intent.CATEGORY_APP_MUSIC);
+		// intent.setDataAndType(uri, "audio/*");
+		// startActivity(intent);
+	}
+	
+	
+	
+	private void loadMusic(final int position,String downLoadPath){
 		final String downLoadUrl = musics.get(position).getMusicFile()
 				.getFileUrl(getActivity());
 		FinalHttp finalHttp = new FinalHttp();
-
 		finalHttp.download(downLoadUrl, downLoadPath, true,
 				new AjaxCallBack<File>() {
 
@@ -197,30 +260,6 @@ public class MusicFragment extends BaseFragment implements OnItemClickListener,
 
 				});
 
-	}
-
-	@Override
-	public void onRefresh() {
-		musics.clear();
-		this.loadData();
-	}
-
-	private void openMusic(Music music) {
-		String downLoadPath = Utils.getDownLoadMusicDir()
-				+ music.getMusicFile().getFilename();
-		music.setData(downLoadPath);
-		Intent intent = new Intent(getActivity(), PlayMusicActivity.class);
-		Bundle bundle = new Bundle();
-		bundle.putSerializable("music", music);
-		intent.putExtras(bundle);
-		startActivity(intent);
-
-		//
-		// Uri uri = Uri.parse(musicPath);
-		// Intent intent = new Intent(Intent.ACTION_VIEW);
-		// //intent.addCategory(Intent.CATEGORY_APP_MUSIC);
-		// intent.setDataAndType(uri, "audio/*");
-		// startActivity(intent);
 	}
 
 }

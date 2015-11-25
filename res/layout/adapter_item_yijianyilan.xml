@@ -10,6 +10,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:textColor="@color/white"
+        android:drawableRight="@drawable/narrow_gray"
+        android:gravity="center_vertical"
+        android:drawablePadding="5dp"
         android:textSize="14sp" />
 
 </LinearLayout>

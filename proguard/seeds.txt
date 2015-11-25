@@ -8200,7 +8200,23 @@ com.wlx.wsolandroid.R$color: int white
 com.wlx.wsolandroid.R$color: int whitesmoke
 com.wlx.wsolandroid.R$color: int wushuangcao
 com.wlx.wsolandroid.R$color: int yellow
+com.wlx.wsolandroid.R$dimen: int font_size_caption_1
+com.wlx.wsolandroid.R$dimen: int font_size_caption_2
+com.wlx.wsolandroid.R$dimen: int font_size_select
+com.wlx.wsolandroid.R$dimen: int font_size_sub_caption
+com.wlx.wsolandroid.R$dimen: int font_size_tab_bar
+com.wlx.wsolandroid.R$dimen: int font_size_text_1
+com.wlx.wsolandroid.R$dimen: int font_size_text_2
+com.wlx.wsolandroid.R$dimen: int font_size_title
+com.wlx.wsolandroid.R$dimen: int height_min_empty_view_pinbaodetails
+com.wlx.wsolandroid.R$dimen: int middle_text_content_font_size
+com.wlx.wsolandroid.R$dimen: int padding_larger
+com.wlx.wsolandroid.R$dimen: int padding_medium
+com.wlx.wsolandroid.R$dimen: int padding_small
 com.wlx.wsolandroid.R$dimen: int sliding_menu_offset
+com.wlx.wsolandroid.R$dimen: int small_text_content_font_size
+com.wlx.wsolandroid.R$dimen: int text_content_font_size
+com.wlx.wsolandroid.R$dimen: int title_height
 com.wlx.wsolandroid.R$drawable: int app_backgroundcolor0
 com.wlx.wsolandroid.R$drawable: int app_backgroundcolor1
 com.wlx.wsolandroid.R$drawable: int app_backgroundcolor10
@@ -8219,6 +8235,7 @@ com.wlx.wsolandroid.R$drawable: int avator_default
 com.wlx.wsolandroid.R$drawable: int borner_login_out
 com.wlx.wsolandroid.R$drawable: int borner_weapon_duanzao
 com.wlx.wsolandroid.R$drawable: int borner_weapon_search_cancel
+com.wlx.wsolandroid.R$drawable: int gray_round_corner_bg
 com.wlx.wsolandroid.R$drawable: int icon
 com.wlx.wsolandroid.R$drawable: int menu_left
 com.wlx.wsolandroid.R$drawable: int menu_left_normal
@@ -8228,6 +8245,7 @@ com.wlx.wsolandroid.R$drawable: int star
 com.wlx.wsolandroid.R$drawable: int upnarrow
 com.wlx.wsolandroid.R$drawable: int weapon_appreciate_listview_back
 com.wlx.wsolandroid.R$drawable: int welcome_img4
+com.wlx.wsolandroid.R$drawable: int white_round_corner_bg
 com.wlx.wsolandroid.R$id: int bt_changeMoshi
 com.wlx.wsolandroid.R$id: int bt_confirm
 com.wlx.wsolandroid.R$id: int bt_findPassword
@@ -8335,6 +8353,8 @@ com.wlx.wsolandroid.R$id: int tv_base
 com.wlx.wsolandroid.R$id: int tv_base_gongjili
 com.wlx.wsolandroid.R$id: int tv_base_yidongli
 com.wlx.wsolandroid.R$id: int tv_beizhu
+com.wlx.wsolandroid.R$id: int tv_cancel
+com.wlx.wsolandroid.R$id: int tv_comfirn
 com.wlx.wsolandroid.R$id: int tv_content
 com.wlx.wsolandroid.R$id: int tv_currentMoshi
 com.wlx.wsolandroid.R$id: int tv_currentPlayTime
@@ -8358,6 +8378,7 @@ com.wlx.wsolandroid.R$id: int tv_lastDiffer
 com.wlx.wsolandroid.R$id: int tv_liutongPoint
 com.wlx.wsolandroid.R$id: int tv_lvNumber
 com.wlx.wsolandroid.R$id: int tv_moveAndJump
+com.wlx.wsolandroid.R$id: int tv_music
 com.wlx.wsolandroid.R$id: int tv_musicName
 com.wlx.wsolandroid.R$id: int tv_music_1
 com.wlx.wsolandroid.R$id: int tv_name
@@ -8445,6 +8466,7 @@ com.wlx.wsolandroid.R$layout: int adapter_item_weaponrank
 com.wlx.wsolandroid.R$layout: int adapter_item_weapontype
 com.wlx.wsolandroid.R$layout: int adapter_item_yijian_reply
 com.wlx.wsolandroid.R$layout: int adapter_item_yijianyilan
+com.wlx.wsolandroid.R$layout: int dialog_if_load_music
 com.wlx.wsolandroid.R$layout: int fragment_loadhtml
 com.wlx.wsolandroid.R$layout: int fragment_loadtxt
 com.wlx.wsolandroid.R$layout: int fragment_meizhouhuodong
@@ -8478,6 +8500,7 @@ com.wlx.wsolandroid.R$style: int NumberProgressBar_Passing_Green
 com.wlx.wsolandroid.R$style: int NumberProgressBar_Relax_Blue
 com.wlx.wsolandroid.R$style: int NumberProgressBar_Twinkle_Night
 com.wlx.wsolandroid.R$style: int NumberProgressBar_Warning_Red
+com.wlx.wsolandroid.R$style: int barcode_dialog
 com.wlx.wsolandroid.R$style: int progress_dialog
 com.wlx.wsolandroid.R$style: int style1
 com.wlx.wsolandroid.R$style: int style2
@@ -8663,7 +8686,10 @@ com.wlx.wsolandroid.model.User: cn.bmob.v3.datatype.BmobGeoPoint lastGeoPoint
 com.wlx.wsolandroid.model.User: java.lang.String lastAddress
 com.wlx.wsolandroid.model.User: java.lang.String registOS
 com.wlx.wsolandroid.model.User: java.lang.String lastUseOS
+com.wlx.wsolandroid.model.User: java.lang.String lastAppVersion
 com.wlx.wsolandroid.model.User: User()
+com.wlx.wsolandroid.model.User: java.lang.String getLastAppVersion()
+com.wlx.wsolandroid.model.User: void setLastAppVersion(java.lang.String)
 com.wlx.wsolandroid.model.User: java.lang.String getLastUseOS()
 com.wlx.wsolandroid.model.User: void setLastUseOS(java.lang.String)
 com.wlx.wsolandroid.model.User: java.lang.String getRegistOS()

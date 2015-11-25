@@ -1,4 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name= "sliding_menu_offset">100dp</dimen>
+    
+     <!-- title高度 -->
+    <dimen name="title_height">50dp</dimen>
+    <!-- 使用的文字尺寸 -->
+    <dimen name="font_size_title">20sp</dimen>
+    <!-- 边距 -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_larger">17dp</dimen>
+    
+    <!-- ActionBar 主标题文字大小 -->
+    <dimen name="font_size_caption_1">17sp</dimen>
+    <!-- tableView（Item）文字大小 -->
+    <dimen name="font_size_caption_2">15sp</dimen>
+    <!-- 大铵钮文字，正文输入文字，顶部铵钮 -->
+    <dimen name="font_size_sub_caption">14sp</dimen>
+    <!-- 副标题，说明性文字 -->
+    <dimen name="font_size_text_1">13sp</dimen>
+    <!-- 灰色底部的说明，小版铵钮内的文字 -->
+    <dimen name="font_size_text_2">12sp</dimen>
+    <!-- 说明文字 -->
+    <dimen name="font_size_tab_bar">11sp</dimen>
+    <!-- 说明文字 底部 -->
+    <dimen name="font_size_select">10sp</dimen>
+    
+    <!-- 内容 -->
+    <dimen name="text_content_font_size">16sp</dimen>
+    <dimen name="middle_text_content_font_size">14sp</dimen>
+    <dimen name="small_text_content_font_size">13sp</dimen>
+    
+    
+    <dimen name="height_min_empty_view_pinbaodetails">160dp</dimen>
 </resources>

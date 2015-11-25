@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="@drawable/white_round_corner_bg"
+        android:padding="@dimen/padding_medium" >
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/padding_medium"
+            android:text="您当前使用的是2G/3G/4G网络，下载音乐将会消耗大量流量，是否继续？"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_size_sub_caption" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dip"
+            android:layout_marginTop="10dip" >
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="80dip"
+                android:layout_height="30dip"
+                android:gravity="center"
+                android:layout_marginRight="15dip"
+                android:text="取消"
+                android:background="@drawable/gray_round_corner_bg"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font_size_sub_caption" />
+
+            <TextView
+                android:id="@+id/tv_comfirn"
+                android:layout_width="80dip"
+                android:layout_height="30dip"
+                android:gravity="center"
+                android:text="确定"
+                android:background="@drawable/gray_round_corner_bg"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font_size_sub_caption" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

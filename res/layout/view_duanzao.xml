@@ -12,6 +12,7 @@
         android:id="@+id/tv_gongjiDown"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:visibility="invisible"
         android:layout_centerVertical="true"
         android:gravity="center"
         android:text="-"
@@ -105,8 +106,7 @@
                     android:layout_gravity="center_vertical"
                     android:id="@+id/iv_upNarrow_gongji_rise"
                     android:layout_width="10dp"
-                    android:layout_height="14dp"
-                    android:background="@drawable/upnarrow" />
+                    android:layout_height="14dp" />
                 
                 <TextView
                     android:layout_width="wrap_content"

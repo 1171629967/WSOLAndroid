@@ -2105,6 +2105,13 @@ com.wlx.wsolandroid.LoadhtmlFragment
 com.wlx.wsolandroid.LoadhtmlFragment$1
 com.wlx.wsolandroid.MainActivity:
     public static final java.lang.String ACTION_FINISH_MAIN_ACTIVITY
+    374:405:private void configTiebaAbout()
+    48:48:static synthetic android.widget.TextView access$1(com.wlx.wsolandroid.MainActivity)
+    49:49:static synthetic android.widget.TextView access$2(com.wlx.wsolandroid.MainActivity)
+    49:49:static synthetic android.widget.TextView access$3(com.wlx.wsolandroid.MainActivity)
+    49:49:static synthetic android.widget.TextView access$4(com.wlx.wsolandroid.MainActivity)
+    49:49:static synthetic android.widget.TextView access$5(com.wlx.wsolandroid.MainActivity)
+com.wlx.wsolandroid.MainActivity$4
 com.wlx.wsolandroid.MeizhouhuodongFragment:
     boolean running
 com.wlx.wsolandroid.PianzimingdanFragment:
@@ -2122,7 +2129,7 @@ com.wlx.wsolandroid.R$layout
 com.wlx.wsolandroid.R$string
 com.wlx.wsolandroid.R$style
 com.wlx.wsolandroid.R$styleable:
-    1143:1143:public R$styleable()
+    1188:1188:public R$styleable()
 com.wlx.wsolandroid.TransationFragment:
     boolean running
 com.wlx.wsolandroid.VideoListFragment
@@ -2210,9 +2217,8 @@ com.wlx.wsolandroid.music.PlayMusicService:
 com.wlx.wsolandroid.utils.APIUtils
 com.wlx.wsolandroid.utils.JsonUtils
 com.wlx.wsolandroid.utils.Utils:
-    30:30:public Utils()
-    97:112:public static int getDisplay(android.app.Activity,int)
-    205:205:public static java.lang.String getVersionName(android.content.Context)
+    32:32:public Utils()
+    99:114:public static int getDisplay(android.app.Activity,int)
 com.wlx.wsolandroid.weapondata.ClothesXiandingData
 com.wlx.wsolandroid.weapondata.R1WeaponData
 com.wlx.wsolandroid.weapondata.R2WeaponData

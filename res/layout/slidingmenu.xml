@@ -45,7 +45,7 @@
                 </RelativeLayout>
 
                 <View style="@style/style_fenge" />
-                
+
                 <TextView
                     style="@style/style1"
                     android:text="武器" />
@@ -54,12 +54,11 @@
                     android:id="@+id/tv_wuqi_1"
                     style="@style/style2"
                     android:text="金牌上升和威力系数" />
-                <!--
-                     <TextView
+
+                <TextView
                     android:id="@+id/tv_wuqi_2"
                     style="@style/style2"
                     android:text="武器锻造模拟器" />
-                -->
 
                 <View style="@style/style_fenge" />
 
@@ -67,12 +66,10 @@
                     style="@style/style1"
                     android:text="任务" />
 
-                
-                     <TextView
+                <TextView
                     android:id="@+id/tv_renwu_1"
                     style="@style/style2"
                     android:text="任务列表" />
-                
 
                 <TextView
                     android:id="@+id/tv_renwu_2"
@@ -82,6 +79,7 @@
                 <View style="@style/style_fenge" />
 
                 <TextView
+                    android:id="@+id/tv_music"
                     style="@style/style1"
                     android:text="音乐" />
 
@@ -90,7 +88,6 @@
                     style="@style/style2"
                     android:text="游戏BGM音乐" />
 
-                <View style="@style/style_fenge" />
                 <!--
                  <TextView
                     style="@style/style1"
@@ -105,8 +102,6 @@
                 <TextView
                     style="@style/style1"
                     android:text="服饰" />
-
-                <View style="@style/style_fenge" />
 
                 <TextView
                     style="@style/style1"
@@ -165,6 +160,7 @@
                     android:id="@+id/tv_qita_6"
                     style="@style/style2"
                     android:text="吧主担保交易" />
+
                 <TextView
                     android:id="@+id/tv_qita_7"
                     style="@style/style2"
