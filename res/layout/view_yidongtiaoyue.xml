@@ -76,7 +76,7 @@
         android:id="@+id/iv_upNarrow"
         android:layout_width="10dp"
         android:layout_height="14dp"
-        android:background="@drawable/upnarrow"
+        android:src="@drawable/upnarrow"
         android:layout_alignBottom="@+id/tv_tesu_yidongli"
         android:layout_toRightOf="@+id/tv_tesu_yidongli"
         android:layout_marginBottom="3dp"

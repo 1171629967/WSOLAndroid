@@ -1,6 +1,9 @@
 package com.wlx.wsolandroid.adapter;
 
+import java.util.List;
+
 import com.wlx.wsolandroid.R;
+import com.wlx.wsolandroid.model.WeaponJinpai;
 import com.wlx.wsolandroid.weapondata.R1WeaponData;
 
 import android.content.Context;
@@ -13,13 +16,12 @@ import android.widget.TextView;
 
 public class WeaponTypeAdapter extends BaseAdapter {
 	private Context context;
-	private String weaponType[] ;
-	private int currentType;
+	private int currentType;//武器在列表中的位置 0：偃月刀  1：大斧
+	private List<WeaponJinpai> weaponJinpais;
 	
-	
-	public WeaponTypeAdapter(Context context) {
+	public WeaponTypeAdapter(Context context,List<WeaponJinpai> weaponJinpais) {
 		this.context = context;
-		this.weaponType = R1WeaponData.R1Names;
+		this.weaponJinpais = weaponJinpais;
 		this.currentType = 0;
 	}
 
@@ -30,8 +32,7 @@ public class WeaponTypeAdapter extends BaseAdapter {
 	
 	@Override
 	public int getCount() {
-
-		return weaponType.length;
+		return weaponJinpais.size();
 	}
 
 	
@@ -40,8 +41,7 @@ public class WeaponTypeAdapter extends BaseAdapter {
 	
 	@Override
 	public Object getItem(int position) {
-
-		return null;
+		return weaponJinpais.get(position);
 	}
 
 	@Override
@@ -63,7 +63,8 @@ public class WeaponTypeAdapter extends BaseAdapter {
 			holder = (ViewHolder) convertView.getTag();
 		}
 
-		holder.tv_weaponName.setText(weaponType[position]);
+	   WeaponJinpai weaponJinpai = (WeaponJinpai) getItem(position);
+		holder.tv_weaponName.setText(weaponJinpai.getName());
 		if (currentType == position) {
 			holder.tv_weaponName.setBackgroundColor(context.getResources().getColor(R.color.orange));
 		}

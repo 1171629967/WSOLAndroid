@@ -11,7 +11,7 @@
 # view res/layout/fragment_yijianyilan.xml #generated:12
 -keep class android.support.v4.widget.SwipeRefreshLayout { <init>(...); }
 
-# view AndroidManifest.xml #generated:107
+# view AndroidManifest.xml #generated:112
 -keep class com.baidu.location.f { <init>(...); }
 
 # view res/layout/slidingmenu.xml #generated:8
@@ -21,7 +21,7 @@
 # view res/layout/activity_scaleimage.xml #generated:10
 -keep class com.polites.android.GestureImageView { <init>(...); }
 
-# view AndroidManifest.xml #generated:88
+# view AndroidManifest.xml #generated:93
 -keep class com.wlx.wsolandroid.CompletePersonInfoActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:68
@@ -46,6 +46,9 @@
 -keep class com.wlx.wsolandroid.WeaponXishuActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:78
+-keep class com.wlx.wsolandroid.WebViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:83
 -keep class com.wlx.wsolandroid.WelcomeActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:48
@@ -57,7 +60,7 @@
 # view AndroidManifest.xml #generated:73
 -keep class com.wlx.wsolandroid.music.PlayMusicActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:113
+# view AndroidManifest.xml #generated:118
 -keep class com.wlx.wsolandroid.music.PlayMusicService { <init>(...); }
 
 # view res/layout/activity_main.xml #generated:12

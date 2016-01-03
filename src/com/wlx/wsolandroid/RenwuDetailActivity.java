@@ -5,7 +5,9 @@ import java.net.URLEncoder;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
@@ -41,15 +43,16 @@ import com.wlx.wsolandroid.widget.MyActionBar;
  * 
  * @author wanglixin
  */
-public class RenwuDetailActivity extends Activity implements OnRefreshListener {
+public class RenwuDetailActivity extends Activity implements OnRefreshListener{
 	private TextView tv_renwuName, tv_renwuLevel, tv_renwuPeopleCount,
 			tv_renwuJiaofu, tv_renwuMap, tv_renwuZhifa, tv_renwuGetDaoju,
 			tv_shangyePoint, tv_liutongPoint, tv_jishuPoint, tv_junshiPoint,
-			tv_zhianPoint, tv_junfeiPoint, tv_renwuBeizhu;
+			tv_zhianPoint, tv_junfeiPoint, tv_video,tv_renwuBeizhu;
 
 	private LinearLayout ll_renwuBeizhu;
 	private int renwuId;
 	private SwipeRefreshLayout swipeRefreshLayout;
+	private MyActionBar actionBar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -69,9 +72,10 @@ public class RenwuDetailActivity extends Activity implements OnRefreshListener {
 	}
 
 	private void initActionBar() {
-		MyActionBar actionBar = new MyActionBar(this);
+		actionBar = new MyActionBar(this);
 		actionBar.setTitle("任务详情");
 		actionBar.setLeftEnable(true);
+		
 		RelativeLayout actionbar = (RelativeLayout) findViewById(R.id.rl_actionbar);
 		actionbar.addView(actionBar);
 	}
@@ -127,8 +131,24 @@ public class RenwuDetailActivity extends Activity implements OnRefreshListener {
 	}
 
 	/** 设置各个控件的数值 */
-	private void setData(RenwuDetail renwuDetail) {
+	private void setData(final RenwuDetail renwuDetail) {
 		tv_renwuName.setText(renwuDetail.getRenwuName());
+		
+		if (!TextUtils.isEmpty(renwuDetail.getVideoUrl())) {
+			actionBar.setRightText("视频攻略");
+			actionBar.setRightClickListenner(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Uri  uri = Uri.parse(renwuDetail.getVideoUrl());
+					   Intent  intent = new  Intent(Intent.ACTION_VIEW, uri);
+					   startActivity(intent);
+				}
+			});
+		}
+		
+		
+		
 		tv_renwuLevel.setText(renwuDetail.getRenwuLevel());
 		tv_renwuJiaofu.setText(renwuDetail.getRenwuJiaofu());
 		tv_renwuGetDaoju.setText(renwuDetail.getRenwuGetDaoju());
@@ -169,5 +189,7 @@ public class RenwuDetailActivity extends Activity implements OnRefreshListener {
 		super.onPause();
 		MobclickAgent.onPageEnd("任务详情");
 	}
+
+	
 
 }

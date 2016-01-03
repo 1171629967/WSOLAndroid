@@ -12,12 +12,12 @@
         android:id="@+id/tv_gongjiDown"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:visibility="invisible"
         android:layout_centerVertical="true"
         android:gravity="center"
         android:text="-"
         android:textColor="@color/white"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:visibility="invisible" />
 
     <!-- 增加攻击锻造按钮 -->
 
@@ -74,15 +74,41 @@
 
             <!-- 攻击基础值 -->
 
-            <TextView
-                android:id="@+id/tv_base_gongjili"
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="50"
-                android:textColor="@color/white"
-                android:textSize="15sp" />
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_base_gongjili"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="50"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+                
+                <TextView
+                    android:id="@+id/tv_chuanshuohua_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="+30"
+                    android:visibility="gone"
+                    android:textColor="#32D2D9"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_upNarrow_baseRise"
+                    android:layout_width="10dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/upnarrow"
+                    android:visibility="gone" />
+            </LinearLayout>
 
             <!-- 攻击上升值 -->
 
@@ -102,12 +128,12 @@
                     android:textSize="15sp" />
 
                 <ImageView
-                    android:visibility="gone"
-                    android:layout_gravity="center_vertical"
                     android:id="@+id/iv_upNarrow_gongji_rise"
                     android:layout_width="10dp"
-                    android:layout_height="14dp" />
-                
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

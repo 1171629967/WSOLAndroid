@@ -1,369 +1,582 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black" >
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/rl_actionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scroolView"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent"
+        android:background="@color/black" >
 
-        <RelativeLayout
-            android:id="@+id/rl_actionbar"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
-
-        <!-- 武器名称和等级 -->
-
-        <RelativeLayout
-            android:id="@+id/rl_weaponNameAndRank"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp" >
+            android:orientation="vertical" >
+
+            <!-- 武器名称 -->
 
             <TextView
                 android:id="@+id/tv_weaponName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- 等级和重置数据按钮 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_weaponNameAndRank"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="5dp"
-                android:layout_toLeftOf="@+id/tv_rankDown"
-                android:text="级别"
-                android:textColor="@color/gongjicao"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/tv_rankDown"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/tv_rank"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="-"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/tv_rank"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_toLeftOf="@+id/tv_rankUp"
-                android:text="1"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/tv_rankUp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:text="+"
-                android:textColor="@color/white"
-                android:textSize="30sp" />
-        </RelativeLayout>
-
-        <!-- 武器改造和锻造 -->
-
-        <RelativeLayout
-            android:id="@+id/rl_weaponGaizaoAndDuanzao"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp" >
-
-            <LinearLayout
-                android:id="@+id/ll_gaizaoPart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
-                android:layout_toLeftOf="@+id/ll_duanzaoPart"
-                android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp" >
 
                 <TextView
+                    android:id="@+id/tv_clearData"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="改造"
-                    android:textColor="@color/gongjicao"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/tv_gaizaoData"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
-                    android:text="0/5"
+                    android:background="@drawable/borner_clear_data"
+                    android:padding="5dp"
+                    android:text="点击重置数据"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ll_duanzaoPart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                    android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/tv_duanzao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_marginRight="5dp"
-                    android:text="锻造"
+                    android:layout_toLeftOf="@+id/tv_rankDown"
+                    android:text="级别"
                     android:textColor="@color/gongjicao"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/tv_duanzaoData"
+                    android:id="@+id/tv_rankDown"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_rank"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tv_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
-                    android:text="0/24"
+                    android:layout_toLeftOf="@+id/tv_rankUp"
+                    android:text="1"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
-                <ImageView
-                    android:id="@+id/iv_upNarrow_duanzaoTime_rise"
-                    android:layout_width="10dp"
-                    android:layout_height="14dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/upnarrow"
-                    android:visibility="gone" />
-
                 <TextView
-                    android:id="@+id/tv_duanzaoTimeUp"
+                    android:id="@+id/tv_rankUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
                     android:gravity="center"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
                     android:text="+"
                     android:textColor="@color/white"
-                    android:textSize="30sp"
-                    android:visibility="invisible" />
+                    android:textSize="30sp" />
+            </RelativeLayout>
+
+            <!-- 武器改造和锻造 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_weaponGaizaoAndDuanzao"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/ll_gaizaoPart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/ll_duanzaoPart"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="改造"
+                        android:textColor="@color/gongjicao"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_gaizaoData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="0/5"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_duanzaoPart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_duanzao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="锻造"
+                        android:textColor="@color/gongjicao"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_duanzaoData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="0/24"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_upNarrow_duanzaoTime_rise"
+                        android:layout_width="10dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/upnarrow"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_duanzaoTimeUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 模式 -->
+
+            <LinearLayout
+                android:id="@+id/ll_moshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_moshi_duanzao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borner_choose_left_selected"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="锻造模式"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_moshi_tesuqianghua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borner_choose_middle_not_selected"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="特殊强化模式"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_moshi_gaizao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borner_choose_middle_not_selected"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="改造模式"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_moshi_chuanshuohua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borner_choose_right_not_selected"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="传说化模式"
+                    android:textColor="@color/white" />
             </LinearLayout>
-        </RelativeLayout>
 
-        <!-- 模式 -->
+            <!-- 原始多少段 -->
 
-        <LinearLayout
-            android:id="@+id/ll_moshi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:id="@+id/tv_moshi_duanzao"
+            <LinearLayout
+                android:id="@+id/ll_yuanshi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/borner_choose_left_selected"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="锻造模式"
-                android:textColor="@color/white" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
 
-            <TextView
-                android:id="@+id/tv_moshi_tesuqianghua"
+                <TextView
+                    android:id="@+id/tv_yuanshi_jinpai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borner_choose_left_selected"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="金牌"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_yuanshi_25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borner_choose_middle_not_selected"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="原始25"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_yuanshi_26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borner_choose_middle_not_selected"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="原始26"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_yuanshi_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borner_choose_right_not_selected"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="原始28"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <!-- 改造菜单 -->
+
+            <LinearLayout
+                android:id="@+id/ll_gaizaoMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/borner_choose_middle_not_selected"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="特殊强化模式"
-                android:textColor="@color/white" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
 
-            <TextView
-                android:id="@+id/tv_moshi_gaizao"
+                <TextView
+                    android:id="@+id/tv_zhengai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borner_choose_left_selected"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="真改"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_jiangai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borner_choose_right_not_selected"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="简改"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_gaizao_shangshengzhi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/borner_choose_left_selected"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="上升值"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_gaizao_jichuzhi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borner_choose_right_not_selected"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="基础值"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <!-- 传说化菜单 -->
+
+            <LinearLayout
+                android:id="@+id/ll_chuanshuohua_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/borner_choose_middle_not_selected"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="改造模式"
-                android:textColor="@color/white" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_jianjing1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borner_choose_left_not_selected"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="尖晶一阶"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_jianjing2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borner_choose_middle_not_selected"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="尖晶二阶"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_jianjing3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borner_choose_right_not_selected"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="尖晶三阶"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_liuli1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borner_choose_left_not_selected"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="琉璃一阶"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_liuli2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borner_choose_middle_not_selected"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="琉璃二阶"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_liuli3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borner_choose_right_not_selected"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="琉璃三阶"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_yudi1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borner_choose_left_not_selected"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="玉滴一阶"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_yudi2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borner_choose_middle_not_selected"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="玉滴二阶"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_yudi3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borner_choose_right_not_selected"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="玉滴三阶"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 五大锻造属性模块 -->
+
+            <LinearLayout
+                android:id="@+id/ll_shuxingPart"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/include_gongji"
+                    layout="@layout/view_duanzao" />
+
+                <include
+                    android:id="@+id/include_pohuai"
+                    layout="@layout/view_duanzao" />
+
+                <include
+                    android:id="@+id/include_fangyu"
+                    layout="@layout/view_duanzao" />
+
+                <include
+                    android:id="@+id/include_tili"
+                    layout="@layout/view_duanzao" />
+
+                <include
+                    android:id="@+id/include_wushuang"
+                    layout="@layout/view_duanzao" />
+
+                <include
+                    android:id="@+id/include_yidong"
+                    layout="@layout/view_yidongtiaoyue" />
+
+                <include
+                    android:id="@+id/include_tiaoyue"
+                    layout="@layout/view_yidongtiaoyue" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_moshi_chuanshuohua"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_totalG"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/borner_choose_right_not_selected"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="传说化模式"
-                android:textColor="@color/white" />
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_totalP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_totalF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_totalT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_totalW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_totalMove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_totalJump"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
         </LinearLayout>
-        
-        
-        <!-- 原始多少段 -->
-        <LinearLayout
-            android:id="@+id/ll_yuanshi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal" >
+    </ScrollView>
 
-            <TextView
-                android:id="@+id/tv_yuanshi_jinpai"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borner_choose_left_selected"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="金牌"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/tv_yuanshi_25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borner_choose_middle_not_selected"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="原始25"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/tv_yuanshi_26"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borner_choose_middle_not_selected"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="原始26"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/tv_yuanshi_28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borner_choose_right_not_selected"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="原始28"
-                android:textColor="@color/white" />
-        </LinearLayout>
-
-        
-       
-        <!-- 改造菜单 -->
-        <LinearLayout
-            android:id="@+id/ll_gaizaoMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:visibility="gone"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:id="@+id/tv_zhengai"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borner_choose_left_selected"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="真改"
-                android:textColor="@color/white" />
-            
-            <TextView
-                android:id="@+id/tv_jiangai"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borner_choose_right_not_selected"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="简改"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:layout_marginLeft="20dp"
-                android:id="@+id/tv_gaizao_shangshengzhi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borner_choose_left_selected"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="上升值"
-                android:textColor="@color/white" />
-            
-            <TextView
-                android:id="@+id/tv_gaizao_jichuzhi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borner_choose_right_not_selected"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text="基础值"
-                android:textColor="@color/white" />
-            
-            
-        </LinearLayout>
-        
-        
-        <!-- 五大锻造属性模块 -->
-
-        <LinearLayout
-            android:id="@+id/ll_shuxingPart"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical" >
-
-            <include
-                android:id="@+id/include_gongji"
-                layout="@layout/view_duanzao" />
-
-            <include
-                android:id="@+id/include_pohuai"
-                layout="@layout/view_duanzao" />
-
-            <include
-                android:id="@+id/include_fangyu"
-                layout="@layout/view_duanzao" />
-
-            <include
-                android:id="@+id/include_tili"
-                layout="@layout/view_duanzao" />
-
-            <include
-                android:id="@+id/include_wushuang"
-                layout="@layout/view_duanzao" />
-
-            <include
-                android:id="@+id/include_yidong"
-                layout="@layout/view_yidongtiaoyue" />
-
-            <include
-                android:id="@+id/include_tiaoyue"
-                layout="@layout/view_yidongtiaoyue" />
-        </LinearLayout>
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

@@ -6,6 +6,7 @@ public class RenwuDetail extends BmobObject{
 	private int renwuId;
 	private String renwuName;
 	private String renwuLevel;
+	private String videoUrl;
 	
 	private int renwuPeopleCount;
 	private String renwuJiaofu;
@@ -23,6 +24,21 @@ public class RenwuDetail extends BmobObject{
 	public int getRenwuId() {
 		return renwuId;
 	}
+	
+	
+	
+	public String getVideoUrl() {
+		return videoUrl;
+	}
+
+
+
+	public void setVideoUrl(String videoUrl) {
+		this.videoUrl = videoUrl;
+	}
+
+
+
 	public void setRenwuId(int renwuId) {
 		this.renwuId = renwuId;
 	}

@@ -18,7 +18,8 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -33,6 +34,8 @@
                     android:gravity="center"
                     android:textColor="@color/white"
                     android:textSize="25sp" />
+
+                
 
                 <LinearLayout
                     android:id="@+id/ll_renwuBeizhu"
@@ -53,7 +56,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:gravity="center"
                         android:textColor="@color/orange"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -191,7 +193,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:gravity="center"
                         android:textColor="@color/white"
                         android:textSize="16sp" />
                 </LinearLayout>

@@ -19,11 +19,91 @@ public class WeaponJinpai extends BmobObject{
     private int move;
     private int jump;
     
-    
-    
-    
+    private int slot_g;
+    private int slot_p;
+    private int slot_f;
+    private int slot_t;
+    private int slot_w;
 
-    public int getG_base() {
+    private String weaponNameR3;
+    private String weaponNameR4;
+    private String weaponNameR5;
+    private String weaponNameR7;
+
+
+    public String getWeaponNameR3() {
+		return weaponNameR3;
+	}
+
+	public void setWeaponNameR3(String weaponNameR3) {
+		this.weaponNameR3 = weaponNameR3;
+	}
+
+	public String getWeaponNameR4() {
+		return weaponNameR4;
+	}
+
+	public void setWeaponNameR4(String weaponNameR4) {
+		this.weaponNameR4 = weaponNameR4;
+	}
+
+	public String getWeaponNameR5() {
+		return weaponNameR5;
+	}
+
+	public void setWeaponNameR5(String weaponNameR5) {
+		this.weaponNameR5 = weaponNameR5;
+	}
+
+	public String getWeaponNameR7() {
+		return weaponNameR7;
+	}
+
+	public void setWeaponNameR7(String weaponNameR7) {
+		this.weaponNameR7 = weaponNameR7;
+	}
+
+	public int getSlot_g() {
+		return slot_g;
+	}
+
+	public void setSlot_g(int slot_g) {
+		this.slot_g = slot_g;
+	}
+
+	public int getSlot_p() {
+		return slot_p;
+	}
+
+	public void setSlot_p(int slot_p) {
+		this.slot_p = slot_p;
+	}
+
+	public int getSlot_f() {
+		return slot_f;
+	}
+
+	public void setSlot_f(int slot_f) {
+		this.slot_f = slot_f;
+	}
+
+	public int getSlot_t() {
+		return slot_t;
+	}
+
+	public void setSlot_t(int slot_t) {
+		this.slot_t = slot_t;
+	}
+
+	public int getSlot_w() {
+		return slot_w;
+	}
+
+	public void setSlot_w(int slot_w) {
+		this.slot_w = slot_w;
+	}
+
+	public int getG_base() {
 		return g_base;
 	}
 
