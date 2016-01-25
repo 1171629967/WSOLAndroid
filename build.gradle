@@ -2,8 +2,7 @@ apply plugin: 'android'
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
-    compile project(':wushuangWorkspace:ActionBarSherlock-master:actionbarsherlock')
-    compile project(':wushuangWorkspace:SlidingMenu-master:library')
+    compile project(':SlidingMenu-master:library')
     compile project(':wushuangWorkspace:gesture-imageview-master:main')
 }
 
@@ -33,5 +32,21 @@ android {
         // by a similar customization.
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
+    }
+}
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.0'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
     }
 }
